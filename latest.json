@@ -1,0 +1,337 @@
+{
+  "date": "2026-06-20",
+  "runs": [
+    {
+      "generated_at": "2026-06-20T10:57:45.264118+00:00",
+      "backend": "grok-cli",
+      "model": "grok-build",
+      "brief_en": "Tesla Cybercabs at Giga Texas now wear fleet decals, signaling an imminent Robotaxi launch. Elon Musk blasted Moody's for rating SpaceX above debt-free Tesla. Fortune says SpaceX's stock surge makes a Tesla merger more plausible. Sweden may block EU FSD approval over speeding.",
+      "brief_zh": "德州Cybercab貼標誌即將上線；馬斯克批評信評；SpaceX併購特斯拉機率升；瑞典反對FSD超速。",
+      "new_item_count": 9,
+      "usage": {
+        "backend": "grok-cli",
+        "model": "grok-build",
+        "requestId": "09f71ee2-7300-4104-87e9-3fab2ab83cdc",
+        "stopReason": "EndTurn"
+      }
+    }
+  ],
+  "items_flat": [
+    {
+      "id": "item-0",
+      "category": "tesla",
+      "title_en": "Cybercab fleet decals spotted at Giga Texas",
+      "title_zh": "德州超級工廠 Cybercab 貼上車隊標誌",
+      "summary_en": "Drone footage shows Tesla applying \"Cybercab\" side decals to vehicles at Gigafactory Texas, mirroring the Robotaxi branding used on Model Y before Austin ride-hailing launched. The move, days after EPA certification, is widely read as the clearest signal yet that dedicated Cybercab fleet deployment is imminent.",
+      "summary_zh": "空拍畫面顯示，特斯拉在德州超級工廠為 Cybercab 貼上側身車隊標誌，做法與一年前 Robotaxi Model Y 上線前類似。在 EPA 認證通過後數日出現此舉，被視為專用 Cybercab 車隊即將部署的最明確信號。",
+      "importance": 5,
+      "links": [
+        {
+          "label": "TESLARATI",
+          "url": "https://www.teslarati.com/tesla-gives-biggest-signal-yet-that-cybercab-launch-imminent/"
+        },
+        {
+          "label": "@Teslarati on X",
+          "url": "https://x.com/Teslarati/status/2067988703948005880"
+        }
+      ]
+    },
+    {
+      "id": "item-1",
+      "category": "elon_personal",
+      "title_en": "Musk slams Tesla's Moody credit rating vs. SpaceX",
+      "title_zh": "馬斯克批評特斯拉信評低於 SpaceX",
+      "summary_en": "After Moody assigned SpaceX a first-time Baa1 rating—two notches above Tesla's Baa3—Elon Musk posted on X that Tesla's rating \"makes no sense,\" citing more than $40 billion in cash, zero debt, and consistent profitability.",
+      "summary_zh": "穆迪首次給予 SpaceX Baa1 評級，比特斯拉的 Baa3 高兩級。馬斯克在 X 上回應稱特斯拉評級「毫無道理」，並強調公司現金逾 400 億美元、零負債且持續獲利。",
+      "importance": 3,
+      "links": [
+        {
+          "label": "TESLARATI",
+          "url": "https://www.teslarati.com/elon-musk-challenges-tesla-credit-rating-moodys-after-spacex-gets-higher-one/"
+        },
+        {
+          "label": "@elonmusk on X",
+          "url": "https://x.com/elonmusk/status/2067773403319108016"
+        }
+      ]
+    },
+    {
+      "id": "item-2",
+      "category": "spacex",
+      "title_en": "SpaceX IPO rally fuels Tesla merger speculation",
+      "title_zh": "SpaceX 上市飆漲推升併購特斯拉猜測",
+      "summary_en": "Fortune reports that SpaceX shares rising 37% to $185 in their first trading week would let the company acquire Tesla with less dilution than at the $135 IPO price, reviving talk of a megamerger after COO Gwynne Shotwell said on CNBC it \"might make Elon Musk's life a little easier.\"",
+      "summary_zh": "《財星》指出，SpaceX 上市首週股價從 135 美元飆至 185 美元，若以全股票併購特斯拉所需增發股份將少於 IPO 當時估算，再度炒熱併購話題；此前營運長 Shotwell 在 CNBC 表示此舉或能讓馬斯克「輕鬆一點」。",
+      "importance": 4,
+      "links": [
+        {
+          "label": "Fortune",
+          "url": "https://fortune.com/2026/06/20/spacex-stock-moonshot-merger-tesla/"
+        }
+      ]
+    },
+    {
+      "id": "item-3",
+      "category": "spacex",
+      "title_en": "SpaceX secures investment-grade ratings from Big Three",
+      "title_zh": "SpaceX 獲三大信評機構投資級評級",
+      "summary_en": "Moody's, Fitch, and S&P Global issued first-time investment-grade ratings for SpaceX days after its record IPO, citing Starlink cash flows and launch dominance. Moody's assigned Baa1—above Tesla's Baa3—while noting risks from Starship execution and heavy AI capex.",
+      "summary_zh": "在創紀錄 IPO 後數日，穆迪、惠譽與標普首次給予 SpaceX 投資級評級，肯定 Starlink 現金流與發射主導地位。穆迪給予 Baa1，高於特斯拉 Baa3，同時警示星艦執行與 AI 巨額資本支出風險。",
+      "importance": 4,
+      "links": [
+        {
+          "label": "Euronews",
+          "url": "https://www.euronews.com/business/2026/06/19/spacex-lands-investment-grade-credit-ratings-as-shares-tumble-from-record-high"
+        }
+      ]
+    },
+    {
+      "id": "item-4",
+      "category": "tesla",
+      "title_en": "Sweden urges EU to reject Tesla FSD over speeding",
+      "title_zh": "瑞典敦促歐盟拒絕特斯拉 FSD 因超速問題",
+      "summary_en": "Sweden's Transport Administration told the EU's Technical Committee on Motor Vehicles it should vote against approving Tesla Full Self-Driving until the system cannot exceed speed limits. The committee meets June 30, as Tesla has won FSD approvals in several other European countries.",
+      "summary_zh": "瑞典運輸管理局致函歐盟汽車技術委員會，建議在特斯拉關閉 FSD 超速能力前反對核准。委員會將於 6 月 30 日開會，而特斯拉已在多個歐洲國家取得 FSD 批准。",
+      "importance": 4,
+      "links": [
+        {
+          "label": "Reuters",
+          "url": "https://www.reuters.com/business/autos-transportation/sweden-may-oppose-teslas-supervised-self-driving-tech-europe-over-speeding-2026-06-18/"
+        },
+        {
+          "label": "TESLARATI",
+          "url": "https://www.teslarati.com/tesla-faces-full-self-driving-pushback-eu-over-speeding/"
+        }
+      ]
+    },
+    {
+      "id": "item-5",
+      "category": "xai_x_platform",
+      "title_en": "Musk: Grok voice control for FSD arriving in ~3 months",
+      "title_zh": "馬斯克：Grok 語音控制 FSD 約三個月內推出",
+      "summary_en": "Responding on X to a Tesla owner who wanted to direct FSD like an Uber driver, Elon Musk said conversational Grok navigation—e.g., \"turn right here\" or drop-off instructions—should arrive in about three months, potentially including the long-teased Banish reverse-summon feature.",
+      "summary_zh": "有車主在 X 希望像叫 Uber 一樣用語音指揮 FSD，馬斯克回覆稱約三個月內可透過 Grok 對話導航（如「這裡右轉」或指定下客點），並可能涵蓋多年來預告的 Banish 反向召喚停車功能。",
+      "importance": 3,
+      "links": [
+        {
+          "label": "TESLARATI",
+          "url": "https://www.teslarati.com/tesla-teases-grok-integration-banish-fsd-3-months-elon-musk/"
+        },
+        {
+          "label": "@elonmusk on X",
+          "url": "https://x.com/elonmusk/status/2067430722399539385"
+        }
+      ]
+    },
+    {
+      "id": "item-6",
+      "category": "xai_x_platform",
+      "title_en": "xAI launches Grok add-in for Microsoft Word",
+      "title_zh": "xAI 推出 Microsoft Word 版 Grok 外掛",
+      "summary_en": "xAI released a free Grok for Word add-in that turns notes into structured documents, rewrites text, searches the web and X, and connects to email and cloud drives. It joins existing Grok integrations for PowerPoint and Excel.",
+      "summary_zh": "xAI 發布免費 Grok for Word 外掛，可將筆記轉為結構化文件、改寫文字、搜尋網頁與 X，並串接郵件與雲端硬碟，與既有的 PowerPoint、Excel 外掛形成 Office 產品線。",
+      "importance": 3,
+      "links": [
+        {
+          "label": "xAI",
+          "url": "https://x.ai/news/introducing-word-addin"
+        }
+      ]
+    },
+    {
+      "id": "item-7",
+      "category": "xai_x_platform",
+      "title_en": "Grok models land on Databricks Agent Bricks",
+      "title_zh": "Grok 模型登陸 Databricks Agent Bricks",
+      "summary_en": "At the 2026 Data + AI Summit, xAI announced Grok is natively available on Databricks Agent Bricks, letting enterprises build governed AI agents on Lakehouse data alongside other frontier models.",
+      "summary_zh": "在 2026 Data + AI 峰會上，xAI 宣布 Grok 原生接入 Databricks Agent Bricks，企業可在 Lakehouse 數據上與其他前沿模型一同構建受治理的 AI 代理。",
+      "importance": 3,
+      "links": [
+        {
+          "label": "xAI",
+          "url": "https://x.ai/news/grok-databricks"
+        }
+      ]
+    },
+    {
+      "id": "item-8",
+      "category": "elon_personal",
+      "title_en": "Euronews maps Musk's trillion-dollar empire",
+      "title_zh": "歐洲新聞網梳理馬斯克兆美元商業帝國",
+      "summary_en": "A June 20 Euronews profile traces how Musk's fortune grew from early Zip2 and PayPal exits to controlling SpaceX (now valued above $2 trillion post-IPO), Tesla (~$1.5 trillion), xAI, X, Neuralink, and The Boring Company under an increasingly integrated empire.",
+      "summary_zh": "歐洲新聞網 6 月 20 日專文梳理馬斯克從 Zip2、PayPal 到掌控 SpaceX（IPO 後估值逾 2 兆美元）、特斯拉（約 1.5 兆）、xAI、X、Neuralink 與 Boring Company 的財富版圖，呈現日益整合的商業帝國。",
+      "importance": 2,
+      "links": [
+        {
+          "label": "Euronews",
+          "url": "https://www.euronews.com/business/2026/06/20/elon-musks-business-empire-the-companies-behind-the-worlds-richest-man"
+        }
+      ]
+    }
+  ],
+  "categories": {
+    "elon_personal": [
+      {
+        "id": "item-1",
+        "category": "elon_personal",
+        "title_en": "Musk slams Tesla's Moody credit rating vs. SpaceX",
+        "title_zh": "馬斯克批評特斯拉信評低於 SpaceX",
+        "summary_en": "After Moody assigned SpaceX a first-time Baa1 rating—two notches above Tesla's Baa3—Elon Musk posted on X that Tesla's rating \"makes no sense,\" citing more than $40 billion in cash, zero debt, and consistent profitability.",
+        "summary_zh": "穆迪首次給予 SpaceX Baa1 評級，比特斯拉的 Baa3 高兩級。馬斯克在 X 上回應稱特斯拉評級「毫無道理」，並強調公司現金逾 400 億美元、零負債且持續獲利。",
+        "importance": 3,
+        "links": [
+          {
+            "label": "TESLARATI",
+            "url": "https://www.teslarati.com/elon-musk-challenges-tesla-credit-rating-moodys-after-spacex-gets-higher-one/"
+          },
+          {
+            "label": "@elonmusk on X",
+            "url": "https://x.com/elonmusk/status/2067773403319108016"
+          }
+        ]
+      },
+      {
+        "id": "item-8",
+        "category": "elon_personal",
+        "title_en": "Euronews maps Musk's trillion-dollar empire",
+        "title_zh": "歐洲新聞網梳理馬斯克兆美元商業帝國",
+        "summary_en": "A June 20 Euronews profile traces how Musk's fortune grew from early Zip2 and PayPal exits to controlling SpaceX (now valued above $2 trillion post-IPO), Tesla (~$1.5 trillion), xAI, X, Neuralink, and The Boring Company under an increasingly integrated empire.",
+        "summary_zh": "歐洲新聞網 6 月 20 日專文梳理馬斯克從 Zip2、PayPal 到掌控 SpaceX（IPO 後估值逾 2 兆美元）、特斯拉（約 1.5 兆）、xAI、X、Neuralink 與 Boring Company 的財富版圖，呈現日益整合的商業帝國。",
+        "importance": 2,
+        "links": [
+          {
+            "label": "Euronews",
+            "url": "https://www.euronews.com/business/2026/06/20/elon-musks-business-empire-the-companies-behind-the-worlds-richest-man"
+          }
+        ]
+      }
+    ],
+    "tesla": [
+      {
+        "id": "item-0",
+        "category": "tesla",
+        "title_en": "Cybercab fleet decals spotted at Giga Texas",
+        "title_zh": "德州超級工廠 Cybercab 貼上車隊標誌",
+        "summary_en": "Drone footage shows Tesla applying \"Cybercab\" side decals to vehicles at Gigafactory Texas, mirroring the Robotaxi branding used on Model Y before Austin ride-hailing launched. The move, days after EPA certification, is widely read as the clearest signal yet that dedicated Cybercab fleet deployment is imminent.",
+        "summary_zh": "空拍畫面顯示，特斯拉在德州超級工廠為 Cybercab 貼上側身車隊標誌，做法與一年前 Robotaxi Model Y 上線前類似。在 EPA 認證通過後數日出現此舉，被視為專用 Cybercab 車隊即將部署的最明確信號。",
+        "importance": 5,
+        "links": [
+          {
+            "label": "TESLARATI",
+            "url": "https://www.teslarati.com/tesla-gives-biggest-signal-yet-that-cybercab-launch-imminent/"
+          },
+          {
+            "label": "@Teslarati on X",
+            "url": "https://x.com/Teslarati/status/2067988703948005880"
+          }
+        ]
+      },
+      {
+        "id": "item-4",
+        "category": "tesla",
+        "title_en": "Sweden urges EU to reject Tesla FSD over speeding",
+        "title_zh": "瑞典敦促歐盟拒絕特斯拉 FSD 因超速問題",
+        "summary_en": "Sweden's Transport Administration told the EU's Technical Committee on Motor Vehicles it should vote against approving Tesla Full Self-Driving until the system cannot exceed speed limits. The committee meets June 30, as Tesla has won FSD approvals in several other European countries.",
+        "summary_zh": "瑞典運輸管理局致函歐盟汽車技術委員會，建議在特斯拉關閉 FSD 超速能力前反對核准。委員會將於 6 月 30 日開會，而特斯拉已在多個歐洲國家取得 FSD 批准。",
+        "importance": 4,
+        "links": [
+          {
+            "label": "Reuters",
+            "url": "https://www.reuters.com/business/autos-transportation/sweden-may-oppose-teslas-supervised-self-driving-tech-europe-over-speeding-2026-06-18/"
+          },
+          {
+            "label": "TESLARATI",
+            "url": "https://www.teslarati.com/tesla-faces-full-self-driving-pushback-eu-over-speeding/"
+          }
+        ]
+      }
+    ],
+    "spacex": [
+      {
+        "id": "item-2",
+        "category": "spacex",
+        "title_en": "SpaceX IPO rally fuels Tesla merger speculation",
+        "title_zh": "SpaceX 上市飆漲推升併購特斯拉猜測",
+        "summary_en": "Fortune reports that SpaceX shares rising 37% to $185 in their first trading week would let the company acquire Tesla with less dilution than at the $135 IPO price, reviving talk of a megamerger after COO Gwynne Shotwell said on CNBC it \"might make Elon Musk's life a little easier.\"",
+        "summary_zh": "《財星》指出，SpaceX 上市首週股價從 135 美元飆至 185 美元，若以全股票併購特斯拉所需增發股份將少於 IPO 當時估算，再度炒熱併購話題；此前營運長 Shotwell 在 CNBC 表示此舉或能讓馬斯克「輕鬆一點」。",
+        "importance": 4,
+        "links": [
+          {
+            "label": "Fortune",
+            "url": "https://fortune.com/2026/06/20/spacex-stock-moonshot-merger-tesla/"
+          }
+        ]
+      },
+      {
+        "id": "item-3",
+        "category": "spacex",
+        "title_en": "SpaceX secures investment-grade ratings from Big Three",
+        "title_zh": "SpaceX 獲三大信評機構投資級評級",
+        "summary_en": "Moody's, Fitch, and S&P Global issued first-time investment-grade ratings for SpaceX days after its record IPO, citing Starlink cash flows and launch dominance. Moody's assigned Baa1—above Tesla's Baa3—while noting risks from Starship execution and heavy AI capex.",
+        "summary_zh": "在創紀錄 IPO 後數日，穆迪、惠譽與標普首次給予 SpaceX 投資級評級，肯定 Starlink 現金流與發射主導地位。穆迪給予 Baa1，高於特斯拉 Baa3，同時警示星艦執行與 AI 巨額資本支出風險。",
+        "importance": 4,
+        "links": [
+          {
+            "label": "Euronews",
+            "url": "https://www.euronews.com/business/2026/06/19/spacex-lands-investment-grade-credit-ratings-as-shares-tumble-from-record-high"
+          }
+        ]
+      }
+    ],
+    "xai_x_platform": [
+      {
+        "id": "item-5",
+        "category": "xai_x_platform",
+        "title_en": "Musk: Grok voice control for FSD arriving in ~3 months",
+        "title_zh": "馬斯克：Grok 語音控制 FSD 約三個月內推出",
+        "summary_en": "Responding on X to a Tesla owner who wanted to direct FSD like an Uber driver, Elon Musk said conversational Grok navigation—e.g., \"turn right here\" or drop-off instructions—should arrive in about three months, potentially including the long-teased Banish reverse-summon feature.",
+        "summary_zh": "有車主在 X 希望像叫 Uber 一樣用語音指揮 FSD，馬斯克回覆稱約三個月內可透過 Grok 對話導航（如「這裡右轉」或指定下客點），並可能涵蓋多年來預告的 Banish 反向召喚停車功能。",
+        "importance": 3,
+        "links": [
+          {
+            "label": "TESLARATI",
+            "url": "https://www.teslarati.com/tesla-teases-grok-integration-banish-fsd-3-months-elon-musk/"
+          },
+          {
+            "label": "@elonmusk on X",
+            "url": "https://x.com/elonmusk/status/2067430722399539385"
+          }
+        ]
+      },
+      {
+        "id": "item-6",
+        "category": "xai_x_platform",
+        "title_en": "xAI launches Grok add-in for Microsoft Word",
+        "title_zh": "xAI 推出 Microsoft Word 版 Grok 外掛",
+        "summary_en": "xAI released a free Grok for Word add-in that turns notes into structured documents, rewrites text, searches the web and X, and connects to email and cloud drives. It joins existing Grok integrations for PowerPoint and Excel.",
+        "summary_zh": "xAI 發布免費 Grok for Word 外掛，可將筆記轉為結構化文件、改寫文字、搜尋網頁與 X，並串接郵件與雲端硬碟，與既有的 PowerPoint、Excel 外掛形成 Office 產品線。",
+        "importance": 3,
+        "links": [
+          {
+            "label": "xAI",
+            "url": "https://x.ai/news/introducing-word-addin"
+          }
+        ]
+      },
+      {
+        "id": "item-7",
+        "category": "xai_x_platform",
+        "title_en": "Grok models land on Databricks Agent Bricks",
+        "title_zh": "Grok 模型登陸 Databricks Agent Bricks",
+        "summary_en": "At the 2026 Data + AI Summit, xAI announced Grok is natively available on Databricks Agent Bricks, letting enterprises build governed AI agents on Lakehouse data alongside other frontier models.",
+        "summary_zh": "在 2026 Data + AI 峰會上，xAI 宣布 Grok 原生接入 Databricks Agent Bricks，企業可在 Lakehouse 數據上與其他前沿模型一同構建受治理的 AI 代理。",
+        "importance": 3,
+        "links": [
+          {
+            "label": "xAI",
+            "url": "https://x.ai/news/grok-databricks"
+          }
+        ]
+      }
+    ],
+    "other": []
+  },
+  "brief_en": "Tesla Cybercabs at Giga Texas now wear fleet decals, signaling an imminent Robotaxi launch. Elon Musk blasted Moody's for rating SpaceX above debt-free Tesla. Fortune says SpaceX's stock surge makes a Tesla merger more plausible. Sweden may block EU FSD approval over speeding.",
+  "brief_zh": "德州Cybercab貼標誌即將上線；馬斯克批評信評；SpaceX併購特斯拉機率升；瑞典反對FSD超速。",
+  "updated_at": "2026-06-20T10:57:45.264118+00:00"
+}

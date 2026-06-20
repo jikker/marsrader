@@ -1,0 +1,6 @@
+backend/.venv/
+backend/digest.log
+__pycache__/
+*.pyc
+.env
+.DS_Store

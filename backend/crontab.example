@@ -1,0 +1,10 @@
+# MarsRadar —— 每 6 小時聚合一次（00:05 / 06:05 / 12:05 / 18:05）
+# 預設後端＝Grok Build CLI（吃 Grok 訂閱、免 API key）。請在「已安裝並登入 grok CLI」的機器上跑。
+# 安裝： crontab -e 後貼上下面這行（改成你的絕對路徑）
+5 */6 * * * /path/to/T-172-marsradar-elon-digest/public-repo/backend/run.sh
+
+# 注意：
+# - grok CLI 的登入態在你的使用者家目錄（~/.grok）。cron 要用「同一個有登入過 grok 的使用者」跑。
+# - 若 grok 不在 cron 的 PATH 裡，可在 run.sh 前設 GROK_BIN=/home/<you>/.grok/bin/grok。
+# - GitHub Actions 無法用 CLI 後端（雲端沒有你的 Grok 登入）；雲端排程請改用 DIGEST_BACKEND=api + XAI_API_KEY，
+#   見 ../.github/workflows/digest.yml。
