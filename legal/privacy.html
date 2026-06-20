@@ -26,7 +26,7 @@
   <h3>我們蒐集的資料</h3>
   <ul>
     <li><strong>我們不會蒐集你的個人資料</strong>：本 App 沒有註冊／登入機制，不要求你提供姓名、Email 或任何帳號資訊，也不內建廣告 SDK、分析 SDK 或位置追蹤。</li>
-    <li><strong>內容資料（唯讀）</strong>：本 App 會從公開的 GitHub（<code>raw.githubusercontent.com</code> / GitHub Pages）下載我們事先整理好的「動態摘要」JSON 來顯示。這是<strong>單向下載</strong>，過程中本 App<strong>不會上傳</strong>你的任何資料；GitHub 作為內容傳遞主機，可能依其服務本身記錄一般網路存取日誌（如 IP）。</li>
+    <li><strong>內容資料（唯讀）</strong>：本 App 會從伺服器下載我們事先整理好的「動態摘要」JSON 來顯示。這是<strong>單向下載</strong>，過程中本 App<strong>不會上傳</strong>你的任何資料；提供內容傳遞的主機可能依其服務本身記錄一般網路存取日誌（如 IP）。</li>
     <li><strong>訂閱資料（由 Apple 處理）</strong>：Pro 訂閱透過 Apple App Store 的 In-App Purchase（StoreKit）完成。付款與帳務由 <strong>Apple</strong> 處理，本 App <strong>不會也無法</strong>取得你的信用卡或 Apple ID 等付款資料；本 App 僅向裝置上的 StoreKit 查詢「目前是否為有效訂閱」這個狀態以解鎖功能。</li>
     <li><strong>本機儲存</strong>：你的偏好設定（語言、介面選項）與下載內容的快取存於裝置本機，不會上傳。</li>
   </ul>
@@ -34,7 +34,7 @@
   <h3>第三方服務</h3>
   <ul>
     <li><strong>Apple App Store / StoreKit</strong>：處理訂閱與付款，適用 <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple 隱私權政策</a>。</li>
-    <li><strong>GitHub（內容主機）</strong>：提供公開 JSON 內容下載，適用 <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub 隱私聲明</a>。</li>
+    <li><strong>內容傳遞主機</strong>：提供本 App 顯示的 JSON 內容下載，僅為內容傳遞用途，本 App 不會傳送你的個人資料給它。</li>
     <li><strong>外部新聞連結</strong>：點擊新聞會在 App 內以 Safari 檢視器（SFSafariViewController）開啟原始來源網站，該網站的資料蒐集適用其各自的隱私權政策。</li>
   </ul>
 
@@ -55,7 +55,7 @@
   <h3>Information We Collect</h3>
   <ul>
     <li><strong>We do not collect your personal data.</strong> The App has no sign-up or login, does not ask for your name, email, or any account, and contains no advertising SDK, analytics SDK, or location tracking.</li>
-    <li><strong>Content data (read-only).</strong> The App downloads pre-curated "digest" JSON from public GitHub (<code>raw.githubusercontent.com</code> / GitHub Pages) to display. This is a <strong>one-way download</strong>; the App <strong>does not upload</strong> any of your data. As the content host, GitHub may keep ordinary access logs (e.g. IP) per its own service.</li>
+    <li><strong>Content data (read-only).</strong> The App downloads pre-curated "digest" JSON from our server to display. This is a <strong>one-way download</strong>; the App <strong>does not upload</strong> any of your data. The content-delivery host may keep ordinary access logs (e.g. IP) per its own service.</li>
     <li><strong>Subscription data (handled by Apple).</strong> The Pro subscription is processed through Apple App Store In-App Purchase (StoreKit). Payment and billing are handled by <strong>Apple</strong>; the App <strong>cannot</strong> access your card or Apple ID payment details. The App only queries on-device StoreKit for whether you currently hold an active subscription, to unlock features.</li>
     <li><strong>Local storage.</strong> Your preferences (language, UI options) and the content cache are stored locally on your device and are not uploaded.</li>
   </ul>
@@ -63,7 +63,7 @@
   <h3>Third-Party Services</h3>
   <ul>
     <li><strong>Apple App Store / StoreKit</strong> — handles subscriptions and payments; see the <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a>.</li>
-    <li><strong>GitHub (content host)</strong> — serves the public JSON content; see the <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</li>
+    <li><strong>Content-delivery host</strong> — serves the JSON content the App displays, for content delivery only; the App does not send your personal data to it.</li>
     <li><strong>External news links</strong> — tapping a story opens the original source in an in-app Safari view (SFSafariViewController); that website's data practices are governed by its own privacy policy.</li>
   </ul>
 
