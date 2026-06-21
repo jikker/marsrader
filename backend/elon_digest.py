@@ -31,10 +31,19 @@ MarsRadar — Elon / Tesla / SpaceX / X 動態聚合後端
   --- 共用 ---
   DIGEST_REPO_DIR    選填，資料倉庫本機路徑（預設＝後端的上一層，digests/ 所在處）
   GIT_PUSH           選填，"1" 才真的 git push（預設只 commit，不 push）
+  MARSRADAR_ENC_KEY  選填，**設了才會把 index.json / latest.json / digests/*.json 用
+                     AES-256-GCM 加密後再寫出**（64 hex 字元＝32 bytes 金鑰）。
+                     沒設＝照舊寫明文（向後相容）。App 端內嵌同一把金鑰自動解密。
+                     用途：擋住「直接用瀏覽器/curl 開公開 JSON 看歷史」的非技術使用者
+                     （能擋約 8 成；真正懂技術的人 dump App binary 仍可取出金鑰，這是
+                     公開 URL 架構的本質限制，已與用戶確認接受、不另做 server-side gating）。
+                     ⚠️ 切換時機：等「內建解密的新 App build」上架後，再把這把金鑰寫進
+                     .env（並設為 GitHub Actions secret）啟用，以免現役 App 讀不到。
 """
 import os
 import sys
 import json
+import base64
 import shutil
 import tempfile
 import subprocess
@@ -53,6 +62,10 @@ XAI_API_KEY = os.environ.get("XAI_API_KEY", "").strip()
 XAI_MODEL = os.environ.get("XAI_MODEL", "grok-4").strip()
 REPO_DIR = Path(os.environ.get("DIGEST_REPO_DIR", str(DEFAULT_REPO))).resolve()
 GIT_PUSH = os.environ.get("GIT_PUSH", "0") == "1"
+
+# 公開 JSON 加密（見頂部 docstring 的 MARSRADAR_ENC_KEY）。env 在 load_dotenv 後才有值，
+# 所以實際讀取放在 _enc_key()，這裡不快取。
+ENC_ENVELOPE_TAG = "marsradar_enc"
 
 XAI_ENDPOINT = "https://api.x.ai/v1/chat/completions"
 
@@ -282,6 +295,69 @@ def call_grok(date_str: str) -> dict:
     return call_grok_cli(date_str)
 
 
+# ------------------------------------------------------ 公開 JSON 加密 ----
+
+def _enc_key() -> bytes | None:
+    """讀 MARSRADAR_ENC_KEY（hex）。沒設＝回 None（寫明文，向後相容）。"""
+    h = os.environ.get("MARSRADAR_ENC_KEY", "").strip()
+    if not h:
+        return None
+    try:
+        key = bytes.fromhex(h)
+    except ValueError:
+        raise RuntimeError("MARSRADAR_ENC_KEY 必須是 hex 字串（64 字元）")
+    if len(key) != 32:
+        raise RuntimeError(f"MARSRADAR_ENC_KEY 需為 32 bytes（64 hex 字元），目前 {len(key)} bytes")
+    return key
+
+
+def encrypt_text(text: str, key: bytes) -> str:
+    """AES-256-GCM 加密 → 回傳信封 JSON 字串。
+    blob = base64(nonce[12] + ciphertext + tag[16])，與 CryptoKit 的
+    AES.GCM.SealedBox(combined:) 位元組順序一致，App 端可直接解。"""
+    from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+    nonce = os.urandom(12)
+    ct = AESGCM(key).encrypt(nonce, text.encode("utf-8"), None)  # ct 尾端含 16-byte tag
+    blob = base64.b64encode(nonce + ct).decode("ascii")
+    return json.dumps({ENC_ENVELOPE_TAG: 1, "alg": "AES-256-GCM", "blob": blob},
+                      ensure_ascii=False)
+
+
+def dump_public(path: Path, obj: dict):
+    """把要供 App 讀取的公開 JSON 寫出。有金鑰就加密成信封，沒有就寫明文。"""
+    text = json.dumps(obj, ensure_ascii=False, indent=2)
+    key = _enc_key()
+    if key is None:
+        path.write_text(text, encoding="utf-8")
+    else:
+        path.write_text(encrypt_text(text, key), encoding="utf-8")
+
+
+def decrypt_text(envelope_text: str, key: bytes) -> str:
+    from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+    env = json.loads(envelope_text)
+    raw = base64.b64decode(env["blob"])
+    nonce, ct = raw[:12], raw[12:]
+    return AESGCM(key).decrypt(nonce, ct, None).decode("utf-8")
+
+
+def load_public(path: Path) -> dict:
+    """讀回 dump_public 寫出的檔：自動辨識「加密信封 / 明文」並回傳 dict。
+    讓同日重跑合併、rebuild_index 在已加密的倉庫上也能正常運作。"""
+    text = path.read_text(encoding="utf-8")
+    try:
+        obj = json.loads(text)
+    except json.JSONDecodeError:
+        raise
+    if isinstance(obj, dict) and obj.get(ENC_ENVELOPE_TAG) and obj.get("blob"):
+        key = _enc_key()
+        if key is None:
+            raise RuntimeError(
+                f"{path.name} 是加密檔，但未設 MARSRADAR_ENC_KEY，無法讀回合併。")
+        return json.loads(decrypt_text(text, key))
+    return obj
+
+
 # --------------------------------------------------------- JSON 寫入/合併 ----
 
 def normalize_items(items: list) -> list:
@@ -310,7 +386,7 @@ def write_digest(repo: Path, date_str: str, run_iso: str, grok: dict) -> Path:
     path = digests / f"{date_str}.json"
 
     if path.exists():
-        doc = json.loads(path.read_text(encoding="utf-8"))
+        doc = load_public(path)
     else:
         doc = {"date": date_str, "runs": []}
 
@@ -344,7 +420,7 @@ def write_digest(repo: Path, date_str: str, run_iso: str, grok: dict) -> Path:
     doc["brief_zh"] = grok.get("brief_zh", "")
     doc["updated_at"] = run_iso
 
-    path.write_text(json.dumps(doc, ensure_ascii=False, indent=2), encoding="utf-8")
+    dump_public(path, doc)
     return path
 
 
@@ -354,7 +430,7 @@ def rebuild_index(repo: Path):
     index = {"updated_at": datetime.now(timezone.utc).isoformat(), "dates": []}
     for f in files:
         try:
-            doc = json.loads(f.read_text(encoding="utf-8"))
+            doc = load_public(f)
         except Exception:
             continue
         index["dates"].append({
@@ -364,13 +440,11 @@ def rebuild_index(repo: Path):
             "brief_zh": doc.get("brief_zh", ""),
             "updated_at": doc.get("updated_at", ""),
         })
-    (repo / "index.json").write_text(
-        json.dumps(index, ensure_ascii=False, indent=2), encoding="utf-8")
+    dump_public(repo / "index.json", index)
     # latest.json = 最新一天，App 首屏直接讀它最省
     if files:
-        latest = json.loads(files[0].read_text(encoding="utf-8"))
-        (repo / "latest.json").write_text(
-            json.dumps(latest, ensure_ascii=False, indent=2), encoding="utf-8")
+        latest = load_public(files[0])
+        dump_public(repo / "latest.json", latest)
 
 
 # ------------------------------------------------------------------ git ----
