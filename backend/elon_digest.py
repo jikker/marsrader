@@ -525,11 +525,13 @@ def merge_daily_items(existing_flat: list, grok_items: list, run_iso: str) -> tu
             it["first_seen"] = it.get("first_seen") or run_iso
             it["updated_at"] = run_iso
         out.append(it); seen_ids.add(sid)
-    # 安全網：Grok 沒回傳的舊重要條目（importance>=3）保留
+    # 安全網：只補回 Grok 漏回且「真的重大」(importance>=4) 的舊條目，避免把已被 Grok 語意合併掉的
+    # 舊重複條目又塞回來（首次遷移時舊條目 story_id 與 Grok 新 id 不一致，門檻放太低會洗不掉）。
+    # 補回的舊條目過 normalize_items 補上 story_id/source_type，避免欄位缺漏。
     kept = 0
     for sid, old in old_by_id.items():
-        if sid not in seen_ids and int(old.get("importance", 3)) >= 3:
-            out.append(old); kept += 1
+        if sid not in seen_ids and int(old.get("importance", 3)) >= 4:
+            out.append(normalize_items([old])[0]); kept += 1
     # 重要度高在前；同重要度時最近更新在前（穩定排序：先排 updated_at 再排 importance）
     out.sort(key=lambda x: x.get("updated_at", ""), reverse=True)
     out.sort(key=lambda x: -int(x.get("importance", 3)))
