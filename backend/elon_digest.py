@@ -136,9 +136,15 @@ def extract_json_object(text: str) -> dict:
     text = text.strip()
     # 去掉 ```json fence（若有）
     if text.startswith("```"):
-        text = text.split("```", 2)[1]
-        if text.lstrip().startswith("json"):
-            text = text.lstrip()[4:]
+        text = text[3:]
+        if text.startswith("json"):
+            text = text[4:]
+        if text.startswith("\n"):
+            text = text[1:]
+        end_fence = text.rfind("```")
+        if end_fence != -1:
+            text = text[:end_fence]
+        text = text.strip()
     # 找第一個 '{'，用括號計數（略過字串內容）找到對應的 '}'
     start = text.find("{")
     if start == -1:
@@ -189,7 +195,10 @@ def call_grok_cli(date_str: str) -> dict:
     """呼叫本機 Grok Build CLI（headless），讓它讀 X/web 後回傳結構化 JSON。
     不需要任何 API key，吃的是使用者的 Grok 訂閱。"""
     grok_bin = _resolve_grok_bin()
-    timeout = int(os.environ.get("GROK_TIMEOUT", "600"))
+    try:
+        timeout = int(os.environ.get("GROK_TIMEOUT", "600"))
+    except ValueError:
+        timeout = 600
     model = os.environ.get("GROK_MODEL", "").strip()
     prompt = build_prompt(date_str)
 
@@ -204,7 +213,8 @@ def call_grok_cli(date_str: str) -> dict:
         cmd += ["--model", model]
 
     try:
-        proc = subprocess.run(cmd, capture_output=True, text=True,
+        proc = subprocess.run(cmd, capture_output=True,
+                              encoding="utf-8", errors="replace",
                               timeout=timeout, stdin=subprocess.DEVNULL)
     except subprocess.TimeoutExpired:
         raise RuntimeError(f"Grok CLI 逾時（{timeout}s）。可調高 GROK_TIMEOUT 重試。")

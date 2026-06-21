@@ -71,6 +71,13 @@ def target_files(repo: Path):
         yield from sorted(d.glob("*.json"))
 
 
+def atomic_write(p: Path, text: str):
+    """原子寫入：先寫 .tmp 再 os.replace，避免中斷時留半寫壞檔（App 會讀不到那天）。"""
+    tmp = p.with_suffix(p.suffix + ".tmp")
+    tmp.write_text(text, encoding="utf-8")
+    os.replace(tmp, p)
+
+
 def main():
     if len(sys.argv) < 2 or sys.argv[1] not in ("encrypt", "decrypt", "verify"):
         sys.exit(__doc__)
@@ -79,31 +86,35 @@ def main():
     k = key()
     n = 0
     for p in target_files(repo):
-        text = p.read_text(encoding="utf-8")
-        obj = json.loads(text)
-        if mode == "encrypt":
-            if is_envelope(obj):
-                print(f"  skip (已加密) {p.name}")
-                continue
-            p.write_text(encrypt_text(text, k), encoding="utf-8")
-            print(f"  encrypted {p.name}")
-            n += 1
-        elif mode == "decrypt":
-            if not is_envelope(obj):
-                print(f"  skip (已明文) {p.name}")
-                continue
-            plain = decrypt_text(text, k)
-            p.write_text(json.dumps(json.loads(plain), ensure_ascii=False, indent=2),
-                         encoding="utf-8")
-            print(f"  decrypted {p.name}")
-            n += 1
-        else:  # verify
-            if not is_envelope(obj):
-                print(f"  {p.name}: 明文（{len(text)} bytes）")
-                continue
-            plain = decrypt_text(text, k)
-            print(f"  {p.name}: 加密 OK → 解出 {len(plain)} bytes JSON")
-            n += 1
+        # 逐檔 try：一個壞檔（BOM/非UTF8/壞JSON/錯金鑰）不應中斷整批、留下半加密的不一致倉庫。
+        try:
+            text = p.read_text(encoding="utf-8-sig")   # utf-8-sig：相容 Windows 編輯留下的 BOM
+            obj = json.loads(text)
+            if mode == "encrypt":
+                if is_envelope(obj):
+                    print(f"  skip (已加密) {p.name}")
+                    continue
+                atomic_write(p, encrypt_text(text, k))
+                print(f"  encrypted {p.name}")
+                n += 1
+            elif mode == "decrypt":
+                if not is_envelope(obj):
+                    print(f"  skip (已明文) {p.name}")
+                    continue
+                plain = decrypt_text(text, k)
+                atomic_write(p, json.dumps(json.loads(plain), ensure_ascii=False, indent=2))
+                print(f"  decrypted {p.name}")
+                n += 1
+            else:  # verify
+                if not is_envelope(obj):
+                    print(f"  {p.name}: 明文（{len(text)} bytes）")
+                    continue
+                plain = decrypt_text(text, k)
+                print(f"  {p.name}: 加密 OK → 解出 {len(plain)} bytes JSON")
+                n += 1
+        except Exception as e:
+            print(f"  ⚠️ 跳過 {p.name}：{type(e).__name__}: {e}")
+            continue
     print(f"== {mode} 完成，處理 {n} 檔（repo={repo}）==")
 
 

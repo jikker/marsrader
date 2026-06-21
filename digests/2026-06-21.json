@@ -42,6 +42,20 @@
         "requestId": "96f38512-7c87-422a-9b46-962d159c8f88",
         "stopReason": "EndTurn"
       }
+    },
+    {
+      "generated_at": "2026-06-21T16:05:02.178336+00:00",
+      "backend": "grok-cli",
+      "model": "grok-build",
+      "brief_en": "A Tesla on driver-assist crashed into a Katy, Texas home, killing a resident as investigators probe Autopilot. A Semi was spotted with FSD validation gear. Musk told the Abundance Summit the global economy could 10x in ten years with a moon base. Trump confirmed Starlink on interim Air Force One. Tesla amplified FSD wins; X is promoting Grok Build.",
+      "brief_zh": "德州特斯拉輔助駕駛撞入民宅致死，調查進行中；Semi現FSD驗證設備。馬斯克預言十年經濟十倍增長及月球基地。川普新空軍一號裝Starlink。特斯拉推廣FSD；X推Grok Build。",
+      "new_item_count": 9,
+      "usage": {
+        "backend": "grok-cli",
+        "model": "grok-build",
+        "requestId": "416fe948-a89c-4fa8-a71d-fa1baa9e6b04",
+        "stopReason": "EndTurn"
+      }
     }
   ],
   "items_flat": [
@@ -507,6 +521,157 @@
           "url": "https://x.com/Teslarati/status/2068349876371362151"
         }
       ]
+    },
+    {
+      "id": "item-0",
+      "category": "tesla",
+      "title_en": "Tesla driver-assist crash kills Katy homeowner",
+      "title_zh": "特斯拉輔助駕駛撞入民宅，屋主身亡",
+      "summary_en": "A Tesla Model 3 driver told Harris County investigators an automated driving-assistance system was engaged when the car failed to turn, left the road at high speed, and crashed into a Katy-area home on June 20, killing 69-year-old Martha Avila inside. The driver cooperated and showed no signs of intoxication; sheriff's officials are still investigating whether Autopilot or FSD was active.",
+      "summary_zh": "哈里斯郡警局稱，6月20日晚一輛特斯拉Model 3駕駛員表示已啟用自動駕駛輔助系統，車輛未能轉彎後高速衝入凱蒂一戶民宅，屋內69歲Martha Avila身亡。駕駛員配合調查且無酒駕跡象，當局仍在查證是否為Autopilot或FSD。",
+      "importance": 5,
+      "links": [
+        {
+          "label": "ABC News",
+          "url": "https://abcnews.com/US/tesla-allegedly-autopilot-mode-crashes-texas-house-woman/story?id=134062374"
+        },
+        {
+          "label": "KPRC Click2Houston",
+          "url": "https://www.click2houston.com/news/local/2026/06/20/tesla-allegedly-on-autopilot-crashes-into-katy-home-killing-76-year-old-woman/"
+        }
+      ]
+    },
+    {
+      "id": "item-1",
+      "category": "tesla",
+      "title_en": "Tesla Semi spotted with ground-truth FSD validation rig",
+      "title_zh": "特斯拉Semi現身搭載FSD真值驗證設備",
+      "summary_en": "A Tesla Semi was photographed in Sunnyvale, California carrying ground-truth validation equipment Tesla uses before major autonomy rollouts. Teslarati linked the sighting to preparations for a commercial-truck FSD launch, noting the rig was flagged to @SawyerMerritt on X.",
+      "summary_zh": "有民眾在加州森尼維爾拍到特斯拉Semi搭載真值驗證設備，此類裝備通常在重大自動駕駛功能上線前使用。Teslarati認為這顯示商用卡車FSD即將推出，並轉發標註@SawyerMerritt的X貼文。",
+      "importance": 4,
+      "links": [
+        {
+          "label": "TESLARATI",
+          "url": "https://www.teslarati.com/tesla-semi-spotted-ground-truth-validation-equipment-launch-looms/"
+        },
+        {
+          "label": "X / Danny",
+          "url": "https://x.com/dannywinner1/status/2068527227155910811"
+        }
+      ]
+    },
+    {
+      "id": "item-2",
+      "category": "elon_personal",
+      "title_en": "Musk forecasts 10x economy and moon base in 10 years",
+      "title_zh": "馬斯克預言十年經濟十倍增長及月球基地",
+      "summary_en": "At the 2026 Abundance Summit, Elon Musk told Peter Diamandis that barring a major world war, the global economy could grow more than tenfold over the next decade and that a self-sustaining moon base could arrive on the same timeline. Musk later quote-posted the clip with \"Wild times ahead!\"",
+      "summary_zh": "馬斯克在2026 Abundance Summit遠端對談中表示，若無世界大戰等重大衝突，全球經濟十年內可成長逾十倍，同期或可建立自給自足的月球基地。他隨後轉發片段並寫道「瘋狂時代來臨！」。",
+      "importance": 4,
+      "links": [
+        {
+          "label": "X / Peter Diamandis",
+          "url": "https://x.com/PeterDiamandis/status/2068507450966179870"
+        },
+        {
+          "label": "X / Elon Musk",
+          "url": "https://x.com/elonmusk/status/2068577952875377062"
+        }
+      ]
+    },
+    {
+      "id": "item-4",
+      "category": "tesla",
+      "title_en": "@Tesla promotes door-to-door FSD Supervised ride",
+      "title_zh": "@Tesla宣傳全程無介入FSD Supervised",
+      "summary_en": "Tesla's official account quote-posted an owner claiming a zero-intervention trip from a home garage to an office parking spot using FSD Supervised, adding that it is \"the only system\" that can take drivers door to door.",
+      "summary_zh": "特斯拉官方帳號轉發車主稱以FSD Supervised從車庫零介入開至辦公室停車位，並強調這是唯一能實現「門到門」自動駕駛的系統。",
+      "importance": 3,
+      "links": [
+        {
+          "label": "X / Tesla",
+          "url": "https://x.com/Tesla/status/2068519225623466074"
+        }
+      ]
+    },
+    {
+      "id": "item-5",
+      "category": "tesla",
+      "title_en": "@Tesla highlights FSD v14.3.4 sideswipe avoidance",
+      "title_zh": "@Tesla展示FSD v14.3.4閃避側撞",
+      "summary_en": "Tesla amplified a user video of FSD v14.3.4 swerving to avoid a sideswipe, captioning the post \"Preventing sideswipes.\" The clip was shared as part of Tesla's ongoing social push showcasing recent supervised-driving safety maneuvers.",
+      "summary_zh": "特斯拉轉發車主影片，顯示FSD v14.3.4自動閃避側向擦撞，配文「防止側撞」。此為特斯拉近期在社群媒體上推廣監督式自動駕駛安全表現的一環。",
+      "importance": 3,
+      "links": [
+        {
+          "label": "X / Tesla",
+          "url": "https://x.com/Tesla/status/2068502229993299985"
+        }
+      ]
+    },
+    {
+      "id": "item-6",
+      "category": "elon_personal",
+      "title_en": "Musk reposts viral Cybertruck FSD first-drive reaction",
+      "title_zh": "馬斯克轉發Cybertruck FSD試駕爆紅影片",
+      "summary_en": "Elon Musk reposted a WalkerAmerica video of a first-time Tesla driver trying Cybertruck FSD with family, after which the poster said they returned a demo vehicle and ordered a Cybertruck within two hours. The clip drew tens of millions of views overnight.",
+      "summary_zh": "馬斯克轉發WalkerAmerica影片，內容為一家首次試駕Cybertruck FSD，稱體驗後兩小時內退還試駕車並下訂新車。該影片一夜間獲數千萬次瀏覽。",
+      "importance": 2,
+      "links": [
+        {
+          "label": "X / Elon Musk",
+          "url": "https://x.com/elonmusk/status/2068520218389860441"
+        },
+        {
+          "label": "X / WalkerAmerica",
+          "url": "https://x.com/WalkerAmerica/status/2068436707683258522"
+        }
+      ]
+    },
+    {
+      "id": "item-7",
+      "category": "xai_x_platform",
+      "title_en": "X main feed now promotes Grok Build at the top",
+      "title_zh": "X主動態頂部推廣Grok Build",
+      "summary_en": "Users reported that X is placing Grok Build promotional content at the top of the main feed, expanding visibility for xAI's terminal-based coding agent beyond its existing SuperGrok and X Premium Plus subscriber base.",
+      "summary_zh": "用戶回報X平台已在主動態頂部投放Grok Build推廣內容，擴大xAI終端機程式碼代理在既有SuperGrok及X Premium Plus訂閱戶之外的曝光。",
+      "importance": 3,
+      "links": [
+        {
+          "label": "Threads / oncescuradu",
+          "url": "https://www.threads.com/@oncescuradu/post/DZ02l5EDB3c/x-now-promotes-grok-build-at-the-top-of-the-main-feed/"
+        }
+      ]
+    },
+    {
+      "id": "item-8",
+      "category": "tesla",
+      "title_en": "Electrek: Katy crash lands amid federal FSD scrutiny",
+      "title_zh": "Electrek：凱蒂事故發生於聯邦調查FSD之際",
+      "summary_en": "Electrek reported that Harris County investigators are examining whether Tesla driver-assistance was engaged in the fatal Katy crash, noting the incident arrives as NHTSA already has an upgraded engineering analysis into roughly 2.9 million Teslas over FSD traffic violations.",
+      "summary_zh": "Electrek指出哈里斯郡正調查凱蒂致命事故是否涉及特斯拉駕駛輔助，並強調此事發生於NHTSA已將約290萬輛特斯拉FSD違規調查升級為工程分析之際。",
+      "importance": 4,
+      "links": [
+        {
+          "label": "Electrek",
+          "url": "https://electrek.co/2026/06/20/tesla-autopilot-katy-texas-home-crash-woman-killed/"
+        }
+      ]
+    },
+    {
+      "id": "item-9",
+      "category": "other",
+      "title_en": "Editorial cartoons tie Musk trillionaire status to wealth gap",
+      "title_zh": "社論漫畫將馬斯克兆萬富翁與貧富差距連結",
+      "summary_en": "Syracuse.com's June 21 editorial-cartoon roundup included commentary on Elon Musk's trillionaire status as a symbol of the widening U.S. wealth gap, reflecting continued mainstream media focus on his net worth alongside his companies' news cycle.",
+      "summary_zh": "Syracuse.com 6月21日社論漫畫專題納入馬斯克成為兆萬富翁的評論，將其視為美國貧富差距擴大的象徵，顯示主流媒體持續關注其個人財富議題。",
+      "importance": 2,
+      "links": [
+        {
+          "label": "Syracuse.com",
+          "url": "https://www.syracuse.com/opinion/2026/06/editorial-cartoons-for-june-21-2026-iran-peace-deal-green-reflecting-pool-trillionaire-elon-musk.html"
+        }
+      ]
     }
   ],
   "categories": {
@@ -572,6 +737,44 @@
           {
             "label": "Heavy",
             "url": "https://heavy.com/sports/ufc/dana-white-elon-musk-mark-zuckerberg/"
+          }
+        ]
+      },
+      {
+        "id": "item-2",
+        "category": "elon_personal",
+        "title_en": "Musk forecasts 10x economy and moon base in 10 years",
+        "title_zh": "馬斯克預言十年經濟十倍增長及月球基地",
+        "summary_en": "At the 2026 Abundance Summit, Elon Musk told Peter Diamandis that barring a major world war, the global economy could grow more than tenfold over the next decade and that a self-sustaining moon base could arrive on the same timeline. Musk later quote-posted the clip with \"Wild times ahead!\"",
+        "summary_zh": "馬斯克在2026 Abundance Summit遠端對談中表示，若無世界大戰等重大衝突，全球經濟十年內可成長逾十倍，同期或可建立自給自足的月球基地。他隨後轉發片段並寫道「瘋狂時代來臨！」。",
+        "importance": 4,
+        "links": [
+          {
+            "label": "X / Peter Diamandis",
+            "url": "https://x.com/PeterDiamandis/status/2068507450966179870"
+          },
+          {
+            "label": "X / Elon Musk",
+            "url": "https://x.com/elonmusk/status/2068577952875377062"
+          }
+        ]
+      },
+      {
+        "id": "item-6",
+        "category": "elon_personal",
+        "title_en": "Musk reposts viral Cybertruck FSD first-drive reaction",
+        "title_zh": "馬斯克轉發Cybertruck FSD試駕爆紅影片",
+        "summary_en": "Elon Musk reposted a WalkerAmerica video of a first-time Tesla driver trying Cybertruck FSD with family, after which the poster said they returned a demo vehicle and ordered a Cybertruck within two hours. The clip drew tens of millions of views overnight.",
+        "summary_zh": "馬斯克轉發WalkerAmerica影片，內容為一家首次試駕Cybertruck FSD，稱體驗後兩小時內退還試駕車並下訂新車。該影片一夜間獲數千萬次瀏覽。",
+        "importance": 2,
+        "links": [
+          {
+            "label": "X / Elon Musk",
+            "url": "https://x.com/elonmusk/status/2068520218389860441"
+          },
+          {
+            "label": "X / WalkerAmerica",
+            "url": "https://x.com/WalkerAmerica/status/2068436707683258522"
           }
         ]
       }
@@ -702,6 +905,89 @@
           {
             "label": "Basenor",
             "url": "https://www.basenor.com/blogs/news/tesla-model-y-l-u-s-launch-6-things-to-know"
+          }
+        ]
+      },
+      {
+        "id": "item-0",
+        "category": "tesla",
+        "title_en": "Tesla driver-assist crash kills Katy homeowner",
+        "title_zh": "特斯拉輔助駕駛撞入民宅，屋主身亡",
+        "summary_en": "A Tesla Model 3 driver told Harris County investigators an automated driving-assistance system was engaged when the car failed to turn, left the road at high speed, and crashed into a Katy-area home on June 20, killing 69-year-old Martha Avila inside. The driver cooperated and showed no signs of intoxication; sheriff's officials are still investigating whether Autopilot or FSD was active.",
+        "summary_zh": "哈里斯郡警局稱，6月20日晚一輛特斯拉Model 3駕駛員表示已啟用自動駕駛輔助系統，車輛未能轉彎後高速衝入凱蒂一戶民宅，屋內69歲Martha Avila身亡。駕駛員配合調查且無酒駕跡象，當局仍在查證是否為Autopilot或FSD。",
+        "importance": 5,
+        "links": [
+          {
+            "label": "ABC News",
+            "url": "https://abcnews.com/US/tesla-allegedly-autopilot-mode-crashes-texas-house-woman/story?id=134062374"
+          },
+          {
+            "label": "KPRC Click2Houston",
+            "url": "https://www.click2houston.com/news/local/2026/06/20/tesla-allegedly-on-autopilot-crashes-into-katy-home-killing-76-year-old-woman/"
+          }
+        ]
+      },
+      {
+        "id": "item-1",
+        "category": "tesla",
+        "title_en": "Tesla Semi spotted with ground-truth FSD validation rig",
+        "title_zh": "特斯拉Semi現身搭載FSD真值驗證設備",
+        "summary_en": "A Tesla Semi was photographed in Sunnyvale, California carrying ground-truth validation equipment Tesla uses before major autonomy rollouts. Teslarati linked the sighting to preparations for a commercial-truck FSD launch, noting the rig was flagged to @SawyerMerritt on X.",
+        "summary_zh": "有民眾在加州森尼維爾拍到特斯拉Semi搭載真值驗證設備，此類裝備通常在重大自動駕駛功能上線前使用。Teslarati認為這顯示商用卡車FSD即將推出，並轉發標註@SawyerMerritt的X貼文。",
+        "importance": 4,
+        "links": [
+          {
+            "label": "TESLARATI",
+            "url": "https://www.teslarati.com/tesla-semi-spotted-ground-truth-validation-equipment-launch-looms/"
+          },
+          {
+            "label": "X / Danny",
+            "url": "https://x.com/dannywinner1/status/2068527227155910811"
+          }
+        ]
+      },
+      {
+        "id": "item-4",
+        "category": "tesla",
+        "title_en": "@Tesla promotes door-to-door FSD Supervised ride",
+        "title_zh": "@Tesla宣傳全程無介入FSD Supervised",
+        "summary_en": "Tesla's official account quote-posted an owner claiming a zero-intervention trip from a home garage to an office parking spot using FSD Supervised, adding that it is \"the only system\" that can take drivers door to door.",
+        "summary_zh": "特斯拉官方帳號轉發車主稱以FSD Supervised從車庫零介入開至辦公室停車位，並強調這是唯一能實現「門到門」自動駕駛的系統。",
+        "importance": 3,
+        "links": [
+          {
+            "label": "X / Tesla",
+            "url": "https://x.com/Tesla/status/2068519225623466074"
+          }
+        ]
+      },
+      {
+        "id": "item-5",
+        "category": "tesla",
+        "title_en": "@Tesla highlights FSD v14.3.4 sideswipe avoidance",
+        "title_zh": "@Tesla展示FSD v14.3.4閃避側撞",
+        "summary_en": "Tesla amplified a user video of FSD v14.3.4 swerving to avoid a sideswipe, captioning the post \"Preventing sideswipes.\" The clip was shared as part of Tesla's ongoing social push showcasing recent supervised-driving safety maneuvers.",
+        "summary_zh": "特斯拉轉發車主影片，顯示FSD v14.3.4自動閃避側向擦撞，配文「防止側撞」。此為特斯拉近期在社群媒體上推廣監督式自動駕駛安全表現的一環。",
+        "importance": 3,
+        "links": [
+          {
+            "label": "X / Tesla",
+            "url": "https://x.com/Tesla/status/2068502229993299985"
+          }
+        ]
+      },
+      {
+        "id": "item-8",
+        "category": "tesla",
+        "title_en": "Electrek: Katy crash lands amid federal FSD scrutiny",
+        "title_zh": "Electrek：凱蒂事故發生於聯邦調查FSD之際",
+        "summary_en": "Electrek reported that Harris County investigators are examining whether Tesla driver-assistance was engaged in the fatal Katy crash, noting the incident arrives as NHTSA already has an upgraded engineering analysis into roughly 2.9 million Teslas over FSD traffic violations.",
+        "summary_zh": "Electrek指出哈里斯郡正調查凱蒂致命事故是否涉及特斯拉駕駛輔助，並強調此事發生於NHTSA已將約290萬輛特斯拉FSD違規調查升級為工程分析之際。",
+        "importance": 4,
+        "links": [
+          {
+            "label": "Electrek",
+            "url": "https://electrek.co/2026/06/20/tesla-autopilot-katy-texas-home-crash-woman-killed/"
           }
         ]
       }
@@ -934,6 +1220,21 @@
             "url": "https://www.middleeasteye.net/news/us-used-musks-grok-deploy-2000-munitions-during-iran-war"
           }
         ]
+      },
+      {
+        "id": "item-7",
+        "category": "xai_x_platform",
+        "title_en": "X main feed now promotes Grok Build at the top",
+        "title_zh": "X主動態頂部推廣Grok Build",
+        "summary_en": "Users reported that X is placing Grok Build promotional content at the top of the main feed, expanding visibility for xAI's terminal-based coding agent beyond its existing SuperGrok and X Premium Plus subscriber base.",
+        "summary_zh": "用戶回報X平台已在主動態頂部投放Grok Build推廣內容，擴大xAI終端機程式碼代理在既有SuperGrok及X Premium Plus訂閱戶之外的曝光。",
+        "importance": 3,
+        "links": [
+          {
+            "label": "Threads / oncescuradu",
+            "url": "https://www.threads.com/@oncescuradu/post/DZ02l5EDB3c/x-now-promotes-grok-build-at-the-top-of-the-main-feed/"
+          }
+        ]
       }
     ],
     "other": [
@@ -981,10 +1282,25 @@
             "url": "https://x.com/Teslarati/status/2068349876371362151"
           }
         ]
+      },
+      {
+        "id": "item-9",
+        "category": "other",
+        "title_en": "Editorial cartoons tie Musk trillionaire status to wealth gap",
+        "title_zh": "社論漫畫將馬斯克兆萬富翁與貧富差距連結",
+        "summary_en": "Syracuse.com's June 21 editorial-cartoon roundup included commentary on Elon Musk's trillionaire status as a symbol of the widening U.S. wealth gap, reflecting continued mainstream media focus on his net worth alongside his companies' news cycle.",
+        "summary_zh": "Syracuse.com 6月21日社論漫畫專題納入馬斯克成為兆萬富翁的評論，將其視為美國貧富差距擴大的象徵，顯示主流媒體持續關注其個人財富議題。",
+        "importance": 2,
+        "links": [
+          {
+            "label": "Syracuse.com",
+            "url": "https://www.syracuse.com/opinion/2026/06/editorial-cartoons-for-june-21-2026-iran-peace-deal-green-reflecting-pool-trillionaire-elon-musk.html"
+          }
+        ]
       }
     ]
   },
-  "brief_en": "Trump unveiled an interim Air Force One with Starlink; Grok’s Pentagon war role drew fresh scrutiny; Tesla pushed robotaxi readiness with Cybercab pickup drills and a new FSD ad while a fatal Katy crash made headlines; SpaceX got MSCI’s lowest ESG grade; Dana White said a Musk–Zuckerberg UFC bout was real.",
-  "brief_zh": "川普新專機裝Starlink；五角大廈稱Grok助伊朗戰役；Cybercab實測上下車、FSD新廣告；德州特斯拉致命事故；SpaceX獲MSCI最低ESG；白稱馬斯克對戰祖克柏曾認真談判。",
-  "updated_at": "2026-06-21T10:05:02.281943+00:00"
+  "brief_en": "A Tesla on driver-assist crashed into a Katy, Texas home, killing a resident as investigators probe Autopilot. A Semi was spotted with FSD validation gear. Musk told the Abundance Summit the global economy could 10x in ten years with a moon base. Trump confirmed Starlink on interim Air Force One. Tesla amplified FSD wins; X is promoting Grok Build.",
+  "brief_zh": "德州特斯拉輔助駕駛撞入民宅致死，調查進行中；Semi現FSD驗證設備。馬斯克預言十年經濟十倍增長及月球基地。川普新空軍一號裝Starlink。特斯拉推廣FSD；X推Grok Build。",
+  "updated_at": "2026-06-21T16:05:02.178336+00:00"
 }
