@@ -468,8 +468,16 @@ def git_commit_push(repo: Path, date_str: str):
                    capture_output=True, text=True)
     print(f"[git] committed: {msg}")
     if GIT_PUSH:
-        r = subprocess.run(["git", "-C", str(repo), "push"],
+        # 先 pull --rebase，避免遠端有更新時 non-fast-forward 被拒（cron 反覆跑必備）
+        subprocess.run(["git", "-C", str(repo), "pull", "--rebase", "origin", "main"],
+                       capture_output=True, text=True)
+        r = subprocess.run(["git", "-C", str(repo), "push", "origin", "main"],
                            capture_output=True, text=True)
+        if r.returncode != 0:   # 競態：再 pull --rebase 一次重試
+            subprocess.run(["git", "-C", str(repo), "pull", "--rebase", "origin", "main"],
+                           capture_output=True, text=True)
+            r = subprocess.run(["git", "-C", str(repo), "push", "origin", "main"],
+                               capture_output=True, text=True)
         print("[git] push:", (r.stdout + r.stderr).strip()[:200])
     else:
         print("[git] GIT_PUSH!=1，已 commit 未 push（正式環境設 GIT_PUSH=1）")

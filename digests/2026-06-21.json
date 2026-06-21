@@ -14,6 +14,20 @@
         "requestId": "5bc7a443-74c8-4a7c-a100-98f2e4b4d79a",
         "stopReason": "EndTurn"
       }
+    },
+    {
+      "generated_at": "2026-06-21T04:05:01.672661+00:00",
+      "backend": "grok-cli",
+      "model": "grok-build",
+      "brief_en": "Overnight: Trump confirmed Starlink on the interim Air Force One; a Tesla driver told Texas police Autopilot was on before a fatal Katy home crash; SpaceX readied Starlink 17-28 from Vandenberg; and June 20 press kept focus on slow Optimus/Robotaxi ramps and rising SpaceX–Tesla merger talk.",
+      "brief_zh": "昨夜動態：川普證實新空軍一號搭載 Starlink；德州凱蒂特斯拉疑 Autopilot 失控撞入民宅致死；SpaceX 準備發射 Starlink 17-28；媒體持續關注 Optimus／Robotaxi 慢速量產與 SpaceX 併購特斯拉傳聞升溫。",
+      "new_item_count": 9,
+      "usage": {
+        "backend": "grok-cli",
+        "model": "grok-build",
+        "requestId": "5232722a-f70d-4294-af3b-d1b66cd89199",
+        "stopReason": "EndTurn"
+      }
     }
   ],
   "items_flat": [
@@ -186,6 +200,149 @@
           "url": "https://spaceflightnow.com/launch-schedule/"
         }
       ]
+    },
+    {
+      "id": "item-0",
+      "category": "spacex",
+      "title_en": "Trump says interim Air Force One carries Starlink",
+      "title_zh": "川普稱臨時空軍一號配備 Starlink",
+      "summary_en": "President Donald Trump unveiled a modified Qatar-gifted Boeing 747-8 at Joint Base Andrews on June 19 and said the interim Air Force One includes Starlink and other advanced communications. Teslarati highlighted his remark that Elon Musk would be “very happy,” framing it as a high-profile government win for SpaceX’s satellite internet business.",
+      "summary_zh": "川普 6 月 19 日在安德魯斯聯合基地展示卡達贈送的波音 747-8 改裝機，稱這架臨時空軍一號配備 Starlink 與多層先進通訊系統。Teslarati 引述他說馬斯克會「很高興」，視為 SpaceX 衛星網路獲政府高調背書。",
+      "importance": 4,
+      "links": [
+        {
+          "label": "Teslarati",
+          "url": "https://www.teslarati.com/president-trump-touts-new-air-force-one-musk-technology/"
+        },
+        {
+          "label": "X / @Teslarati",
+          "url": "https://x.com/Teslarati/status/2068349876371362151"
+        }
+      ]
+    },
+    {
+      "id": "item-1",
+      "category": "tesla",
+      "title_en": "Fatal Katy, Texas home crash; driver claims Autopilot",
+      "title_zh": "德州凱蒂特斯拉撞入民宅致死，駕駛稱開啟 Autopilot",
+      "summary_en": "Harris County authorities said a Tesla failed to turn at an intersection Friday evening, sped into a Katy home, and killed a 76-year-old woman inside. The 44-year-old driver told deputies Autopilot was engaged; investigators are still verifying whether any driver-assist system was active and have filed no charges.",
+      "summary_zh": "哈里斯郡警方稱，週五晚一輛特斯拉未在路口轉彎、高速衝入凱蒂一戶民宅，造成屋內 76 歲女子死亡。44 歲駕駛向警方表示當時使用 Autopilot；調查單位仍在查證輔助駕駛是否啟用，尚未起訴。",
+      "importance": 5,
+      "links": [
+        {
+          "label": "Electrek",
+          "url": "https://electrek.co/2026/06/20/tesla-autopilot-katy-texas-home-crash-woman-killed/"
+        },
+        {
+          "label": "Covering Katy News",
+          "url": "https://coveringkaty.com/news/katy/tesla-crashes-into-west-harris-county-home-killing-76-year-o/"
+        }
+      ]
+    },
+    {
+      "id": "item-2",
+      "category": "spacex",
+      "title_en": "SpaceX targets Starlink 17-28 launch from Vandenberg",
+      "title_zh": "SpaceX 準備自范登堡發射 Starlink 17-28",
+      "summary_en": "Spaceflight Now reported SpaceX is preparing to launch 24 Starlink V2 Mini satellites on Falcon 9 booster B1063 from Vandenberg SLC-4E. Liftoff of the Starlink 17-28 mission is scheduled for 8:12 a.m. PDT on June 21 (15:12 UTC), marking SpaceX’s 72nd Falcon 9 flight of 2026.",
+      "summary_zh": "Spaceflight Now 報導，SpaceX 將以 Falcon 9 助推器 B1063 自范登堡 SLC-4E 發射 24 顆 Starlink V2 Mini 衛星。Starlink 17-28 任務預定 6 月 21 日太平洋時間上午 8:12（UTC 15:12）升空，為今年第 72 次 Falcon 9 發射。",
+      "importance": 3,
+      "links": [
+        {
+          "label": "Spaceflight Now",
+          "url": "https://spaceflightnow.com/2026/06/20/live-coverage-spacex-to-launch-24-starlink-satellites-on-falcon-9-rocket-from-vandenberg-5/"
+        }
+      ]
+    },
+    {
+      "id": "item-3",
+      "category": "tesla",
+      "title_en": "Report: Musk tells investors to be patient on Optimus and Robotaxi",
+      "title_zh": "報導：馬斯克要投資人對 Optimus 與 Robotaxi 保持耐心",
+      "summary_en": "A June 20 24/7 Wall St. recap of Tesla’s Q1 2026 earnings call said Elon Musk warned Optimus and Cybercab production will start very slowly and that unsupervised FSD Robotaxi revenue is unlikely to be material this year. The piece also noted Tesla plans more than $25 billion in 2026 capex for robotics, autonomy, and related fabs.",
+      "summary_zh": "24/7 Wall St. 6 月 20 日整理特斯拉 Q1 財報電話會議稱，馬斯克警告 Optimus 與 Cybercab 初期產量會很慢，今年無人監督 FSD Robotaxi 營收恐難顯著。文章並指特斯拉 2026 年資本支出預計逾 250 億美元，投向機器人、自駕與相關晶片廠。",
+      "importance": 4,
+      "links": [
+        {
+          "label": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/20/elon-musk-just-told-investors-to-be-really-patient-with-optimus-and-robotaxi/"
+        }
+      ]
+    },
+    {
+      "id": "item-4",
+      "category": "other",
+      "title_en": "Fortune: SpaceX stock surge makes a Tesla merger cheaper",
+      "title_zh": "Fortune：SpaceX 股價飆升降低併購特斯拉稀釋成本",
+      "summary_en": "Fortune argued on June 20 that SpaceX’s post-IPO rally to roughly a $2.44 trillion market cap means it could acquire Tesla with less dilution than at the $135 IPO reference price. The article tied renewed merger talk to Gwynne Shotwell’s June 12 CNBC comments and noted Kalshi odds of a deal by May 2027 near 54%.",
+      "summary_zh": "Fortune 6 月 20 日分析，SpaceX 上市後市值飆至約 2.44 兆美元，若以全股票併購特斯拉，所需增發比例低於 IPO 參考價 135 美元時的估算。文章連結 Gwynne Shotwell 6 月 12 日 CNBC 發言，並指 Kalshi 對 2027 年 5 月前完成交易的機率約 54%。",
+      "importance": 4,
+      "links": [
+        {
+          "label": "Fortune",
+          "url": "https://fortune.com/2026/06/20/spacex-stock-moonshot-merger-tesla/"
+        }
+      ]
+    },
+    {
+      "id": "item-5",
+      "category": "spacex",
+      "title_en": "Fortune maps the executives running Musk’s $2.4T SpaceX empire",
+      "title_zh": "Fortune 盤點馬斯克 2.4 兆美元 SpaceX 核心高管",
+      "summary_en": "A June 20 Fortune guide profiled SpaceX leaders after the February xAI merger and June IPO, including Gwynne Shotwell now helping oversee xAI operations, CFO Bret Johnsen running xAI finances, and Brian Bjelde handling HR and operations across SpaceX, xAI, and X. It described a post-IPO org blending rockets, Starlink, and AI under longtime Musk loyalists.",
+      "summary_zh": "Fortune 6 月 20 日專文盤點 SpaceX 二月併入 xAI 及 6 月 IPO 後的高層布局，包括 Gwynne Shotwell 協管 xAI 營運、CFO Bret Johnsen 負責 xAI 財務，以及 Brian Bjelde 橫跨 SpaceX、xAI 與 X 的人資與營運。文章描繪上市後火箭、Starlink 與 AI 合一的治理架構。",
+      "importance": 3,
+      "links": [
+        {
+          "label": "Fortune",
+          "url": "https://fortune.com/2026/06/20/executives-running-spacex-x-doge-elon-musk-loyalists/"
+        }
+      ]
+    },
+    {
+      "id": "item-6",
+      "category": "elon_personal",
+      "title_en": "Musk’s $158B pay package tops 2025 CEO compensation rankings",
+      "title_zh": "馬斯克 1580 億美元薪酬登頂 2025 年 CEO 薪資榜",
+      "summary_en": "Fortune reported June 20 that C-Suite Comp data ranked Elon Musk first among public-company CEOs in fiscal 2025 with a $158.4 billion Tesla stock award reinstated by Delaware’s Supreme Court. Excluding Musk, median CEO pay rose 13% to $4.75 million while the median CEO-to-worker pay ratio widened to 99-to-1.",
+      "summary_zh": "Fortune 6 月 20 日引述 C-Suite Comp 數據，馬斯克因特拉華最高法院恢復的特斯拉股票獎酬，以 1584 億美元居 2025 財年上市公司 CEO 薪酬榜首。若排除馬斯克，CEO 薪酬中位數年增 13% 至 475 萬美元，CEO 與員工薪酬比中位數擴至 99 比 1。",
+      "importance": 3,
+      "links": [
+        {
+          "label": "Fortune",
+          "url": "https://fortune.com/2026/06/20/executive-pay-ceo-gap-worker-widened/"
+        }
+      ]
+    },
+    {
+      "id": "item-7",
+      "category": "elon_personal",
+      "title_en": "Salon commentary: Musk’s trillionaire status fuels democracy debate",
+      "title_zh": "Salon 評論：馬斯克萬億身價引發民主制度爭議",
+      "summary_en": "A June 20 Salon commentary argued that SpaceX’s IPO made Elon Musk the world’s first trillionaire with wealth estimated above $1.3 trillion, intensifying concerns about extreme inequality and political influence. The piece cited his large 2024 political donations and claims that X amplifies right-wing voices.",
+      "summary_zh": "Salon 6 月 20 日評論指出，SpaceX 上市使馬斯克成為全球首位萬億富翁，身家估計逾 1.3 兆美元，加劇對貧富差距與政治影響力的擔憂。文章並提及他 2024 年巨額政治捐款，以及 X 被指放大右翼聲量的爭議。",
+      "importance": 2,
+      "links": [
+        {
+          "label": "Salon",
+          "url": "https://www.salon.com/2026/06/20/elon-musk-and-the-trillionaire-class-test-democracys-limits/"
+        }
+      ]
+    },
+    {
+      "id": "item-8",
+      "category": "xai_x_platform",
+      "title_en": "June 21 roundup: Cursor deal frames Grok Build push",
+      "title_zh": "6 月 21 日綜述：Cursor 交易推動 Grok Build 布局",
+      "summary_en": "An AI industry roundup published June 21 noted SpaceX’s June 16 SEC filing for a $60 billion all-stock Cursor acquisition, with a joint xAI coding model trained on Colossus expected in Cursor and a new Grok Build product. It framed the deal as central to xAI’s effort to regain AI coding market share after SpaceX’s first public trading week.",
+      "summary_zh": "6 月 21 日 AI 產業綜述指出，SpaceX 6 月 16 日向 SEC 提交以 600 億美元全股票收購 Cursor 的文件，並預期在 Colossus 上訓練的聯合編程模型將進入 Cursor 與新產品 Grok Build。文章認為此交易是 xAI 在 SpaceX 上市首週後搶回 AI 編程市占的關鍵。",
+      "importance": 3,
+      "links": [
+        {
+          "label": "Build Fast with AI",
+          "url": "https://www.buildfastwithai.com/blogs/ai-news-today-june-21-2026"
+        }
+      ]
     }
   ],
   "categories": {
@@ -208,6 +365,36 @@
             "url": "https://www.jpost.com/business-and-innovation/article-862412"
           }
         ]
+      },
+      {
+        "id": "item-6",
+        "category": "elon_personal",
+        "title_en": "Musk’s $158B pay package tops 2025 CEO compensation rankings",
+        "title_zh": "馬斯克 1580 億美元薪酬登頂 2025 年 CEO 薪資榜",
+        "summary_en": "Fortune reported June 20 that C-Suite Comp data ranked Elon Musk first among public-company CEOs in fiscal 2025 with a $158.4 billion Tesla stock award reinstated by Delaware’s Supreme Court. Excluding Musk, median CEO pay rose 13% to $4.75 million while the median CEO-to-worker pay ratio widened to 99-to-1.",
+        "summary_zh": "Fortune 6 月 20 日引述 C-Suite Comp 數據，馬斯克因特拉華最高法院恢復的特斯拉股票獎酬，以 1584 億美元居 2025 財年上市公司 CEO 薪酬榜首。若排除馬斯克，CEO 薪酬中位數年增 13% 至 475 萬美元，CEO 與員工薪酬比中位數擴至 99 比 1。",
+        "importance": 3,
+        "links": [
+          {
+            "label": "Fortune",
+            "url": "https://fortune.com/2026/06/20/executive-pay-ceo-gap-worker-widened/"
+          }
+        ]
+      },
+      {
+        "id": "item-7",
+        "category": "elon_personal",
+        "title_en": "Salon commentary: Musk’s trillionaire status fuels democracy debate",
+        "title_zh": "Salon 評論：馬斯克萬億身價引發民主制度爭議",
+        "summary_en": "A June 20 Salon commentary argued that SpaceX’s IPO made Elon Musk the world’s first trillionaire with wealth estimated above $1.3 trillion, intensifying concerns about extreme inequality and political influence. The piece cited his large 2024 political donations and claims that X amplifies right-wing voices.",
+        "summary_zh": "Salon 6 月 20 日評論指出，SpaceX 上市使馬斯克成為全球首位萬億富翁，身家估計逾 1.3 兆美元，加劇對貧富差距與政治影響力的擔憂。文章並提及他 2024 年巨額政治捐款，以及 X 被指放大右翼聲量的爭議。",
+        "importance": 2,
+        "links": [
+          {
+            "label": "Salon",
+            "url": "https://www.salon.com/2026/06/20/elon-musk-and-the-trillionaire-class-test-democracys-limits/"
+          }
+        ]
       }
     ],
     "tesla": [
@@ -227,6 +414,40 @@
           {
             "label": "Yahoo Finance",
             "url": "https://finance.yahoo.com/news/elon-musk-nears-20-voting-power-tesla-exercising-stock-options-234511894.html"
+          }
+        ]
+      },
+      {
+        "id": "item-1",
+        "category": "tesla",
+        "title_en": "Fatal Katy, Texas home crash; driver claims Autopilot",
+        "title_zh": "德州凱蒂特斯拉撞入民宅致死，駕駛稱開啟 Autopilot",
+        "summary_en": "Harris County authorities said a Tesla failed to turn at an intersection Friday evening, sped into a Katy home, and killed a 76-year-old woman inside. The 44-year-old driver told deputies Autopilot was engaged; investigators are still verifying whether any driver-assist system was active and have filed no charges.",
+        "summary_zh": "哈里斯郡警方稱，週五晚一輛特斯拉未在路口轉彎、高速衝入凱蒂一戶民宅，造成屋內 76 歲女子死亡。44 歲駕駛向警方表示當時使用 Autopilot；調查單位仍在查證輔助駕駛是否啟用，尚未起訴。",
+        "importance": 5,
+        "links": [
+          {
+            "label": "Electrek",
+            "url": "https://electrek.co/2026/06/20/tesla-autopilot-katy-texas-home-crash-woman-killed/"
+          },
+          {
+            "label": "Covering Katy News",
+            "url": "https://coveringkaty.com/news/katy/tesla-crashes-into-west-harris-county-home-killing-76-year-o/"
+          }
+        ]
+      },
+      {
+        "id": "item-3",
+        "category": "tesla",
+        "title_en": "Report: Musk tells investors to be patient on Optimus and Robotaxi",
+        "title_zh": "報導：馬斯克要投資人對 Optimus 與 Robotaxi 保持耐心",
+        "summary_en": "A June 20 24/7 Wall St. recap of Tesla’s Q1 2026 earnings call said Elon Musk warned Optimus and Cybercab production will start very slowly and that unsupervised FSD Robotaxi revenue is unlikely to be material this year. The piece also noted Tesla plans more than $25 billion in 2026 capex for robotics, autonomy, and related fabs.",
+        "summary_zh": "24/7 Wall St. 6 月 20 日整理特斯拉 Q1 財報電話會議稱，馬斯克警告 Optimus 與 Cybercab 初期產量會很慢，今年無人監督 FSD Robotaxi 營收恐難顯著。文章並指特斯拉 2026 年資本支出預計逾 250 億美元，投向機器人、自駕與相關晶片廠。",
+        "importance": 4,
+        "links": [
+          {
+            "label": "24/7 Wall St.",
+            "url": "https://247wallst.com/investing/2026/06/20/elon-musk-just-told-investors-to-be-really-patient-with-optimus-and-robotaxi/"
           }
         ]
       }
@@ -314,6 +535,55 @@
             "url": "https://spaceflightnow.com/launch-schedule/"
           }
         ]
+      },
+      {
+        "id": "item-0",
+        "category": "spacex",
+        "title_en": "Trump says interim Air Force One carries Starlink",
+        "title_zh": "川普稱臨時空軍一號配備 Starlink",
+        "summary_en": "President Donald Trump unveiled a modified Qatar-gifted Boeing 747-8 at Joint Base Andrews on June 19 and said the interim Air Force One includes Starlink and other advanced communications. Teslarati highlighted his remark that Elon Musk would be “very happy,” framing it as a high-profile government win for SpaceX’s satellite internet business.",
+        "summary_zh": "川普 6 月 19 日在安德魯斯聯合基地展示卡達贈送的波音 747-8 改裝機，稱這架臨時空軍一號配備 Starlink 與多層先進通訊系統。Teslarati 引述他說馬斯克會「很高興」，視為 SpaceX 衛星網路獲政府高調背書。",
+        "importance": 4,
+        "links": [
+          {
+            "label": "Teslarati",
+            "url": "https://www.teslarati.com/president-trump-touts-new-air-force-one-musk-technology/"
+          },
+          {
+            "label": "X / @Teslarati",
+            "url": "https://x.com/Teslarati/status/2068349876371362151"
+          }
+        ]
+      },
+      {
+        "id": "item-2",
+        "category": "spacex",
+        "title_en": "SpaceX targets Starlink 17-28 launch from Vandenberg",
+        "title_zh": "SpaceX 準備自范登堡發射 Starlink 17-28",
+        "summary_en": "Spaceflight Now reported SpaceX is preparing to launch 24 Starlink V2 Mini satellites on Falcon 9 booster B1063 from Vandenberg SLC-4E. Liftoff of the Starlink 17-28 mission is scheduled for 8:12 a.m. PDT on June 21 (15:12 UTC), marking SpaceX’s 72nd Falcon 9 flight of 2026.",
+        "summary_zh": "Spaceflight Now 報導，SpaceX 將以 Falcon 9 助推器 B1063 自范登堡 SLC-4E 發射 24 顆 Starlink V2 Mini 衛星。Starlink 17-28 任務預定 6 月 21 日太平洋時間上午 8:12（UTC 15:12）升空，為今年第 72 次 Falcon 9 發射。",
+        "importance": 3,
+        "links": [
+          {
+            "label": "Spaceflight Now",
+            "url": "https://spaceflightnow.com/2026/06/20/live-coverage-spacex-to-launch-24-starlink-satellites-on-falcon-9-rocket-from-vandenberg-5/"
+          }
+        ]
+      },
+      {
+        "id": "item-5",
+        "category": "spacex",
+        "title_en": "Fortune maps the executives running Musk’s $2.4T SpaceX empire",
+        "title_zh": "Fortune 盤點馬斯克 2.4 兆美元 SpaceX 核心高管",
+        "summary_en": "A June 20 Fortune guide profiled SpaceX leaders after the February xAI merger and June IPO, including Gwynne Shotwell now helping oversee xAI operations, CFO Bret Johnsen running xAI finances, and Brian Bjelde handling HR and operations across SpaceX, xAI, and X. It described a post-IPO org blending rockets, Starlink, and AI under longtime Musk loyalists.",
+        "summary_zh": "Fortune 6 月 20 日專文盤點 SpaceX 二月併入 xAI 及 6 月 IPO 後的高層布局，包括 Gwynne Shotwell 協管 xAI 營運、CFO Bret Johnsen 負責 xAI 財務，以及 Brian Bjelde 橫跨 SpaceX、xAI 與 X 的人資與營運。文章描繪上市後火箭、Starlink 與 AI 合一的治理架構。",
+        "importance": 3,
+        "links": [
+          {
+            "label": "Fortune",
+            "url": "https://fortune.com/2026/06/20/executives-running-spacex-x-doge-elon-musk-loyalists/"
+          }
+        ]
       }
     ],
     "xai_x_platform": [
@@ -350,6 +620,21 @@
             "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/elon-musk-says-that-china-will-have-a-fable-5-class-ai-model-probably-q1-next-year-ceo-of-chinese-anthropic-rival-says-it-wont-take-that-long"
           }
         ]
+      },
+      {
+        "id": "item-8",
+        "category": "xai_x_platform",
+        "title_en": "June 21 roundup: Cursor deal frames Grok Build push",
+        "title_zh": "6 月 21 日綜述：Cursor 交易推動 Grok Build 布局",
+        "summary_en": "An AI industry roundup published June 21 noted SpaceX’s June 16 SEC filing for a $60 billion all-stock Cursor acquisition, with a joint xAI coding model trained on Colossus expected in Cursor and a new Grok Build product. It framed the deal as central to xAI’s effort to regain AI coding market share after SpaceX’s first public trading week.",
+        "summary_zh": "6 月 21 日 AI 產業綜述指出，SpaceX 6 月 16 日向 SEC 提交以 600 億美元全股票收購 Cursor 的文件，並預期在 Colossus 上訓練的聯合編程模型將進入 Cursor 與新產品 Grok Build。文章認為此交易是 xAI 在 SpaceX 上市首週後搶回 AI 編程市占的關鍵。",
+        "importance": 3,
+        "links": [
+          {
+            "label": "Build Fast with AI",
+            "url": "https://www.buildfastwithai.com/blogs/ai-news-today-june-21-2026"
+          }
+        ]
       }
     ],
     "other": [
@@ -367,10 +652,25 @@
             "url": "https://fortune.com/2026/06/20/spacex-stock-moonshot-merger-tesla/"
           }
         ]
+      },
+      {
+        "id": "item-4",
+        "category": "other",
+        "title_en": "Fortune: SpaceX stock surge makes a Tesla merger cheaper",
+        "title_zh": "Fortune：SpaceX 股價飆升降低併購特斯拉稀釋成本",
+        "summary_en": "Fortune argued on June 20 that SpaceX’s post-IPO rally to roughly a $2.44 trillion market cap means it could acquire Tesla with less dilution than at the $135 IPO reference price. The article tied renewed merger talk to Gwynne Shotwell’s June 12 CNBC comments and noted Kalshi odds of a deal by May 2027 near 54%.",
+        "summary_zh": "Fortune 6 月 20 日分析，SpaceX 上市後市值飆至約 2.44 兆美元，若以全股票併購特斯拉，所需增發比例低於 IPO 參考價 135 美元時的估算。文章連結 Gwynne Shotwell 6 月 12 日 CNBC 發言，並指 Kalshi 對 2027 年 5 月前完成交易的機率約 54%。",
+        "importance": 4,
+        "links": [
+          {
+            "label": "Fortune",
+            "url": "https://fortune.com/2026/06/20/spacex-stock-moonshot-merger-tesla/"
+          }
+        ]
       }
     ]
   },
-  "brief_en": "Trump unveiled interim Air Force One with Starlink aboard. SpaceX slipped a Vandenberg Starlink launch to June 21. Fortune flagged rising SpaceX–Tesla merger odds after the IPO rally. Musk’s Tesla stake nears 20% voting power after his options exercise.",
-  "brief_zh": "川普公布裝星鏈臨時空軍一號；范登堡星鏈發射延至6/21；外媒指SpaceX併購特斯拉機率升；馬斯克特斯拉持股逼近兩成投票權。",
-  "updated_at": "2026-06-21T01:19:27.746872+00:00"
+  "brief_en": "Overnight: Trump confirmed Starlink on the interim Air Force One; a Tesla driver told Texas police Autopilot was on before a fatal Katy home crash; SpaceX readied Starlink 17-28 from Vandenberg; and June 20 press kept focus on slow Optimus/Robotaxi ramps and rising SpaceX–Tesla merger talk.",
+  "brief_zh": "昨夜動態：川普證實新空軍一號搭載 Starlink；德州凱蒂特斯拉疑 Autopilot 失控撞入民宅致死；SpaceX 準備發射 Starlink 17-28；媒體持續關注 Optimus／Robotaxi 慢速量產與 SpaceX 併購特斯拉傳聞升溫。",
+  "updated_at": "2026-06-21T04:05:01.672661+00:00"
 }
