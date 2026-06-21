@@ -28,6 +28,20 @@
         "requestId": "5232722a-f70d-4294-af3b-d1b66cd89199",
         "stopReason": "EndTurn"
       }
+    },
+    {
+      "generated_at": "2026-06-21T10:05:02.281943+00:00",
+      "backend": "grok-cli",
+      "model": "grok-build",
+      "brief_en": "Trump unveiled an interim Air Force One with Starlink; Grok’s Pentagon war role drew fresh scrutiny; Tesla pushed robotaxi readiness with Cybercab pickup drills and a new FSD ad while a fatal Katy crash made headlines; SpaceX got MSCI’s lowest ESG grade; Dana White said a Musk–Zuckerberg UFC bout was real.",
+      "brief_zh": "川普新專機裝Starlink；五角大廈稱Grok助伊朗戰役；Cybercab實測上下車、FSD新廣告；德州特斯拉致命事故；SpaceX獲MSCI最低ESG；白稱馬斯克對戰祖克柏曾認真談判。",
+      "new_item_count": 10,
+      "usage": {
+        "backend": "grok-cli",
+        "model": "grok-build",
+        "requestId": "96f38512-7c87-422a-9b46-962d159c8f88",
+        "stopReason": "EndTurn"
+      }
     }
   ],
   "items_flat": [
@@ -343,6 +357,156 @@
           "url": "https://www.buildfastwithai.com/blogs/ai-news-today-june-21-2026"
         }
       ]
+    },
+    {
+      "id": "item-1",
+      "category": "xai_x_platform",
+      "title_en": "Pentagon AI chief says Grok helped target 2,000+ Iran-war strikes",
+      "title_zh": "五角大廈 AI 官員：Grok 協助鎖定逾 2000 個伊朗戰事目標",
+      "summary_en": "In a sworn court filing cited by The Hill, Pentagon AI chief Cameron Stanley said xAI’s Grok Gov Model helped U.S. forces deploy more than 2,000 munitions to distinct targets within 96 hours during Operation Epic Fury. The disclosure resurfaced in major coverage over the past day, intensifying debate over military use of Musk’s AI.",
+      "summary_zh": "The Hill 引述五角大廈 AI 主管 Cameron Stanley 法庭證詞稱，xAI 的 Grok Gov 模型在「史詩狂怒」行動中 96 小時內協助美軍對逾 2000 個目標部署彈藥。相關報導過去 12 小時再度升溫，軍用 Grok 爭議擴大。",
+      "importance": 5,
+      "links": [
+        {
+          "label": "The Hill",
+          "url": "https://thehill.com/policy/technology/5928204-pentagon-musk-grok-chatbot-iran-strikes/"
+        }
+      ]
+    },
+    {
+      "id": "item-2",
+      "category": "tesla",
+      "title_en": "Cybercab spotted simulating robotaxi pickups and drop-offs",
+      "title_zh": "Cybercab 實測模擬 Robotaxi 上下客",
+      "summary_en": "New footage shared on X shows Tesla Cybercabs rehearsing the core robotaxi loop—pull up, wait, and depart—at sites including San Francisco’s Twin Peaks and multiple Texas locations. Basenor reported the sightings early June 21, framing them as operational rehearsal rather than track-only testing.",
+      "summary_zh": "X 上流傳新影片顯示 Cybercab 在舊金山 Twin Peaks 及德州多地練習靠站、等待、離開的 Robotaxi 核心流程。Basenor 6 月 21 日報導，視為實地營運彩排而非僅賽道測試。",
+      "importance": 4,
+      "links": [
+        {
+          "label": "Basenor",
+          "url": "https://www.basenor.com/blogs/news/tesla-cybercab-spotted-simulating-pickups-and-drop-offs"
+        }
+      ]
+    },
+    {
+      "id": "item-3",
+      "category": "tesla",
+      "title_en": "Refreshed Tesla Semi seen testing FSD validation hardware",
+      "title_zh": "改款特斯拉 Semi 首度曝光 FSD 驗證硬體",
+      "summary_en": "A refreshed Tesla Semi was photographed carrying FSD validation equipment—the first public sighting of active autonomy testing on the electric truck. Basenor reported June 21 that engineers appear to be gathering real-world data toward certifying FSD for Class 8 freight operations.",
+      "summary_zh": "改款 Tesla Semi 被拍到搭載 FSD 驗證設備，為電動卡車自動駕駛測試首次公開紀錄。Basenor 6 月 21 日稱，工程團隊似正收集實路資料，為 Class 8 貨卡 FSD 認證做準備。",
+      "importance": 3,
+      "links": [
+        {
+          "label": "Basenor",
+          "url": "https://www.basenor.com/blogs/news/tesla-semi-spotted-testing-fsd-hardware-for-the-first-time"
+        }
+      ]
+    },
+    {
+      "id": "item-4",
+      "category": "tesla",
+      "title_en": "Tesla and Musk promote new FSD Supervised door-to-door ad",
+      "title_zh": "特斯拉與馬斯克推廣 FSD Supervised「門到門」廣告",
+      "summary_en": "Tesla released a new FSD Supervised commercial late June 20 positioning it as the only system that lets your own car drive door to door, and Elon Musk amplified it on X to more than a million views within an hour. Basenor noted the push as Tesla expands FSD marketing while stressing supervised-driver requirements.",
+      "summary_zh": "特斯拉 6 月 20 日晚推出 FSD Supervised 新廣告，主打「自己的車門到門接送」，馬斯克隨後在 X 轉發，一小時內破百萬觀看。Basenor 指出這是擴大 FSD 行銷，但仍強調需駕駛監督。",
+      "importance": 3,
+      "links": [
+        {
+          "label": "Basenor",
+          "url": "https://www.basenor.com/blogs/news/teslas-new-fsd-supervised-ad-makes-one-bold-claim"
+        }
+      ]
+    },
+    {
+      "id": "item-5",
+      "category": "tesla",
+      "title_en": "Fatal Katy crash: driver says Tesla assist was engaged",
+      "title_zh": "凱蒂致命車禍：駕駛稱特斯拉輔助駕駛已啟用",
+      "summary_en": "A Tesla Model 3 crashed into a Katy-area home on June 20, killing 69-year-old Martha Avila inside, Harris County sheriff’s officials said. The driver told investigators an automated driving-assistance system was engaged; neighbors reported high speed before impact. KPRC updated the story late June 20 as the probe continues.",
+      "summary_zh": "哈里斯郡警稱，6 月 20 日一輛 Model 3 衝入凱蒂民宅，屋內 69 歲 Martha Avila 身亡。駕駛告訴調查人員自動駕駛輔助系統當時啟用，鄰居指車速極快。KPRC 6 月 20 日晚更新報導，調查持續。",
+      "importance": 4,
+      "links": [
+        {
+          "label": "KPRC Click2Houston",
+          "url": "https://www.click2houston.com/news/local/2026/06/20/tesla-allegedly-on-autopilot-crashes-into-katy-home-killing-76-year-old-woman/"
+        }
+      ]
+    },
+    {
+      "id": "item-6",
+      "category": "spacex",
+      "title_en": "MSCI assigns SpaceX its lowest CCC ESG rating",
+      "title_zh": "MSCI 給 SpaceX 最低 CCC 級 ESG 評等",
+      "summary_en": "Index provider MSCI gave SpaceX its lowest ESG grade of CCC, citing high risk exposure and weak management of material ESG issues, PANews reported June 21. An EDHEC climate scholar called the governance and controversy profile alarming for public-market investors after SpaceX’s record IPO.",
+      "summary_zh": "PANews 6 月 21 日報導，MSCI 將 SpaceX 評為最低 CCC 級 ESG，指其風險曝險高且重大 ESG 議題管理不足。EDHEC 學者稱，在 SpaceX 創紀錄 IPO 後，其治理與爭議紀錄對公市投資人堪憂。",
+      "importance": 3,
+      "links": [
+        {
+          "label": "PANews",
+          "url": "https://www.panewslab.com/en/articles/019ee85f-9f6b-72aa-ac96-4b7448285134"
+        }
+      ]
+    },
+    {
+      "id": "item-7",
+      "category": "tesla",
+      "title_en": "Model Y L U.S. launch rumored for July 2",
+      "title_zh": "傳聞美國 Model Y L 將於 7 月 2 日發表",
+      "summary_en": "Reports circulating June 21 suggest Tesla could announce the six-seat Model Y L for the U.S. on July 2, with first deliveries possibly in August or September. Basenor noted corroborating signals including camouflaged prototypes and body shells at Gigafactory Texas, though Tesla has not confirmed the date.",
+      "summary_zh": "6 月 21 日流傳特斯拉可能 7 月 2 日在美國發表六座 Model Y L，首批交車或於 8 至 9 月。Basenor 指德州工廠試車與車殼等線索增加可信度，但特斯拉尚未證實日期。",
+      "importance": 3,
+      "links": [
+        {
+          "label": "Basenor",
+          "url": "https://www.basenor.com/blogs/news/tesla-model-y-l-u-s-launch-6-things-to-know"
+        }
+      ]
+    },
+    {
+      "id": "item-8",
+      "category": "elon_personal",
+      "title_en": "Dana White says Musk–Zuckerberg UFC fight talks were real",
+      "title_zh": "白稱馬斯克對祖克柏 UFC 格鬥談判屬實",
+      "summary_en": "After UFC Vegas 119, Dana White told reporters he spent two weeks negotiating a real Musk vs. Mark Zuckerberg MMA bout that would have required about $150 million to stage at Rome’s Colosseum. Heavy reported June 21 that the deal collapsed on venue cost, though White joked he would still do it if someone funded the site.",
+      "summary_zh": "UFC 119 後，白受訪稱曾花兩週談判馬斯克對馬克·祖克柏的真格鬥賽，羅馬競技場場地費約 1.5 億美元。Heavy 6 月 21 日報導談判因成本破局，白開玩笑稱若有人出資仍願辦賽。",
+      "importance": 2,
+      "links": [
+        {
+          "label": "Heavy",
+          "url": "https://heavy.com/sports/ufc/dana-white-elon-musk-mark-zuckerberg/"
+        }
+      ]
+    },
+    {
+      "id": "item-9",
+      "category": "xai_x_platform",
+      "title_en": "DOJ cites Grok data centers as vital to national security",
+      "title_zh": "司法部稱 Grok 資料中心對國安至關重要",
+      "summary_en": "In the NAACP lawsuit over xAI’s Memphis-area power plant, Pentagon AI chief Cameron Stanley argued Colossus 2 and the Grok Gov Model are vital to targeting, intelligence, and surge AI demand in crises. Middle East Eye summarized the filing as the administration’s first direct admission of Grok use in the Iran war.",
+      "summary_zh": "在 NAACP 控告 xAI 孟菲斯電廠污染案中，Stanley 稱 Colossus 2 與 Grok Gov 對目標識別、情報與危機 AI 算力至關重要。Middle East Eye 整理稱，這是政府首次直接承認伊朗戰事使用 Grok。",
+      "importance": 4,
+      "links": [
+        {
+          "label": "Middle East Eye",
+          "url": "https://www.middleeasteye.net/news/us-used-musks-grok-deploy-2000-munitions-during-iran-war"
+        }
+      ]
+    },
+    {
+      "id": "item-10",
+      "category": "other",
+      "title_en": "Teslarati amplifies Trump Starlink Air Force One clip on X",
+      "title_zh": "Teslarati 在 X 轉傳川普證實空軍一號裝星鏈",
+      "summary_en": "Teslarati posted on X June 20 a clip of President Trump saying the new Air Force One includes Starlink and that “my friend Elon is going to be very happy.” The post helped drive Musk-ecosystem social coverage of the presidential jet upgrade alongside mainstream news reports.",
+      "summary_zh": "Teslarati 6 月 20 日在 X 發布川普稱新「空軍一號」配備星鏈、並說「我朋友伊隆會很高興」的片段。該帖帶動馬斯克生態系社群討論，與主流媒體報導相互呼應。",
+      "importance": 2,
+      "links": [
+        {
+          "label": "X / Teslarati",
+          "url": "https://x.com/Teslarati/status/2068349876371362151"
+        }
+      ]
     }
   ],
   "categories": {
@@ -393,6 +557,21 @@
           {
             "label": "Salon",
             "url": "https://www.salon.com/2026/06/20/elon-musk-and-the-trillionaire-class-test-democracys-limits/"
+          }
+        ]
+      },
+      {
+        "id": "item-8",
+        "category": "elon_personal",
+        "title_en": "Dana White says Musk–Zuckerberg UFC fight talks were real",
+        "title_zh": "白稱馬斯克對祖克柏 UFC 格鬥談判屬實",
+        "summary_en": "After UFC Vegas 119, Dana White told reporters he spent two weeks negotiating a real Musk vs. Mark Zuckerberg MMA bout that would have required about $150 million to stage at Rome’s Colosseum. Heavy reported June 21 that the deal collapsed on venue cost, though White joked he would still do it if someone funded the site.",
+        "summary_zh": "UFC 119 後，白受訪稱曾花兩週談判馬斯克對馬克·祖克柏的真格鬥賽，羅馬競技場場地費約 1.5 億美元。Heavy 6 月 21 日報導談判因成本破局，白開玩笑稱若有人出資仍願辦賽。",
+        "importance": 2,
+        "links": [
+          {
+            "label": "Heavy",
+            "url": "https://heavy.com/sports/ufc/dana-white-elon-musk-mark-zuckerberg/"
           }
         ]
       }
@@ -448,6 +627,81 @@
           {
             "label": "24/7 Wall St.",
             "url": "https://247wallst.com/investing/2026/06/20/elon-musk-just-told-investors-to-be-really-patient-with-optimus-and-robotaxi/"
+          }
+        ]
+      },
+      {
+        "id": "item-2",
+        "category": "tesla",
+        "title_en": "Cybercab spotted simulating robotaxi pickups and drop-offs",
+        "title_zh": "Cybercab 實測模擬 Robotaxi 上下客",
+        "summary_en": "New footage shared on X shows Tesla Cybercabs rehearsing the core robotaxi loop—pull up, wait, and depart—at sites including San Francisco’s Twin Peaks and multiple Texas locations. Basenor reported the sightings early June 21, framing them as operational rehearsal rather than track-only testing.",
+        "summary_zh": "X 上流傳新影片顯示 Cybercab 在舊金山 Twin Peaks 及德州多地練習靠站、等待、離開的 Robotaxi 核心流程。Basenor 6 月 21 日報導，視為實地營運彩排而非僅賽道測試。",
+        "importance": 4,
+        "links": [
+          {
+            "label": "Basenor",
+            "url": "https://www.basenor.com/blogs/news/tesla-cybercab-spotted-simulating-pickups-and-drop-offs"
+          }
+        ]
+      },
+      {
+        "id": "item-3",
+        "category": "tesla",
+        "title_en": "Refreshed Tesla Semi seen testing FSD validation hardware",
+        "title_zh": "改款特斯拉 Semi 首度曝光 FSD 驗證硬體",
+        "summary_en": "A refreshed Tesla Semi was photographed carrying FSD validation equipment—the first public sighting of active autonomy testing on the electric truck. Basenor reported June 21 that engineers appear to be gathering real-world data toward certifying FSD for Class 8 freight operations.",
+        "summary_zh": "改款 Tesla Semi 被拍到搭載 FSD 驗證設備，為電動卡車自動駕駛測試首次公開紀錄。Basenor 6 月 21 日稱，工程團隊似正收集實路資料，為 Class 8 貨卡 FSD 認證做準備。",
+        "importance": 3,
+        "links": [
+          {
+            "label": "Basenor",
+            "url": "https://www.basenor.com/blogs/news/tesla-semi-spotted-testing-fsd-hardware-for-the-first-time"
+          }
+        ]
+      },
+      {
+        "id": "item-4",
+        "category": "tesla",
+        "title_en": "Tesla and Musk promote new FSD Supervised door-to-door ad",
+        "title_zh": "特斯拉與馬斯克推廣 FSD Supervised「門到門」廣告",
+        "summary_en": "Tesla released a new FSD Supervised commercial late June 20 positioning it as the only system that lets your own car drive door to door, and Elon Musk amplified it on X to more than a million views within an hour. Basenor noted the push as Tesla expands FSD marketing while stressing supervised-driver requirements.",
+        "summary_zh": "特斯拉 6 月 20 日晚推出 FSD Supervised 新廣告，主打「自己的車門到門接送」，馬斯克隨後在 X 轉發，一小時內破百萬觀看。Basenor 指出這是擴大 FSD 行銷，但仍強調需駕駛監督。",
+        "importance": 3,
+        "links": [
+          {
+            "label": "Basenor",
+            "url": "https://www.basenor.com/blogs/news/teslas-new-fsd-supervised-ad-makes-one-bold-claim"
+          }
+        ]
+      },
+      {
+        "id": "item-5",
+        "category": "tesla",
+        "title_en": "Fatal Katy crash: driver says Tesla assist was engaged",
+        "title_zh": "凱蒂致命車禍：駕駛稱特斯拉輔助駕駛已啟用",
+        "summary_en": "A Tesla Model 3 crashed into a Katy-area home on June 20, killing 69-year-old Martha Avila inside, Harris County sheriff’s officials said. The driver told investigators an automated driving-assistance system was engaged; neighbors reported high speed before impact. KPRC updated the story late June 20 as the probe continues.",
+        "summary_zh": "哈里斯郡警稱，6 月 20 日一輛 Model 3 衝入凱蒂民宅，屋內 69 歲 Martha Avila 身亡。駕駛告訴調查人員自動駕駛輔助系統當時啟用，鄰居指車速極快。KPRC 6 月 20 日晚更新報導，調查持續。",
+        "importance": 4,
+        "links": [
+          {
+            "label": "KPRC Click2Houston",
+            "url": "https://www.click2houston.com/news/local/2026/06/20/tesla-allegedly-on-autopilot-crashes-into-katy-home-killing-76-year-old-woman/"
+          }
+        ]
+      },
+      {
+        "id": "item-7",
+        "category": "tesla",
+        "title_en": "Model Y L U.S. launch rumored for July 2",
+        "title_zh": "傳聞美國 Model Y L 將於 7 月 2 日發表",
+        "summary_en": "Reports circulating June 21 suggest Tesla could announce the six-seat Model Y L for the U.S. on July 2, with first deliveries possibly in August or September. Basenor noted corroborating signals including camouflaged prototypes and body shells at Gigafactory Texas, though Tesla has not confirmed the date.",
+        "summary_zh": "6 月 21 日流傳特斯拉可能 7 月 2 日在美國發表六座 Model Y L，首批交車或於 8 至 9 月。Basenor 指德州工廠試車與車殼等線索增加可信度，但特斯拉尚未證實日期。",
+        "importance": 3,
+        "links": [
+          {
+            "label": "Basenor",
+            "url": "https://www.basenor.com/blogs/news/tesla-model-y-l-u-s-launch-6-things-to-know"
           }
         ]
       }
@@ -584,6 +838,21 @@
             "url": "https://fortune.com/2026/06/20/executives-running-spacex-x-doge-elon-musk-loyalists/"
           }
         ]
+      },
+      {
+        "id": "item-6",
+        "category": "spacex",
+        "title_en": "MSCI assigns SpaceX its lowest CCC ESG rating",
+        "title_zh": "MSCI 給 SpaceX 最低 CCC 級 ESG 評等",
+        "summary_en": "Index provider MSCI gave SpaceX its lowest ESG grade of CCC, citing high risk exposure and weak management of material ESG issues, PANews reported June 21. An EDHEC climate scholar called the governance and controversy profile alarming for public-market investors after SpaceX’s record IPO.",
+        "summary_zh": "PANews 6 月 21 日報導，MSCI 將 SpaceX 評為最低 CCC 級 ESG，指其風險曝險高且重大 ESG 議題管理不足。EDHEC 學者稱，在 SpaceX 創紀錄 IPO 後，其治理與爭議紀錄對公市投資人堪憂。",
+        "importance": 3,
+        "links": [
+          {
+            "label": "PANews",
+            "url": "https://www.panewslab.com/en/articles/019ee85f-9f6b-72aa-ac96-4b7448285134"
+          }
+        ]
       }
     ],
     "xai_x_platform": [
@@ -635,6 +904,36 @@
             "url": "https://www.buildfastwithai.com/blogs/ai-news-today-june-21-2026"
           }
         ]
+      },
+      {
+        "id": "item-1",
+        "category": "xai_x_platform",
+        "title_en": "Pentagon AI chief says Grok helped target 2,000+ Iran-war strikes",
+        "title_zh": "五角大廈 AI 官員：Grok 協助鎖定逾 2000 個伊朗戰事目標",
+        "summary_en": "In a sworn court filing cited by The Hill, Pentagon AI chief Cameron Stanley said xAI’s Grok Gov Model helped U.S. forces deploy more than 2,000 munitions to distinct targets within 96 hours during Operation Epic Fury. The disclosure resurfaced in major coverage over the past day, intensifying debate over military use of Musk’s AI.",
+        "summary_zh": "The Hill 引述五角大廈 AI 主管 Cameron Stanley 法庭證詞稱，xAI 的 Grok Gov 模型在「史詩狂怒」行動中 96 小時內協助美軍對逾 2000 個目標部署彈藥。相關報導過去 12 小時再度升溫，軍用 Grok 爭議擴大。",
+        "importance": 5,
+        "links": [
+          {
+            "label": "The Hill",
+            "url": "https://thehill.com/policy/technology/5928204-pentagon-musk-grok-chatbot-iran-strikes/"
+          }
+        ]
+      },
+      {
+        "id": "item-9",
+        "category": "xai_x_platform",
+        "title_en": "DOJ cites Grok data centers as vital to national security",
+        "title_zh": "司法部稱 Grok 資料中心對國安至關重要",
+        "summary_en": "In the NAACP lawsuit over xAI’s Memphis-area power plant, Pentagon AI chief Cameron Stanley argued Colossus 2 and the Grok Gov Model are vital to targeting, intelligence, and surge AI demand in crises. Middle East Eye summarized the filing as the administration’s first direct admission of Grok use in the Iran war.",
+        "summary_zh": "在 NAACP 控告 xAI 孟菲斯電廠污染案中，Stanley 稱 Colossus 2 與 Grok Gov 對目標識別、情報與危機 AI 算力至關重要。Middle East Eye 整理稱，這是政府首次直接承認伊朗戰事使用 Grok。",
+        "importance": 4,
+        "links": [
+          {
+            "label": "Middle East Eye",
+            "url": "https://www.middleeasteye.net/news/us-used-musks-grok-deploy-2000-munitions-during-iran-war"
+          }
+        ]
       }
     ],
     "other": [
@@ -667,10 +966,25 @@
             "url": "https://fortune.com/2026/06/20/spacex-stock-moonshot-merger-tesla/"
           }
         ]
+      },
+      {
+        "id": "item-10",
+        "category": "other",
+        "title_en": "Teslarati amplifies Trump Starlink Air Force One clip on X",
+        "title_zh": "Teslarati 在 X 轉傳川普證實空軍一號裝星鏈",
+        "summary_en": "Teslarati posted on X June 20 a clip of President Trump saying the new Air Force One includes Starlink and that “my friend Elon is going to be very happy.” The post helped drive Musk-ecosystem social coverage of the presidential jet upgrade alongside mainstream news reports.",
+        "summary_zh": "Teslarati 6 月 20 日在 X 發布川普稱新「空軍一號」配備星鏈、並說「我朋友伊隆會很高興」的片段。該帖帶動馬斯克生態系社群討論，與主流媒體報導相互呼應。",
+        "importance": 2,
+        "links": [
+          {
+            "label": "X / Teslarati",
+            "url": "https://x.com/Teslarati/status/2068349876371362151"
+          }
+        ]
       }
     ]
   },
-  "brief_en": "Overnight: Trump confirmed Starlink on the interim Air Force One; a Tesla driver told Texas police Autopilot was on before a fatal Katy home crash; SpaceX readied Starlink 17-28 from Vandenberg; and June 20 press kept focus on slow Optimus/Robotaxi ramps and rising SpaceX–Tesla merger talk.",
-  "brief_zh": "昨夜動態：川普證實新空軍一號搭載 Starlink；德州凱蒂特斯拉疑 Autopilot 失控撞入民宅致死；SpaceX 準備發射 Starlink 17-28；媒體持續關注 Optimus／Robotaxi 慢速量產與 SpaceX 併購特斯拉傳聞升溫。",
-  "updated_at": "2026-06-21T04:05:01.672661+00:00"
+  "brief_en": "Trump unveiled an interim Air Force One with Starlink; Grok’s Pentagon war role drew fresh scrutiny; Tesla pushed robotaxi readiness with Cybercab pickup drills and a new FSD ad while a fatal Katy crash made headlines; SpaceX got MSCI’s lowest ESG grade; Dana White said a Musk–Zuckerberg UFC bout was real.",
+  "brief_zh": "川普新專機裝Starlink；五角大廈稱Grok助伊朗戰役；Cybercab實測上下車、FSD新廣告；德州特斯拉致命事故；SpaceX獲MSCI最低ESG；白稱馬斯克對戰祖克柏曾認真談判。",
+  "updated_at": "2026-06-21T10:05:02.281943+00:00"
 }
