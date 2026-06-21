@@ -84,50 +84,102 @@ CATEGORIES = ["elon_personal", "tesla", "spacex", "xai_x_platform", "other"]
 
 # ----------------------------------------------------------- Prompt 共用 ----
 
-SYSTEM_RULES = """You are MarsRadar's news editor. You produce a concise, accurate,
-bilingual (English + Traditional Chinese / 繁體中文) digest of the latest Elon Musk,
-Tesla, SpaceX, and xAI / X-platform developments.
+SYSTEM_RULES = """You are MarsRadar's editor. You produce a concise, accurate, bilingual
+(English + Traditional Chinese / 繁體中文) digest of what Elon Musk is actually saying and
+doing on X, plus related Tesla / SpaceX / xAI / X-platform developments.
 
-RULES:
-- Use ONLY information you actually find via live/web search and X reading. Do NOT invent.
-- NEVER copy a full news article. Write your OWN 1-3 sentence summary and ALWAYS cite the
-  original source URL so readers can click through (fair-use / 合理使用).
-- Categorize every item into exactly one of:
-  elon_personal | tesla | spacex | xai_x_platform | other
-- Rate importance 1 (minor) to 5 (major).
-- Provide BOTH an English and a Traditional-Chinese title and summary for every item.
-- Also produce a top-level "one-minute brief" in EN and ZH (一分鐘看懂今日動態)."""
+SOURCE PRIORITY (strict — this is the core of the product):
+1) PRIMARY = @elonmusk's OWN X activity in the window: original posts, quote-posts and
+   substantive replies (not @-only spam). Capture his ACTUAL words, tone and topics. This is
+   the main product — lead with "what Elon said", not with a news headline.
+2) SECONDARY = Official accounts (@Tesla, @SpaceX, @xAI, @cybertruck) ONLY when (a) Elon did
+   not post about it AND (b) it is a material corporate/product event.
+3) TERTIARY = Reputable news / web (@Teslarati, @SawyerMerritt, major outlets): background or
+   corroboration ONLY. Never let a news headline become the main story if Elon already posted
+   about the same topic.
+
+ANTI-HALLUCINATION:
+- Use ONLY facts found via live X reading and web search. Do NOT invent posts, quotes or URLs.
+- Every link must be a real URL you actually retrieved; prefer x.com/... post permalinks.
+- NEVER copy a full article or full tweet thread. Paraphrase in your OWN 1-3 sentences (fair use).
+- Respect timestamps: only include items from the stated lookback window; do NOT resurface old
+  viral posts as if new. If you cannot verify a claim or URL, omit it.
+
+SAME-DAY STORY MERGE (critical — avoid duplicates):
+- You will receive EXISTING_ITEMS for today (UTC). Treat them as the canonical list so far.
+- ONE real-world story = ONE item for the whole day. When new info arrives, UPDATE the matching
+  item in place (keep its story_id, preserve first_seen, refresh summaries/importance/links/
+  musk_quote/updated_at). Only create a NEW item if it is genuinely a different story.
+- Do NOT merge two different stories just because they involve the same company/topic.
+- Do NOT delete an existing item unless it was proven false. Return the FULL merged day list.
+- Rebuild brief_en / brief_zh from the merged full-day picture, not just the newest window.
+
+OUTPUT:
+- Categorize each item: elon_personal | tesla | spacex | xai_x_platform | other
+- Rate importance 1 (minor) to 5 (major); Elon's own posts on major topics = 4-5.
+- Bilingual title + summary for every item.
+- Top-level one-minute brief in EN and ZH (一分鐘看懂今日動態)."""
 
 SCHEMA_BLOCK = """Return STRICT JSON with EXACTLY this shape:
 {{
-  "brief_en": "<=60 words one-minute brief",
-  "brief_zh": "<=60字 一分鐘看懂今日動態",
+  "brief_en": "<=60 words, full-day one-minute brief",
+  "brief_zh": "<=60字 一分鐘看懂今日動態（整日合併後）",
   "items": [
     {{
+      "story_id": "stable-lowercase-kebab-id-for-this-story-today (e.g. tesla-fsd-china-2026-06-22)",
       "category": "elon_personal|tesla|spacex|xai_x_platform|other",
+      "source_type": "musk_post|musk_reply|musk_quote|official_account|news|mixed",
       "title_en": "...",
       "title_zh": "...",
-      "summary_en": "1-3 sentences, your own words",
-      "summary_zh": "1-3 句，用你自己的話",
+      "summary_en": "1-3 sentences, your own words; lead with what Musk said if applicable",
+      "summary_zh": "1-3 句，用你自己的話；若為馬斯克發文，先寫他說了什麼",
+      "musk_quote": "short verbatim excerpt of Elon's own words (<=280 chars); empty string if not a musk_* item",
+      "musk_quote_zh": "馬斯克原話的繁中翻譯；非本人發文則空字串",
       "importance": 1,
-      "links": [{{"label": "Source name", "url": "https://..."}}]
+      "first_seen": "ISO-8601 UTC — PRESERVE from the existing item if you are updating it",
+      "updated_at": "ISO-8601 UTC — now",
+      "links": [{{"label": "Source name (Elon on X / Reuters / ...)", "url": "https://..."}}]
     }}
   ]
 }}
-Aim for 6-15 high-signal items. Skip low-value spam/replies."""
+Rules:
+- musk_quote required (non-empty) when source_type starts with musk_; use "" for pure news/official items.
+- links[0] should be the PRIMARY source (the @elonmusk post URL when source_type is musk_*).
+- items = the FULL merged list for today AFTER applying EXISTING_ITEMS (not a delta, not just new ones).
+- Aim for 6-15 high-signal items for the whole day. Drop stale low-value noise."""
 
-USER_TEMPLATE = """Today is {date} (UTC). Summarize the most notable developments from the
-LAST 12 HOURS for: Elon Musk personally, Tesla, SpaceX, and xAI / the X platform.
+USER_TEMPLATE = """Today is {date} (UTC). Current run time: {run_iso}.
 
-Focus on these accounts and reputable news about them: {handles}.
+TASK: Produce today's MarsRadar digest by MERGING new developments from the LAST {lookback_hours}
+HOURS into any existing items for this calendar day (UTC). Lead with @elonmusk's own posts.
+
+=== EXISTING_ITEMS (today so far — UPDATE/MERGE these in place, do NOT duplicate stories) ===
+{existing_items_json}
+
+=== ACCOUNTS TO MONITOR ===
+PRIMARY: @elonmusk  (his posts, quote-posts, substantive replies — THE main product)
+SECONDARY (only if Musk didn't cover it AND it's material): @Tesla, @SpaceX, @xAI, @cybertruck
+TERTIARY (context/corroboration only): @Teslarati, @SawyerMerritt, reputable news outlets
+
+=== WHAT TO PRIORITIZE ===
+1. What did @elonmusk literally say/post in the window? (topic, tone, controversy, product hints,
+   politics) — group related posts into ONE story item, not one item per reply.
+2. Corporate/official news ONLY when it adds facts Musk didn't say (earnings, launch, recall...).
+3. Skip: reply spam, reposts of old news, engagement bait with no substance.
 
 """ + SCHEMA_BLOCK
 
 
-def build_prompt(date_str: str) -> str:
-    """組出單一段提示詞（CLI 用一段、API 拆 system/user 各用一半）。"""
-    handles = ", ".join("@" + h for h in WATCH_HANDLES)
-    return (SYSTEM_RULES + "\n\n" + USER_TEMPLATE.format(date=date_str, handles=handles)
+def build_prompt(date_str: str, run_iso: str = "", existing_items: list | None = None,
+                 lookback_hours: int = 12) -> str:
+    """組出單一段提示詞（CLI 用一段、API 拆 system/user 各用一半）。
+    existing_items：今日已存在的條目（供 Grok 演進式合併，避免同日重複）。"""
+    existing_json = (json.dumps(existing_items, ensure_ascii=False, indent=1)
+                     if existing_items else "[]")
+    user = USER_TEMPLATE.format(date=date_str, run_iso=run_iso or date_str,
+                                lookback_hours=lookback_hours,
+                                existing_items_json=existing_json)
+    return (SYSTEM_RULES + "\n\n" + user
             + "\n\nOutput STRICT JSON only — no markdown fences, no commentary before or after.")
 
 
@@ -191,7 +243,7 @@ def _resolve_grok_bin() -> str:
     )
 
 
-def call_grok_cli(date_str: str) -> dict:
+def call_grok_cli(date_str: str, run_iso: str = "", existing_items: list | None = None) -> dict:
     """呼叫本機 Grok Build CLI（headless），讓它讀 X/web 後回傳結構化 JSON。
     不需要任何 API key，吃的是使用者的 Grok 訂閱。"""
     grok_bin = _resolve_grok_bin()
@@ -200,7 +252,7 @@ def call_grok_cli(date_str: str) -> dict:
     except ValueError:
         timeout = 600
     model = os.environ.get("GROK_MODEL", "").strip()
-    prompt = build_prompt(date_str)
+    prompt = build_prompt(date_str, run_iso, existing_items, lookback_hours=12)
 
     # CLI 會載入 cwd 的 .mcp.json（含需 OAuth 的 server 會卡死）→ 用乾淨臨時目錄當 cwd。
     workdir = tempfile.mkdtemp(prefix="marsradar_grok_")
@@ -246,7 +298,7 @@ def call_grok_cli(date_str: str) -> dict:
 
 # --------------------------------------------------------- Grok API 後端 ----
 
-def call_grok_api(date_str: str) -> dict:
+def call_grok_api(date_str: str, run_iso: str = "", existing_items: list | None = None) -> dict:
     """（備援）呼叫 xAI Grok REST API，啟用 Live Search，回傳解析後的 dict。需 XAI_API_KEY。"""
     try:
         import requests
@@ -259,21 +311,27 @@ def call_grok_api(date_str: str) -> dict:
             "或改用預設的 cli 後端（DIGEST_BACKEND=cli，吃 Grok 訂閱、不需 key）。"
         )
 
-    handles = ", ".join("@" + h for h in WATCH_HANDLES)
+    existing_json = (json.dumps(existing_items, ensure_ascii=False, indent=1)
+                     if existing_items else "[]")
+    user_msg = USER_TEMPLATE.format(date=date_str, run_iso=run_iso or date_str,
+                                    lookback_hours=12, existing_items_json=existing_json)
     payload = {
         "model": XAI_MODEL,
         "messages": [
             {"role": "system", "content": SYSTEM_RULES},
-            {"role": "user", "content": USER_TEMPLATE.format(date=date_str, handles=handles)},
+            {"role": "user", "content": user_msg},
         ],
         "temperature": 0.2,
         "response_format": {"type": "json_object"},
         "search_parameters": {
             "mode": "on",
-            "from_date": (datetime.now(timezone.utc) - timedelta(hours=12)).strftime("%Y-%m-%d"),
-            "max_search_results": 25,
+            # 抓整個 UTC 當日，靠 EXISTING_ITEMS 合併補全天脈絡（不只 12h）。
+            "from_date": date_str,
+            "max_search_results": 30,
             "sources": [
-                {"type": "x", "x_handles": WATCH_HANDLES},
+                # 馬斯克本人優先（第一來源），官方帳號其次，新聞/網路只當佐證。
+                {"type": "x", "x_handles": ["elonmusk"]},
+                {"type": "x", "x_handles": [h for h in WATCH_HANDLES if h != "elonmusk"]},
                 {"type": "news"},
                 {"type": "web"},
             ],
@@ -298,11 +356,12 @@ def call_grok_api(date_str: str) -> dict:
     return data
 
 
-def call_grok(date_str: str) -> dict:
-    """依 DIGEST_BACKEND 選擇後端。預設 cli（吃訂閱、不需 key）。"""
+def call_grok(date_str: str, run_iso: str = "", existing_items: list | None = None) -> dict:
+    """依 DIGEST_BACKEND 選擇後端。預設 cli（吃訂閱、不需 key）。
+    existing_items：今日已存在條目，餵回給 Grok 做演進式合併（避免同日重複）。"""
     if DIGEST_BACKEND == "api":
-        return call_grok_api(date_str)
-    return call_grok_cli(date_str)
+        return call_grok_api(date_str, run_iso, existing_items)
+    return call_grok_cli(date_str, run_iso, existing_items)
 
 
 # ------------------------------------------------------ 公開 JSON 加密 ----
@@ -370,24 +429,96 @@ def load_public(path: Path) -> dict:
 
 # --------------------------------------------------------- JSON 寫入/合併 ----
 
+SOURCE_TYPES = {"musk_post", "musk_reply", "musk_quote", "official_account", "news", "mixed", "web"}
+
+
+def _slugify_story(it: dict, idx: int) -> str:
+    """沒給 story_id 時，從 title_en 生一個穩定 fallback id。"""
+    base = (it.get("title_en") or "").lower()
+    slug = "".join(c if c.isalnum() else "-" for c in base).strip("-")
+    slug = "-".join(p for p in slug.split("-") if p)[:60]
+    return slug or f"item-{idx}"
+
+
 def normalize_items(items: list) -> list:
-    """淨化、保證每筆都有合法 category 與必要欄位。"""
+    """淨化、保證每筆都有合法 category、story_id 與必要欄位（含馬斯克原話/來源型別/時間戳）。"""
     out = []
     for i, it in enumerate(items):
         cat = it.get("category", "other")
         if cat not in CATEGORIES:
             cat = "other"
+        st = (it.get("source_type") or "").strip()
+        if st not in SOURCE_TYPES:
+            st = "news"
+        sid = (it.get("story_id") or it.get("id") or "").strip() or _slugify_story(it, i)
         out.append({
-            "id": it.get("id") or f"item-{i}",
+            "id": sid,                 # App 用 id 當 Identifiable；= story_id 讓合併後不閃爍
+            "story_id": sid,
             "category": cat,
+            "source_type": st,
             "title_en": (it.get("title_en") or "").strip(),
             "title_zh": (it.get("title_zh") or "").strip(),
             "summary_en": (it.get("summary_en") or "").strip(),
             "summary_zh": (it.get("summary_zh") or "").strip(),
+            "musk_quote": (it.get("musk_quote") or "").strip(),
+            "musk_quote_zh": (it.get("musk_quote_zh") or "").strip(),
             "importance": int(it.get("importance") or 3),
+            "first_seen": (it.get("first_seen") or "").strip(),
+            "updated_at": (it.get("updated_at") or "").strip(),
             "links": [l for l in it.get("links", []) if l.get("url")],
         })
     return out
+
+
+def load_today_items(repo: Path, date_str: str) -> list:
+    """讀回今日 digest 的 items_flat（供餵給 Grok 做演進式合併）。無檔/讀不到＝空清單。"""
+    path = repo / "digests" / f"{date_str}.json"
+    if not path.exists():
+        return []
+    try:
+        return load_public(path).get("items_flat", []) or []
+    except Exception as e:
+        print(f"[merge] 讀今日既有條目失敗（當空處理）：{e}")
+        return []
+
+
+def _merge_one(old: dict, new: dict, run_iso: str) -> dict:
+    """同一 story_id：用 Grok 新版內容，但保留 first_seen、取較高 importance、聯集 links。"""
+    new["first_seen"] = old.get("first_seen") or new.get("first_seen") or run_iso
+    new["importance"] = max(int(new.get("importance", 3)), int(old.get("importance", 3)))
+    seen_urls = {l["url"] for l in new.get("links", [])}
+    new["links"] = new.get("links", []) + [l for l in old.get("links", []) if l["url"] not in seen_urls]
+    # 馬斯克原話：新版沒抓到就沿用舊的，別讓引用消失
+    if not new.get("musk_quote") and old.get("musk_quote"):
+        new["musk_quote"] = old["musk_quote"]; new["musk_quote_zh"] = old.get("musk_quote_zh", "")
+    new["updated_at"] = run_iso
+    return new
+
+
+def merge_daily_items(existing_flat: list, grok_items: list, run_iso: str) -> tuple[list, int, int]:
+    """以 story_id 為主鍵把 Grok 回傳的「全日列表」併進今日既有條目。
+    - Grok 已做語意合併、回傳完整列表 → 這裡用 story_id 兜底（保 first_seen / links / 原話）。
+    - 安全網：Grok 漏回但 importance>=3 的舊條目自動保留，避免重要資訊一天內被洗掉。"""
+    old_by_id = {it.get("story_id") or it.get("id"): it for it in existing_flat}
+    out, seen_ids = [], set()
+    updated = 0
+    for it in normalize_items(grok_items):
+        sid = it["story_id"]
+        if sid in old_by_id:
+            it = _merge_one(old_by_id[sid], it, run_iso); updated += 1
+        else:
+            it["first_seen"] = it.get("first_seen") or run_iso
+            it["updated_at"] = run_iso
+        out.append(it); seen_ids.add(sid)
+    # 安全網：Grok 沒回傳的舊重要條目（importance>=3）保留
+    kept = 0
+    for sid, old in old_by_id.items():
+        if sid not in seen_ids and int(old.get("importance", 3)) >= 3:
+            out.append(old); kept += 1
+    # 重要度高在前；同重要度時最近更新在前（穩定排序：先排 updated_at 再排 importance）
+    out.sort(key=lambda x: x.get("updated_at", ""), reverse=True)
+    out.sort(key=lambda x: -int(x.get("importance", 3)))
+    return out, updated, kept
 
 
 def write_digest(repo: Path, date_str: str, run_iso: str, grok: dict) -> Path:
@@ -400,15 +531,10 @@ def write_digest(repo: Path, date_str: str, run_iso: str, grok: dict) -> Path:
     else:
         doc = {"date": date_str, "runs": []}
 
-    new_items = normalize_items(grok.get("items", []))
-
-    # 以 (title_en 前 40 字 + category) 去重，避免同日重複跑時灌水
-    seen = {(r["title_en"][:40].lower(), r["category"]) for r in doc.get("items_flat", [])}
-    merged_new = [it for it in new_items
-                  if (it["title_en"][:40].lower(), it["category"]) not in seen]
-
-    doc.setdefault("items_flat", [])
-    doc["items_flat"].extend(merged_new)
+    existing_flat = doc.get("items_flat", []) or []
+    # Grok 回傳的是「全日合併後完整列表」→ 以 story_id 兜底合併、整表替換（不再 append）
+    merged, updated_n, kept_n = merge_daily_items(existing_flat, grok.get("items", []), run_iso)
+    doc["items_flat"] = merged
 
     # 依分類聚合（App 直接讀 categories）
     by_cat = {c: [] for c in CATEGORIES}
@@ -416,16 +542,19 @@ def write_digest(repo: Path, date_str: str, run_iso: str, grok: dict) -> Path:
         by_cat[it["category"]].append(it)
     doc["categories"] = by_cat
 
+    doc.setdefault("runs", [])
     doc["runs"].append({
         "generated_at": run_iso,
         "backend": grok.get("_usage", {}).get("backend", DIGEST_BACKEND),
         "model": grok.get("_usage", {}).get("model", ""),
         "brief_en": grok.get("brief_en", ""),
         "brief_zh": grok.get("brief_zh", ""),
-        "new_item_count": len(merged_new),
+        "item_count": len(doc["items_flat"]),
+        "updated_count": updated_n,
+        "kept_count": kept_n,
         "usage": grok.get("_usage", {}),
     })
-    # 最新一次的 brief 放頂層方便 App 顯示
+    # 最新一次的 brief 放頂層方便 App 顯示（Grok 已重建為全日視角）
     doc["brief_en"] = grok.get("brief_en", "")
     doc["brief_zh"] = grok.get("brief_zh", "")
     doc["updated_at"] = run_iso
@@ -519,7 +648,11 @@ def main():
     run_iso = now.isoformat()
     print(f"=== MarsRadar digest run {run_iso} (backend={DIGEST_BACKEND}) ===")
 
-    grok = call_grok(date_str)
+    # 先載入今日既有條目，餵回給 Grok 做「同日同故事演進式合併」（避免早報/晚報重複）
+    existing_items = load_today_items(REPO_DIR, date_str)
+    print(f"[merge] 今日既有 {len(existing_items)} 條，餵回 Grok 做合併")
+
+    grok = call_grok(date_str, run_iso, existing_items)
     print(f"[grok] {len(grok.get('items', []))} items, usage={grok.get('_usage')}")
 
     path = write_digest(REPO_DIR, date_str, run_iso, grok)
