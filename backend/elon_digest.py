@@ -106,7 +106,7 @@ ANTI-HALLUCINATION:
   viral posts as if new. If you cannot verify a claim or URL, omit it.
 
 SAME-DAY STORY MERGE (critical — avoid duplicates):
-- You will receive EXISTING_ITEMS for today (UTC). Treat them as the canonical list so far.
+- You will receive EXISTING_ITEMS for today (UTC+8 / Taipei calendar day). Treat them as the canonical list so far.
 - ONE real-world story = ONE item for the whole day. When new info arrives, UPDATE the matching
   item in place (keep its story_id, preserve first_seen, refresh summaries/importance/links/
   musk_quote/updated_at). Only create a NEW item if it is genuinely a different story.
@@ -148,10 +148,10 @@ Rules:
 - items = the FULL merged list for today AFTER applying EXISTING_ITEMS (not a delta, not just new ones).
 - Aim for 6-15 high-signal items for the whole day. Drop stale low-value noise."""
 
-USER_TEMPLATE = """Today is {date} (UTC). Current run time: {run_iso}.
+USER_TEMPLATE = """Today is {date} (UTC+8 / Taipei time). Current run time (UTC): {run_iso}.
 
 TASK: Produce today's MarsRadar digest by MERGING new developments from the LAST {lookback_hours}
-HOURS into any existing items for this calendar day (UTC). Lead with @elonmusk's own posts.
+HOURS into any existing items for this calendar day (UTC+8 / Taipei). Lead with @elonmusk's own posts.
 
 === EXISTING_ITEMS (today so far — UPDATE/MERGE these in place, do NOT duplicate stories) ===
 {existing_items_json}
@@ -660,10 +660,12 @@ def main():
     load_dotenv()
     XAI_API_KEY = os.environ.get("XAI_API_KEY", "").strip()
 
-    now = datetime.now(timezone.utc)
-    date_str = now.strftime("%Y-%m-%d")
-    run_iso = now.isoformat()
-    print(f"=== MarsRadar digest run {run_iso} (backend={DIGEST_BACKEND}) ===")
+    now_utc = datetime.now(timezone.utc)
+    # 以 UTC+8（台北）日期切檔——避免凌晨(台北)還算到前一天(UTC)。每天台北 00:00 換新一份 digest。
+    TPE = timezone(timedelta(hours=8))
+    date_str = now_utc.astimezone(TPE).strftime("%Y-%m-%d")
+    run_iso = now_utc.isoformat()
+    print(f"=== MarsRadar digest run {run_iso} | 台北日期 {date_str} (backend={DIGEST_BACKEND}) ===")
 
     # 先載入今日既有條目，餵回給 Grok 做「同日同故事演進式合併」（避免早報/晚報重複）
     existing_items = load_today_items(REPO_DIR, date_str)
