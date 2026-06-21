@@ -170,11 +170,26 @@ TERTIARY (context/corroboration only): @Teslarati, @SawyerMerritt, reputable new
 """ + SCHEMA_BLOCK
 
 
+def _compact_existing(items: list, limit: int = 25) -> list:
+    """精簡今日既有條目再餵給 Grok：只留辨識同故事所需欄位（id/標題/分類/重要度/英文摘要/首見時間），
+    丟掉 links、zh、musk_quote 等大欄位 → 控制 prompt 大小、避免 Grok 逾時。
+    依重要度取前 limit 筆（低訊號舊條目不必回灌）。"""
+    ranked = sorted(items, key=lambda x: -int(x.get("importance", 3)))[:limit]
+    return [{
+        "story_id": it.get("story_id") or it.get("id"),
+        "category": it.get("category"),
+        "importance": it.get("importance", 3),
+        "title_en": it.get("title_en", ""),
+        "summary_en": (it.get("summary_en", "") or "")[:240],
+        "first_seen": it.get("first_seen", ""),
+    } for it in ranked]
+
+
 def build_prompt(date_str: str, run_iso: str = "", existing_items: list | None = None,
                  lookback_hours: int = 12) -> str:
     """組出單一段提示詞（CLI 用一段、API 拆 system/user 各用一半）。
     existing_items：今日已存在的條目（供 Grok 演進式合併，避免同日重複）。"""
-    existing_json = (json.dumps(existing_items, ensure_ascii=False, indent=1)
+    existing_json = (json.dumps(_compact_existing(existing_items), ensure_ascii=False, indent=1)
                      if existing_items else "[]")
     user = USER_TEMPLATE.format(date=date_str, run_iso=run_iso or date_str,
                                 lookback_hours=lookback_hours,
@@ -311,7 +326,7 @@ def call_grok_api(date_str: str, run_iso: str = "", existing_items: list | None 
             "或改用預設的 cli 後端（DIGEST_BACKEND=cli，吃 Grok 訂閱、不需 key）。"
         )
 
-    existing_json = (json.dumps(existing_items, ensure_ascii=False, indent=1)
+    existing_json = (json.dumps(_compact_existing(existing_items), ensure_ascii=False, indent=1)
                      if existing_items else "[]")
     user_msg = USER_TEMPLATE.format(date=date_str, run_iso=run_iso or date_str,
                                     lookback_hours=12, existing_items_json=existing_json)
