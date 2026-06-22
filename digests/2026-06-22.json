@@ -86,6 +86,22 @@
         "raw_count": 6,
         "mapped_count": 6
       }
+    },
+    {
+      "generated_at": "2026-06-22T15:42:20.308533+00:00",
+      "backend": "grok-web",
+      "model": "grok.com (browser)",
+      "brief_en": "Elon Musk criticized Ro Khanna as 'evil liar' and said 'Time to sue this liar' over DOGE cuts claims. He quoted a vibecoding meme, defended McCarthy, commented on immigration and socialism, and posted a video amplifying warnings on Islam and Western immigration. Earlier: AI may exceed all human intelligence in 4-5 years; UK crime cases highlighted.",
+      "brief_zh": "馬斯克今日痛批羅·康納為「邪惡騙子」並稱「該起訴」其DOGE言論；引用vibecoding迷因、支持麥卡錫觀點、評移民與社會主義，並發影片警示伊斯蘭與西方移民。稍早預測AI 4-5年內超越人類智慧總和，關注英國犯罪案件。",
+      "item_count": 12,
+      "updated_count": 11,
+      "kept_count": 0,
+      "usage": {
+        "backend": "grok-web",
+        "model": "grok.com (browser)",
+        "lookback_hours": 12,
+        "item_count": 12
+      }
     }
   ],
   "items_flat": [
@@ -95,17 +111,17 @@
       "category": "elon_personal",
       "source_type": "musk_quote",
       "title_en": "Vibecoding meme reaction (quote → @kanavtwt)",
-      "title_zh": "",
-      "summary_en": "[quote to @kanavtwt] “Full access” 😂",
-      "summary_zh": "",
+      "title_zh": "對vibecoding迷因的回應（引用 @kanavtwt）",
+      "summary_en": "Musk quote-posted a meme about 'Day 1 of vibecoding' with the reply '“Full access” 😂'. The post received massive engagement.",
+      "summary_zh": "馬斯克引用 @kanavtwt 關於「vibecoding第一天」的迷因貼文，回覆「Full access」並附大笑表情，獲得大量互動。",
       "musk_quote": "“Full access” 😂",
-      "musk_quote_zh": "",
+      "musk_quote_zh": "「完全訪問權限」😂",
       "importance": 5,
       "first_seen": "2026-06-22T02:33:44Z",
-      "updated_at": "2026-06-22T14:29:49.466572+00:00",
+      "updated_at": "2026-06-22T15:42:20.308533+00:00",
       "links": [
         {
-          "label": "Elon on X",
+          "label": "Elon Musk on X",
           "url": "https://x.com/elonmusk/status/2068885116064080018"
         }
       ]
@@ -115,18 +131,22 @@
       "story_id": "musk-2068887884954796453",
       "category": "elon_personal",
       "source_type": "musk_reply",
-      "title_en": "Ro Khanna tax proposal criticism (reply → @WesternLensman)",
-      "title_zh": "",
-      "summary_en": "[reply to @WesternLensman] He’s such an evil liar",
-      "summary_zh": "",
-      "musk_quote": "He’s such an evil liar",
-      "musk_quote_zh": "",
+      "title_en": "Ro Khanna criticism escalates: 'evil liar' on tax proposal and 'Time to sue this liar' over DOGE cuts",
+      "title_zh": "羅·康納批評升級：稅務提案「邪惡騙子」及DOGE削減兒童主張「該起訴這個騙子」",
+      "summary_en": "Musk replied 'He’s such an evil liar' to criticism of Rep. Ro Khanna's tax proposal. Later, responding to a New York Post story where Khanna claimed Musk 'needs to answer' for 4.5M kids 'sentenced to death' over DOGE cuts, Musk posted 'Time to sue this liar'.",
+      "summary_zh": "馬斯克回覆稱羅·康納在稅務提案上「是個邪惡的騙子」。稍後針對紐約郵報報導康納指馬斯克需為DOGE削減導致450萬兒童「被判死刑」負責，馬斯克發文「該起訴這個騙子」。",
+      "musk_quote": "Time to sue this liar",
+      "musk_quote_zh": "該起訴這個騙子",
       "importance": 4,
       "first_seen": "2026-06-22T02:44:44Z",
-      "updated_at": "2026-06-22T14:29:49.466572+00:00",
+      "updated_at": "2026-06-22T15:42:20.308533+00:00",
       "links": [
         {
-          "label": "Elon on X",
+          "label": "Elon Musk on X (latest)",
+          "url": "https://x.com/elonmusk/status/2069083221300576664"
+        },
+        {
+          "label": "Earlier reply on X",
           "url": "https://x.com/elonmusk/status/2068887884954796453"
         }
       ]
@@ -137,17 +157,17 @@
       "category": "elon_personal",
       "source_type": "musk_reply",
       "title_en": "Immigration cultural critique (reply → @miatalias)",
-      "title_zh": "",
-      "summary_en": "[reply to @miatalias] Seriously",
-      "summary_zh": "",
+      "title_zh": "移民文化批評（回覆 @miatalias）",
+      "summary_en": "Musk replied 'Seriously' to a post on immigration and cultural issues.",
+      "summary_zh": "馬斯克針對移民與文化議題的貼文回覆「Seriously」。",
       "musk_quote": "Seriously",
-      "musk_quote_zh": "",
+      "musk_quote_zh": "認真的",
       "importance": 4,
       "first_seen": "2026-06-22T02:32:50Z",
-      "updated_at": "2026-06-22T14:29:49.466572+00:00",
+      "updated_at": "2026-06-22T15:42:20.308533+00:00",
       "links": [
         {
-          "label": "Elon on X",
+          "label": "Elon Musk on X",
           "url": "https://x.com/elonmusk/status/2068884892096647260"
         }
       ]
@@ -158,17 +178,17 @@
       "category": "elon_personal",
       "source_type": "musk_reply",
       "title_en": "McCarthyism historical defense (reply → @Rothmus)",
-      "title_zh": "",
-      "summary_en": "[reply to @Rothmus] McCarthy was right",
-      "summary_zh": "",
+      "title_zh": "麥卡錫主義歷史辯護（回覆 @Rothmus）",
+      "summary_en": "Musk replied 'McCarthy was right' defending historical McCarthyism.",
+      "summary_zh": "馬斯克回覆「McCarthy was right」，為歷史上的麥卡錫主義辯護。",
       "musk_quote": "McCarthy was right",
-      "musk_quote_zh": "",
+      "musk_quote_zh": "麥卡錫是對的",
       "importance": 4,
       "first_seen": "2026-06-22T02:30:01Z",
-      "updated_at": "2026-06-22T14:29:49.466572+00:00",
+      "updated_at": "2026-06-22T15:42:20.308533+00:00",
       "links": [
         {
-          "label": "Elon on X",
+          "label": "Elon Musk on X",
           "url": "https://x.com/elonmusk/status/2068884179731828856"
         }
       ]
@@ -179,17 +199,17 @@
       "category": "elon_personal",
       "source_type": "musk_reply",
       "title_en": "Socialists Latin America fail (reply → @EndWokeness)",
-      "title_zh": "",
-      "summary_en": "[reply to @EndWokeness] 😂",
-      "summary_zh": "",
+      "title_zh": "社會主義在拉丁美洲失敗（回覆 @EndWokeness）",
+      "summary_en": "Musk replied '😂' to a post about socialists' failures in Latin America.",
+      "summary_zh": "馬斯克針對社會主義在拉丁美洲失敗的貼文回覆「😂」。",
       "musk_quote": "😂",
-      "musk_quote_zh": "",
+      "musk_quote_zh": "😂",
       "importance": 4,
       "first_seen": "2026-06-22T02:29:10Z",
-      "updated_at": "2026-06-22T14:26:12.386124+00:00",
+      "updated_at": "2026-06-22T15:42:20.308533+00:00",
       "links": [
         {
-          "label": "Elon on X",
+          "label": "Elon Musk on X",
           "url": "https://x.com/elonmusk/status/2068883969077117159"
         }
       ]
@@ -198,17 +218,21 @@
       "id": "uk-grooming-media-double-standard-2026-06-22",
       "story_id": "uk-grooming-media-double-standard-2026-06-22",
       "category": "elon_personal",
-      "source_type": "musk_reply",
+      "source_type": "mixed",
       "title_en": "Musk amplifies UK grooming-gang and media double-standard critiques",
-      "title_zh": "馬斯克放大英國 grooming 團伙與媒體雙重標準批評",
-      "summary_en": "Musk retweeted @VladTheInflator contrasting a single Edinburgh knife attack labeled terrorism with grooming gangs' industrialized abuse of ~250,000 British girls that authorities downplayed. He later replied '💯' to another post on torture and cover-ups, then shared a video on Islamist threats and related UK issues.",
-      "summary_zh": "馬斯克轉推 @VladTheInflator，對比愛丁堡持刀案被標恐怖主義，卻對 grooming 團伙長期強暴約25萬女孩、當局掩蓋醜聞保持沉默。他後續對酷刑與掩蓋貼文回「💯」，並分享伊斯蘭威脅等英國議題影片。",
+      "title_zh": "馬斯克放大英國grooming幫派與媒體雙重標準批評",
+      "summary_en": "Musk retweeted @VladTheInflator contrasting a single Edinburgh knife attack labeled terrorism with grooming gangs' industrialized abuse of ~250,000 British girls that authorities downplayed. He later replied '💯' to another post on the topic.",
+      "summary_zh": "馬斯克轉推 @VladTheInflator，對比單一起愛丁堡持刀攻擊被標為恐怖主義，與grooming幫派工業化虐待約25萬英國女孩卻被當局淡化的事件。後續回覆「💯」表支持。",
       "musk_quote": "💯",
       "musk_quote_zh": "💯",
       "importance": 4,
       "first_seen": "2026-06-21T16:53:37.000Z",
-      "updated_at": "2026-06-22T11:37:39.489621+00:00",
+      "updated_at": "2026-06-22T15:42:20.308533+00:00",
       "links": [
+        {
+          "label": "Related Elon Musk activity on X",
+          "url": "https://x.com/elonmusk"
+        },
         {
           "label": "Darth Powell (VladTheInflator) on X",
           "url": "https://x.com/VladTheInflator/status/2068739125944172627"
@@ -229,15 +253,19 @@
       "category": "elon_personal",
       "source_type": "musk_reply",
       "title_en": "Musk: 'Execute them' in horrific UK baby murder case",
-      "title_zh": "馬斯克在英國嬰兒謀殺慘案中說「處決他們」",
+      "title_zh": "馬斯克：英國嬰兒謀殺案「處決他們」",
       "summary_en": "Musk replied 'Execute them' to a post on a British teacher couple convicted of murdering and severely sexually abusing their 1-year-old adopted son Preston, with evidence of prolonged torture that reports say media downplayed.",
-      "summary_zh": "馬斯克回覆「Execute them」，針對英國教師伴侶被判謀殺並嚴重性侵1歲領養兒 Preston 的案件，證據顯示長期酷刑，媒體報導據稱刻意淡化。",
+      "summary_zh": "馬斯克針對英國教師夫婦被判謀殺並嚴重性虐待1歲養子Preston的案件回覆「Execute them」，該案有長期酷刑證據，報導指媒體淡化處理。",
       "musk_quote": "Execute them",
-      "musk_quote_zh": "處決他們。",
+      "musk_quote_zh": "處決他們",
       "importance": 4,
       "first_seen": "2026-06-21T22:46:55.000Z",
-      "updated_at": "2026-06-22T11:37:39.489621+00:00",
+      "updated_at": "2026-06-22T15:42:20.308533+00:00",
       "links": [
+        {
+          "label": "Elon Musk on X",
+          "url": "https://x.com/elonmusk"
+        },
         {
           "label": "Elon Musk on X",
           "url": "https://x.com/elonmusk/status/2068828038062616833"
@@ -248,16 +276,16 @@
       "id": "ai-superintelligence-4-5-years-2026-06-22",
       "story_id": "ai-superintelligence-4-5-years-2026-06-22",
       "category": "xai_x_platform",
-      "source_type": "musk_post",
+      "source_type": "musk_reply",
       "title_en": "Musk: AI will exceed the sum of all human intelligence in 4-5 years",
-      "title_zh": "馬斯克：AI 將在 4-5 年內超越全人類智慧總和",
+      "title_zh": "馬斯克：AI將在4-5年內超越全人類智慧總和",
       "summary_en": "Musk stated: 'AI probably exceeds the sum of all human intelligence in 4 or 5 years.' The comment landed amid ongoing debate over rapid AI progress and xAI's trajectory.",
-      "summary_zh": "馬斯克表示：「AI probably exceeds the sum of all human intelligence in 4 or 5 years.」此言出現在討論 AI 快速進展與 xAI 發展的脈絡中。",
+      "summary_zh": "馬斯克表示：「AI大概會在4或5年內超越全人類智慧的總和。」此言論正值AI快速進展與xAI軌跡的熱烈討論中。",
       "musk_quote": "AI probably exceeds the sum of all human intelligence in 4 or 5 years",
-      "musk_quote_zh": "AI 可能在 4 或 5 年內超越全人類智慧的總和。",
+      "musk_quote_zh": "AI大概會在4或5年內超越全人類智慧的總和",
       "importance": 4,
       "first_seen": "2026-06-21T22:55:07.000Z",
-      "updated_at": "2026-06-22T11:37:39.489621+00:00",
+      "updated_at": "2026-06-22T15:42:20.308533+00:00",
       "links": [
         {
           "label": "Elon Musk on X",
@@ -269,20 +297,45 @@
       "id": "spacex-starlink-california-launch-2026-06-22",
       "story_id": "spacex-starlink-california-launch-2026-06-22",
       "category": "spacex",
-      "source_type": "mixed",
+      "source_type": "musk_quote",
       "title_en": "Musk retweets Falcon 9 Starlink launch from California",
-      "title_zh": "馬斯克轉推 Falcon 9 從加州發射 Starlink 衛星",
+      "title_zh": "馬斯克轉推Falcon 9從加州發射Starlink",
       "summary_en": "SpaceX announced Falcon 9 launched 24 Starlink satellites from California with video and photos. Musk retweeted without added commentary, amplifying the successful mission.",
-      "summary_zh": "SpaceX 宣布 Falcon 9 從加州發射 24 顆 Starlink 衛星，附影片與照片。馬斯克轉推未加評論，放大此次成功任務。",
+      "summary_zh": "SpaceX宣布Falcon 9從加州成功發射24顆Starlink衛星，並附影片與照片。馬斯克無附加評論轉推，放大此成功任務。",
       "musk_quote": "",
       "musk_quote_zh": "",
       "importance": 4,
       "first_seen": "2026-06-21T18:30:07.000Z",
-      "updated_at": "2026-06-22T11:37:39.489621+00:00",
+      "updated_at": "2026-06-22T15:42:20.308533+00:00",
       "links": [
         {
           "label": "SpaceX on X",
+          "url": "https://x.com/SpaceX"
+        },
+        {
+          "label": "SpaceX on X",
           "url": "https://x.com/SpaceX/status/2068763409940705752"
+        }
+      ]
+    },
+    {
+      "id": "musk-2068881208281358654",
+      "story_id": "musk-2068881208281358654",
+      "category": "elon_personal",
+      "source_type": "musk_post",
+      "title_en": "Musk posts video amplifying concerns over Islam and mass immigration in the West",
+      "title_zh": "馬斯克發佈影片放大對伊斯蘭與西方大規模移民的擔憂",
+      "summary_en": "Elon Musk posted a video highlighting claims that Islam is a hostile totalitarian political ideology and warning that mass immigration to the West acts as a 'Trojan Horse' that must be stopped. The post aligns with his recent focus on UK and European cultural and security issues and gained strong engagement.",
+      "summary_zh": "馬斯克發佈一段影片，強調伊斯蘭被描述為敵對的極權政治意識形態，並警告西方大規模移民如同「特洛伊木馬」必須停止。此貼文與他近期關注英國及歐洲文化安全議題一致，並獲得強烈互動。",
+      "musk_quote": "",
+      "musk_quote_zh": "",
+      "importance": 4,
+      "first_seen": "2026-06-22T02:18:12Z",
+      "updated_at": "2026-06-22T15:42:20.308533+00:00",
+      "links": [
+        {
+          "label": "Elon Musk on X",
+          "url": "https://x.com/elonmusk/status/2068881208281358654"
         }
       ]
     },
@@ -292,17 +345,17 @@
       "category": "elon_personal",
       "source_type": "musk_quote",
       "title_en": "China renewable energy growth (repost → @Rothmus)",
-      "title_zh": "",
-      "summary_en": "[repost to @Rothmus] RT @Rothmus: China added a Germany-sized low carbon electricity grid last year. \n\nNearly 500 TWh more generation, almost all solar and wind…",
-      "summary_zh": "",
+      "title_zh": "中國再生能源成長（轉推 @Rothmus）",
+      "summary_en": "Musk reposted @Rothmus noting China added a Germany-sized low carbon electricity grid last year, with nearly 500 TWh more generation, almost all solar and wind.",
+      "summary_zh": "馬斯克轉推 @Rothmus，指出中國去年新增相當於德國規模的低碳電網，新增近500 TWh發電量，幾乎全為太陽能與風能。",
       "musk_quote": "RT @Rothmus: China added a Germany-sized low carbon electricity grid last year. \n\nNearly 500 TWh more generation, almost all solar and wind…",
       "musk_quote_zh": "",
       "importance": 3,
       "first_seen": "2026-06-22T03:24:53Z",
-      "updated_at": "2026-06-22T14:29:49.466572+00:00",
+      "updated_at": "2026-06-22T15:42:20.308533+00:00",
       "links": [
         {
-          "label": "Elon on X",
+          "label": "Elon Musk on X",
           "url": "https://x.com/elonmusk/status/2068897990878597500"
         }
       ]
@@ -313,17 +366,17 @@
       "category": "elon_personal",
       "source_type": "musk_reply",
       "title_en": "Bookstore anti-Marx statement (reply → @Chesschick01)",
-      "title_zh": "",
-      "summary_en": "[reply to @Chesschick01] Nice",
-      "summary_zh": "",
+      "title_zh": "書店反馬克思聲明（回覆 @Chesschick01）",
+      "summary_en": "Musk replied 'Nice' to a post about a bookstore's anti-Marx statement.",
+      "summary_zh": "馬斯克針對書店反馬克思聲明的貼文回覆「Nice」。",
       "musk_quote": "Nice",
-      "musk_quote_zh": "",
+      "musk_quote_zh": "不錯",
       "importance": 3,
       "first_seen": "2026-06-22T02:33:08Z",
-      "updated_at": "2026-06-22T14:29:49.466572+00:00",
+      "updated_at": "2026-06-22T15:42:20.308533+00:00",
       "links": [
         {
-          "label": "Elon on X",
+          "label": "Elon Musk on X",
           "url": "https://x.com/elonmusk/status/2068884964867723614"
         }
       ]
@@ -337,17 +390,17 @@
         "category": "elon_personal",
         "source_type": "musk_quote",
         "title_en": "Vibecoding meme reaction (quote → @kanavtwt)",
-        "title_zh": "",
-        "summary_en": "[quote to @kanavtwt] “Full access” 😂",
-        "summary_zh": "",
+        "title_zh": "對vibecoding迷因的回應（引用 @kanavtwt）",
+        "summary_en": "Musk quote-posted a meme about 'Day 1 of vibecoding' with the reply '“Full access” 😂'. The post received massive engagement.",
+        "summary_zh": "馬斯克引用 @kanavtwt 關於「vibecoding第一天」的迷因貼文，回覆「Full access」並附大笑表情，獲得大量互動。",
         "musk_quote": "“Full access” 😂",
-        "musk_quote_zh": "",
+        "musk_quote_zh": "「完全訪問權限」😂",
         "importance": 5,
         "first_seen": "2026-06-22T02:33:44Z",
-        "updated_at": "2026-06-22T14:29:49.466572+00:00",
+        "updated_at": "2026-06-22T15:42:20.308533+00:00",
         "links": [
           {
-            "label": "Elon on X",
+            "label": "Elon Musk on X",
             "url": "https://x.com/elonmusk/status/2068885116064080018"
           }
         ]
@@ -357,18 +410,22 @@
         "story_id": "musk-2068887884954796453",
         "category": "elon_personal",
         "source_type": "musk_reply",
-        "title_en": "Ro Khanna tax proposal criticism (reply → @WesternLensman)",
-        "title_zh": "",
-        "summary_en": "[reply to @WesternLensman] He’s such an evil liar",
-        "summary_zh": "",
-        "musk_quote": "He’s such an evil liar",
-        "musk_quote_zh": "",
+        "title_en": "Ro Khanna criticism escalates: 'evil liar' on tax proposal and 'Time to sue this liar' over DOGE cuts",
+        "title_zh": "羅·康納批評升級：稅務提案「邪惡騙子」及DOGE削減兒童主張「該起訴這個騙子」",
+        "summary_en": "Musk replied 'He’s such an evil liar' to criticism of Rep. Ro Khanna's tax proposal. Later, responding to a New York Post story where Khanna claimed Musk 'needs to answer' for 4.5M kids 'sentenced to death' over DOGE cuts, Musk posted 'Time to sue this liar'.",
+        "summary_zh": "馬斯克回覆稱羅·康納在稅務提案上「是個邪惡的騙子」。稍後針對紐約郵報報導康納指馬斯克需為DOGE削減導致450萬兒童「被判死刑」負責，馬斯克發文「該起訴這個騙子」。",
+        "musk_quote": "Time to sue this liar",
+        "musk_quote_zh": "該起訴這個騙子",
         "importance": 4,
         "first_seen": "2026-06-22T02:44:44Z",
-        "updated_at": "2026-06-22T14:29:49.466572+00:00",
+        "updated_at": "2026-06-22T15:42:20.308533+00:00",
         "links": [
           {
-            "label": "Elon on X",
+            "label": "Elon Musk on X (latest)",
+            "url": "https://x.com/elonmusk/status/2069083221300576664"
+          },
+          {
+            "label": "Earlier reply on X",
             "url": "https://x.com/elonmusk/status/2068887884954796453"
           }
         ]
@@ -379,17 +436,17 @@
         "category": "elon_personal",
         "source_type": "musk_reply",
         "title_en": "Immigration cultural critique (reply → @miatalias)",
-        "title_zh": "",
-        "summary_en": "[reply to @miatalias] Seriously",
-        "summary_zh": "",
+        "title_zh": "移民文化批評（回覆 @miatalias）",
+        "summary_en": "Musk replied 'Seriously' to a post on immigration and cultural issues.",
+        "summary_zh": "馬斯克針對移民與文化議題的貼文回覆「Seriously」。",
         "musk_quote": "Seriously",
-        "musk_quote_zh": "",
+        "musk_quote_zh": "認真的",
         "importance": 4,
         "first_seen": "2026-06-22T02:32:50Z",
-        "updated_at": "2026-06-22T14:29:49.466572+00:00",
+        "updated_at": "2026-06-22T15:42:20.308533+00:00",
         "links": [
           {
-            "label": "Elon on X",
+            "label": "Elon Musk on X",
             "url": "https://x.com/elonmusk/status/2068884892096647260"
           }
         ]
@@ -400,17 +457,17 @@
         "category": "elon_personal",
         "source_type": "musk_reply",
         "title_en": "McCarthyism historical defense (reply → @Rothmus)",
-        "title_zh": "",
-        "summary_en": "[reply to @Rothmus] McCarthy was right",
-        "summary_zh": "",
+        "title_zh": "麥卡錫主義歷史辯護（回覆 @Rothmus）",
+        "summary_en": "Musk replied 'McCarthy was right' defending historical McCarthyism.",
+        "summary_zh": "馬斯克回覆「McCarthy was right」，為歷史上的麥卡錫主義辯護。",
         "musk_quote": "McCarthy was right",
-        "musk_quote_zh": "",
+        "musk_quote_zh": "麥卡錫是對的",
         "importance": 4,
         "first_seen": "2026-06-22T02:30:01Z",
-        "updated_at": "2026-06-22T14:29:49.466572+00:00",
+        "updated_at": "2026-06-22T15:42:20.308533+00:00",
         "links": [
           {
-            "label": "Elon on X",
+            "label": "Elon Musk on X",
             "url": "https://x.com/elonmusk/status/2068884179731828856"
           }
         ]
@@ -421,17 +478,17 @@
         "category": "elon_personal",
         "source_type": "musk_reply",
         "title_en": "Socialists Latin America fail (reply → @EndWokeness)",
-        "title_zh": "",
-        "summary_en": "[reply to @EndWokeness] 😂",
-        "summary_zh": "",
+        "title_zh": "社會主義在拉丁美洲失敗（回覆 @EndWokeness）",
+        "summary_en": "Musk replied '😂' to a post about socialists' failures in Latin America.",
+        "summary_zh": "馬斯克針對社會主義在拉丁美洲失敗的貼文回覆「😂」。",
         "musk_quote": "😂",
-        "musk_quote_zh": "",
+        "musk_quote_zh": "😂",
         "importance": 4,
         "first_seen": "2026-06-22T02:29:10Z",
-        "updated_at": "2026-06-22T14:26:12.386124+00:00",
+        "updated_at": "2026-06-22T15:42:20.308533+00:00",
         "links": [
           {
-            "label": "Elon on X",
+            "label": "Elon Musk on X",
             "url": "https://x.com/elonmusk/status/2068883969077117159"
           }
         ]
@@ -440,17 +497,21 @@
         "id": "uk-grooming-media-double-standard-2026-06-22",
         "story_id": "uk-grooming-media-double-standard-2026-06-22",
         "category": "elon_personal",
-        "source_type": "musk_reply",
+        "source_type": "mixed",
         "title_en": "Musk amplifies UK grooming-gang and media double-standard critiques",
-        "title_zh": "馬斯克放大英國 grooming 團伙與媒體雙重標準批評",
-        "summary_en": "Musk retweeted @VladTheInflator contrasting a single Edinburgh knife attack labeled terrorism with grooming gangs' industrialized abuse of ~250,000 British girls that authorities downplayed. He later replied '💯' to another post on torture and cover-ups, then shared a video on Islamist threats and related UK issues.",
-        "summary_zh": "馬斯克轉推 @VladTheInflator，對比愛丁堡持刀案被標恐怖主義，卻對 grooming 團伙長期強暴約25萬女孩、當局掩蓋醜聞保持沉默。他後續對酷刑與掩蓋貼文回「💯」，並分享伊斯蘭威脅等英國議題影片。",
+        "title_zh": "馬斯克放大英國grooming幫派與媒體雙重標準批評",
+        "summary_en": "Musk retweeted @VladTheInflator contrasting a single Edinburgh knife attack labeled terrorism with grooming gangs' industrialized abuse of ~250,000 British girls that authorities downplayed. He later replied '💯' to another post on the topic.",
+        "summary_zh": "馬斯克轉推 @VladTheInflator，對比單一起愛丁堡持刀攻擊被標為恐怖主義，與grooming幫派工業化虐待約25萬英國女孩卻被當局淡化的事件。後續回覆「💯」表支持。",
         "musk_quote": "💯",
         "musk_quote_zh": "💯",
         "importance": 4,
         "first_seen": "2026-06-21T16:53:37.000Z",
-        "updated_at": "2026-06-22T11:37:39.489621+00:00",
+        "updated_at": "2026-06-22T15:42:20.308533+00:00",
         "links": [
+          {
+            "label": "Related Elon Musk activity on X",
+            "url": "https://x.com/elonmusk"
+          },
           {
             "label": "Darth Powell (VladTheInflator) on X",
             "url": "https://x.com/VladTheInflator/status/2068739125944172627"
@@ -471,18 +532,43 @@
         "category": "elon_personal",
         "source_type": "musk_reply",
         "title_en": "Musk: 'Execute them' in horrific UK baby murder case",
-        "title_zh": "馬斯克在英國嬰兒謀殺慘案中說「處決他們」",
+        "title_zh": "馬斯克：英國嬰兒謀殺案「處決他們」",
         "summary_en": "Musk replied 'Execute them' to a post on a British teacher couple convicted of murdering and severely sexually abusing their 1-year-old adopted son Preston, with evidence of prolonged torture that reports say media downplayed.",
-        "summary_zh": "馬斯克回覆「Execute them」，針對英國教師伴侶被判謀殺並嚴重性侵1歲領養兒 Preston 的案件，證據顯示長期酷刑，媒體報導據稱刻意淡化。",
+        "summary_zh": "馬斯克針對英國教師夫婦被判謀殺並嚴重性虐待1歲養子Preston的案件回覆「Execute them」，該案有長期酷刑證據，報導指媒體淡化處理。",
         "musk_quote": "Execute them",
-        "musk_quote_zh": "處決他們。",
+        "musk_quote_zh": "處決他們",
         "importance": 4,
         "first_seen": "2026-06-21T22:46:55.000Z",
-        "updated_at": "2026-06-22T11:37:39.489621+00:00",
+        "updated_at": "2026-06-22T15:42:20.308533+00:00",
         "links": [
           {
             "label": "Elon Musk on X",
+            "url": "https://x.com/elonmusk"
+          },
+          {
+            "label": "Elon Musk on X",
             "url": "https://x.com/elonmusk/status/2068828038062616833"
+          }
+        ]
+      },
+      {
+        "id": "musk-2068881208281358654",
+        "story_id": "musk-2068881208281358654",
+        "category": "elon_personal",
+        "source_type": "musk_post",
+        "title_en": "Musk posts video amplifying concerns over Islam and mass immigration in the West",
+        "title_zh": "馬斯克發佈影片放大對伊斯蘭與西方大規模移民的擔憂",
+        "summary_en": "Elon Musk posted a video highlighting claims that Islam is a hostile totalitarian political ideology and warning that mass immigration to the West acts as a 'Trojan Horse' that must be stopped. The post aligns with his recent focus on UK and European cultural and security issues and gained strong engagement.",
+        "summary_zh": "馬斯克發佈一段影片，強調伊斯蘭被描述為敵對的極權政治意識形態，並警告西方大規模移民如同「特洛伊木馬」必須停止。此貼文與他近期關注英國及歐洲文化安全議題一致，並獲得強烈互動。",
+        "musk_quote": "",
+        "musk_quote_zh": "",
+        "importance": 4,
+        "first_seen": "2026-06-22T02:18:12Z",
+        "updated_at": "2026-06-22T15:42:20.308533+00:00",
+        "links": [
+          {
+            "label": "Elon Musk on X",
+            "url": "https://x.com/elonmusk/status/2068881208281358654"
           }
         ]
       },
@@ -492,17 +578,17 @@
         "category": "elon_personal",
         "source_type": "musk_quote",
         "title_en": "China renewable energy growth (repost → @Rothmus)",
-        "title_zh": "",
-        "summary_en": "[repost to @Rothmus] RT @Rothmus: China added a Germany-sized low carbon electricity grid last year. \n\nNearly 500 TWh more generation, almost all solar and wind…",
-        "summary_zh": "",
+        "title_zh": "中國再生能源成長（轉推 @Rothmus）",
+        "summary_en": "Musk reposted @Rothmus noting China added a Germany-sized low carbon electricity grid last year, with nearly 500 TWh more generation, almost all solar and wind.",
+        "summary_zh": "馬斯克轉推 @Rothmus，指出中國去年新增相當於德國規模的低碳電網，新增近500 TWh發電量，幾乎全為太陽能與風能。",
         "musk_quote": "RT @Rothmus: China added a Germany-sized low carbon electricity grid last year. \n\nNearly 500 TWh more generation, almost all solar and wind…",
         "musk_quote_zh": "",
         "importance": 3,
         "first_seen": "2026-06-22T03:24:53Z",
-        "updated_at": "2026-06-22T14:29:49.466572+00:00",
+        "updated_at": "2026-06-22T15:42:20.308533+00:00",
         "links": [
           {
-            "label": "Elon on X",
+            "label": "Elon Musk on X",
             "url": "https://x.com/elonmusk/status/2068897990878597500"
           }
         ]
@@ -513,17 +599,17 @@
         "category": "elon_personal",
         "source_type": "musk_reply",
         "title_en": "Bookstore anti-Marx statement (reply → @Chesschick01)",
-        "title_zh": "",
-        "summary_en": "[reply to @Chesschick01] Nice",
-        "summary_zh": "",
+        "title_zh": "書店反馬克思聲明（回覆 @Chesschick01）",
+        "summary_en": "Musk replied 'Nice' to a post about a bookstore's anti-Marx statement.",
+        "summary_zh": "馬斯克針對書店反馬克思聲明的貼文回覆「Nice」。",
         "musk_quote": "Nice",
-        "musk_quote_zh": "",
+        "musk_quote_zh": "不錯",
         "importance": 3,
         "first_seen": "2026-06-22T02:33:08Z",
-        "updated_at": "2026-06-22T14:29:49.466572+00:00",
+        "updated_at": "2026-06-22T15:42:20.308533+00:00",
         "links": [
           {
-            "label": "Elon on X",
+            "label": "Elon Musk on X",
             "url": "https://x.com/elonmusk/status/2068884964867723614"
           }
         ]
@@ -535,17 +621,21 @@
         "id": "spacex-starlink-california-launch-2026-06-22",
         "story_id": "spacex-starlink-california-launch-2026-06-22",
         "category": "spacex",
-        "source_type": "mixed",
+        "source_type": "musk_quote",
         "title_en": "Musk retweets Falcon 9 Starlink launch from California",
-        "title_zh": "馬斯克轉推 Falcon 9 從加州發射 Starlink 衛星",
+        "title_zh": "馬斯克轉推Falcon 9從加州發射Starlink",
         "summary_en": "SpaceX announced Falcon 9 launched 24 Starlink satellites from California with video and photos. Musk retweeted without added commentary, amplifying the successful mission.",
-        "summary_zh": "SpaceX 宣布 Falcon 9 從加州發射 24 顆 Starlink 衛星，附影片與照片。馬斯克轉推未加評論，放大此次成功任務。",
+        "summary_zh": "SpaceX宣布Falcon 9從加州成功發射24顆Starlink衛星，並附影片與照片。馬斯克無附加評論轉推，放大此成功任務。",
         "musk_quote": "",
         "musk_quote_zh": "",
         "importance": 4,
         "first_seen": "2026-06-21T18:30:07.000Z",
-        "updated_at": "2026-06-22T11:37:39.489621+00:00",
+        "updated_at": "2026-06-22T15:42:20.308533+00:00",
         "links": [
+          {
+            "label": "SpaceX on X",
+            "url": "https://x.com/SpaceX"
+          },
           {
             "label": "SpaceX on X",
             "url": "https://x.com/SpaceX/status/2068763409940705752"
@@ -558,16 +648,16 @@
         "id": "ai-superintelligence-4-5-years-2026-06-22",
         "story_id": "ai-superintelligence-4-5-years-2026-06-22",
         "category": "xai_x_platform",
-        "source_type": "musk_post",
+        "source_type": "musk_reply",
         "title_en": "Musk: AI will exceed the sum of all human intelligence in 4-5 years",
-        "title_zh": "馬斯克：AI 將在 4-5 年內超越全人類智慧總和",
+        "title_zh": "馬斯克：AI將在4-5年內超越全人類智慧總和",
         "summary_en": "Musk stated: 'AI probably exceeds the sum of all human intelligence in 4 or 5 years.' The comment landed amid ongoing debate over rapid AI progress and xAI's trajectory.",
-        "summary_zh": "馬斯克表示：「AI probably exceeds the sum of all human intelligence in 4 or 5 years.」此言出現在討論 AI 快速進展與 xAI 發展的脈絡中。",
+        "summary_zh": "馬斯克表示：「AI大概會在4或5年內超越全人類智慧的總和。」此言論正值AI快速進展與xAI軌跡的熱烈討論中。",
         "musk_quote": "AI probably exceeds the sum of all human intelligence in 4 or 5 years",
-        "musk_quote_zh": "AI 可能在 4 或 5 年內超越全人類智慧的總和。",
+        "musk_quote_zh": "AI大概會在4或5年內超越全人類智慧的總和",
         "importance": 4,
         "first_seen": "2026-06-21T22:55:07.000Z",
-        "updated_at": "2026-06-22T11:37:39.489621+00:00",
+        "updated_at": "2026-06-22T15:42:20.308533+00:00",
         "links": [
           {
             "label": "Elon Musk on X",
@@ -578,7 +668,7 @@
     ],
     "other": []
   },
-  "brief_en": "Elon Musk on X in the last 12h: Vibecoding meme reaction (quote → @kanavtwt); Ro Khanna tax proposal criticism (reply → @WesternLensman); McCarthyism historical defense (reply → @Rothmus); China renewable energy growth (repost → @Rothmus); Immigration cultural critique (reply → @miatalias)",
-  "brief_zh": "",
-  "updated_at": "2026-06-22T14:29:49.466572+00:00"
+  "brief_en": "Elon Musk criticized Ro Khanna as 'evil liar' and said 'Time to sue this liar' over DOGE cuts claims. He quoted a vibecoding meme, defended McCarthy, commented on immigration and socialism, and posted a video amplifying warnings on Islam and Western immigration. Earlier: AI may exceed all human intelligence in 4-5 years; UK crime cases highlighted.",
+  "brief_zh": "馬斯克今日痛批羅·康納為「邪惡騙子」並稱「該起訴」其DOGE言論；引用vibecoding迷因、支持麥卡錫觀點、評移民與社會主義，並發影片警示伊斯蘭與西方移民。稍早預測AI 4-5年內超越人類智慧總和，關注英國犯罪案件。",
+  "updated_at": "2026-06-22T15:42:20.308533+00:00"
 }

@@ -406,22 +406,20 @@ class GrokTab:
 
 # ------------------------------------------------------------ prompt ----
 
-# 刻意精簡（~850 字）：實測 grok.com 的 TipTap 輸入框，超長 prompt（~1500 字）browser_fill
-# 逐字輸入會在送出鈕互動上出狀況；精簡版同樣能讓 grok 用 X 存取吐出正確 JSON，且送出穩。
-WEBGROK_PROMPT_TEMPLATE = """You have native access to X (Twitter). Use it now to read \
-@elonmusk's activity. TASK: List EVERY post, reply and repost made by Elon Musk (@elonmusk) on X \
-in the LAST {lookback_hours} HOURS (current UTC {run_iso}). Read his actual X timeline — do NOT \
-guess, do NOT use stale old viral posts, do NOT invent anything. If he made nothing in the window, \
-return an empty array []. Return ONLY a JSON array inside one ```json fenced code block. Each \
-element MUST be an object with EXACTLY these keys: type (post/reply/repost/quote), text (his \
-verbatim words), engaged_with (the @handle he engaged with, or empty string for original posts), \
-link (permalink https://x.com/elonmusk/status/...), time_utc (ISO-8601 UTC), topic (2-5 word \
-English label), importance (integer 1-5). Group nothing — one X post = one array element. Only \
-items truly inside the {lookback_hours}h window. Output STRICT JSON only, no commentary."""
-
-
-def build_webgrok_prompt(run_iso: str) -> str:
-    return WEBGROK_PROMPT_TEMPLATE.format(lookback_hours=LOOKBACK_HOURS, run_iso=run_iso)
+# 用「原本 CLI 版的完整複雜提示詞」(elon_digest.SYSTEM_RULES + USER_TEMPLATE + SCHEMA_BLOCK)，
+# 讓 grok 直接吐含 標題/中英摘要/馬斯克原話+中譯/分類/重要度/links + 整日 brief 的完整 digest，
+# 並與既有條目演進式合併。送出穩定問題已用「URL 變化判定」解決，與 prompt 長度無關，故可用長 prompt。
+# 唯一差別：要 grok 把 JSON 放進一個 ```json fenced code block(方便穩定 grab)。
+def build_webgrok_prompt(run_iso: str, date_str: str, existing_items: list) -> str:
+    existing_json = (json.dumps(ed._compact_existing(existing_items, limit=25),
+                                ensure_ascii=False, indent=1)
+                     if existing_items else "[]")
+    user = ed.USER_TEMPLATE.format(date=date_str, run_iso=run_iso or date_str,
+                                   lookback_hours=LOOKBACK_HOURS,
+                                   existing_items_json=existing_json)
+    return (ed.SYSTEM_RULES + "\n\n" + user
+            + "\n\nIMPORTANT OUTPUT FORMAT: output the STRICT JSON object inside ONE ```json fenced "
+              "code block, nothing before or after the code block.")
 
 
 def parse_grok_array(text: str) -> list:
@@ -597,8 +595,9 @@ def grok_items_to_digest(grok_arr: list, run_iso: str, date_str: str) -> dict:
 
 # --------------------------------------------------------------- 讀 X ----
 
-def read_x_via_webgrok(run_iso: str, date_str: str) -> dict:
-    """完整流程：連 daemon → 開/找 grok.com 分頁 → 送 prompt → 等回覆 → 解析 → 對映 schema。"""
+def read_x_via_webgrok(run_iso: str, date_str: str, existing_items: list) -> dict:
+    """完整流程：連 daemon → 開/找 grok.com 分頁 → 送「完整複雜 prompt」→ 等回覆 →
+    用 elon_digest.extract_json_object 解析成完整 digest dict(brief+items 已合併)。"""
     mcp = MCP()
     mcp.connect()
     print(f"[webgrok] 已連上 browser MCP daemon（{MCP_BASE}）")
@@ -609,23 +608,32 @@ def read_x_via_webgrok(run_iso: str, date_str: str) -> dict:
         raise RuntimeError("grok.com 編輯器（.tiptap.ProseMirror）未就緒——"
                            "確認瀏覽器已開 grok.com 且已登入。")
 
-    prompt = build_webgrok_prompt(run_iso)
-    print(f"[webgrok] 送出 prompt（{len(prompt)} 字，lookback={LOOKBACK_HOURS}h）→ grok 讀 X 中…")
+    prompt = build_webgrok_prompt(run_iso, date_str, existing_items)
+    print(f"[webgrok] 送出完整 prompt（{len(prompt)} 字，lookback={LOOKBACK_HOURS}h，"
+          f"既有 {len(existing_items)} 條）→ grok 讀 X+合併中…")
     if not tab.send(prompt):
-        raise RuntimeError("prompt 送出失敗（輸入框未清空，可能 fill/提交鈕沒生效）。")
+        raise RuntimeError("prompt 送出失敗（送出後 URL 沒變成對話頁）。")
 
     block = tab.wait_reply(GEN_TIMEOUT)
     if not block:
-        raise RuntimeError(f"等不到 grok 回覆的 code block（逾時 {GEN_TIMEOUT}s）。")
-    print(f"[webgrok] 取得回覆 code block（{len(block)} 字）")
+        raise RuntimeError(f"等不到 grok 回覆（逾時 {GEN_TIMEOUT}s）。")
+    print(f"[webgrok] 取得回覆（{len(block)} 字）")
 
-    arr = parse_grok_array(block)
-    print(f"[webgrok] 解析出 {len(arr)} 則 X 貼文")
-    if not arr:
-        # 把抓到的原文印一小段方便除錯（不中止：可能 grok 真的回空陣列）
-        print(f"[webgrok] ⚠ 解析為空，回覆前 200 字：{block[:200]!r}")
-
-    return grok_items_to_digest(arr, run_iso, date_str)
+    # 用 elon_digest 既有的健壯解析(容忍 ```fence、前後雜訊)抽出完整 digest 物件。
+    try:
+        data = ed.extract_json_object(block)
+    except Exception as e:
+        print(f"[webgrok] ⚠ JSON 解析失敗：{e!r}；回覆前 300 字：{block[:300]!r}", file=sys.stderr)
+        raise
+    items = data.get("items", [])
+    print(f"[webgrok] 解析出完整 digest：{len(items)} items，brief_en={bool(data.get('brief_en'))}")
+    data["_usage"] = {
+        "backend": "grok-web",
+        "model": "grok.com (browser)",
+        "lookback_hours": LOOKBACK_HOURS,
+        "item_count": len(items),
+    }
+    return data
 
 
 # ------------------------------------------------------------------ main ---
@@ -642,9 +650,13 @@ def main():
     print(f"=== MarsRadar webgrok run {run_iso} | 台北日期 {date_str} "
           f"| repo={repo} | push={ed.GIT_PUSH} ===")
 
-    # 1) 用 web 版 grok 讀 X
+    # 0) 先載入今日既有條目，連同完整 prompt 一起餵 grok 做演進式合併(產出完整 digest)
+    existing = ed.load_today_items(repo, date_str)
+    print(f"[merge] 今日既有 {len(existing)} 條（一併餵給 grok 合併，write_digest 內再以 story_id 收斂）")
+
+    # 1) 用 web 版 grok 讀 X（完整複雜 prompt → 完整 digest）
     try:
-        grok = read_x_via_webgrok(run_iso, date_str)
+        grok = read_x_via_webgrok(run_iso, date_str, existing)
     except Exception as e:
         print(f"[webgrok] ❌ 讀 X 失敗：{e!r}", file=sys.stderr)
         sys.exit(2)
@@ -653,8 +665,6 @@ def main():
 
     # 2) 重用 elon_digest 既有的 merge / 寫檔 / index / git
     try:
-        existing = ed.load_today_items(repo, date_str)
-        print(f"[merge] 今日既有 {len(existing)} 條（write_digest 內會以 story_id 合併）")
         path = ed.write_digest(repo, date_str, run_iso, grok)
         ed.rebuild_index(repo)
         print(f"[write] {path}")
