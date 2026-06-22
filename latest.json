@@ -69,6 +69,23 @@
         "raw_count": 8,
         "mapped_count": 8
       }
+    },
+    {
+      "generated_at": "2026-06-22T14:29:49.466572+00:00",
+      "backend": "grok-web",
+      "model": "grok.com (browser)",
+      "brief_en": "Elon Musk on X in the last 12h: Vibecoding meme reaction (quote → @kanavtwt); Ro Khanna tax proposal criticism (reply → @WesternLensman); McCarthyism historical defense (reply → @Rothmus); China renewable energy growth (repost → @Rothmus); Immigration cultural critique (reply → @miatalias)",
+      "brief_zh": "",
+      "item_count": 11,
+      "updated_count": 6,
+      "kept_count": 5,
+      "usage": {
+        "backend": "grok-web",
+        "model": "grok.com (browser)",
+        "lookback_hours": 12,
+        "raw_count": 6,
+        "mapped_count": 6
+      }
     }
   ],
   "items_flat": [
@@ -77,7 +94,7 @@
       "story_id": "musk-2068885116064080018",
       "category": "elon_personal",
       "source_type": "musk_quote",
-      "title_en": "Vibecoding full access meme (quote → @kanavtwt)",
+      "title_en": "Vibecoding meme reaction (quote → @kanavtwt)",
       "title_zh": "",
       "summary_en": "[quote to @kanavtwt] “Full access” 😂",
       "summary_zh": "",
@@ -85,7 +102,7 @@
       "musk_quote_zh": "",
       "importance": 5,
       "first_seen": "2026-06-22T02:33:44Z",
-      "updated_at": "2026-06-22T14:26:12.386124+00:00",
+      "updated_at": "2026-06-22T14:29:49.466572+00:00",
       "links": [
         {
           "label": "Elon on X",
@@ -98,7 +115,7 @@
       "story_id": "musk-2068887884954796453",
       "category": "elon_personal",
       "source_type": "musk_reply",
-      "title_en": "Ro Khanna tax criticism (reply → @WesternLensman)",
+      "title_en": "Ro Khanna tax proposal criticism (reply → @WesternLensman)",
       "title_zh": "",
       "summary_en": "[reply to @WesternLensman] He’s such an evil liar",
       "summary_zh": "",
@@ -106,7 +123,7 @@
       "musk_quote_zh": "",
       "importance": 4,
       "first_seen": "2026-06-22T02:44:44Z",
-      "updated_at": "2026-06-22T14:26:12.386124+00:00",
+      "updated_at": "2026-06-22T14:29:49.466572+00:00",
       "links": [
         {
           "label": "Elon on X",
@@ -119,7 +136,7 @@
       "story_id": "musk-2068884892096647260",
       "category": "elon_personal",
       "source_type": "musk_reply",
-      "title_en": "Immigrant America complaint video (reply → @miatalias)",
+      "title_en": "Immigration cultural critique (reply → @miatalias)",
       "title_zh": "",
       "summary_en": "[reply to @miatalias] Seriously",
       "summary_zh": "",
@@ -127,7 +144,7 @@
       "musk_quote_zh": "",
       "importance": 4,
       "first_seen": "2026-06-22T02:32:50Z",
-      "updated_at": "2026-06-22T14:26:12.386124+00:00",
+      "updated_at": "2026-06-22T14:29:49.466572+00:00",
       "links": [
         {
           "label": "Elon on X",
@@ -140,7 +157,7 @@
       "story_id": "musk-2068884179731828856",
       "category": "elon_personal",
       "source_type": "musk_reply",
-      "title_en": "McCarthyism citizenship revocation (reply → @Rothmus)",
+      "title_en": "McCarthyism historical defense (reply → @Rothmus)",
       "title_zh": "",
       "summary_en": "[reply to @Rothmus] McCarthy was right",
       "summary_zh": "",
@@ -148,7 +165,7 @@
       "musk_quote_zh": "",
       "importance": 4,
       "first_seen": "2026-06-22T02:30:01Z",
-      "updated_at": "2026-06-22T14:26:12.386124+00:00",
+      "updated_at": "2026-06-22T14:29:49.466572+00:00",
       "links": [
         {
           "label": "Elon on X",
@@ -276,13 +293,13 @@
       "source_type": "musk_quote",
       "title_en": "China renewable energy growth (repost → @Rothmus)",
       "title_zh": "",
-      "summary_en": "[repost to @Rothmus] China added a Germany-sized low carbon electricity grid last year. \n\nNearly 500 TWh more generation, almost all solar and wind…",
+      "summary_en": "[repost to @Rothmus] RT @Rothmus: China added a Germany-sized low carbon electricity grid last year. \n\nNearly 500 TWh more generation, almost all solar and wind…",
       "summary_zh": "",
-      "musk_quote": "China added a Germany-sized low carbon electricity grid last year. \n\nNearly 500 TWh more generation, almost all solar and wind…",
+      "musk_quote": "RT @Rothmus: China added a Germany-sized low carbon electricity grid last year. \n\nNearly 500 TWh more generation, almost all solar and wind…",
       "musk_quote_zh": "",
       "importance": 3,
       "first_seen": "2026-06-22T03:24:53Z",
-      "updated_at": "2026-06-22T14:26:12.386124+00:00",
+      "updated_at": "2026-06-22T14:29:49.466572+00:00",
       "links": [
         {
           "label": "Elon on X",
@@ -295,7 +312,7 @@
       "story_id": "musk-2068884964867723614",
       "category": "elon_personal",
       "source_type": "musk_reply",
-      "title_en": "Bookstore Hayek Marx books (reply → @Chesschick01)",
+      "title_en": "Bookstore anti-Marx statement (reply → @Chesschick01)",
       "title_zh": "",
       "summary_en": "[reply to @Chesschick01] Nice",
       "summary_zh": "",
@@ -303,32 +320,11 @@
       "musk_quote_zh": "",
       "importance": 3,
       "first_seen": "2026-06-22T02:33:08Z",
-      "updated_at": "2026-06-22T14:26:12.386124+00:00",
+      "updated_at": "2026-06-22T14:29:49.466572+00:00",
       "links": [
         {
           "label": "Elon on X",
           "url": "https://x.com/elonmusk/status/2068884964867723614"
-        }
-      ]
-    },
-    {
-      "id": "musk-2068883812390441203",
-      "story_id": "musk-2068883812390441203",
-      "category": "elon_personal",
-      "source_type": "musk_quote",
-      "title_en": "Father's Day family celebration (repost → @WilliamShatner)",
-      "title_zh": "",
-      "summary_en": "[repost to @WilliamShatner] There's nothing like celebrating Father's Day with your children, grand kids and great grandsons!  I hope you all had a…",
-      "summary_zh": "",
-      "musk_quote": "There's nothing like celebrating Father's Day with your children, grand kids and great grandsons!  I hope you all had a…",
-      "musk_quote_zh": "",
-      "importance": 2,
-      "first_seen": "2026-06-22T02:28:33Z",
-      "updated_at": "2026-06-22T14:26:12.386124+00:00",
-      "links": [
-        {
-          "label": "Elon on X",
-          "url": "https://x.com/elonmusk/status/2068883812390441203"
         }
       ]
     }
@@ -340,7 +336,7 @@
         "story_id": "musk-2068885116064080018",
         "category": "elon_personal",
         "source_type": "musk_quote",
-        "title_en": "Vibecoding full access meme (quote → @kanavtwt)",
+        "title_en": "Vibecoding meme reaction (quote → @kanavtwt)",
         "title_zh": "",
         "summary_en": "[quote to @kanavtwt] “Full access” 😂",
         "summary_zh": "",
@@ -348,7 +344,7 @@
         "musk_quote_zh": "",
         "importance": 5,
         "first_seen": "2026-06-22T02:33:44Z",
-        "updated_at": "2026-06-22T14:26:12.386124+00:00",
+        "updated_at": "2026-06-22T14:29:49.466572+00:00",
         "links": [
           {
             "label": "Elon on X",
@@ -361,7 +357,7 @@
         "story_id": "musk-2068887884954796453",
         "category": "elon_personal",
         "source_type": "musk_reply",
-        "title_en": "Ro Khanna tax criticism (reply → @WesternLensman)",
+        "title_en": "Ro Khanna tax proposal criticism (reply → @WesternLensman)",
         "title_zh": "",
         "summary_en": "[reply to @WesternLensman] He’s such an evil liar",
         "summary_zh": "",
@@ -369,7 +365,7 @@
         "musk_quote_zh": "",
         "importance": 4,
         "first_seen": "2026-06-22T02:44:44Z",
-        "updated_at": "2026-06-22T14:26:12.386124+00:00",
+        "updated_at": "2026-06-22T14:29:49.466572+00:00",
         "links": [
           {
             "label": "Elon on X",
@@ -382,7 +378,7 @@
         "story_id": "musk-2068884892096647260",
         "category": "elon_personal",
         "source_type": "musk_reply",
-        "title_en": "Immigrant America complaint video (reply → @miatalias)",
+        "title_en": "Immigration cultural critique (reply → @miatalias)",
         "title_zh": "",
         "summary_en": "[reply to @miatalias] Seriously",
         "summary_zh": "",
@@ -390,7 +386,7 @@
         "musk_quote_zh": "",
         "importance": 4,
         "first_seen": "2026-06-22T02:32:50Z",
-        "updated_at": "2026-06-22T14:26:12.386124+00:00",
+        "updated_at": "2026-06-22T14:29:49.466572+00:00",
         "links": [
           {
             "label": "Elon on X",
@@ -403,7 +399,7 @@
         "story_id": "musk-2068884179731828856",
         "category": "elon_personal",
         "source_type": "musk_reply",
-        "title_en": "McCarthyism citizenship revocation (reply → @Rothmus)",
+        "title_en": "McCarthyism historical defense (reply → @Rothmus)",
         "title_zh": "",
         "summary_en": "[reply to @Rothmus] McCarthy was right",
         "summary_zh": "",
@@ -411,7 +407,7 @@
         "musk_quote_zh": "",
         "importance": 4,
         "first_seen": "2026-06-22T02:30:01Z",
-        "updated_at": "2026-06-22T14:26:12.386124+00:00",
+        "updated_at": "2026-06-22T14:29:49.466572+00:00",
         "links": [
           {
             "label": "Elon on X",
@@ -497,13 +493,13 @@
         "source_type": "musk_quote",
         "title_en": "China renewable energy growth (repost → @Rothmus)",
         "title_zh": "",
-        "summary_en": "[repost to @Rothmus] China added a Germany-sized low carbon electricity grid last year. \n\nNearly 500 TWh more generation, almost all solar and wind…",
+        "summary_en": "[repost to @Rothmus] RT @Rothmus: China added a Germany-sized low carbon electricity grid last year. \n\nNearly 500 TWh more generation, almost all solar and wind…",
         "summary_zh": "",
-        "musk_quote": "China added a Germany-sized low carbon electricity grid last year. \n\nNearly 500 TWh more generation, almost all solar and wind…",
+        "musk_quote": "RT @Rothmus: China added a Germany-sized low carbon electricity grid last year. \n\nNearly 500 TWh more generation, almost all solar and wind…",
         "musk_quote_zh": "",
         "importance": 3,
         "first_seen": "2026-06-22T03:24:53Z",
-        "updated_at": "2026-06-22T14:26:12.386124+00:00",
+        "updated_at": "2026-06-22T14:29:49.466572+00:00",
         "links": [
           {
             "label": "Elon on X",
@@ -516,7 +512,7 @@
         "story_id": "musk-2068884964867723614",
         "category": "elon_personal",
         "source_type": "musk_reply",
-        "title_en": "Bookstore Hayek Marx books (reply → @Chesschick01)",
+        "title_en": "Bookstore anti-Marx statement (reply → @Chesschick01)",
         "title_zh": "",
         "summary_en": "[reply to @Chesschick01] Nice",
         "summary_zh": "",
@@ -524,32 +520,11 @@
         "musk_quote_zh": "",
         "importance": 3,
         "first_seen": "2026-06-22T02:33:08Z",
-        "updated_at": "2026-06-22T14:26:12.386124+00:00",
+        "updated_at": "2026-06-22T14:29:49.466572+00:00",
         "links": [
           {
             "label": "Elon on X",
             "url": "https://x.com/elonmusk/status/2068884964867723614"
-          }
-        ]
-      },
-      {
-        "id": "musk-2068883812390441203",
-        "story_id": "musk-2068883812390441203",
-        "category": "elon_personal",
-        "source_type": "musk_quote",
-        "title_en": "Father's Day family celebration (repost → @WilliamShatner)",
-        "title_zh": "",
-        "summary_en": "[repost to @WilliamShatner] There's nothing like celebrating Father's Day with your children, grand kids and great grandsons!  I hope you all had a…",
-        "summary_zh": "",
-        "musk_quote": "There's nothing like celebrating Father's Day with your children, grand kids and great grandsons!  I hope you all had a…",
-        "musk_quote_zh": "",
-        "importance": 2,
-        "first_seen": "2026-06-22T02:28:33Z",
-        "updated_at": "2026-06-22T14:26:12.386124+00:00",
-        "links": [
-          {
-            "label": "Elon on X",
-            "url": "https://x.com/elonmusk/status/2068883812390441203"
           }
         ]
       }
@@ -603,7 +578,7 @@
     ],
     "other": []
   },
-  "brief_en": "Elon Musk on X in the last 12h: Vibecoding full access meme (quote → @kanavtwt); Ro Khanna tax criticism (reply → @WesternLensman); Immigrant America complaint video (reply → @miatalias); McCarthyism citizenship revocation (reply → @Rothmus); Socialists Latin America fail (reply → @EndWokeness)",
+  "brief_en": "Elon Musk on X in the last 12h: Vibecoding meme reaction (quote → @kanavtwt); Ro Khanna tax proposal criticism (reply → @WesternLensman); McCarthyism historical defense (reply → @Rothmus); China renewable energy growth (repost → @Rothmus); Immigration cultural critique (reply → @miatalias)",
   "brief_zh": "",
-  "updated_at": "2026-06-22T14:26:12.386124+00:00"
+  "updated_at": "2026-06-22T14:29:49.466572+00:00"
 }
