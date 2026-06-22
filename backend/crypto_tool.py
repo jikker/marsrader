@@ -4,7 +4,7 @@ MarsRadar 公開 JSON 加密小工具
 ==============================
 
 用途：切換到加密時，把倉庫裡「現有的明文 JSON」一次性轉成加密信封（或反向解回明文驗證）。
-平常的 6 小時排程由 elon_digest.py 自己加密，這支只在「手動切換 / 驗證」時用。
+平常的 2 小時排程由 elon_digest.py 自己加密，這支只在「手動切換 / 驗證」時用。
 
 金鑰：環境變數 MARSRADAR_ENC_KEY（64 hex 字元＝32 bytes），與 App Config.encKeyHex 相同。
 

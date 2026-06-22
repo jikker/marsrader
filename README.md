@@ -1,7 +1,7 @@
 # MarsRadar Data
 
 Auto-generated, bilingual (EN / 繁中) digest of **Elon Musk · Tesla · SpaceX · xAI / X** news,
-refreshed every 6 hours by Grok (xAI Live Search). Powers the **MarsRadar** iOS app.
+refreshed every 2 hours by Grok (xAI Live Search). Powers the **MarsRadar** iOS app.
 
 > Unofficial fan project. Not affiliated with Elon Musk or any of his companies.
 > Summaries are original; each item links back to its original source (fair use).
@@ -12,7 +12,7 @@ refreshed every 6 hours by Grok (xAI Live Search). Powers the **MarsRadar** iOS 
 - `latest.json` — newest day (app reads this first).
 
 ## How it updates
-`backend/elon_digest.py` runs on a 6-hour cron, then commits the new JSON. Two backends:
+`backend/elon_digest.py` runs on a 2-hour cron, then commits the new JSON. Two backends:
 
 - **`cli` (default, no API key)** — calls the local **Grok Build CLI** (`grok -p ...`), which uses your
   Grok subscription. Run it via local cron (`backend/run.sh`) on a machine where `grok` is installed and

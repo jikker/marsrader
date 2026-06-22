@@ -16,6 +16,22 @@
         "requestId": "18e23fcc-75dd-41c0-a43d-f86a9533149e",
         "stopReason": "EndTurn"
       }
+    },
+    {
+      "generated_at": "2026-06-22T06:29:18.726933+00:00",
+      "backend": "grok-cli",
+      "model": "grok-build",
+      "brief_en": "Elon amplified UK grooming gangs and media double standards (retweeted Darth Powell, replied 💯 to rape gangs post, shared related video on Islamist threats), posted Grok Imagine dancing kittens video, said AI will exceed all human intelligence in 4-5 years, demanded 'Execute them' in UK baby murder case, called Ro Khanna an 'evil liar' over tax proposals, endorsed 'McCarthy was right' on stripping terrorists' citizenship, joked 'Full access' on vibecoding, retweeted Starlink launch, shared Father's Day tributes and history replies.",
+      "brief_zh": "馬斯克放大英國 grooming 團伙與媒體雙重標準（轉推 Darth Powell、💯 回覆強暴團伙貼文、分享相關伊斯蘭威脅影片），貼出 Grok Imagine 跳舞小貓影片，稱 AI 4-5 年內將超越全人類智慧，要求處決英國虐兒兇手，痛批 Ro Khanna 為「邪惡騙子」，認同「麥卡錫沒錯」剝奪恐怖分子公民權，幽默評「完全存取權」vibecoding，轉推 Starlink 發射、分享父親節致敬與歷史回覆。",
+      "item_count": 15,
+      "updated_count": 9,
+      "kept_count": 0,
+      "usage": {
+        "backend": "grok-cli",
+        "model": "grok-build",
+        "requestId": "6a2a22f8-e37a-44e6-a679-c610b76fbb0f",
+        "stopReason": "EndTurn"
+      }
     }
   ],
   "items_flat": [
@@ -23,24 +39,28 @@
       "id": "uk-grooming-media-double-standard-2026-06-22",
       "story_id": "uk-grooming-media-double-standard-2026-06-22",
       "category": "elon_personal",
-      "source_type": "mixed",
+      "source_type": "musk_reply",
       "title_en": "Musk amplifies UK grooming-gang and media double-standard critiques",
-      "title_zh": "馬斯克轉推並認同英國性侵醜聞與媒體雙標批評",
-      "summary_en": "Musk retweeted Darth Powell's post contrasting Edinburgh knife-attack terrorism coverage with silence on alleged mass grooming of British girls, then replied \"💯\" hours later. The post drew heavy engagement on X.",
-      "summary_zh": "馬斯克轉推 Darth Powell 對比愛丁堡持刀案被定調恐攻、卻對據稱大規模性侵英國女童醜聞沉默的貼文，數小時後回覆「💯」，引發大量互動。",
+      "title_zh": "馬斯克放大英國 grooming 團伙與媒體雙重標準批評",
+      "summary_en": "Musk retweeted @VladTheInflator's post contrasting a single Edinburgh knife-attack labeled terrorism with the industrialized rape of ~250,000 British girls by grooming gangs that authorities downplayed. Hours later he replied '💯' to another post by the same account detailing torture, 'red rooms,' miscarriages and politicians burying the scandal. On June 22 he further amplified a video highlighting Islamist threats, Tommy Robinson support and related UK issues.",
+      "summary_zh": "馬斯克轉推 @VladTheInflator 貼文，對比單一愛丁堡持刀攻擊被貼上恐怖主義標籤，卻對 grooming 團伙工業化強暴約25萬英國女孩、當局長期掩蓋的醜聞保持沉默。數小時後他對同一帳號另一則描述酷刑、「紅房」、流產及政客掩蓋的貼文回「💯」。22日進一步分享影片，突顯伊斯蘭威脅、Tommy Robinson 支持及相關英國議題。",
       "musk_quote": "💯",
-      "musk_quote_zh": "💯（完全同意）",
+      "musk_quote_zh": "💯",
       "importance": 4,
       "first_seen": "2026-06-21T16:53:37.000Z",
-      "updated_at": "2026-06-21T23:00:02.435669+00:00",
+      "updated_at": "2026-06-22T06:29:18.726933+00:00",
       "links": [
         {
-          "label": "Elon on X (reply)",
+          "label": "Darth Powell (VladTheInflator) on X",
+          "url": "https://x.com/VladTheInflator/status/2068739125944172627"
+        },
+        {
+          "label": "Elon Musk 💯 reply on X",
           "url": "https://x.com/elonmusk/status/2068825303678431318"
         },
         {
-          "label": "Quoted post",
-          "url": "https://x.com/VladTheInflator/status/2068739125944172627"
+          "label": "Elon Musk video share (UK/Islamist issues) on X",
+          "url": "https://x.com/elonmusk/status/2068881208281358654"
         }
       ]
     },
@@ -50,14 +70,14 @@
       "category": "spacex",
       "source_type": "mixed",
       "title_en": "Musk retweets Falcon 9 Starlink launch from California",
-      "title_zh": "馬斯克轉推加州 Falcon 9 Starlink 發射",
-      "summary_en": "Musk retweeted SpaceX's post announcing Falcon 9 launched 24 Starlink satellites from California, amplifying the mission to his followers without added commentary.",
-      "summary_zh": "馬斯克轉推 SpaceX 宣布 Falcon 9 從加州發射 24 顆 Starlink 衛星的貼文，未加評論便向粉絲傳播任務消息。",
+      "title_zh": "馬斯克轉推 Falcon 9 從加州發射 Starlink 衛星",
+      "summary_en": "SpaceX announced Falcon 9 launched 24 Starlink satellites from California with video and photos. Musk retweeted the post to his followers without additional commentary, amplifying the successful mission.",
+      "summary_zh": "SpaceX 宣布 Falcon 9 從加州發射 24 顆 Starlink 衛星，附影片與照片。馬斯克轉推該貼文給追隨者，未加評論，放大此次成功任務。",
       "musk_quote": "",
       "musk_quote_zh": "",
       "importance": 4,
       "first_seen": "2026-06-21T18:30:07.000Z",
-      "updated_at": "2026-06-21T23:00:02.435669+00:00",
+      "updated_at": "2026-06-22T06:29:18.726933+00:00",
       "links": [
         {
           "label": "SpaceX on X",
@@ -66,22 +86,68 @@
       ]
     },
     {
+      "id": "preston-baby-murder-execute-2026-06-22",
+      "story_id": "preston-baby-murder-execute-2026-06-22",
+      "category": "elon_personal",
+      "source_type": "musk_reply",
+      "title_en": "Musk: 'Execute them' in horrific UK baby murder case",
+      "title_zh": "馬斯克在英國嬰兒謀殺慘案中說「處決他們」",
+      "summary_en": "Musk replied 'Execute them' to a post detailing the case of a British teacher couple (adoptive gay parents) convicted of murdering and severely sexually abusing their 1-year-old adopted son Preston, with evidence of prolonged torture that media reports allegedly downplayed by omitting the parents' orientation.",
+      "summary_zh": "馬斯克回覆「Execute them」，針對一則貼文詳述英國教師伴侶（領養的同性戀父母）被判謀殺並嚴重性侵其1歲領養兒 Preston 的案件，證據顯示長期酷刑，媒體報導據稱刻意隱瞞父母性向。",
+      "musk_quote": "Execute them",
+      "musk_quote_zh": "處決他們。",
+      "importance": 4,
+      "first_seen": "2026-06-21T22:46:55.000Z",
+      "updated_at": "2026-06-22T06:29:18.726933+00:00",
+      "links": [
+        {
+          "label": "Elon Musk on X",
+          "url": "https://x.com/elonmusk/status/2068828038062616833"
+        }
+      ]
+    },
+    {
+      "id": "ai-superintelligence-4-5-years-2026-06-22",
+      "story_id": "ai-superintelligence-4-5-years-2026-06-22",
+      "category": "xai_x_platform",
+      "source_type": "musk_post",
+      "title_en": "Musk: AI will exceed the sum of all human intelligence in 4-5 years",
+      "title_zh": "馬斯克：AI 將在 4-5 年內超越全人類智慧總和",
+      "summary_en": "Musk stated: 'AI probably exceeds the sum of all human intelligence in 4 or 5 years.' The comment came amid ongoing discussion of rapid AI progress and xAI's trajectory.",
+      "summary_zh": "馬斯克表示：「AI probably exceeds the sum of all human intelligence in 4 or 5 years.」此言論出現在討論 AI 快速進展與 xAI 軌跡的脈絡中。",
+      "musk_quote": "AI probably exceeds the sum of all human intelligence in 4 or 5 years",
+      "musk_quote_zh": "AI 可能在 4 或 5 年內超越全人類智慧的總和。",
+      "importance": 4,
+      "first_seen": "2026-06-21T22:55:07.000Z",
+      "updated_at": "2026-06-22T06:29:18.726933+00:00",
+      "links": [
+        {
+          "label": "Elon Musk on X",
+          "url": "https://x.com/elonmusk/status/2068830099449766067"
+        }
+      ]
+    },
+    {
       "id": "fathers-day-family-posts-2026-06-22",
       "story_id": "fathers-day-family-posts-2026-06-22",
       "category": "elon_personal",
-      "source_type": "mixed",
+      "source_type": "musk_post",
       "title_en": "Musk posts Father's Day tributes to family and Karl Marx's dad",
-      "title_zh": "馬斯克父親節向家人與馬克思父親致意",
-      "summary_en": "After Taipei midnight, Musk replied with a heart emoji to his mother Maye Musk's Father's Day post, then quote-posted a letter from Karl Marx's father with \"Karl's Dad was cool.\"",
-      "summary_zh": "台北時間跨日後，馬斯克以愛心回覆母親 Maye Musk 的父親節貼文，並引用馬克思父親的信件寫道「卡爾他爸很酷」。",
-      "musk_quote": "Karl's Dad was cool",
-      "musk_quote_zh": "卡爾他爸很酷",
+      "title_zh": "馬斯克發文父親節致敬家人與卡爾·馬克思的父親",
+      "summary_en": "Musk posted 'Happy Father’s Day!' (massive engagement). He also quote-posted a letter from Karl Marx's father criticizing his son's lifestyle and lack of work, adding 'Karl’s Dad was cool.' Existing reports indicate he replied with a heart emoji to his mother Maye Musk's post.",
+      "summary_zh": "馬斯克貼文「父親節快樂！」（極高互動）。他也轉推卡爾·馬克思父親寫給兒子的信，信中批評馬克思的生活方式與不工作，並加註「Karl’s Dad was cool」。先前報導顯示他對母親 Maye Musk 的貼文回覆愛心表情。",
+      "musk_quote": "Karl’s Dad was cool",
+      "musk_quote_zh": "卡爾的爸爸很酷",
       "importance": 3,
       "first_seen": "2026-06-21T16:41:25.000Z",
-      "updated_at": "2026-06-21T23:00:02.435669+00:00",
+      "updated_at": "2026-06-22T06:29:18.726933+00:00",
       "links": [
         {
-          "label": "Elon on X",
+          "label": "Elon Musk Happy Father's Day on X",
+          "url": "https://x.com/elonmusk/status/2068722935553032543"
+        },
+        {
+          "label": "Elon Musk Karl's Dad quote-post on X",
           "url": "https://x.com/elonmusk/status/2068743751376244966"
         },
         {
@@ -96,17 +162,17 @@
       "category": "xai_x_platform",
       "source_type": "musk_post",
       "title_en": "Musk demos Grok Imagine with dancing kittens video prompt",
-      "title_zh": "馬斯克展示 Grok Imagine 跳舞手套小貓影片",
-      "summary_en": "Musk posted a Grok Imagine-generated video of mitten-wearing kittens dancing and singing, sharing the full prompt and telling followers \"Your kids will love this video!\"",
-      "summary_zh": "馬斯克發布 Grok Imagine 生成的戴手套小貓跳舞唱歌影片，附上完整提示詞並稱「你的孩子會愛這部影片！」",
-      "musk_quote": "Your kids will love this video! Grok Imagine prompt: The kittens with mittens start dancing and singing \"we're kittens with mittens\"",
-      "musk_quote_zh": "你的孩子會愛這部影片！Grok Imagine 提示詞：戴手套的小貓開始跳舞唱歌「我們是戴手套的小貓」",
+      "title_zh": "馬斯克展示 Grok Imagine 跳舞小貓影片提示",
+      "summary_en": "Musk posted a Grok Imagine-generated video of mitten-wearing kittens dancing and singing 'we’re kittens with mittens' with joyful movements. He shared the full prompt and wrote 'Your kids will love this video!'",
+      "summary_zh": "馬斯克貼出 Grok Imagine 生成的影片：戴手套的小貓跳舞唱「we’re kittens with mittens」，動作歡快。他分享完整提示並寫「Your kids will love this video!」",
+      "musk_quote": "Your kids will love this video!\nGrok Imagine prompt:\nThe kittens with mittens start dancing and singing “we’re kittens with mittens” with joyful, energetic movements and playful expressions.",
+      "musk_quote_zh": "你的孩子會喜歡這段影片！\nGrok Imagine 提示：\n戴手套的小貓開始跳舞並唱著「we’re kittens with mittens」，動作歡快充滿活力，表情俏皮。",
       "importance": 3,
       "first_seen": "2026-06-21T17:29:12.000Z",
-      "updated_at": "2026-06-21T23:00:02.435669+00:00",
+      "updated_at": "2026-06-22T06:29:18.726933+00:00",
       "links": [
         {
-          "label": "Elon on X",
+          "label": "Elon Musk on X",
           "url": "https://x.com/elonmusk/status/2068748080623604004"
         }
       ]
@@ -117,17 +183,17 @@
       "category": "elon_personal",
       "source_type": "musk_quote",
       "title_en": "Musk: blocking puberty at 11 but allowing social media makes no sense",
-      "title_zh": "馬斯克：11歲可阻斷青春期卻限制社群年齡「毫無道理」",
+      "title_zh": "馬斯克：11歲可阻斷青春期卻要到16歲才准用社群媒體說不通",
       "summary_en": "Quote-posting educator Katharine Birbalsingh's criticism that children can block puberty at 11 yet are told to avoid social media until 16, Musk wrote simply: \"Makes no sense.\"",
-      "summary_zh": "馬斯克引用教育者批評「11歲可阻斷青春期、卻要到16歲才能上社群媒體」的荒謬對比，只寫了一句：「毫無道理。」",
+      "summary_zh": "馬斯克轉推教育家 Katharine Birbalsingh 批評：孩子11歲就能阻斷青春期，卻被告知要到16歲才能用社群媒體，他只寫：「Makes no sense.」",
       "musk_quote": "Makes no sense",
-      "musk_quote_zh": "毫無道理",
+      "musk_quote_zh": "這說不通。",
       "importance": 3,
       "first_seen": "2026-06-21T17:16:52.000Z",
-      "updated_at": "2026-06-21T23:00:02.435669+00:00",
+      "updated_at": "2026-06-22T06:29:18.726933+00:00",
       "links": [
         {
-          "label": "Elon on X",
+          "label": "Elon Musk on X",
           "url": "https://x.com/elonmusk/status/2068744977333535118"
         }
       ]
@@ -136,24 +202,87 @@
       "id": "charlie-kirk-legacy-video-2026-06-22",
       "story_id": "charlie-kirk-legacy-video-2026-06-22",
       "category": "elon_personal",
-      "source_type": "musk_post",
+      "source_type": "musk_quote",
       "title_en": "Musk shares Charlie Kirk legacy conversion video",
-      "title_zh": "馬斯克分享 Charlie Kirk 遺產改變人生影片",
-      "summary_en": "Musk quote-posted a video from Soldiersgirl about a man who said he was glad Charlie Kirk was murdered, then admitted Kirk's content changed his life and reconciled his family — amplifying it without added text.",
-      "summary_zh": "馬斯克引用 Soldiersgirl 影片：一名男子曾稱樂見 Charlie Kirk 遇害，後承認 Kirk 內容改變其人生並促成家庭和解，馬斯克未加文字便轉發。",
+      "title_zh": "馬斯克分享 Charlie Kirk 遺產轉變影片",
+      "summary_en": "Musk posted (without added text) the video originally from Soldiersgirl (@Hisbabygirl68) of a man who said he was glad Charlie Kirk was murdered, then admitted Kirk's videos and debates changed his life completely, reconciled his family, and made Kirk his hero.",
+      "summary_zh": "馬斯克無文字純分享 Soldiersgirl (@Hisbabygirl68) 原影片：一名男子曾說很高興 Charlie Kirk 被謀殺，後來承認 Kirk 的影片與辯論徹底改變他的人生、讓家庭和解，並視 Kirk 為英雄。",
       "musk_quote": "",
       "musk_quote_zh": "",
       "importance": 3,
       "first_seen": "2026-06-21T17:53:25.000Z",
-      "updated_at": "2026-06-21T23:00:02.435669+00:00",
+      "updated_at": "2026-06-22T06:29:18.726933+00:00",
       "links": [
         {
-          "label": "Elon on X",
+          "label": "Elon Musk on X",
           "url": "https://x.com/elonmusk/status/2068754172925591955"
         },
         {
-          "label": "Quoted video",
+          "label": "Original Soldiersgirl video on X",
           "url": "https://x.com/Hisbabygirl68/status/2068476659477479739"
+        }
+      ]
+    },
+    {
+      "id": "ro-khanna-evil-liar-2026-06-22",
+      "story_id": "ro-khanna-evil-liar-2026-06-22",
+      "category": "elon_personal",
+      "source_type": "musk_reply",
+      "title_en": "Musk calls Ro Khanna an 'evil liar' over tax-the-rich proposals",
+      "title_zh": "馬斯克痛批 Ro Khanna 為「邪惡騙子」，針對「向富人課稅」提案",
+      "summary_en": "Replying to a post quoting Rep. Ro Khanna suggesting a 5% one-time tax on Elon Musk could fund universal child care at $10/day and earlier comments about taxing billionaires for student debt, Musk wrote: 'He’s such an evil liar.'",
+      "summary_zh": "回覆引用眾議員 Ro Khanna 建議對 Elon Musk 課徵 5% 一次性稅就能資助全美每天 10 美元托兒服務，以及先前「向億萬富翁課稅還學生債」言論，馬斯克寫：「He’s such an evil liar.」",
+      "musk_quote": "He’s such an evil liar",
+      "musk_quote_zh": "他真是個邪惡的騙子。",
+      "importance": 3,
+      "first_seen": "2026-06-22T02:44:44.000Z",
+      "updated_at": "2026-06-22T06:29:18.726933+00:00",
+      "links": [
+        {
+          "label": "Elon Musk on X",
+          "url": "https://x.com/elonmusk/status/2068887884954796453"
+        }
+      ]
+    },
+    {
+      "id": "mccarthy-citizenship-terrorists-2026-06-22",
+      "story_id": "mccarthy-citizenship-terrorists-2026-06-22",
+      "category": "elon_personal",
+      "source_type": "musk_reply",
+      "title_en": "Musk: 'McCarthy was right' on stripping citizenship from terrorists",
+      "title_zh": "馬斯克：「麥卡錫沒錯」支持剝奪恐怖分子公民權",
+      "summary_en": "Agreeing with a post about the DOJ using a 1952 law to denaturalize a Somali immigrant who joined al-Shabaab terrorists shortly after naturalization in 2007, Musk wrote simply: 'McCarthy was right.'",
+      "summary_zh": "同意一則貼文指出 DOJ 利用 1952 年法律，取消 2007 年歸化後數月即加入 al-Shabaab 恐怖組織的索馬利移民公民權，馬斯克僅寫：「McCarthy was right.」",
+      "musk_quote": "McCarthy was right",
+      "musk_quote_zh": "麥卡錫沒錯。",
+      "importance": 3,
+      "first_seen": "2026-06-22T02:30:01.000Z",
+      "updated_at": "2026-06-22T06:29:18.726933+00:00",
+      "links": [
+        {
+          "label": "Elon Musk on X",
+          "url": "https://x.com/elonmusk/status/2068884179731828856"
+        }
+      ]
+    },
+    {
+      "id": "bukele-works-every-time-2026-06-22",
+      "story_id": "bukele-works-every-time-2026-06-22",
+      "category": "elon_personal",
+      "source_type": "musk_quote",
+      "title_en": "Musk: 'Works every time' agreeing with Bukele",
+      "title_zh": "馬斯克：「每次都有效」同意 Bukele",
+      "summary_en": "Musk quote-posted President Nayib Bukele's post 'It’s a very simple concept, really.' (with image) and replied 'Works every time' — amplifying Bukele's governance or security approach.",
+      "summary_zh": "馬斯克轉推總統 Nayib Bukele 的貼文「It’s a very simple concept, really.」（附圖），並回「Works every time」——放大 Bukele 的治理或安全方針。",
+      "musk_quote": "Works every time",
+      "musk_quote_zh": "每次都有效。",
+      "importance": 3,
+      "first_seen": "2026-06-21T23:55:36.000Z",
+      "updated_at": "2026-06-22T06:29:18.726933+00:00",
+      "links": [
+        {
+          "label": "Elon Musk on X",
+          "url": "https://x.com/elonmusk/status/2068845321984053656"
         }
       ]
     },
@@ -164,16 +293,16 @@
       "source_type": "musk_reply",
       "title_en": "Musk jokes electric rockets are impossible",
       "title_zh": "馬斯克開玩笑：電動火箭不可能",
-      "summary_en": "Replying to a discussion thread, Musk quipped \"Unfortunately, electric rockets are impossible\" — a characteristic physics joke amid his space-focused timeline activity.",
-      "summary_zh": "馬斯克在討論串回覆「不幸的是，電動火箭不可能」，以典型物理梗穿插在太空相關動態中。",
+      "summary_en": "Replying in a discussion thread, Musk quipped 'Unfortunately, electric rockets are impossible' — a characteristic physics joke amid his space-focused activity.",
+      "summary_zh": "在討論串回覆中，馬斯克幽默表示「Unfortunately, electric rockets are impossible」——典型的物理學笑話，呼應他專注太空的動態。",
       "musk_quote": "Unfortunately, electric rockets are impossible",
-      "musk_quote_zh": "不幸的是，電動火箭不可能",
+      "musk_quote_zh": "不幸的是，電動火箭是不可能的。",
       "importance": 2,
       "first_seen": "2026-06-21T17:41:48.000Z",
-      "updated_at": "2026-06-21T23:00:02.435669+00:00",
+      "updated_at": "2026-06-22T06:29:18.726933+00:00",
       "links": [
         {
-          "label": "Elon on X",
+          "label": "Elon Musk on X",
           "url": "https://x.com/elonmusk/status/2068751250640797826"
         }
       ]
@@ -184,17 +313,17 @@
       "category": "elon_personal",
       "source_type": "musk_post",
       "title_en": "Musk reacts \"Wow\" to viral video clip",
-      "title_zh": "馬斯克對爆紅影片回應「哇」",
-      "summary_en": "Musk posted a one-word reaction — \"Wow\" — amplifying a video from Thaïs d'Escufon that quickly racked up millions of views.",
-      "summary_zh": "馬斯克對 Thaïs d'Escufon 的影片只寫「哇」便轉發，該帖迅速累積數百萬瀏覽。",
+      "title_zh": "馬斯克對病毒影片回「Wow」",
+      "summary_en": "Musk posted a one-word reaction — \"Wow\" — with video media amplifying a clip from Thaïs d'Escufon that quickly gained millions of views.",
+      "summary_zh": "馬斯克僅以一字「Wow」回應並附上影片，放大來自 Thaïs d'Escufon 的病毒影片，迅速獲得數百萬觀看。",
       "musk_quote": "Wow",
       "musk_quote_zh": "哇",
       "importance": 2,
       "first_seen": "2026-06-21T17:43:09.000Z",
-      "updated_at": "2026-06-21T23:00:02.435669+00:00",
+      "updated_at": "2026-06-22T06:29:18.726933+00:00",
       "links": [
         {
-          "label": "Elon on X",
+          "label": "Elon Musk on X",
           "url": "https://x.com/elonmusk/status/2068751590199103855"
         }
       ]
@@ -205,18 +334,39 @@
       "category": "elon_personal",
       "source_type": "musk_reply",
       "title_en": "Musk muses on William the Conqueror invasion timing",
-      "title_zh": "馬斯克談威廉征服者入侵時機",
-      "summary_en": "In a late-night reply to Joe Lonsdale, Musk said he loves niche history and argued William the Conqueror would probably have lost had he invaded a year earlier — \"timing is everything.\"",
-      "summary_zh": "馬斯克深夜回覆 Joe Lonsdale，稱自己熱愛小眾歷史，並認為威廉征服者若早一年入侵可能會敗——「時機就是一切」。",
-      "musk_quote": "True! I love niche history. Timing is everything. William would probably have lost if he had invaded a year earlier.",
-      "musk_quote_zh": "沒錯！我熱愛小眾歷史。時機就是一切。威廉若早一年入侵，大概會落敗。",
+      "title_zh": "馬斯克談論威廉征服者入侵時機",
+      "summary_en": "In a reply to Joe Lonsdale, Musk said he loves niche history and argued William the Conqueror would probably have lost had he invaded a year earlier — 'timing is everything.'",
+      "summary_zh": "回覆 Joe Lonsdale 時，馬斯克表示熱愛冷門歷史，並認為如果威廉征服者早一年入侵，可能會失敗——「時機就是一切」。",
+      "musk_quote": "True! I love niche history. \nTiming is everything. William would probably have lost if he had invaded a year earlier.",
+      "musk_quote_zh": "沒錯！我熱愛冷門歷史。\n時機就是一切。如果威廉早一年入侵，可能會失敗。",
       "importance": 2,
       "first_seen": "2026-06-21T22:30:05.000Z",
-      "updated_at": "2026-06-21T23:00:02.435669+00:00",
+      "updated_at": "2026-06-22T06:29:18.726933+00:00",
       "links": [
         {
-          "label": "Elon on X",
+          "label": "Elon Musk on X",
           "url": "https://x.com/elonmusk/status/2068823801362575635"
+        }
+      ]
+    },
+    {
+      "id": "grok-vibecoding-full-access-2026-06-22",
+      "story_id": "grok-vibecoding-full-access-2026-06-22",
+      "category": "xai_x_platform",
+      "source_type": "musk_quote",
+      "title_en": "Musk comments 'Full access' 😂 on viral vibecoding meme",
+      "title_zh": "馬斯克幽默評論病毒「vibecoding」迷因「完全存取權」😂",
+      "summary_en": "Musk quote-posted a popular 'Day 1 of vibecoding' image (chaotic/funny AI-assisted coding screenshot) with the comment '“Full access” 😂' — widely interpreted as a joke about giving AI coding tools broad permissions.",
+      "summary_zh": "馬斯克轉推熱門「Day 1 of vibecoding」圖片（混亂/搞笑的 AI 輔助編碼截圖），並評論「“Full access” 😂」——普遍被解讀為給 AI 編碼工具廣泛權限的笑話。",
+      "musk_quote": "“Full access” 😂",
+      "musk_quote_zh": "「完全存取權」😂",
+      "importance": 2,
+      "first_seen": "2026-06-22T02:33:44.000Z",
+      "updated_at": "2026-06-22T06:29:18.726933+00:00",
+      "links": [
+        {
+          "label": "Elon Musk on X",
+          "url": "https://x.com/elonmusk/status/2068885116064080018"
         }
       ]
     }
@@ -227,24 +377,49 @@
         "id": "uk-grooming-media-double-standard-2026-06-22",
         "story_id": "uk-grooming-media-double-standard-2026-06-22",
         "category": "elon_personal",
-        "source_type": "mixed",
+        "source_type": "musk_reply",
         "title_en": "Musk amplifies UK grooming-gang and media double-standard critiques",
-        "title_zh": "馬斯克轉推並認同英國性侵醜聞與媒體雙標批評",
-        "summary_en": "Musk retweeted Darth Powell's post contrasting Edinburgh knife-attack terrorism coverage with silence on alleged mass grooming of British girls, then replied \"💯\" hours later. The post drew heavy engagement on X.",
-        "summary_zh": "馬斯克轉推 Darth Powell 對比愛丁堡持刀案被定調恐攻、卻對據稱大規模性侵英國女童醜聞沉默的貼文，數小時後回覆「💯」，引發大量互動。",
+        "title_zh": "馬斯克放大英國 grooming 團伙與媒體雙重標準批評",
+        "summary_en": "Musk retweeted @VladTheInflator's post contrasting a single Edinburgh knife-attack labeled terrorism with the industrialized rape of ~250,000 British girls by grooming gangs that authorities downplayed. Hours later he replied '💯' to another post by the same account detailing torture, 'red rooms,' miscarriages and politicians burying the scandal. On June 22 he further amplified a video highlighting Islamist threats, Tommy Robinson support and related UK issues.",
+        "summary_zh": "馬斯克轉推 @VladTheInflator 貼文，對比單一愛丁堡持刀攻擊被貼上恐怖主義標籤，卻對 grooming 團伙工業化強暴約25萬英國女孩、當局長期掩蓋的醜聞保持沉默。數小時後他對同一帳號另一則描述酷刑、「紅房」、流產及政客掩蓋的貼文回「💯」。22日進一步分享影片，突顯伊斯蘭威脅、Tommy Robinson 支持及相關英國議題。",
         "musk_quote": "💯",
-        "musk_quote_zh": "💯（完全同意）",
+        "musk_quote_zh": "💯",
         "importance": 4,
         "first_seen": "2026-06-21T16:53:37.000Z",
-        "updated_at": "2026-06-21T23:00:02.435669+00:00",
+        "updated_at": "2026-06-22T06:29:18.726933+00:00",
         "links": [
           {
-            "label": "Elon on X (reply)",
+            "label": "Darth Powell (VladTheInflator) on X",
+            "url": "https://x.com/VladTheInflator/status/2068739125944172627"
+          },
+          {
+            "label": "Elon Musk 💯 reply on X",
             "url": "https://x.com/elonmusk/status/2068825303678431318"
           },
           {
-            "label": "Quoted post",
-            "url": "https://x.com/VladTheInflator/status/2068739125944172627"
+            "label": "Elon Musk video share (UK/Islamist issues) on X",
+            "url": "https://x.com/elonmusk/status/2068881208281358654"
+          }
+        ]
+      },
+      {
+        "id": "preston-baby-murder-execute-2026-06-22",
+        "story_id": "preston-baby-murder-execute-2026-06-22",
+        "category": "elon_personal",
+        "source_type": "musk_reply",
+        "title_en": "Musk: 'Execute them' in horrific UK baby murder case",
+        "title_zh": "馬斯克在英國嬰兒謀殺慘案中說「處決他們」",
+        "summary_en": "Musk replied 'Execute them' to a post detailing the case of a British teacher couple (adoptive gay parents) convicted of murdering and severely sexually abusing their 1-year-old adopted son Preston, with evidence of prolonged torture that media reports allegedly downplayed by omitting the parents' orientation.",
+        "summary_zh": "馬斯克回覆「Execute them」，針對一則貼文詳述英國教師伴侶（領養的同性戀父母）被判謀殺並嚴重性侵其1歲領養兒 Preston 的案件，證據顯示長期酷刑，媒體報導據稱刻意隱瞞父母性向。",
+        "musk_quote": "Execute them",
+        "musk_quote_zh": "處決他們。",
+        "importance": 4,
+        "first_seen": "2026-06-21T22:46:55.000Z",
+        "updated_at": "2026-06-22T06:29:18.726933+00:00",
+        "links": [
+          {
+            "label": "Elon Musk on X",
+            "url": "https://x.com/elonmusk/status/2068828038062616833"
           }
         ]
       },
@@ -252,19 +427,23 @@
         "id": "fathers-day-family-posts-2026-06-22",
         "story_id": "fathers-day-family-posts-2026-06-22",
         "category": "elon_personal",
-        "source_type": "mixed",
+        "source_type": "musk_post",
         "title_en": "Musk posts Father's Day tributes to family and Karl Marx's dad",
-        "title_zh": "馬斯克父親節向家人與馬克思父親致意",
-        "summary_en": "After Taipei midnight, Musk replied with a heart emoji to his mother Maye Musk's Father's Day post, then quote-posted a letter from Karl Marx's father with \"Karl's Dad was cool.\"",
-        "summary_zh": "台北時間跨日後，馬斯克以愛心回覆母親 Maye Musk 的父親節貼文，並引用馬克思父親的信件寫道「卡爾他爸很酷」。",
-        "musk_quote": "Karl's Dad was cool",
-        "musk_quote_zh": "卡爾他爸很酷",
+        "title_zh": "馬斯克發文父親節致敬家人與卡爾·馬克思的父親",
+        "summary_en": "Musk posted 'Happy Father’s Day!' (massive engagement). He also quote-posted a letter from Karl Marx's father criticizing his son's lifestyle and lack of work, adding 'Karl’s Dad was cool.' Existing reports indicate he replied with a heart emoji to his mother Maye Musk's post.",
+        "summary_zh": "馬斯克貼文「父親節快樂！」（極高互動）。他也轉推卡爾·馬克思父親寫給兒子的信，信中批評馬克思的生活方式與不工作，並加註「Karl’s Dad was cool」。先前報導顯示他對母親 Maye Musk 的貼文回覆愛心表情。",
+        "musk_quote": "Karl’s Dad was cool",
+        "musk_quote_zh": "卡爾的爸爸很酷",
         "importance": 3,
         "first_seen": "2026-06-21T16:41:25.000Z",
-        "updated_at": "2026-06-21T23:00:02.435669+00:00",
+        "updated_at": "2026-06-22T06:29:18.726933+00:00",
         "links": [
           {
-            "label": "Elon on X",
+            "label": "Elon Musk Happy Father's Day on X",
+            "url": "https://x.com/elonmusk/status/2068722935553032543"
+          },
+          {
+            "label": "Elon Musk Karl's Dad quote-post on X",
             "url": "https://x.com/elonmusk/status/2068743751376244966"
           },
           {
@@ -279,17 +458,17 @@
         "category": "elon_personal",
         "source_type": "musk_quote",
         "title_en": "Musk: blocking puberty at 11 but allowing social media makes no sense",
-        "title_zh": "馬斯克：11歲可阻斷青春期卻限制社群年齡「毫無道理」",
+        "title_zh": "馬斯克：11歲可阻斷青春期卻要到16歲才准用社群媒體說不通",
         "summary_en": "Quote-posting educator Katharine Birbalsingh's criticism that children can block puberty at 11 yet are told to avoid social media until 16, Musk wrote simply: \"Makes no sense.\"",
-        "summary_zh": "馬斯克引用教育者批評「11歲可阻斷青春期、卻要到16歲才能上社群媒體」的荒謬對比，只寫了一句：「毫無道理。」",
+        "summary_zh": "馬斯克轉推教育家 Katharine Birbalsingh 批評：孩子11歲就能阻斷青春期，卻被告知要到16歲才能用社群媒體，他只寫：「Makes no sense.」",
         "musk_quote": "Makes no sense",
-        "musk_quote_zh": "毫無道理",
+        "musk_quote_zh": "這說不通。",
         "importance": 3,
         "first_seen": "2026-06-21T17:16:52.000Z",
-        "updated_at": "2026-06-21T23:00:02.435669+00:00",
+        "updated_at": "2026-06-22T06:29:18.726933+00:00",
         "links": [
           {
-            "label": "Elon on X",
+            "label": "Elon Musk on X",
             "url": "https://x.com/elonmusk/status/2068744977333535118"
           }
         ]
@@ -298,24 +477,87 @@
         "id": "charlie-kirk-legacy-video-2026-06-22",
         "story_id": "charlie-kirk-legacy-video-2026-06-22",
         "category": "elon_personal",
-        "source_type": "musk_post",
+        "source_type": "musk_quote",
         "title_en": "Musk shares Charlie Kirk legacy conversion video",
-        "title_zh": "馬斯克分享 Charlie Kirk 遺產改變人生影片",
-        "summary_en": "Musk quote-posted a video from Soldiersgirl about a man who said he was glad Charlie Kirk was murdered, then admitted Kirk's content changed his life and reconciled his family — amplifying it without added text.",
-        "summary_zh": "馬斯克引用 Soldiersgirl 影片：一名男子曾稱樂見 Charlie Kirk 遇害，後承認 Kirk 內容改變其人生並促成家庭和解，馬斯克未加文字便轉發。",
+        "title_zh": "馬斯克分享 Charlie Kirk 遺產轉變影片",
+        "summary_en": "Musk posted (without added text) the video originally from Soldiersgirl (@Hisbabygirl68) of a man who said he was glad Charlie Kirk was murdered, then admitted Kirk's videos and debates changed his life completely, reconciled his family, and made Kirk his hero.",
+        "summary_zh": "馬斯克無文字純分享 Soldiersgirl (@Hisbabygirl68) 原影片：一名男子曾說很高興 Charlie Kirk 被謀殺，後來承認 Kirk 的影片與辯論徹底改變他的人生、讓家庭和解，並視 Kirk 為英雄。",
         "musk_quote": "",
         "musk_quote_zh": "",
         "importance": 3,
         "first_seen": "2026-06-21T17:53:25.000Z",
-        "updated_at": "2026-06-21T23:00:02.435669+00:00",
+        "updated_at": "2026-06-22T06:29:18.726933+00:00",
         "links": [
           {
-            "label": "Elon on X",
+            "label": "Elon Musk on X",
             "url": "https://x.com/elonmusk/status/2068754172925591955"
           },
           {
-            "label": "Quoted video",
+            "label": "Original Soldiersgirl video on X",
             "url": "https://x.com/Hisbabygirl68/status/2068476659477479739"
+          }
+        ]
+      },
+      {
+        "id": "ro-khanna-evil-liar-2026-06-22",
+        "story_id": "ro-khanna-evil-liar-2026-06-22",
+        "category": "elon_personal",
+        "source_type": "musk_reply",
+        "title_en": "Musk calls Ro Khanna an 'evil liar' over tax-the-rich proposals",
+        "title_zh": "馬斯克痛批 Ro Khanna 為「邪惡騙子」，針對「向富人課稅」提案",
+        "summary_en": "Replying to a post quoting Rep. Ro Khanna suggesting a 5% one-time tax on Elon Musk could fund universal child care at $10/day and earlier comments about taxing billionaires for student debt, Musk wrote: 'He’s such an evil liar.'",
+        "summary_zh": "回覆引用眾議員 Ro Khanna 建議對 Elon Musk 課徵 5% 一次性稅就能資助全美每天 10 美元托兒服務，以及先前「向億萬富翁課稅還學生債」言論，馬斯克寫：「He’s such an evil liar.」",
+        "musk_quote": "He’s such an evil liar",
+        "musk_quote_zh": "他真是個邪惡的騙子。",
+        "importance": 3,
+        "first_seen": "2026-06-22T02:44:44.000Z",
+        "updated_at": "2026-06-22T06:29:18.726933+00:00",
+        "links": [
+          {
+            "label": "Elon Musk on X",
+            "url": "https://x.com/elonmusk/status/2068887884954796453"
+          }
+        ]
+      },
+      {
+        "id": "mccarthy-citizenship-terrorists-2026-06-22",
+        "story_id": "mccarthy-citizenship-terrorists-2026-06-22",
+        "category": "elon_personal",
+        "source_type": "musk_reply",
+        "title_en": "Musk: 'McCarthy was right' on stripping citizenship from terrorists",
+        "title_zh": "馬斯克：「麥卡錫沒錯」支持剝奪恐怖分子公民權",
+        "summary_en": "Agreeing with a post about the DOJ using a 1952 law to denaturalize a Somali immigrant who joined al-Shabaab terrorists shortly after naturalization in 2007, Musk wrote simply: 'McCarthy was right.'",
+        "summary_zh": "同意一則貼文指出 DOJ 利用 1952 年法律，取消 2007 年歸化後數月即加入 al-Shabaab 恐怖組織的索馬利移民公民權，馬斯克僅寫：「McCarthy was right.」",
+        "musk_quote": "McCarthy was right",
+        "musk_quote_zh": "麥卡錫沒錯。",
+        "importance": 3,
+        "first_seen": "2026-06-22T02:30:01.000Z",
+        "updated_at": "2026-06-22T06:29:18.726933+00:00",
+        "links": [
+          {
+            "label": "Elon Musk on X",
+            "url": "https://x.com/elonmusk/status/2068884179731828856"
+          }
+        ]
+      },
+      {
+        "id": "bukele-works-every-time-2026-06-22",
+        "story_id": "bukele-works-every-time-2026-06-22",
+        "category": "elon_personal",
+        "source_type": "musk_quote",
+        "title_en": "Musk: 'Works every time' agreeing with Bukele",
+        "title_zh": "馬斯克：「每次都有效」同意 Bukele",
+        "summary_en": "Musk quote-posted President Nayib Bukele's post 'It’s a very simple concept, really.' (with image) and replied 'Works every time' — amplifying Bukele's governance or security approach.",
+        "summary_zh": "馬斯克轉推總統 Nayib Bukele 的貼文「It’s a very simple concept, really.」（附圖），並回「Works every time」——放大 Bukele 的治理或安全方針。",
+        "musk_quote": "Works every time",
+        "musk_quote_zh": "每次都有效。",
+        "importance": 3,
+        "first_seen": "2026-06-21T23:55:36.000Z",
+        "updated_at": "2026-06-22T06:29:18.726933+00:00",
+        "links": [
+          {
+            "label": "Elon Musk on X",
+            "url": "https://x.com/elonmusk/status/2068845321984053656"
           }
         ]
       },
@@ -325,17 +567,17 @@
         "category": "elon_personal",
         "source_type": "musk_post",
         "title_en": "Musk reacts \"Wow\" to viral video clip",
-        "title_zh": "馬斯克對爆紅影片回應「哇」",
-        "summary_en": "Musk posted a one-word reaction — \"Wow\" — amplifying a video from Thaïs d'Escufon that quickly racked up millions of views.",
-        "summary_zh": "馬斯克對 Thaïs d'Escufon 的影片只寫「哇」便轉發，該帖迅速累積數百萬瀏覽。",
+        "title_zh": "馬斯克對病毒影片回「Wow」",
+        "summary_en": "Musk posted a one-word reaction — \"Wow\" — with video media amplifying a clip from Thaïs d'Escufon that quickly gained millions of views.",
+        "summary_zh": "馬斯克僅以一字「Wow」回應並附上影片，放大來自 Thaïs d'Escufon 的病毒影片，迅速獲得數百萬觀看。",
         "musk_quote": "Wow",
         "musk_quote_zh": "哇",
         "importance": 2,
         "first_seen": "2026-06-21T17:43:09.000Z",
-        "updated_at": "2026-06-21T23:00:02.435669+00:00",
+        "updated_at": "2026-06-22T06:29:18.726933+00:00",
         "links": [
           {
-            "label": "Elon on X",
+            "label": "Elon Musk on X",
             "url": "https://x.com/elonmusk/status/2068751590199103855"
           }
         ]
@@ -346,17 +588,17 @@
         "category": "elon_personal",
         "source_type": "musk_reply",
         "title_en": "Musk muses on William the Conqueror invasion timing",
-        "title_zh": "馬斯克談威廉征服者入侵時機",
-        "summary_en": "In a late-night reply to Joe Lonsdale, Musk said he loves niche history and argued William the Conqueror would probably have lost had he invaded a year earlier — \"timing is everything.\"",
-        "summary_zh": "馬斯克深夜回覆 Joe Lonsdale，稱自己熱愛小眾歷史，並認為威廉征服者若早一年入侵可能會敗——「時機就是一切」。",
-        "musk_quote": "True! I love niche history. Timing is everything. William would probably have lost if he had invaded a year earlier.",
-        "musk_quote_zh": "沒錯！我熱愛小眾歷史。時機就是一切。威廉若早一年入侵，大概會落敗。",
+        "title_zh": "馬斯克談論威廉征服者入侵時機",
+        "summary_en": "In a reply to Joe Lonsdale, Musk said he loves niche history and argued William the Conqueror would probably have lost had he invaded a year earlier — 'timing is everything.'",
+        "summary_zh": "回覆 Joe Lonsdale 時，馬斯克表示熱愛冷門歷史，並認為如果威廉征服者早一年入侵，可能會失敗——「時機就是一切」。",
+        "musk_quote": "True! I love niche history. \nTiming is everything. William would probably have lost if he had invaded a year earlier.",
+        "musk_quote_zh": "沒錯！我熱愛冷門歷史。\n時機就是一切。如果威廉早一年入侵，可能會失敗。",
         "importance": 2,
         "first_seen": "2026-06-21T22:30:05.000Z",
-        "updated_at": "2026-06-21T23:00:02.435669+00:00",
+        "updated_at": "2026-06-22T06:29:18.726933+00:00",
         "links": [
           {
-            "label": "Elon on X",
+            "label": "Elon Musk on X",
             "url": "https://x.com/elonmusk/status/2068823801362575635"
           }
         ]
@@ -370,14 +612,14 @@
         "category": "spacex",
         "source_type": "mixed",
         "title_en": "Musk retweets Falcon 9 Starlink launch from California",
-        "title_zh": "馬斯克轉推加州 Falcon 9 Starlink 發射",
-        "summary_en": "Musk retweeted SpaceX's post announcing Falcon 9 launched 24 Starlink satellites from California, amplifying the mission to his followers without added commentary.",
-        "summary_zh": "馬斯克轉推 SpaceX 宣布 Falcon 9 從加州發射 24 顆 Starlink 衛星的貼文，未加評論便向粉絲傳播任務消息。",
+        "title_zh": "馬斯克轉推 Falcon 9 從加州發射 Starlink 衛星",
+        "summary_en": "SpaceX announced Falcon 9 launched 24 Starlink satellites from California with video and photos. Musk retweeted the post to his followers without additional commentary, amplifying the successful mission.",
+        "summary_zh": "SpaceX 宣布 Falcon 9 從加州發射 24 顆 Starlink 衛星，附影片與照片。馬斯克轉推該貼文給追隨者，未加評論，放大此次成功任務。",
         "musk_quote": "",
         "musk_quote_zh": "",
         "importance": 4,
         "first_seen": "2026-06-21T18:30:07.000Z",
-        "updated_at": "2026-06-21T23:00:02.435669+00:00",
+        "updated_at": "2026-06-22T06:29:18.726933+00:00",
         "links": [
           {
             "label": "SpaceX on X",
@@ -392,16 +634,16 @@
         "source_type": "musk_reply",
         "title_en": "Musk jokes electric rockets are impossible",
         "title_zh": "馬斯克開玩笑：電動火箭不可能",
-        "summary_en": "Replying to a discussion thread, Musk quipped \"Unfortunately, electric rockets are impossible\" — a characteristic physics joke amid his space-focused timeline activity.",
-        "summary_zh": "馬斯克在討論串回覆「不幸的是，電動火箭不可能」，以典型物理梗穿插在太空相關動態中。",
+        "summary_en": "Replying in a discussion thread, Musk quipped 'Unfortunately, electric rockets are impossible' — a characteristic physics joke amid his space-focused activity.",
+        "summary_zh": "在討論串回覆中，馬斯克幽默表示「Unfortunately, electric rockets are impossible」——典型的物理學笑話，呼應他專注太空的動態。",
         "musk_quote": "Unfortunately, electric rockets are impossible",
-        "musk_quote_zh": "不幸的是，電動火箭不可能",
+        "musk_quote_zh": "不幸的是，電動火箭是不可能的。",
         "importance": 2,
         "first_seen": "2026-06-21T17:41:48.000Z",
-        "updated_at": "2026-06-21T23:00:02.435669+00:00",
+        "updated_at": "2026-06-22T06:29:18.726933+00:00",
         "links": [
           {
-            "label": "Elon on X",
+            "label": "Elon Musk on X",
             "url": "https://x.com/elonmusk/status/2068751250640797826"
           }
         ]
@@ -409,30 +651,72 @@
     ],
     "xai_x_platform": [
       {
+        "id": "ai-superintelligence-4-5-years-2026-06-22",
+        "story_id": "ai-superintelligence-4-5-years-2026-06-22",
+        "category": "xai_x_platform",
+        "source_type": "musk_post",
+        "title_en": "Musk: AI will exceed the sum of all human intelligence in 4-5 years",
+        "title_zh": "馬斯克：AI 將在 4-5 年內超越全人類智慧總和",
+        "summary_en": "Musk stated: 'AI probably exceeds the sum of all human intelligence in 4 or 5 years.' The comment came amid ongoing discussion of rapid AI progress and xAI's trajectory.",
+        "summary_zh": "馬斯克表示：「AI probably exceeds the sum of all human intelligence in 4 or 5 years.」此言論出現在討論 AI 快速進展與 xAI 軌跡的脈絡中。",
+        "musk_quote": "AI probably exceeds the sum of all human intelligence in 4 or 5 years",
+        "musk_quote_zh": "AI 可能在 4 或 5 年內超越全人類智慧的總和。",
+        "importance": 4,
+        "first_seen": "2026-06-21T22:55:07.000Z",
+        "updated_at": "2026-06-22T06:29:18.726933+00:00",
+        "links": [
+          {
+            "label": "Elon Musk on X",
+            "url": "https://x.com/elonmusk/status/2068830099449766067"
+          }
+        ]
+      },
+      {
         "id": "grok-imagine-kittens-demo-2026-06-22",
         "story_id": "grok-imagine-kittens-demo-2026-06-22",
         "category": "xai_x_platform",
         "source_type": "musk_post",
         "title_en": "Musk demos Grok Imagine with dancing kittens video prompt",
-        "title_zh": "馬斯克展示 Grok Imagine 跳舞手套小貓影片",
-        "summary_en": "Musk posted a Grok Imagine-generated video of mitten-wearing kittens dancing and singing, sharing the full prompt and telling followers \"Your kids will love this video!\"",
-        "summary_zh": "馬斯克發布 Grok Imagine 生成的戴手套小貓跳舞唱歌影片，附上完整提示詞並稱「你的孩子會愛這部影片！」",
-        "musk_quote": "Your kids will love this video! Grok Imagine prompt: The kittens with mittens start dancing and singing \"we're kittens with mittens\"",
-        "musk_quote_zh": "你的孩子會愛這部影片！Grok Imagine 提示詞：戴手套的小貓開始跳舞唱歌「我們是戴手套的小貓」",
+        "title_zh": "馬斯克展示 Grok Imagine 跳舞小貓影片提示",
+        "summary_en": "Musk posted a Grok Imagine-generated video of mitten-wearing kittens dancing and singing 'we’re kittens with mittens' with joyful movements. He shared the full prompt and wrote 'Your kids will love this video!'",
+        "summary_zh": "馬斯克貼出 Grok Imagine 生成的影片：戴手套的小貓跳舞唱「we’re kittens with mittens」，動作歡快。他分享完整提示並寫「Your kids will love this video!」",
+        "musk_quote": "Your kids will love this video!\nGrok Imagine prompt:\nThe kittens with mittens start dancing and singing “we’re kittens with mittens” with joyful, energetic movements and playful expressions.",
+        "musk_quote_zh": "你的孩子會喜歡這段影片！\nGrok Imagine 提示：\n戴手套的小貓開始跳舞並唱著「we’re kittens with mittens」，動作歡快充滿活力，表情俏皮。",
         "importance": 3,
         "first_seen": "2026-06-21T17:29:12.000Z",
-        "updated_at": "2026-06-21T23:00:02.435669+00:00",
+        "updated_at": "2026-06-22T06:29:18.726933+00:00",
         "links": [
           {
-            "label": "Elon on X",
+            "label": "Elon Musk on X",
             "url": "https://x.com/elonmusk/status/2068748080623604004"
+          }
+        ]
+      },
+      {
+        "id": "grok-vibecoding-full-access-2026-06-22",
+        "story_id": "grok-vibecoding-full-access-2026-06-22",
+        "category": "xai_x_platform",
+        "source_type": "musk_quote",
+        "title_en": "Musk comments 'Full access' 😂 on viral vibecoding meme",
+        "title_zh": "馬斯克幽默評論病毒「vibecoding」迷因「完全存取權」😂",
+        "summary_en": "Musk quote-posted a popular 'Day 1 of vibecoding' image (chaotic/funny AI-assisted coding screenshot) with the comment '“Full access” 😂' — widely interpreted as a joke about giving AI coding tools broad permissions.",
+        "summary_zh": "馬斯克轉推熱門「Day 1 of vibecoding」圖片（混亂/搞笑的 AI 輔助編碼截圖），並評論「“Full access” 😂」——普遍被解讀為給 AI 編碼工具廣泛權限的笑話。",
+        "musk_quote": "“Full access” 😂",
+        "musk_quote_zh": "「完全存取權」😂",
+        "importance": 2,
+        "first_seen": "2026-06-22T02:33:44.000Z",
+        "updated_at": "2026-06-22T06:29:18.726933+00:00",
+        "links": [
+          {
+            "label": "Elon Musk on X",
+            "url": "https://x.com/elonmusk/status/2068885116064080018"
           }
         ]
       }
     ],
     "other": []
   },
-  "brief_en": "Early June 22 (Taipei): Musk marked Father's Day with family posts, pushed UK grooming-gang/media-coverage critiques (RT + 💯), demoed Grok Imagine, quoted skepticism on puberty blockers vs social-media age rules, boosted a California Starlink launch, and shared lighter video and history takes.",
-  "brief_zh": "台北6/22凌晨：馬斯克父親節發文、轉推並認同英國性侵醜聞與媒體雙標評論、展示Grok Imagine、質疑青春期阻斷與社群年齡規定矛盾、轉推加州Starlink發射，並分享影片與歷史趣談。",
-  "updated_at": "2026-06-21T23:00:02.435669+00:00"
+  "brief_en": "Elon amplified UK grooming gangs and media double standards (retweeted Darth Powell, replied 💯 to rape gangs post, shared related video on Islamist threats), posted Grok Imagine dancing kittens video, said AI will exceed all human intelligence in 4-5 years, demanded 'Execute them' in UK baby murder case, called Ro Khanna an 'evil liar' over tax proposals, endorsed 'McCarthy was right' on stripping terrorists' citizenship, joked 'Full access' on vibecoding, retweeted Starlink launch, shared Father's Day tributes and history replies.",
+  "brief_zh": "馬斯克放大英國 grooming 團伙與媒體雙重標準（轉推 Darth Powell、💯 回覆強暴團伙貼文、分享相關伊斯蘭威脅影片），貼出 Grok Imagine 跳舞小貓影片，稱 AI 4-5 年內將超越全人類智慧，要求處決英國虐兒兇手，痛批 Ro Khanna 為「邪惡騙子」，認同「麥卡錫沒錯」剝奪恐怖分子公民權，幽默評「完全存取權」vibecoding，轉推 Starlink 發射、分享父親節致敬與歷史回覆。",
+  "updated_at": "2026-06-22T06:29:18.726933+00:00"
 }

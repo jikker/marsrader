@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 """
 MarsRadar — Elon / Tesla / SpaceX / X 動態聚合後端
 =================================================
 
-每 6 小時跑一次：
+每 2 小時跑一次：
   1. 呼叫 Grok 讓它用 Live Search 監控特定 X 帳號 + 網路新聞
   2. 讓 Grok 整理成「中英重點 + 分類 + 原始連結」的結構化 JSON
   3. 合併進當天的 digests/<date>.json，更新 index.json / latest.json
