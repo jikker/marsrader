@@ -27,6 +27,8 @@ MarsRadar — Elon / Tesla / SpaceX / X 動態聚合後端
   GROK_BIN           選填，Grok CLI 執行檔路徑（預設自動找 PATH / ~/.grok/bin/grok）
   GROK_MODEL         選填，傳給 grok --model（不設＝CLI 預設 grok-build 模型）
   GROK_TIMEOUT       選填，單次呼叫逾時秒數（預設 600）
+  GROK_RETRY_TIMEOUT 選填，降級重試的單次逾時秒數（預設 600）
+  GROK_RETRY_ON_TIMEOUT 選填，"0" 可關閉 CLI timeout 後的降級重試
   --- api 後端 ---
   XAI_API_KEY        api 後端必填，xAI / Grok API key（https://console.x.ai）
   XAI_MODEL          選填，預設 grok-4（可改 grok-4-fast 省錢）
@@ -83,6 +85,14 @@ WATCH_HANDLES = [
 ]
 
 CATEGORIES = ["elon_personal", "tesla", "spacex", "xai_x_platform", "other"]
+
+
+def env_int(name: str, default: int) -> int:
+    try:
+        value = int(os.environ.get(name, str(default)))
+    except ValueError:
+        return default
+    return value if value > 0 else default
 
 # ----------------------------------------------------------- Prompt 共用 ----
 
@@ -188,10 +198,11 @@ def _compact_existing(items: list, limit: int = 25) -> list:
 
 
 def build_prompt(date_str: str, run_iso: str = "", existing_items: list | None = None,
-                 lookback_hours: int = 12) -> str:
+                 lookback_hours: int = 12, existing_limit: int = 25) -> str:
     """組出單一段提示詞（CLI 用一段、API 拆 system/user 各用一半）。
     existing_items：今日已存在的條目（供 Grok 演進式合併，避免同日重複）。"""
-    existing_json = (json.dumps(_compact_existing(existing_items), ensure_ascii=False, indent=1)
+    existing_json = (json.dumps(_compact_existing(existing_items, limit=existing_limit),
+                                ensure_ascii=False, indent=1)
                      if existing_items else "[]")
     user = USER_TEMPLATE.format(date=date_str, run_iso=run_iso or date_str,
                                 lookback_hours=lookback_hours,
@@ -264,53 +275,71 @@ def call_grok_cli(date_str: str, run_iso: str = "", existing_items: list | None 
     """呼叫本機 Grok Build CLI（headless），讓它讀 X/web 後回傳結構化 JSON。
     不需要任何 API key，吃的是使用者的 Grok 訂閱。"""
     grok_bin = _resolve_grok_bin()
-    try:
-        timeout = int(os.environ.get("GROK_TIMEOUT", "600"))
-    except ValueError:
-        timeout = 600
+    timeout = env_int("GROK_TIMEOUT", 600)
+    retry_timeout = env_int("GROK_RETRY_TIMEOUT", min(timeout, 600))
     model = os.environ.get("GROK_MODEL", "").strip()
-    prompt = build_prompt(date_str, run_iso, existing_items, lookback_hours=12)
+    attempts = [(12, 25, timeout)]
+    if os.environ.get("GROK_RETRY_ON_TIMEOUT", "1") != "0":
+        attempts.extend([(6, 12, retry_timeout), (3, 6, retry_timeout)])
 
-    # CLI 會載入 cwd 的 .mcp.json（含需 OAuth 的 server 會卡死）→ 用乾淨臨時目錄當 cwd。
-    workdir = tempfile.mkdtemp(prefix="marsradar_grok_")
-    prompt_file = Path(workdir) / "prompt.txt"
-    prompt_file.write_text(prompt, encoding="utf-8")
+    timeout_notes = []
+    for attempt_no, (lookback_hours, existing_limit, attempt_timeout) in enumerate(attempts, 1):
+        prompt = build_prompt(date_str, run_iso, existing_items,
+                              lookback_hours=lookback_hours,
+                              existing_limit=existing_limit)
 
-    cmd = [grok_bin, "--cwd", workdir, "--always-approve",
-           "--output-format", "json", "--prompt-file", str(prompt_file)]
-    if model:
-        cmd += ["--model", model]
+        # CLI 會載入 cwd 的 .mcp.json（含需 OAuth 的 server 會卡死）→ 用乾淨臨時目錄當 cwd。
+        workdir = tempfile.mkdtemp(prefix="marsradar_grok_")
+        prompt_file = Path(workdir) / "prompt.txt"
+        prompt_file.write_text(prompt, encoding="utf-8")
 
-    try:
-        proc = subprocess.run(cmd, capture_output=True,
-                              encoding="utf-8", errors="replace",
-                              timeout=timeout, stdin=subprocess.DEVNULL)
-    except subprocess.TimeoutExpired:
-        raise RuntimeError(f"Grok CLI 逾時（{timeout}s）。可調高 GROK_TIMEOUT 重試。")
-    finally:
-        shutil.rmtree(workdir, ignore_errors=True)
+        cmd = [grok_bin, "--cwd", workdir, "--always-approve",
+               "--output-format", "json", "--prompt-file", str(prompt_file)]
+        if model:
+            cmd += ["--model", model]
 
-    if proc.returncode != 0:
-        raise RuntimeError(
-            f"Grok CLI 失敗 (exit {proc.returncode})：{(proc.stderr or proc.stdout)[:500]}")
+        try:
+            proc = subprocess.run(cmd, capture_output=True,
+                                  encoding="utf-8", errors="replace",
+                                  timeout=attempt_timeout, stdin=subprocess.DEVNULL)
+        except subprocess.TimeoutExpired:
+            note = (f"attempt {attempt_no} timeout: "
+                    f"lookback={lookback_hours}h existing_limit={existing_limit} "
+                    f"timeout={attempt_timeout}s")
+            timeout_notes.append(note)
+            print(f"[grok] {note}; retrying with smaller prompt" if attempt_no < len(attempts)
+                  else f"[grok] {note}")
+            continue
+        finally:
+            shutil.rmtree(workdir, ignore_errors=True)
 
-    # CLI 的 --output-format json 外層 envelope：{"text","stopReason","sessionId","requestId","thought"}
-    try:
-        envelope = json.loads(proc.stdout.strip())
-        inner_text = envelope.get("text", "")
-    except json.JSONDecodeError:
-        # 萬一沒拿到 envelope，就把整段 stdout 當內容處理
-        envelope = {}
-        inner_text = proc.stdout
+        if proc.returncode != 0:
+            raise RuntimeError(
+                f"Grok CLI 失敗 (exit {proc.returncode})：{(proc.stderr or proc.stdout)[:500]}")
 
-    data = extract_json_object(inner_text)
-    data["_usage"] = {
-        "backend": "grok-cli",
-        "model": model or "grok-build",
-        "requestId": envelope.get("requestId", ""),
-        "stopReason": envelope.get("stopReason", ""),
-    }
-    return data
+        # CLI 的 --output-format json 外層 envelope：{"text","stopReason","sessionId","requestId","thought"}
+        try:
+            envelope = json.loads(proc.stdout.strip())
+            inner_text = envelope.get("text", "")
+        except json.JSONDecodeError:
+            # 萬一沒拿到 envelope，就把整段 stdout 當內容處理
+            envelope = {}
+            inner_text = proc.stdout
+
+        data = extract_json_object(inner_text)
+        data["_usage"] = {
+            "backend": "grok-cli",
+            "model": model or "grok-build",
+            "requestId": envelope.get("requestId", ""),
+            "stopReason": envelope.get("stopReason", ""),
+            "attempt": attempt_no,
+            "lookback_hours": lookback_hours,
+            "existing_limit": existing_limit,
+            "timeout_notes": timeout_notes,
+        }
+        return data
+
+    raise RuntimeError("Grok CLI 逾時；已嘗試降級重試仍未完成：" + " | ".join(timeout_notes))
 
 
 # --------------------------------------------------------- Grok API 後端 ----
