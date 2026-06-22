@@ -16,6 +16,22 @@
         "lookback_hours": 12,
         "item_count": 4
       }
+    },
+    {
+      "generated_at": "2026-06-22T18:05:03.065613+00:00",
+      "backend": "grok-web",
+      "model": "grok.com (browser)",
+      "brief_en": "Elon Musk escalated attacks on Rep. Ro Khanna over DOGE/USAID, calling him 'Robber Khanna' and demanding prison while defending aid verification standards. He replied 'Execution' supporting death penalty in a UK child sex abuse case and 'Wow' to Sam Altman/Worldcoin probes. Other posts addressed media 'white supremacy' narratives, McCarthy-era loyalty laws, and Tesla amplified positive FSD user feedback.",
+      "brief_zh": "馬斯克升級抨擊Ro Khanna議員，稱「Robber Khanna」並要求入獄，捍衛援助查核標準；對英國兒童性犯罪案回「Execution」支持死刑，對Altman Worldcoin調查回「Wow」。另有媒體「白人至上」論述、麥卡錫公民權議題，特斯拉轉發FSD用戶正面體驗。",
+      "item_count": 6,
+      "updated_count": 4,
+      "kept_count": 0,
+      "usage": {
+        "backend": "grok-web",
+        "model": "grok.com (browser)",
+        "lookback_hours": 12,
+        "item_count": 6
+      }
     }
   ],
   "items_flat": [
@@ -24,18 +40,22 @@
       "story_id": "elon-ro-khanna-doge-usaid-2026-06-22",
       "category": "elon_personal",
       "source_type": "mixed",
-      "title_en": "Elon Musk Accuses Rep. Ro Khanna of Lying on DOGE/USAID, Calls for Accountability and Legal Action",
-      "title_zh": "馬斯克指控眾議員Ro Khanna在DOGE/USAID議題上撒謊 呼籲追究責任與法律行動",
-      "summary_en": "Elon Musk stated that DOGE's standard was simple: require contact information for aid recipients to confirm it is not fraudulent. He accused money being sent to corrupt politicians under the guise of aid and labeled Rep. Ro Khanna ('Ro the Robber') a liar and stock insider trader who should be in prison. In related posts, Musk called Khanna an 'evil liar' and said 'Time to sue this liar' over claims blaming DOGE cuts for 4.5 million child deaths from USAID.",
-      "summary_zh": "馬斯克表示DOGE的標準非常簡單：要求援助接收者提供聯絡資訊以確認非詐欺。他指控錢在援助幌子下流向腐敗政客，並稱眾議員Ro Khanna（「搶劫的Ro」）是騙子與股票內線交易者，應該進監獄。在相關貼文中，馬斯克稱Khanna為「邪惡的騙子」，並對其指控DOGE削減導致450萬兒童死亡的說法表示「是時候起訴這個騙子了」。",
+      "title_en": "Elon Musk Escalates Attacks on Rep. Ro Khanna, Calls Him 'Robber' and Demands Prison Over DOGE/USAID",
+      "title_zh": "埃隆·馬斯克升級抨擊Ro Khanna議員，稱其為「Robber」並要求入獄，聚焦DOGE與USAID議題",
+      "summary_en": "Elon Musk sharply escalated his criticism of Rep. Ro Khanna regarding DOGE's oversight of USAID. He labeled Khanna 'Ro the Robber,' stated 'Robber Khanna should be in prison' and 'Time to sue this liar.' Musk defended DOGE's simple standard of requiring contact information for aid recipients to confirm it is not fraudulent, accusing that money was being sent to corrupt politicians under the guise of aid. He noted multiple USAID officials have been charged by DOJ and pleaded guilty to stealing funds, while pointing to Khanna's extensive stock trading activity in Congress.",
+      "summary_zh": "埃隆·馬斯克大幅升級對Ro Khanna議員在DOGE監督USAID支出上的批評。他稱Khanna為「Ro the Robber」，表示「Robber Khanna should be in prison」並「Time to sue this liar」。馬斯克捍衛DOGE的簡單標準——要求援助接收者提供聯絡資訊以確認無詐欺，指控資金在援助名義下流向腐敗政客。他提到多名USAID官員遭司法部起訴並認罪竊取公款，同時點出Khanna在國會的大量股票交易。",
       "musk_quote": "The standard applied by DOGE was very simple and easy: Provide contact information for the recipients of aid, so that we can confirm it is not fraudulent. The reality is that money was being sent to corrupt politicians under the guise of aid! Liars and stock insider traders like Ro the Robber should be in prison!!",
-      "musk_quote_zh": "DOGE採用的標準非常簡單易懂：提供援助接收者的聯絡資訊，以便我們確認不是詐欺。現實是，錢在援助的幌子下被送給腐敗的政客！像「搶劫的Ro」這樣的騙子和股票內線交易者應該進監獄！！",
+      "musk_quote_zh": "DOGE採用的標準非常簡單且容易：提供援助接收者的聯絡資訊，以便我們確認這不是詐欺。現實情況是，錢在援助的名義下被送給了腐敗的政客！像Ro the Robber這樣的騙子和股票內線交易者應該入獄！！",
       "importance": 5,
       "first_seen": "2026-06-22T02:44:44Z",
-      "updated_at": "2026-06-22T16:05:03.031641+00:00",
+      "updated_at": "2026-06-22T18:05:03.065613+00:00",
       "links": [
         {
-          "label": "Elon Musk on X (DOGE defense)",
+          "label": "Elon Musk on X",
+          "url": "https://x.com/elonmusk/status/2069109019684249683"
+        },
+        {
+          "label": "Elon Musk detailed post on X",
           "url": "https://x.com/elonmusk/status/2069087335824699744"
         },
         {
@@ -49,19 +69,40 @@
       ]
     },
     {
+      "id": "elon-calls-execution-child-sex-offenders-2026-06-22",
+      "story_id": "elon-calls-execution-child-sex-offenders-2026-06-22",
+      "category": "elon_personal",
+      "source_type": "musk_reply",
+      "title_en": "Elon Musk Replies 'Execution' Supporting Death Penalty in UK Child Sex Abuse Case",
+      "title_zh": "埃隆·馬斯克回覆「Execution」，支持英國兒童性虐待案死刑",
+      "summary_en": "Elon Musk replied 'Execution' to a post detailing charges against two UK men for multiple counts of sexual activity with a child, paying for sexual services of a child, and sex trafficking. The original post requested the death penalty for the convicted offenders.",
+      "summary_zh": "埃隆·馬斯克對一則貼文回覆「Execution」，該貼文報導兩名英國男子被控多項與兒童發生性行為、支付兒童性服務及性販運罪名。原貼文要求對這些罪犯判處死刑。",
+      "musk_quote": "Execution",
+      "musk_quote_zh": "執行",
+      "importance": 3,
+      "first_seen": "2026-06-22T16:35:49Z",
+      "updated_at": "2026-06-22T18:05:03.065613+00:00",
+      "links": [
+        {
+          "label": "Elon Musk on X",
+          "url": "https://x.com/elonmusk/status/2069097032568971265"
+        }
+      ]
+    },
+    {
       "id": "elon-white-supremacy-media-narrative-2026-06-22",
       "story_id": "elon-white-supremacy-media-narrative-2026-06-22",
       "category": "elon_personal",
       "source_type": "musk_reply",
       "title_en": "Elon Musk: Massive Rise in Media 'White Supremacy' Term is Manufactured Leftist Anti-White Racism",
-      "title_zh": "馬斯克：媒體「白人至上」一詞使用量大增是製造的反白人種族主義",
-      "summary_en": "Elon Musk replied 'True' to analysis showing explosive increases in media usage of the term 'White Supremacy' (e.g., LA Times up 9749% from 2010-2020). He agreed it was not organic but a Leftist creation manufactured to push anti-white racism.",
-      "summary_zh": "馬斯克回覆「True」，同意分析顯示媒體使用「白人至上」一詞的次數爆炸性增長（例如洛杉磯時報2010-2020年增長9749%）。他認為這不是自然現象，而是左派製造的反白人種族主義敘事。",
+      "title_zh": "埃隆·馬斯克：媒體「白人至上」一詞使用量大增是左派製造的反白人種族主義",
+      "summary_en": "Elon Musk replied 'True' to analysis showing explosive increases in media usage of the term 'White Supremacy' (e.g., LA Times up 9749% from 2010-2020, with similar spikes at NYT, WaPo, WSJ). He agreed it was not organic but a Leftist creation manufactured to push anti-white racism.",
+      "summary_zh": "埃隆·馬斯克對分析回覆「True」，該分析顯示媒體使用「White Supremacy」一詞呈爆炸性增長（例如洛杉磯時報2010-2020年增加9749%，紐約時報、華盛頓郵報、華爾街日報亦有類似激增）。他同意這不是有機發展，而是左派為推動反白人種族主義而製造的。",
       "musk_quote": "True",
-      "musk_quote_zh": "True（正確）",
+      "musk_quote_zh": "正確",
       "importance": 3,
       "first_seen": "2026-06-22T15:45:47Z",
-      "updated_at": "2026-06-22T16:05:03.031641+00:00",
+      "updated_at": "2026-06-22T18:05:03.065613+00:00",
       "links": [
         {
           "label": "Elon Musk on X",
@@ -75,18 +116,39 @@
       "category": "elon_personal",
       "source_type": "musk_reply",
       "title_en": "Elon Musk: 'McCarthy Was Right' on Stripping Citizenship from Those Joining Terrorist Groups",
-      "title_zh": "馬斯克：「麥卡錫是對的」 支持剝奪加入恐怖組織者的公民權",
-      "summary_en": "Elon Musk replied 'McCarthy was right' to a post praising DOJ use of 1952 law to denaturalize a Somali citizen who joined al-Shabaab terrorists months after naturalization. He supported rejecting 'McCarthyism' smears and enforcing loyalty as a contract for citizenship.",
-      "summary_zh": "馬斯克回覆「McCarthy was right」，支持司法部使用1952年法律，剝奪一名索馬利歸化公民（入籍後數月即加入伊斯蘭恐怖組織al-Shabaab）的公民權。他認為應拒絕「麥卡錫主義」抹黑，並將忠誠視為公民權的契約。",
+      "title_zh": "埃隆·馬斯克：「麥卡錫是對的」，支持剝奪加入恐怖組織者的公民權",
+      "summary_en": "Elon Musk replied 'McCarthy was right' to a post praising DOJ use of a 1952 law to denaturalize a Somali citizen who joined al-Shabaab terrorists months after naturalization. He supported enforcing loyalty standards and rejecting 'McCarthyism' smears in such cases.",
+      "summary_zh": "埃隆·馬斯克對一則貼文回覆「McCarthy was right」，該貼文讚揚司法部運用1952年法律，剝奪一名索馬利公民入籍後不久加入al-Shabaab恐怖組織的公民權。他支持執行忠誠標準，並拒絕在此類案件中使用「麥卡錫主義」抹黑。",
       "musk_quote": "McCarthy was right",
-      "musk_quote_zh": "McCarthy was right（麥卡錫是對的）",
+      "musk_quote_zh": "麥卡錫是對的",
       "importance": 3,
       "first_seen": "2026-06-22T02:30:01Z",
-      "updated_at": "2026-06-22T16:05:03.031641+00:00",
+      "updated_at": "2026-06-22T18:05:03.065613+00:00",
       "links": [
         {
           "label": "Elon Musk on X",
           "url": "https://x.com/elonmusk/status/2068884179731828856"
+        }
+      ]
+    },
+    {
+      "id": "elon-wow-sam-altman-worldcoin-probe-2026-06-22",
+      "story_id": "elon-wow-sam-altman-worldcoin-probe-2026-06-22",
+      "category": "elon_personal",
+      "source_type": "musk_reply",
+      "title_en": "Elon Musk Reacts 'Wow' to Internal Probes at Sam Altman's Worldcoin/Orb",
+      "title_zh": "埃隆·馬斯克對薩姆·奧特曼Worldcoin/Orb內部調查回應「Wow」",
+      "summary_en": "Elon Musk replied 'Wow' to a report on internal investigations at Sam Altman's Orb startup (Worldcoin) for financial irregularities, bribery of foreign officials in Thailand, and ties to an individual accused of transnational cyber-fraud, all while seeking SEC approval for the OpenAI IPO.",
+      "summary_zh": "埃隆·馬斯克對一則報導回應「Wow」，內容指出薩姆·奧特曼的Orb新創公司（Worldcoin）面臨財務不當、泰國外國官員賄賂及與跨國網路詐欺嫌犯相關的內部調查，同時正尋求SEC批准OpenAI IPO。",
+      "musk_quote": "Wow",
+      "musk_quote_zh": "哇",
+      "importance": 2,
+      "first_seen": "2026-06-22T17:15:23Z",
+      "updated_at": "2026-06-22T18:05:03.065613+00:00",
+      "links": [
+        {
+          "label": "Elon Musk on X",
+          "url": "https://x.com/elonmusk/status/2069106990383550853"
         }
       ]
     },
@@ -96,15 +158,19 @@
       "category": "tesla",
       "source_type": "official_account",
       "title_en": "Tesla Amplifies User Praise: FSD Supervised 'Like Going from Black and White to Color TV'",
-      "title_zh": "Tesla轉發用戶讚譽：FSD Supervised「如同從黑白電視進入彩色電視」",
-      "summary_en": "Tesla quoted a user describing FSD Supervised v14+ as transformative after long road trips and daily use: 'it’s like going from black and white to color TV.' When driving a regular car again, even a 'better' one, the user felt they were 'dumb having to drive yourself.'",
-      "summary_zh": "Tesla轉發用戶體驗：FSD Supervised v14+在長途與日常使用後帶來革命性改變，「如同從黑白電視進入彩色電視」。當再次駕駛一般汽車（即使是「更好的」車）時，用戶感覺「自己開車很蠢」。",
+      "title_zh": "特斯拉轉發用戶讚揚：FSD Supervised「就像從黑白電視變成彩色電視」",
+      "summary_en": "Tesla quoted a user describing FSD Supervised v14+ as transformative after long road trips and daily use: 'it’s like going from black and white to color TV.' When driving a regular car again, even a 'better' one, the user felt they were 'driving in the stone age.'",
+      "summary_zh": "特斯拉轉發用戶描述FSD Supervised v14+ 在長途旅行和日常使用後具有變革性：「就像從黑白電視變成彩色電視」。當再次開一般車（即使是「更好」的車），用戶感覺像「在石器時代開車」。",
       "musk_quote": "",
       "musk_quote_zh": "",
       "importance": 2,
       "first_seen": "2026-06-22T07:24:39Z",
-      "updated_at": "2026-06-22T16:05:03.031641+00:00",
+      "updated_at": "2026-06-22T18:05:03.065613+00:00",
       "links": [
+        {
+          "label": "Tesla on X",
+          "url": "https://x.com/Tesla"
+        },
         {
           "label": "Tesla on X",
           "url": "https://x.com/Tesla/status/2068958329452568644"
@@ -119,18 +185,22 @@
         "story_id": "elon-ro-khanna-doge-usaid-2026-06-22",
         "category": "elon_personal",
         "source_type": "mixed",
-        "title_en": "Elon Musk Accuses Rep. Ro Khanna of Lying on DOGE/USAID, Calls for Accountability and Legal Action",
-        "title_zh": "馬斯克指控眾議員Ro Khanna在DOGE/USAID議題上撒謊 呼籲追究責任與法律行動",
-        "summary_en": "Elon Musk stated that DOGE's standard was simple: require contact information for aid recipients to confirm it is not fraudulent. He accused money being sent to corrupt politicians under the guise of aid and labeled Rep. Ro Khanna ('Ro the Robber') a liar and stock insider trader who should be in prison. In related posts, Musk called Khanna an 'evil liar' and said 'Time to sue this liar' over claims blaming DOGE cuts for 4.5 million child deaths from USAID.",
-        "summary_zh": "馬斯克表示DOGE的標準非常簡單：要求援助接收者提供聯絡資訊以確認非詐欺。他指控錢在援助幌子下流向腐敗政客，並稱眾議員Ro Khanna（「搶劫的Ro」）是騙子與股票內線交易者，應該進監獄。在相關貼文中，馬斯克稱Khanna為「邪惡的騙子」，並對其指控DOGE削減導致450萬兒童死亡的說法表示「是時候起訴這個騙子了」。",
+        "title_en": "Elon Musk Escalates Attacks on Rep. Ro Khanna, Calls Him 'Robber' and Demands Prison Over DOGE/USAID",
+        "title_zh": "埃隆·馬斯克升級抨擊Ro Khanna議員，稱其為「Robber」並要求入獄，聚焦DOGE與USAID議題",
+        "summary_en": "Elon Musk sharply escalated his criticism of Rep. Ro Khanna regarding DOGE's oversight of USAID. He labeled Khanna 'Ro the Robber,' stated 'Robber Khanna should be in prison' and 'Time to sue this liar.' Musk defended DOGE's simple standard of requiring contact information for aid recipients to confirm it is not fraudulent, accusing that money was being sent to corrupt politicians under the guise of aid. He noted multiple USAID officials have been charged by DOJ and pleaded guilty to stealing funds, while pointing to Khanna's extensive stock trading activity in Congress.",
+        "summary_zh": "埃隆·馬斯克大幅升級對Ro Khanna議員在DOGE監督USAID支出上的批評。他稱Khanna為「Ro the Robber」，表示「Robber Khanna should be in prison」並「Time to sue this liar」。馬斯克捍衛DOGE的簡單標準——要求援助接收者提供聯絡資訊以確認無詐欺，指控資金在援助名義下流向腐敗政客。他提到多名USAID官員遭司法部起訴並認罪竊取公款，同時點出Khanna在國會的大量股票交易。",
         "musk_quote": "The standard applied by DOGE was very simple and easy: Provide contact information for the recipients of aid, so that we can confirm it is not fraudulent. The reality is that money was being sent to corrupt politicians under the guise of aid! Liars and stock insider traders like Ro the Robber should be in prison!!",
-        "musk_quote_zh": "DOGE採用的標準非常簡單易懂：提供援助接收者的聯絡資訊，以便我們確認不是詐欺。現實是，錢在援助的幌子下被送給腐敗的政客！像「搶劫的Ro」這樣的騙子和股票內線交易者應該進監獄！！",
+        "musk_quote_zh": "DOGE採用的標準非常簡單且容易：提供援助接收者的聯絡資訊，以便我們確認這不是詐欺。現實情況是，錢在援助的名義下被送給了腐敗的政客！像Ro the Robber這樣的騙子和股票內線交易者應該入獄！！",
         "importance": 5,
         "first_seen": "2026-06-22T02:44:44Z",
-        "updated_at": "2026-06-22T16:05:03.031641+00:00",
+        "updated_at": "2026-06-22T18:05:03.065613+00:00",
         "links": [
           {
-            "label": "Elon Musk on X (DOGE defense)",
+            "label": "Elon Musk on X",
+            "url": "https://x.com/elonmusk/status/2069109019684249683"
+          },
+          {
+            "label": "Elon Musk detailed post on X",
             "url": "https://x.com/elonmusk/status/2069087335824699744"
           },
           {
@@ -144,19 +214,40 @@
         ]
       },
       {
+        "id": "elon-calls-execution-child-sex-offenders-2026-06-22",
+        "story_id": "elon-calls-execution-child-sex-offenders-2026-06-22",
+        "category": "elon_personal",
+        "source_type": "musk_reply",
+        "title_en": "Elon Musk Replies 'Execution' Supporting Death Penalty in UK Child Sex Abuse Case",
+        "title_zh": "埃隆·馬斯克回覆「Execution」，支持英國兒童性虐待案死刑",
+        "summary_en": "Elon Musk replied 'Execution' to a post detailing charges against two UK men for multiple counts of sexual activity with a child, paying for sexual services of a child, and sex trafficking. The original post requested the death penalty for the convicted offenders.",
+        "summary_zh": "埃隆·馬斯克對一則貼文回覆「Execution」，該貼文報導兩名英國男子被控多項與兒童發生性行為、支付兒童性服務及性販運罪名。原貼文要求對這些罪犯判處死刑。",
+        "musk_quote": "Execution",
+        "musk_quote_zh": "執行",
+        "importance": 3,
+        "first_seen": "2026-06-22T16:35:49Z",
+        "updated_at": "2026-06-22T18:05:03.065613+00:00",
+        "links": [
+          {
+            "label": "Elon Musk on X",
+            "url": "https://x.com/elonmusk/status/2069097032568971265"
+          }
+        ]
+      },
+      {
         "id": "elon-white-supremacy-media-narrative-2026-06-22",
         "story_id": "elon-white-supremacy-media-narrative-2026-06-22",
         "category": "elon_personal",
         "source_type": "musk_reply",
         "title_en": "Elon Musk: Massive Rise in Media 'White Supremacy' Term is Manufactured Leftist Anti-White Racism",
-        "title_zh": "馬斯克：媒體「白人至上」一詞使用量大增是製造的反白人種族主義",
-        "summary_en": "Elon Musk replied 'True' to analysis showing explosive increases in media usage of the term 'White Supremacy' (e.g., LA Times up 9749% from 2010-2020). He agreed it was not organic but a Leftist creation manufactured to push anti-white racism.",
-        "summary_zh": "馬斯克回覆「True」，同意分析顯示媒體使用「白人至上」一詞的次數爆炸性增長（例如洛杉磯時報2010-2020年增長9749%）。他認為這不是自然現象，而是左派製造的反白人種族主義敘事。",
+        "title_zh": "埃隆·馬斯克：媒體「白人至上」一詞使用量大增是左派製造的反白人種族主義",
+        "summary_en": "Elon Musk replied 'True' to analysis showing explosive increases in media usage of the term 'White Supremacy' (e.g., LA Times up 9749% from 2010-2020, with similar spikes at NYT, WaPo, WSJ). He agreed it was not organic but a Leftist creation manufactured to push anti-white racism.",
+        "summary_zh": "埃隆·馬斯克對分析回覆「True」，該分析顯示媒體使用「White Supremacy」一詞呈爆炸性增長（例如洛杉磯時報2010-2020年增加9749%，紐約時報、華盛頓郵報、華爾街日報亦有類似激增）。他同意這不是有機發展，而是左派為推動反白人種族主義而製造的。",
         "musk_quote": "True",
-        "musk_quote_zh": "True（正確）",
+        "musk_quote_zh": "正確",
         "importance": 3,
         "first_seen": "2026-06-22T15:45:47Z",
-        "updated_at": "2026-06-22T16:05:03.031641+00:00",
+        "updated_at": "2026-06-22T18:05:03.065613+00:00",
         "links": [
           {
             "label": "Elon Musk on X",
@@ -170,18 +261,39 @@
         "category": "elon_personal",
         "source_type": "musk_reply",
         "title_en": "Elon Musk: 'McCarthy Was Right' on Stripping Citizenship from Those Joining Terrorist Groups",
-        "title_zh": "馬斯克：「麥卡錫是對的」 支持剝奪加入恐怖組織者的公民權",
-        "summary_en": "Elon Musk replied 'McCarthy was right' to a post praising DOJ use of 1952 law to denaturalize a Somali citizen who joined al-Shabaab terrorists months after naturalization. He supported rejecting 'McCarthyism' smears and enforcing loyalty as a contract for citizenship.",
-        "summary_zh": "馬斯克回覆「McCarthy was right」，支持司法部使用1952年法律，剝奪一名索馬利歸化公民（入籍後數月即加入伊斯蘭恐怖組織al-Shabaab）的公民權。他認為應拒絕「麥卡錫主義」抹黑，並將忠誠視為公民權的契約。",
+        "title_zh": "埃隆·馬斯克：「麥卡錫是對的」，支持剝奪加入恐怖組織者的公民權",
+        "summary_en": "Elon Musk replied 'McCarthy was right' to a post praising DOJ use of a 1952 law to denaturalize a Somali citizen who joined al-Shabaab terrorists months after naturalization. He supported enforcing loyalty standards and rejecting 'McCarthyism' smears in such cases.",
+        "summary_zh": "埃隆·馬斯克對一則貼文回覆「McCarthy was right」，該貼文讚揚司法部運用1952年法律，剝奪一名索馬利公民入籍後不久加入al-Shabaab恐怖組織的公民權。他支持執行忠誠標準，並拒絕在此類案件中使用「麥卡錫主義」抹黑。",
         "musk_quote": "McCarthy was right",
-        "musk_quote_zh": "McCarthy was right（麥卡錫是對的）",
+        "musk_quote_zh": "麥卡錫是對的",
         "importance": 3,
         "first_seen": "2026-06-22T02:30:01Z",
-        "updated_at": "2026-06-22T16:05:03.031641+00:00",
+        "updated_at": "2026-06-22T18:05:03.065613+00:00",
         "links": [
           {
             "label": "Elon Musk on X",
             "url": "https://x.com/elonmusk/status/2068884179731828856"
+          }
+        ]
+      },
+      {
+        "id": "elon-wow-sam-altman-worldcoin-probe-2026-06-22",
+        "story_id": "elon-wow-sam-altman-worldcoin-probe-2026-06-22",
+        "category": "elon_personal",
+        "source_type": "musk_reply",
+        "title_en": "Elon Musk Reacts 'Wow' to Internal Probes at Sam Altman's Worldcoin/Orb",
+        "title_zh": "埃隆·馬斯克對薩姆·奧特曼Worldcoin/Orb內部調查回應「Wow」",
+        "summary_en": "Elon Musk replied 'Wow' to a report on internal investigations at Sam Altman's Orb startup (Worldcoin) for financial irregularities, bribery of foreign officials in Thailand, and ties to an individual accused of transnational cyber-fraud, all while seeking SEC approval for the OpenAI IPO.",
+        "summary_zh": "埃隆·馬斯克對一則報導回應「Wow」，內容指出薩姆·奧特曼的Orb新創公司（Worldcoin）面臨財務不當、泰國外國官員賄賂及與跨國網路詐欺嫌犯相關的內部調查，同時正尋求SEC批准OpenAI IPO。",
+        "musk_quote": "Wow",
+        "musk_quote_zh": "哇",
+        "importance": 2,
+        "first_seen": "2026-06-22T17:15:23Z",
+        "updated_at": "2026-06-22T18:05:03.065613+00:00",
+        "links": [
+          {
+            "label": "Elon Musk on X",
+            "url": "https://x.com/elonmusk/status/2069106990383550853"
           }
         ]
       }
@@ -193,15 +305,19 @@
         "category": "tesla",
         "source_type": "official_account",
         "title_en": "Tesla Amplifies User Praise: FSD Supervised 'Like Going from Black and White to Color TV'",
-        "title_zh": "Tesla轉發用戶讚譽：FSD Supervised「如同從黑白電視進入彩色電視」",
-        "summary_en": "Tesla quoted a user describing FSD Supervised v14+ as transformative after long road trips and daily use: 'it’s like going from black and white to color TV.' When driving a regular car again, even a 'better' one, the user felt they were 'dumb having to drive yourself.'",
-        "summary_zh": "Tesla轉發用戶體驗：FSD Supervised v14+在長途與日常使用後帶來革命性改變，「如同從黑白電視進入彩色電視」。當再次駕駛一般汽車（即使是「更好的」車）時，用戶感覺「自己開車很蠢」。",
+        "title_zh": "特斯拉轉發用戶讚揚：FSD Supervised「就像從黑白電視變成彩色電視」",
+        "summary_en": "Tesla quoted a user describing FSD Supervised v14+ as transformative after long road trips and daily use: 'it’s like going from black and white to color TV.' When driving a regular car again, even a 'better' one, the user felt they were 'driving in the stone age.'",
+        "summary_zh": "特斯拉轉發用戶描述FSD Supervised v14+ 在長途旅行和日常使用後具有變革性：「就像從黑白電視變成彩色電視」。當再次開一般車（即使是「更好」的車），用戶感覺像「在石器時代開車」。",
         "musk_quote": "",
         "musk_quote_zh": "",
         "importance": 2,
         "first_seen": "2026-06-22T07:24:39Z",
-        "updated_at": "2026-06-22T16:05:03.031641+00:00",
+        "updated_at": "2026-06-22T18:05:03.065613+00:00",
         "links": [
+          {
+            "label": "Tesla on X",
+            "url": "https://x.com/Tesla"
+          },
           {
             "label": "Tesla on X",
             "url": "https://x.com/Tesla/status/2068958329452568644"
@@ -213,7 +329,7 @@
     "xai_x_platform": [],
     "other": []
   },
-  "brief_en": "Elon Musk sharply criticized Rep. Ro Khanna over DOGE/USAID cuts, calling him an 'evil liar' and 'Ro the Robber', accusing fraud and insider trading while defending DOGE's verification standards and suggesting lawsuits or prison. He affirmed 'McCarthy was right' on denaturalizing terrorists and that media's 'White Supremacy' surge is manufactured anti-white racism. Tesla amplified strong FSD v14+ user feedback.",
-  "brief_zh": "馬斯克猛烈反擊眾議員Ro Khanna在DOGE/USAID削減議題上，稱其為「邪惡的騙子」和「搶劫的Ro」，指控詐欺與內線交易，捍衛DOGE驗證標準並建議訴訟或入獄。他肯定「麥卡錫是對的」（關於剝奪恐怖分子公民權），並指媒體「白人至上」使用量激增是製造的反白人種族主義。Tesla分享FSD v14+強力用戶正面反饋。",
-  "updated_at": "2026-06-22T16:05:03.031641+00:00"
+  "brief_en": "Elon Musk escalated attacks on Rep. Ro Khanna over DOGE/USAID, calling him 'Robber Khanna' and demanding prison while defending aid verification standards. He replied 'Execution' supporting death penalty in a UK child sex abuse case and 'Wow' to Sam Altman/Worldcoin probes. Other posts addressed media 'white supremacy' narratives, McCarthy-era loyalty laws, and Tesla amplified positive FSD user feedback.",
+  "brief_zh": "馬斯克升級抨擊Ro Khanna議員，稱「Robber Khanna」並要求入獄，捍衛援助查核標準；對英國兒童性犯罪案回「Execution」支持死刑，對Altman Worldcoin調查回「Wow」。另有媒體「白人至上」論述、麥卡錫公民權議題，特斯拉轉發FSD用戶正面體驗。",
+  "updated_at": "2026-06-22T18:05:03.065613+00:00"
 }
