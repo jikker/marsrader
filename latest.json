@@ -52,9 +52,131 @@
         "existing_limit": 25,
         "timeout_notes": []
       }
+    },
+    {
+      "generated_at": "2026-06-22T14:26:12.386124+00:00",
+      "backend": "grok-web",
+      "model": "grok.com (browser)",
+      "brief_en": "Elon Musk on X in the last 12h: Vibecoding full access meme (quote → @kanavtwt); Ro Khanna tax criticism (reply → @WesternLensman); Immigrant America complaint video (reply → @miatalias); McCarthyism citizenship revocation (reply → @Rothmus); Socialists Latin America fail (reply → @EndWokeness)",
+      "brief_zh": "",
+      "item_count": 12,
+      "updated_count": 0,
+      "kept_count": 4,
+      "usage": {
+        "backend": "grok-web",
+        "model": "grok.com (browser)",
+        "lookback_hours": 12,
+        "raw_count": 8,
+        "mapped_count": 8
+      }
     }
   ],
   "items_flat": [
+    {
+      "id": "musk-2068885116064080018",
+      "story_id": "musk-2068885116064080018",
+      "category": "elon_personal",
+      "source_type": "musk_quote",
+      "title_en": "Vibecoding full access meme (quote → @kanavtwt)",
+      "title_zh": "",
+      "summary_en": "[quote to @kanavtwt] “Full access” 😂",
+      "summary_zh": "",
+      "musk_quote": "“Full access” 😂",
+      "musk_quote_zh": "",
+      "importance": 5,
+      "first_seen": "2026-06-22T02:33:44Z",
+      "updated_at": "2026-06-22T14:26:12.386124+00:00",
+      "links": [
+        {
+          "label": "Elon on X",
+          "url": "https://x.com/elonmusk/status/2068885116064080018"
+        }
+      ]
+    },
+    {
+      "id": "musk-2068887884954796453",
+      "story_id": "musk-2068887884954796453",
+      "category": "elon_personal",
+      "source_type": "musk_reply",
+      "title_en": "Ro Khanna tax criticism (reply → @WesternLensman)",
+      "title_zh": "",
+      "summary_en": "[reply to @WesternLensman] He’s such an evil liar",
+      "summary_zh": "",
+      "musk_quote": "He’s such an evil liar",
+      "musk_quote_zh": "",
+      "importance": 4,
+      "first_seen": "2026-06-22T02:44:44Z",
+      "updated_at": "2026-06-22T14:26:12.386124+00:00",
+      "links": [
+        {
+          "label": "Elon on X",
+          "url": "https://x.com/elonmusk/status/2068887884954796453"
+        }
+      ]
+    },
+    {
+      "id": "musk-2068884892096647260",
+      "story_id": "musk-2068884892096647260",
+      "category": "elon_personal",
+      "source_type": "musk_reply",
+      "title_en": "Immigrant America complaint video (reply → @miatalias)",
+      "title_zh": "",
+      "summary_en": "[reply to @miatalias] Seriously",
+      "summary_zh": "",
+      "musk_quote": "Seriously",
+      "musk_quote_zh": "",
+      "importance": 4,
+      "first_seen": "2026-06-22T02:32:50Z",
+      "updated_at": "2026-06-22T14:26:12.386124+00:00",
+      "links": [
+        {
+          "label": "Elon on X",
+          "url": "https://x.com/elonmusk/status/2068884892096647260"
+        }
+      ]
+    },
+    {
+      "id": "musk-2068884179731828856",
+      "story_id": "musk-2068884179731828856",
+      "category": "elon_personal",
+      "source_type": "musk_reply",
+      "title_en": "McCarthyism citizenship revocation (reply → @Rothmus)",
+      "title_zh": "",
+      "summary_en": "[reply to @Rothmus] McCarthy was right",
+      "summary_zh": "",
+      "musk_quote": "McCarthy was right",
+      "musk_quote_zh": "",
+      "importance": 4,
+      "first_seen": "2026-06-22T02:30:01Z",
+      "updated_at": "2026-06-22T14:26:12.386124+00:00",
+      "links": [
+        {
+          "label": "Elon on X",
+          "url": "https://x.com/elonmusk/status/2068884179731828856"
+        }
+      ]
+    },
+    {
+      "id": "musk-2068883969077117159",
+      "story_id": "musk-2068883969077117159",
+      "category": "elon_personal",
+      "source_type": "musk_reply",
+      "title_en": "Socialists Latin America fail (reply → @EndWokeness)",
+      "title_zh": "",
+      "summary_en": "[reply to @EndWokeness] 😂",
+      "summary_zh": "",
+      "musk_quote": "😂",
+      "musk_quote_zh": "",
+      "importance": 4,
+      "first_seen": "2026-06-22T02:29:10Z",
+      "updated_at": "2026-06-22T14:26:12.386124+00:00",
+      "links": [
+        {
+          "label": "Elon on X",
+          "url": "https://x.com/elonmusk/status/2068883969077117159"
+        }
+      ]
+    },
     {
       "id": "uk-grooming-media-double-standard-2026-06-22",
       "story_id": "uk-grooming-media-double-standard-2026-06-22",
@@ -148,209 +270,176 @@
       ]
     },
     {
-      "id": "fathers-day-family-posts-2026-06-22",
-      "story_id": "fathers-day-family-posts-2026-06-22",
-      "category": "elon_personal",
-      "source_type": "musk_post",
-      "title_en": "Musk posts Father's Day tributes to family and Karl Marx's dad",
-      "title_zh": "馬斯克發文父親節致敬家人與卡爾·馬克思的父親",
-      "summary_en": "Musk posted 'Happy Father's Day!' to huge engagement. He quote-posted Karl Marx's father's letter criticizing his son's lifestyle, adding 'Karl's Dad was cool,' and replied with a heart to mother Maye Musk's post.",
-      "summary_zh": "馬斯克貼文「父親節快樂！」互動極高。他轉推卡爾·馬克思父親批評兒子的信並寫「Karl's Dad was cool」，並以愛心回覆母親 Maye Musk 的貼文。",
-      "musk_quote": "Karl's Dad was cool",
-      "musk_quote_zh": "卡爾的爸爸很酷。",
-      "importance": 3,
-      "first_seen": "2026-06-21T16:41:25.000Z",
-      "updated_at": "2026-06-22T11:37:39.489621+00:00",
-      "links": [
-        {
-          "label": "Elon Musk Happy Father's Day on X",
-          "url": "https://x.com/elonmusk/status/2068722935553032543"
-        },
-        {
-          "label": "Elon Musk Karl's Dad quote-post on X",
-          "url": "https://x.com/elonmusk/status/2068743751376244966"
-        },
-        {
-          "label": "Elon reply to Maye on X",
-          "url": "https://x.com/elonmusk/status/2068736055432315162"
-        }
-      ]
-    },
-    {
-      "id": "grok-imagine-kittens-demo-2026-06-22",
-      "story_id": "grok-imagine-kittens-demo-2026-06-22",
-      "category": "xai_x_platform",
-      "source_type": "musk_post",
-      "title_en": "Musk demos Grok Imagine with dancing kittens video prompt",
-      "title_zh": "馬斯克展示 Grok Imagine 跳舞小貓影片提示",
-      "summary_en": "Musk posted a Grok Imagine video of mitten-wearing kittens dancing and singing 'we're kittens with mittens.' He shared the full prompt and wrote 'Your kids will love this video!'",
-      "summary_zh": "馬斯克貼出 Grok Imagine 生成的戴手套小貓跳舞唱「we're kittens with mittens」影片，分享完整提示並寫「Your kids will love this video!」",
-      "musk_quote": "Your kids will love this video!",
-      "musk_quote_zh": "你的孩子會喜歡這段影片！",
-      "importance": 3,
-      "first_seen": "2026-06-21T17:29:12.000Z",
-      "updated_at": "2026-06-22T11:37:39.489621+00:00",
-      "links": [
-        {
-          "label": "Elon Musk on X",
-          "url": "https://x.com/elonmusk/status/2068748080623604004"
-        }
-      ]
-    },
-    {
-      "id": "puberty-blockers-social-media-age-2026-06-22",
-      "story_id": "puberty-blockers-social-media-age-2026-06-22",
+      "id": "musk-2068897990878597500",
+      "story_id": "musk-2068897990878597500",
       "category": "elon_personal",
       "source_type": "musk_quote",
-      "title_en": "Musk: blocking puberty at 11 but allowing social media makes no sense",
-      "title_zh": "馬斯克：11歲可阻斷青春期卻要到16歲才准用社群媒體說不通",
-      "summary_en": "Quote-posting educator Katharine Birbalsingh's criticism that children can block puberty at 11 yet are told to avoid social media until 16, Musk wrote: 'Makes no sense.'",
-      "summary_zh": "馬斯克轉推教育家 Katharine Birbalsingh 批評：孩子11歲就能阻斷青春期，卻被告知要到16歲才能用社群媒體，他只寫：「Makes no sense.」",
-      "musk_quote": "Makes no sense",
-      "musk_quote_zh": "這說不通。",
-      "importance": 3,
-      "first_seen": "2026-06-21T17:16:52.000Z",
-      "updated_at": "2026-06-22T11:37:39.489621+00:00",
-      "links": [
-        {
-          "label": "Elon Musk on X",
-          "url": "https://x.com/elonmusk/status/2068744977333535118"
-        }
-      ]
-    },
-    {
-      "id": "charlie-kirk-legacy-video-2026-06-22",
-      "story_id": "charlie-kirk-legacy-video-2026-06-22",
-      "category": "elon_personal",
-      "source_type": "musk_quote",
-      "title_en": "Musk shares Charlie Kirk legacy conversion video",
-      "title_zh": "馬斯克分享 Charlie Kirk 遺產轉變影片",
-      "summary_en": "Musk posted without added text a video of a man who once said he was glad Charlie Kirk was murdered, then said Kirk's videos and debates changed his life, reconciled his family, and made Kirk his hero.",
-      "summary_zh": "馬斯克無文字分享影片：一名男子曾稱樂見 Charlie Kirk 被謀殺，後來表示 Kirk 的影片與辯論改變他的人生、讓家庭和解，並視 Kirk 為英雄。",
-      "musk_quote": "",
+      "title_en": "China renewable energy growth (repost → @Rothmus)",
+      "title_zh": "",
+      "summary_en": "[repost to @Rothmus] China added a Germany-sized low carbon electricity grid last year. \n\nNearly 500 TWh more generation, almost all solar and wind…",
+      "summary_zh": "",
+      "musk_quote": "China added a Germany-sized low carbon electricity grid last year. \n\nNearly 500 TWh more generation, almost all solar and wind…",
       "musk_quote_zh": "",
       "importance": 3,
-      "first_seen": "2026-06-21T17:53:25.000Z",
-      "updated_at": "2026-06-22T11:37:39.489621+00:00",
+      "first_seen": "2026-06-22T03:24:53Z",
+      "updated_at": "2026-06-22T14:26:12.386124+00:00",
       "links": [
         {
-          "label": "Elon Musk on X",
-          "url": "https://x.com/elonmusk/status/2068754172925591955"
-        },
-        {
-          "label": "Original Soldiersgirl video on X",
-          "url": "https://x.com/Hisbabygirl68/status/2068476659477479739"
+          "label": "Elon on X",
+          "url": "https://x.com/elonmusk/status/2068897990878597500"
         }
       ]
     },
     {
-      "id": "ro-khanna-evil-liar-2026-06-22",
-      "story_id": "ro-khanna-evil-liar-2026-06-22",
+      "id": "musk-2068884964867723614",
+      "story_id": "musk-2068884964867723614",
       "category": "elon_personal",
       "source_type": "musk_reply",
-      "title_en": "Musk calls Ro Khanna an 'evil liar' over tax-the-rich proposals",
-      "title_zh": "馬斯克痛批 Ro Khanna 為「邪惡騙子」，針對「向富人課稅」提案",
-      "summary_en": "Replying to a post quoting Rep. Ro Khanna on taxing Musk 5% once to fund $10/day child care and taxing billionaires for student debt, Musk wrote: 'He's such an evil liar.'",
-      "summary_zh": "回覆引用眾議員 Ro Khanna 建議對馬斯克課徵5%一次性稅資助每天10美元托兒，以及向億萬富翁課稅還學貸言論，馬斯克寫：「He's such an evil liar.」",
-      "musk_quote": "He's such an evil liar",
-      "musk_quote_zh": "他真是個邪惡的騙子。",
-      "importance": 3,
-      "first_seen": "2026-06-22T02:44:44.000Z",
-      "updated_at": "2026-06-22T11:37:39.489621+00:00",
-      "links": [
-        {
-          "label": "Elon Musk on X",
-          "url": "https://x.com/elonmusk/status/2068887884954796453"
-        }
-      ]
-    },
-    {
-      "id": "mccarthy-citizenship-terrorists-2026-06-22",
-      "story_id": "mccarthy-citizenship-terrorists-2026-06-22",
-      "category": "elon_personal",
-      "source_type": "musk_reply",
-      "title_en": "Musk: 'McCarthy was right' on stripping citizenship from terrorists",
-      "title_zh": "馬斯克：「麥卡錫沒錯」支持剝奪恐怖分子公民權",
-      "summary_en": "Agreeing with a post on the DOJ using a 1952 law to denaturalize a Somali immigrant who joined al-Shabaab shortly after naturalization in 2007, Musk wrote: 'McCarthy was right.'",
-      "summary_zh": "同意一則貼文指出 DOJ 利用 1952 年法律，取消 2007 年歸化後數月即加入 al-Shabaab 的索馬利移民公民權，馬斯克寫：「McCarthy was right.」",
-      "musk_quote": "McCarthy was right",
-      "musk_quote_zh": "麥卡錫沒錯。",
-      "importance": 3,
-      "first_seen": "2026-06-22T02:30:01.000Z",
-      "updated_at": "2026-06-22T11:37:39.489621+00:00",
-      "links": [
-        {
-          "label": "Elon Musk on X",
-          "url": "https://x.com/elonmusk/status/2068884179731828856"
-        }
-      ]
-    },
-    {
-      "id": "bukele-works-every-time-2026-06-22",
-      "story_id": "bukele-works-every-time-2026-06-22",
-      "category": "elon_personal",
-      "source_type": "musk_quote",
-      "title_en": "Musk: 'Works every time' agreeing with Bukele",
-      "title_zh": "馬斯克：「每次都有效」同意 Bukele",
-      "summary_en": "Musk quote-posted President Nayib Bukele's 'It's a very simple concept, really.' and replied 'Works every time' — amplifying Bukele's security approach.",
-      "summary_zh": "馬斯克轉推總統 Nayib Bukele 的「It's a very simple concept, really.」並回「Works every time」——放大 Bukele 的安全治理方針。",
-      "musk_quote": "Works every time",
-      "musk_quote_zh": "每次都有效。",
-      "importance": 3,
-      "first_seen": "2026-06-21T23:55:36.000Z",
-      "updated_at": "2026-06-22T11:37:39.489621+00:00",
-      "links": [
-        {
-          "label": "Elon Musk on X",
-          "url": "https://x.com/elonmusk/status/2068845321984053656"
-        }
-      ]
-    },
-    {
-      "id": "tesla-fsd-supervised-color-tv-2026-06-22",
-      "story_id": "tesla-fsd-supervised-color-tv-2026-06-22",
-      "category": "tesla",
-      "source_type": "official_account",
-      "title_en": "Tesla quotes FSD praise: 'like black and white to color TV'",
-      "title_zh": "特斯拉轉推 FSD 好評：「像從黑白電視變彩色」",
-      "summary_en": "With no Musk comment, @Tesla quote-posted @dwr's testimonial that after Model Y road trips with FSD 14+, living with FSD Supervised is 'like going from black and white to color TV.'",
-      "summary_zh": "馬斯克未置評；@Tesla 轉推 @dwr 心得，稱 Model Y 搭配 FSD 14+ 長途與日常駕駛後，全自動輔助駕駛生活「像從黑白電視變彩色電視」。",
-      "musk_quote": "",
+      "title_en": "Bookstore Hayek Marx books (reply → @Chesschick01)",
+      "title_zh": "",
+      "summary_en": "[reply to @Chesschick01] Nice",
+      "summary_zh": "",
+      "musk_quote": "Nice",
       "musk_quote_zh": "",
       "importance": 3,
-      "first_seen": "2026-06-22T07:24:39.000Z",
-      "updated_at": "2026-06-22T11:37:39.489621+00:00",
+      "first_seen": "2026-06-22T02:33:08Z",
+      "updated_at": "2026-06-22T14:26:12.386124+00:00",
       "links": [
         {
-          "label": "Tesla on X",
-          "url": "https://x.com/Tesla/status/2068958329452568644"
+          "label": "Elon on X",
+          "url": "https://x.com/elonmusk/status/2068884964867723614"
         }
       ]
     },
     {
-      "id": "grok-vibecoding-full-access-2026-06-22",
-      "story_id": "grok-vibecoding-full-access-2026-06-22",
-      "category": "xai_x_platform",
+      "id": "musk-2068883812390441203",
+      "story_id": "musk-2068883812390441203",
+      "category": "elon_personal",
       "source_type": "musk_quote",
-      "title_en": "Musk comments 'Full access' 😂 on viral vibecoding meme",
-      "title_zh": "馬斯克幽默評論病毒「vibecoding」迷因「完全存取權」😂",
-      "summary_en": "Musk quote-posted a popular 'Day 1 of vibecoding' AI-coding screenshot with '\"Full access\" 😂' — widely read as a joke about giving AI coding tools broad permissions.",
-      "summary_zh": "馬斯克轉推熱門「Day 1 of vibecoding」AI 輔助編碼截圖，評論「\"Full access\" 😂」——普遍解讀為給 AI 編碼工具廣泛權限的笑話。",
-      "musk_quote": "\"Full access\" 😂",
-      "musk_quote_zh": "「完全存取權」😂",
+      "title_en": "Father's Day family celebration (repost → @WilliamShatner)",
+      "title_zh": "",
+      "summary_en": "[repost to @WilliamShatner] There's nothing like celebrating Father's Day with your children, grand kids and great grandsons!  I hope you all had a…",
+      "summary_zh": "",
+      "musk_quote": "There's nothing like celebrating Father's Day with your children, grand kids and great grandsons!  I hope you all had a…",
+      "musk_quote_zh": "",
       "importance": 2,
-      "first_seen": "2026-06-22T02:33:44.000Z",
-      "updated_at": "2026-06-22T11:37:39.489621+00:00",
+      "first_seen": "2026-06-22T02:28:33Z",
+      "updated_at": "2026-06-22T14:26:12.386124+00:00",
       "links": [
         {
-          "label": "Elon Musk on X",
-          "url": "https://x.com/elonmusk/status/2068885116064080018"
+          "label": "Elon on X",
+          "url": "https://x.com/elonmusk/status/2068883812390441203"
         }
       ]
     }
   ],
   "categories": {
     "elon_personal": [
+      {
+        "id": "musk-2068885116064080018",
+        "story_id": "musk-2068885116064080018",
+        "category": "elon_personal",
+        "source_type": "musk_quote",
+        "title_en": "Vibecoding full access meme (quote → @kanavtwt)",
+        "title_zh": "",
+        "summary_en": "[quote to @kanavtwt] “Full access” 😂",
+        "summary_zh": "",
+        "musk_quote": "“Full access” 😂",
+        "musk_quote_zh": "",
+        "importance": 5,
+        "first_seen": "2026-06-22T02:33:44Z",
+        "updated_at": "2026-06-22T14:26:12.386124+00:00",
+        "links": [
+          {
+            "label": "Elon on X",
+            "url": "https://x.com/elonmusk/status/2068885116064080018"
+          }
+        ]
+      },
+      {
+        "id": "musk-2068887884954796453",
+        "story_id": "musk-2068887884954796453",
+        "category": "elon_personal",
+        "source_type": "musk_reply",
+        "title_en": "Ro Khanna tax criticism (reply → @WesternLensman)",
+        "title_zh": "",
+        "summary_en": "[reply to @WesternLensman] He’s such an evil liar",
+        "summary_zh": "",
+        "musk_quote": "He’s such an evil liar",
+        "musk_quote_zh": "",
+        "importance": 4,
+        "first_seen": "2026-06-22T02:44:44Z",
+        "updated_at": "2026-06-22T14:26:12.386124+00:00",
+        "links": [
+          {
+            "label": "Elon on X",
+            "url": "https://x.com/elonmusk/status/2068887884954796453"
+          }
+        ]
+      },
+      {
+        "id": "musk-2068884892096647260",
+        "story_id": "musk-2068884892096647260",
+        "category": "elon_personal",
+        "source_type": "musk_reply",
+        "title_en": "Immigrant America complaint video (reply → @miatalias)",
+        "title_zh": "",
+        "summary_en": "[reply to @miatalias] Seriously",
+        "summary_zh": "",
+        "musk_quote": "Seriously",
+        "musk_quote_zh": "",
+        "importance": 4,
+        "first_seen": "2026-06-22T02:32:50Z",
+        "updated_at": "2026-06-22T14:26:12.386124+00:00",
+        "links": [
+          {
+            "label": "Elon on X",
+            "url": "https://x.com/elonmusk/status/2068884892096647260"
+          }
+        ]
+      },
+      {
+        "id": "musk-2068884179731828856",
+        "story_id": "musk-2068884179731828856",
+        "category": "elon_personal",
+        "source_type": "musk_reply",
+        "title_en": "McCarthyism citizenship revocation (reply → @Rothmus)",
+        "title_zh": "",
+        "summary_en": "[reply to @Rothmus] McCarthy was right",
+        "summary_zh": "",
+        "musk_quote": "McCarthy was right",
+        "musk_quote_zh": "",
+        "importance": 4,
+        "first_seen": "2026-06-22T02:30:01Z",
+        "updated_at": "2026-06-22T14:26:12.386124+00:00",
+        "links": [
+          {
+            "label": "Elon on X",
+            "url": "https://x.com/elonmusk/status/2068884179731828856"
+          }
+        ]
+      },
+      {
+        "id": "musk-2068883969077117159",
+        "story_id": "musk-2068883969077117159",
+        "category": "elon_personal",
+        "source_type": "musk_reply",
+        "title_en": "Socialists Latin America fail (reply → @EndWokeness)",
+        "title_zh": "",
+        "summary_en": "[reply to @EndWokeness] 😂",
+        "summary_zh": "",
+        "musk_quote": "😂",
+        "musk_quote_zh": "",
+        "importance": 4,
+        "first_seen": "2026-06-22T02:29:10Z",
+        "updated_at": "2026-06-22T14:26:12.386124+00:00",
+        "links": [
+          {
+            "label": "Elon on X",
+            "url": "https://x.com/elonmusk/status/2068883969077117159"
+          }
+        ]
+      },
       {
         "id": "uk-grooming-media-double-standard-2026-06-22",
         "story_id": "uk-grooming-media-double-standard-2026-06-22",
@@ -402,167 +491,70 @@
         ]
       },
       {
-        "id": "fathers-day-family-posts-2026-06-22",
-        "story_id": "fathers-day-family-posts-2026-06-22",
-        "category": "elon_personal",
-        "source_type": "musk_post",
-        "title_en": "Musk posts Father's Day tributes to family and Karl Marx's dad",
-        "title_zh": "馬斯克發文父親節致敬家人與卡爾·馬克思的父親",
-        "summary_en": "Musk posted 'Happy Father's Day!' to huge engagement. He quote-posted Karl Marx's father's letter criticizing his son's lifestyle, adding 'Karl's Dad was cool,' and replied with a heart to mother Maye Musk's post.",
-        "summary_zh": "馬斯克貼文「父親節快樂！」互動極高。他轉推卡爾·馬克思父親批評兒子的信並寫「Karl's Dad was cool」，並以愛心回覆母親 Maye Musk 的貼文。",
-        "musk_quote": "Karl's Dad was cool",
-        "musk_quote_zh": "卡爾的爸爸很酷。",
-        "importance": 3,
-        "first_seen": "2026-06-21T16:41:25.000Z",
-        "updated_at": "2026-06-22T11:37:39.489621+00:00",
-        "links": [
-          {
-            "label": "Elon Musk Happy Father's Day on X",
-            "url": "https://x.com/elonmusk/status/2068722935553032543"
-          },
-          {
-            "label": "Elon Musk Karl's Dad quote-post on X",
-            "url": "https://x.com/elonmusk/status/2068743751376244966"
-          },
-          {
-            "label": "Elon reply to Maye on X",
-            "url": "https://x.com/elonmusk/status/2068736055432315162"
-          }
-        ]
-      },
-      {
-        "id": "puberty-blockers-social-media-age-2026-06-22",
-        "story_id": "puberty-blockers-social-media-age-2026-06-22",
+        "id": "musk-2068897990878597500",
+        "story_id": "musk-2068897990878597500",
         "category": "elon_personal",
         "source_type": "musk_quote",
-        "title_en": "Musk: blocking puberty at 11 but allowing social media makes no sense",
-        "title_zh": "馬斯克：11歲可阻斷青春期卻要到16歲才准用社群媒體說不通",
-        "summary_en": "Quote-posting educator Katharine Birbalsingh's criticism that children can block puberty at 11 yet are told to avoid social media until 16, Musk wrote: 'Makes no sense.'",
-        "summary_zh": "馬斯克轉推教育家 Katharine Birbalsingh 批評：孩子11歲就能阻斷青春期，卻被告知要到16歲才能用社群媒體，他只寫：「Makes no sense.」",
-        "musk_quote": "Makes no sense",
-        "musk_quote_zh": "這說不通。",
-        "importance": 3,
-        "first_seen": "2026-06-21T17:16:52.000Z",
-        "updated_at": "2026-06-22T11:37:39.489621+00:00",
-        "links": [
-          {
-            "label": "Elon Musk on X",
-            "url": "https://x.com/elonmusk/status/2068744977333535118"
-          }
-        ]
-      },
-      {
-        "id": "charlie-kirk-legacy-video-2026-06-22",
-        "story_id": "charlie-kirk-legacy-video-2026-06-22",
-        "category": "elon_personal",
-        "source_type": "musk_quote",
-        "title_en": "Musk shares Charlie Kirk legacy conversion video",
-        "title_zh": "馬斯克分享 Charlie Kirk 遺產轉變影片",
-        "summary_en": "Musk posted without added text a video of a man who once said he was glad Charlie Kirk was murdered, then said Kirk's videos and debates changed his life, reconciled his family, and made Kirk his hero.",
-        "summary_zh": "馬斯克無文字分享影片：一名男子曾稱樂見 Charlie Kirk 被謀殺，後來表示 Kirk 的影片與辯論改變他的人生、讓家庭和解，並視 Kirk 為英雄。",
-        "musk_quote": "",
+        "title_en": "China renewable energy growth (repost → @Rothmus)",
+        "title_zh": "",
+        "summary_en": "[repost to @Rothmus] China added a Germany-sized low carbon electricity grid last year. \n\nNearly 500 TWh more generation, almost all solar and wind…",
+        "summary_zh": "",
+        "musk_quote": "China added a Germany-sized low carbon electricity grid last year. \n\nNearly 500 TWh more generation, almost all solar and wind…",
         "musk_quote_zh": "",
         "importance": 3,
-        "first_seen": "2026-06-21T17:53:25.000Z",
-        "updated_at": "2026-06-22T11:37:39.489621+00:00",
+        "first_seen": "2026-06-22T03:24:53Z",
+        "updated_at": "2026-06-22T14:26:12.386124+00:00",
         "links": [
           {
-            "label": "Elon Musk on X",
-            "url": "https://x.com/elonmusk/status/2068754172925591955"
-          },
-          {
-            "label": "Original Soldiersgirl video on X",
-            "url": "https://x.com/Hisbabygirl68/status/2068476659477479739"
+            "label": "Elon on X",
+            "url": "https://x.com/elonmusk/status/2068897990878597500"
           }
         ]
       },
       {
-        "id": "ro-khanna-evil-liar-2026-06-22",
-        "story_id": "ro-khanna-evil-liar-2026-06-22",
+        "id": "musk-2068884964867723614",
+        "story_id": "musk-2068884964867723614",
         "category": "elon_personal",
         "source_type": "musk_reply",
-        "title_en": "Musk calls Ro Khanna an 'evil liar' over tax-the-rich proposals",
-        "title_zh": "馬斯克痛批 Ro Khanna 為「邪惡騙子」，針對「向富人課稅」提案",
-        "summary_en": "Replying to a post quoting Rep. Ro Khanna on taxing Musk 5% once to fund $10/day child care and taxing billionaires for student debt, Musk wrote: 'He's such an evil liar.'",
-        "summary_zh": "回覆引用眾議員 Ro Khanna 建議對馬斯克課徵5%一次性稅資助每天10美元托兒，以及向億萬富翁課稅還學貸言論，馬斯克寫：「He's such an evil liar.」",
-        "musk_quote": "He's such an evil liar",
-        "musk_quote_zh": "他真是個邪惡的騙子。",
+        "title_en": "Bookstore Hayek Marx books (reply → @Chesschick01)",
+        "title_zh": "",
+        "summary_en": "[reply to @Chesschick01] Nice",
+        "summary_zh": "",
+        "musk_quote": "Nice",
+        "musk_quote_zh": "",
         "importance": 3,
-        "first_seen": "2026-06-22T02:44:44.000Z",
-        "updated_at": "2026-06-22T11:37:39.489621+00:00",
+        "first_seen": "2026-06-22T02:33:08Z",
+        "updated_at": "2026-06-22T14:26:12.386124+00:00",
         "links": [
           {
-            "label": "Elon Musk on X",
-            "url": "https://x.com/elonmusk/status/2068887884954796453"
+            "label": "Elon on X",
+            "url": "https://x.com/elonmusk/status/2068884964867723614"
           }
         ]
       },
       {
-        "id": "mccarthy-citizenship-terrorists-2026-06-22",
-        "story_id": "mccarthy-citizenship-terrorists-2026-06-22",
-        "category": "elon_personal",
-        "source_type": "musk_reply",
-        "title_en": "Musk: 'McCarthy was right' on stripping citizenship from terrorists",
-        "title_zh": "馬斯克：「麥卡錫沒錯」支持剝奪恐怖分子公民權",
-        "summary_en": "Agreeing with a post on the DOJ using a 1952 law to denaturalize a Somali immigrant who joined al-Shabaab shortly after naturalization in 2007, Musk wrote: 'McCarthy was right.'",
-        "summary_zh": "同意一則貼文指出 DOJ 利用 1952 年法律，取消 2007 年歸化後數月即加入 al-Shabaab 的索馬利移民公民權，馬斯克寫：「McCarthy was right.」",
-        "musk_quote": "McCarthy was right",
-        "musk_quote_zh": "麥卡錫沒錯。",
-        "importance": 3,
-        "first_seen": "2026-06-22T02:30:01.000Z",
-        "updated_at": "2026-06-22T11:37:39.489621+00:00",
-        "links": [
-          {
-            "label": "Elon Musk on X",
-            "url": "https://x.com/elonmusk/status/2068884179731828856"
-          }
-        ]
-      },
-      {
-        "id": "bukele-works-every-time-2026-06-22",
-        "story_id": "bukele-works-every-time-2026-06-22",
+        "id": "musk-2068883812390441203",
+        "story_id": "musk-2068883812390441203",
         "category": "elon_personal",
         "source_type": "musk_quote",
-        "title_en": "Musk: 'Works every time' agreeing with Bukele",
-        "title_zh": "馬斯克：「每次都有效」同意 Bukele",
-        "summary_en": "Musk quote-posted President Nayib Bukele's 'It's a very simple concept, really.' and replied 'Works every time' — amplifying Bukele's security approach.",
-        "summary_zh": "馬斯克轉推總統 Nayib Bukele 的「It's a very simple concept, really.」並回「Works every time」——放大 Bukele 的安全治理方針。",
-        "musk_quote": "Works every time",
-        "musk_quote_zh": "每次都有效。",
-        "importance": 3,
-        "first_seen": "2026-06-21T23:55:36.000Z",
-        "updated_at": "2026-06-22T11:37:39.489621+00:00",
+        "title_en": "Father's Day family celebration (repost → @WilliamShatner)",
+        "title_zh": "",
+        "summary_en": "[repost to @WilliamShatner] There's nothing like celebrating Father's Day with your children, grand kids and great grandsons!  I hope you all had a…",
+        "summary_zh": "",
+        "musk_quote": "There's nothing like celebrating Father's Day with your children, grand kids and great grandsons!  I hope you all had a…",
+        "musk_quote_zh": "",
+        "importance": 2,
+        "first_seen": "2026-06-22T02:28:33Z",
+        "updated_at": "2026-06-22T14:26:12.386124+00:00",
         "links": [
           {
-            "label": "Elon Musk on X",
-            "url": "https://x.com/elonmusk/status/2068845321984053656"
+            "label": "Elon on X",
+            "url": "https://x.com/elonmusk/status/2068883812390441203"
           }
         ]
       }
     ],
-    "tesla": [
-      {
-        "id": "tesla-fsd-supervised-color-tv-2026-06-22",
-        "story_id": "tesla-fsd-supervised-color-tv-2026-06-22",
-        "category": "tesla",
-        "source_type": "official_account",
-        "title_en": "Tesla quotes FSD praise: 'like black and white to color TV'",
-        "title_zh": "特斯拉轉推 FSD 好評：「像從黑白電視變彩色」",
-        "summary_en": "With no Musk comment, @Tesla quote-posted @dwr's testimonial that after Model Y road trips with FSD 14+, living with FSD Supervised is 'like going from black and white to color TV.'",
-        "summary_zh": "馬斯克未置評；@Tesla 轉推 @dwr 心得，稱 Model Y 搭配 FSD 14+ 長途與日常駕駛後，全自動輔助駕駛生活「像從黑白電視變彩色電視」。",
-        "musk_quote": "",
-        "musk_quote_zh": "",
-        "importance": 3,
-        "first_seen": "2026-06-22T07:24:39.000Z",
-        "updated_at": "2026-06-22T11:37:39.489621+00:00",
-        "links": [
-          {
-            "label": "Tesla on X",
-            "url": "https://x.com/Tesla/status/2068958329452568644"
-          }
-        ]
-      }
-    ],
+    "tesla": [],
     "spacex": [
       {
         "id": "spacex-starlink-california-launch-2026-06-22",
@@ -607,53 +599,11 @@
             "url": "https://x.com/elonmusk/status/2068830099449766067"
           }
         ]
-      },
-      {
-        "id": "grok-imagine-kittens-demo-2026-06-22",
-        "story_id": "grok-imagine-kittens-demo-2026-06-22",
-        "category": "xai_x_platform",
-        "source_type": "musk_post",
-        "title_en": "Musk demos Grok Imagine with dancing kittens video prompt",
-        "title_zh": "馬斯克展示 Grok Imagine 跳舞小貓影片提示",
-        "summary_en": "Musk posted a Grok Imagine video of mitten-wearing kittens dancing and singing 'we're kittens with mittens.' He shared the full prompt and wrote 'Your kids will love this video!'",
-        "summary_zh": "馬斯克貼出 Grok Imagine 生成的戴手套小貓跳舞唱「we're kittens with mittens」影片，分享完整提示並寫「Your kids will love this video!」",
-        "musk_quote": "Your kids will love this video!",
-        "musk_quote_zh": "你的孩子會喜歡這段影片！",
-        "importance": 3,
-        "first_seen": "2026-06-21T17:29:12.000Z",
-        "updated_at": "2026-06-22T11:37:39.489621+00:00",
-        "links": [
-          {
-            "label": "Elon Musk on X",
-            "url": "https://x.com/elonmusk/status/2068748080623604004"
-          }
-        ]
-      },
-      {
-        "id": "grok-vibecoding-full-access-2026-06-22",
-        "story_id": "grok-vibecoding-full-access-2026-06-22",
-        "category": "xai_x_platform",
-        "source_type": "musk_quote",
-        "title_en": "Musk comments 'Full access' 😂 on viral vibecoding meme",
-        "title_zh": "馬斯克幽默評論病毒「vibecoding」迷因「完全存取權」😂",
-        "summary_en": "Musk quote-posted a popular 'Day 1 of vibecoding' AI-coding screenshot with '\"Full access\" 😂' — widely read as a joke about giving AI coding tools broad permissions.",
-        "summary_zh": "馬斯克轉推熱門「Day 1 of vibecoding」AI 輔助編碼截圖，評論「\"Full access\" 😂」——普遍解讀為給 AI 編碼工具廣泛權限的笑話。",
-        "musk_quote": "\"Full access\" 😂",
-        "musk_quote_zh": "「完全存取權」😂",
-        "importance": 2,
-        "first_seen": "2026-06-22T02:33:44.000Z",
-        "updated_at": "2026-06-22T11:37:39.489621+00:00",
-        "links": [
-          {
-            "label": "Elon Musk on X",
-            "url": "https://x.com/elonmusk/status/2068885116064080018"
-          }
-        ]
       }
     ],
     "other": []
   },
-  "brief_en": "Elon spent Father's Day amplifying UK grooming/media critiques, demanding 'Execute them' in a horrific baby case, predicting AI beats all human intelligence in 4-5 years, blasting Ro Khanna and endorsing 'McCarthy was right,' while demoing Grok Imagine. Silent since early morning. Tesla quoted FSD praise; SpaceX launched Starlink from California.",
-  "brief_zh": "馬斯克父親節放大英國醜聞與媒體雙標、要求處決虐嬰兇手、稱AI四五年超越人類智慧、批Khanna與麥卡錫議題，展示Grok；凌晨後沉寂。Tesla轉推FSD好評。",
-  "updated_at": "2026-06-22T11:37:39.489621+00:00"
+  "brief_en": "Elon Musk on X in the last 12h: Vibecoding full access meme (quote → @kanavtwt); Ro Khanna tax criticism (reply → @WesternLensman); Immigrant America complaint video (reply → @miatalias); McCarthyism citizenship revocation (reply → @Rothmus); Socialists Latin America fail (reply → @EndWokeness)",
+  "brief_zh": "",
+  "updated_at": "2026-06-22T14:26:12.386124+00:00"
 }
