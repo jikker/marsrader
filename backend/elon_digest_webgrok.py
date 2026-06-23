@@ -235,6 +235,20 @@ class GrokTab:
         print(f"[webgrok] 開新 grok.com 分頁 tabId={self.tab_id}")
         return self.tab_id
 
+    def open_fresh(self):
+        """強制開一個全新 grok.com 分頁(不複用)。複用到的分頁壞掉時的後備。"""
+        out, _ = self.mcp.call("browser_create_tab", {"url": GROK_URL}, timeout=60)
+        try:
+            self.tab_id = json.loads(out).get("tabId")
+        except Exception:
+            m = re.search(r'"tabId"\s*:\s*(\d+)', out)
+            self.tab_id = int(m.group(1)) if m else None
+        if self.tab_id is None:
+            raise RuntimeError(f"無法開新 grok.com 分頁：{out[:160]}")
+        time.sleep(2)
+        print(f"[webgrok] 已開全新 grok.com 分頁 tabId={self.tab_id}")
+        return self.tab_id
+
     # ---- 低階 eval ----
 
     def _eval(self, code, timeout=30):
@@ -606,8 +620,13 @@ def read_x_via_webgrok(run_iso: str, date_str: str, existing_items: list) -> dic
     tab = GrokTab(mcp)
     tab.open()
     if not tab.wait_editor(45):
-        raise RuntimeError("grok.com 編輯器（.tiptap.ProseMirror）未就緒——"
-                           "確認瀏覽器已開 grok.com 且已登入。")
+        # 複用到的分頁壞了(編輯器抓不到、CDP debugger 斷線等)→ 別卡死失敗,
+        # 自己開一個全新 grok.com 分頁重試(用戶 2026-06-23 要求:沒有/壞掉就自己開一個)。
+        print("[webgrok] 既有分頁編輯器未就緒→改開全新 grok.com 分頁重試")
+        tab.open_fresh()
+        if not tab.wait_editor(45):
+            raise RuntimeError("grok.com 編輯器（.tiptap.ProseMirror）未就緒——"
+                               "確認瀏覽器已開 grok.com 且已登入。")
 
     prompt = build_webgrok_prompt(run_iso, date_str, existing_items)
     print(f"[webgrok] 送出完整 prompt（{len(prompt)} 字，lookback={LOOKBACK_HOURS}h，"
