@@ -200,7 +200,8 @@ class GrokTab:
             return None
         for t in tabs:
             url = (t.get("url") or "") if isinstance(t, dict) else ""
-            if "grok.com" in url:
+            # 只認 grok.com「對話」分頁；排除 /imagine、/project（產圖批次的分頁沒有聊天輸入框→會抓錯害失敗）。
+            if "grok.com" in url and "/imagine" not in url and "/project" not in url:
                 return t.get("tabId") or t.get("id")
         return None
 
