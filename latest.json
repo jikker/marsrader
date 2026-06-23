@@ -64,6 +64,22 @@
         "lookback_hours": 12,
         "item_count": 9
       }
+    },
+    {
+      "generated_at": "2026-06-23T00:05:04.742366+00:00",
+      "backend": "grok-web",
+      "model": "grok.com (browser)",
+      "brief_en": "Elon escalated attacks on Ro Khanna over DOGE/USAID (no dead children from cuts, sue the liar), defended FSD in high-speed crash reports, called Starmer's UK resignation 'inevitable', questioned permitting double standards for unauthorized Texas 'city' construction, and highlighted Grok Build multi-agent /goal upgrades. Also commented on trans hormones/violence risk and media narratives.",
+      "brief_zh": "Elon Musk 升級抨擊 Ro Khanna 及 DOGE/USAID（否認兒童死亡指控、要求訴訟）；為 FSD 高速撞擊辯護；稱英國首相 Starmer 辭職「必然」；質疑德州無許可「城市」建設雙重標準；並推廣 Grok Build 多代理 /goal 功能。另評論跨性別荷爾蒙風險與媒體敘事。",
+      "item_count": 11,
+      "updated_count": 9,
+      "kept_count": 0,
+      "usage": {
+        "backend": "grok-web",
+        "model": "grok.com (browser)",
+        "lookback_hours": 12,
+        "item_count": 11
+      }
     }
   ],
   "items_flat": [
@@ -74,17 +90,21 @@
       "source_type": "musk_reply",
       "title_en": "Elon Musk Escalates Attacks on Rep. Ro Khanna, Calls Him 'Robber' and Demands Prison Over DOGE/USAID",
       "title_zh": "Elon Musk 升級抨擊眾議員 Ro Khanna，稱其為「強盜」並要求因 DOGE/USAID 入獄",
-      "summary_en": "Elon Musk sharply escalated his criticism of Rep. Ro Khanna regarding DOGE's oversight of USAID throughout the day. He labeled Khanna 'Ro the Robber,' stated 'Robber Khanna should be in prison' and 'Time to sue this liar.' Musk defended DOGE's work exposing waste and actual DOJ-proven USAID bribery schemes. Later in the evening, responding to claims of 4.5 million children dying from funding cuts, Elon stated there is not even a single dead child and if true it would be worldwide headline news. He emphasized accountability for real corruption over inflated body counts.",
-      "summary_zh": "Elon Musk 全天大幅升級對眾議員 Ro Khanna 的批評，針對 DOGE 監督 USAID 事務。他稱 Khanna 為「Ro the Robber」，表示「強盜 Khanna 應該入獄」並「是時候起訴這個騙子」。Musk 為 DOGE 揭露浪費與司法部已證實的 USAID 賄賂案辯護。晚間回應「450 萬兒童因經費削減死亡」的指控時，Elon 表示「甚至沒有一個死去的孩子」，若真有其事將成為全球頭條新聞。他強調應追究真實貪腐而非誇大死亡數字。",
-      "musk_quote": "There is not even a single dead child!\nIf there were, it would be worldwide headline news!",
-      "musk_quote_zh": "甚至沒有一個死去的孩子！\n若真有其事，將成為全球頭條新聞！",
+      "summary_en": "Elon Musk sharply escalated criticism of Rep. Ro Khanna over DOGE's USAID oversight. He labeled him 'Ro the Robber,' said 'Robber Khanna should be in prison' and 'Time to sue this liar.' Musk defended DOGE's accountability push. Later he added: 'There is not even a single dead child! If there were, it would be worldwide headline news!' rebutting claims that cuts sentenced millions of children to death.",
+      "summary_zh": "Elon Musk 今日大幅升級對眾議員 Ro Khanna 的批評，稱其為「Ro the Robber」，並表示「強盜 Khanna 應該入獄」及「是時候起訴這個騙子」。他為 DOGE 的問責行動辯護。稍後更強調：「甚至沒有一個死去的孩子！如果有，全世界都會頭條新聞！」以反駁削減 USAID 導致數百萬兒童死亡的指控。",
+      "musk_quote": "There is not even a single dead child! If there were, it would be worldwide headline news!",
+      "musk_quote_zh": "甚至沒有一個死去的孩子！如果有，全世界都會頭條新聞！",
       "importance": 5,
       "first_seen": "2026-06-22T02:44:44Z",
-      "updated_at": "2026-06-22T22:05:02.962453+00:00",
+      "updated_at": "2026-06-23T00:05:04.742366+00:00",
       "links": [
         {
-          "label": "Elon Musk on X (latest reply)",
+          "label": "Elon Musk on X",
           "url": "https://x.com/elonmusk/status/2069159695319757288"
+        },
+        {
+          "label": "Earlier escalation context",
+          "url": "https://x.com/elonmusk/status/2069070536517497046"
         },
         {
           "label": "Elon Musk on X (earlier posts)",
@@ -114,14 +134,14 @@
       "category": "tesla",
       "source_type": "musk_reply",
       "title_en": "Elon Musk Defends Tesla FSD: 'This Was a High Speed Crash' After Media Misreports Driver Override",
-      "title_zh": "Elon Musk 為 Tesla FSD 辯護：「這是一起高速撞擊」，媒體誤報駕駛超控",
-      "summary_en": "Elon Musk replied to reports (including Business Insider) of a Tesla crashing into a house at high speed, killing a woman: 'Yes, this makes no sense. FSD drives slowly through neighborhood streets and this was a high speed crash!' Tesla AI lead Ashok Elluswamy confirmed the driver manually overrode FSD by pressing the accelerator to 100%, reaching 73 mph in a residential area even after impact. Media accused of falsely labeling it an FSD incident.",
-      "summary_zh": "Elon Musk 回應包括 Business Insider 在內的報導，指出 Tesla 高速撞入民宅導致女性死亡：「是的，這說不通。FSD 在社區街道上開得很慢，而這是一起高速撞擊事故！」Tesla AI 負責人 Ashok Elluswamy 證實駕駛手動超控 FSD，將油門踩到底，在住宅區達到 73 mph，甚至撞擊後仍持續踩油門。媒體被指控錯誤標示為 FSD 事故。",
+      "title_zh": "Elon Musk 為 Tesla FSD 辯護：「這是高速撞擊」 媒體誤報駕駛接管",
+      "summary_en": "Elon Musk replied to reports of a Tesla crashing into a house at high speed, killing a woman: 'Yes, this makes no sense. FSD drives slowly through neighborhood streets and this was a high speed crash!' Tesla AI team noted the vehicle was traveling ~75 mph in a 30 mph zone with driver override.",
+      "summary_zh": "Elon Musk 回應一輛 Tesla 高速撞入民宅導致女子死亡的報導：「是的，這說不通。FSD 在社區街道會慢慢開，這是高速撞擊！」Tesla AI 團隊指出車輛時速約 75 英里，遠超 30 英里限速，且駕駛曾接管。",
       "musk_quote": "Yes, this makes no sense. FSD drives slowly through neighborhood streets and this was a high speed crash!",
-      "musk_quote_zh": "是的，這說不通。FSD 在社區街道上開得很慢，而這是一起高速撞擊事故！",
+      "musk_quote_zh": "是的，這說不通。FSD 在社區街道會慢慢開，這是高速撞擊！",
       "importance": 4,
       "first_seen": "2026-06-22T20:51:44Z",
-      "updated_at": "2026-06-22T22:05:02.962453+00:00",
+      "updated_at": "2026-06-23T00:05:04.742366+00:00",
       "links": [
         {
           "label": "Elon Musk on X",
@@ -139,14 +159,14 @@
       "category": "elon_personal",
       "source_type": "musk_reply",
       "title_en": "Elon Musk: Giving 'Rage-Inducing Hormones to Mentally Ill People' Greatly Increases Murder and Suicide Risk",
-      "title_zh": "Elon Musk：給精神疾病者注射「引發憤怒的荷爾蒙」會大幅增加謀殺與自殺風險",
-      "summary_en": "Replying to a report of a Dutch 15-year-old girl identifying as a trans boy (later as a dog) who stabbed her parents to death after years of identity struggles and increasingly erratic behavior, Elon Musk stated: 'Giving rage-inducing hormones to mentally ill people obviously greatly increases risk of murder and suicide.' The comment links gender-affirming hormones to elevated violence and self-harm risks in those with underlying mental health issues.",
-      "summary_zh": "回應一則荷蘭 15 歲女孩自認跨男（後來自認狗）在多年身份掙扎與行為日益異常後刺殺父母的報導，Elon Musk 表示：「給有精神疾病的人注射引發憤怒的荷爾蒙，顯然會大大增加謀殺和自殺的風險。」此評論將性別肯定荷爾蒙與潛在精神健康問題者的暴力及自傷風險升高連結起來。",
+      "title_zh": "Elon Musk：給「精神疾病患者」使用「引發狂怒的荷爾蒙」會大幅增加謀殺與自殺風險",
+      "summary_en": "Replying to a report of a Dutch 15-year-old girl identifying as a trans boy (later as a dog) who stabbed her parents after years of identity struggles, Elon stated: 'Giving rage-inducing hormones to mentally ill people obviously greatly increases risk of murder and suicide.'",
+      "summary_zh": "針對一則荷蘭 15 歲少女自認跨性別男孩（後來自認狗）在多年身份掙扎後刺殺父母的報導，Elon Musk 表示：「給精神疾病患者使用引發狂怒的荷爾蒙，顯然會大幅增加謀殺與自殺的風險。」",
       "musk_quote": "Giving rage-inducing hormones to mentally ill people obviously greatly increases risk of murder and suicide",
-      "musk_quote_zh": "給有精神疾病的人注射引發憤怒的荷爾蒙，顯然會大大增加謀殺和自殺的風險",
+      "musk_quote_zh": "給精神疾病患者使用引發狂怒的荷爾蒙，顯然會大幅增加謀殺與自殺的風險",
       "importance": 4,
       "first_seen": "2026-06-22T20:43:12Z",
-      "updated_at": "2026-06-22T22:05:02.962453+00:00",
+      "updated_at": "2026-06-23T00:05:04.742366+00:00",
       "links": [
         {
           "label": "Elon Musk on X",
@@ -160,15 +180,19 @@
       "category": "elon_personal",
       "source_type": "musk_reply",
       "title_en": "Elon Musk Replies 'Execution' Supporting Death Penalty in UK Child Sex Abuse Case",
-      "title_zh": "Elon Musk 回覆「Execution」，支持英國兒童性虐待案死刑",
-      "summary_en": "Elon Musk replied 'Execution' to a post detailing charges against two UK men for multiple counts of sexual activity with a child, paying for sexual services of a child, and sex trafficking. The original post requested the death penalty for such offenders.",
-      "summary_zh": "Elon Musk 對一則 detailing 兩名英國男子被控多項與兒童性行為、支付兒童性服務及人口販運的貼文回覆「Execution」。原貼文要求對此類罪犯判處死刑。",
+      "title_zh": "Elon Musk 回覆「處決」支持英國兒童性虐待案死刑",
+      "summary_en": "Elon Musk replied 'Execution' to a post detailing charges against two UK men for multiple counts of sexual activity with a child, paying for sexual services of a child, and sex trafficking. The original post requested the death penalty.",
+      "summary_zh": "Elon Musk 對一則 detailing 兩名英國男子被控多項兒童性行為、支付兒童性服務及人口販運的貼文回覆「處決」。原貼文要求對此類罪行判處死刑。",
       "musk_quote": "Execution",
       "musk_quote_zh": "處決",
       "importance": 3,
       "first_seen": "2026-06-22T16:35:49Z",
-      "updated_at": "2026-06-22T22:05:02.962453+00:00",
+      "updated_at": "2026-06-23T00:05:04.742366+00:00",
       "links": [
+        {
+          "label": "Elon Musk on X",
+          "url": "https://x.com/elonmusk/status/2069158770832203815"
+        },
         {
           "label": "Elon Musk on X",
           "url": "https://x.com/elonmusk"
@@ -186,14 +210,18 @@
       "source_type": "musk_reply",
       "title_en": "Elon Musk: Massive Rise in Media 'White Supremacy' Term is Manufactured Leftist Anti-White Racism",
       "title_zh": "Elon Musk：媒體「白人至上主義」用詞大幅上升是左派製造的反白人種族主義",
-      "summary_en": "Elon Musk replied 'True' to analysis showing explosive increases in media usage of the term 'White Supremacy' (e.g., LA Times up 9749% from 2010-2020, with similar spikes at NYT, WaPo, WSJ). He agreed it was not organic but a Leftist creation to push anti-white racism.",
-      "summary_zh": "Elon Musk 對一則分析回覆「True」，該分析顯示媒體使用「白人至上主義」一詞呈爆炸性增長（例如 LA Times 2010-2020 年上升 9749%，NYT、WaPo、WSJ 也有類似激增）。他同意這不是自然現象，而是左派為推動反白人種族主義而製造的敘事。",
+      "summary_en": "Elon Musk replied 'True' to analysis showing explosive increases in media usage of 'White Supremacy' (e.g., LA Times up 9749% from 2010-2020). He agreed it was manufactured leftist anti-white racism rather than organic.",
+      "summary_zh": "Elon Musk 對一則顯示媒體「白人至上主義」用詞爆炸性增加的分析回覆「True」（例如 LA Times 2010-2020 年上升 9749%）。他同意這是左派製造的反白人種族主義，而非自然現象。",
       "musk_quote": "True",
-      "musk_quote_zh": "正確",
+      "musk_quote_zh": "True",
       "importance": 3,
       "first_seen": "2026-06-22T15:45:47Z",
-      "updated_at": "2026-06-22T22:05:02.962453+00:00",
+      "updated_at": "2026-06-23T00:05:04.742366+00:00",
       "links": [
+        {
+          "label": "Elon Musk on X",
+          "url": "https://x.com/elonmusk/status/2069159440377397258"
+        },
         {
           "label": "Elon Musk on X",
           "url": "https://x.com/elonmusk"
@@ -210,15 +238,19 @@
       "category": "elon_personal",
       "source_type": "musk_reply",
       "title_en": "Elon Musk: 'McCarthy Was Right' on Stripping Citizenship from Those Joining Terrorist Groups",
-      "title_zh": "Elon Musk：「McCarthy 沒錯」，支持剝奪加入恐怖組織者的公民權",
-      "summary_en": "Elon Musk replied 'McCarthy was right' to a post praising DOJ use of a 1952 law to denaturalize a Somali citizen who joined al-Shabaab terrorists months after naturalization. He supported enforcing loyalty standards and rejecting 'McCarthyism' smears against such enforcement.",
-      "summary_zh": "Elon Musk 對一則讚揚司法部運用 1952 年法律，剝奪一名入籍後數月即加入 al-Shabaab 恐怖組織的索馬利亞公民國籍的貼文回覆「McCarthy was right」。他支持執行忠誠標準，並拒絕將此類執法貼上「麥卡錫主義」標籤。",
+      "title_zh": "Elon Musk：「麥卡錫是對的」 支持剝奪加入恐怖組織者的公民權",
+      "summary_en": "Elon Musk replied 'McCarthy was right' to a post praising DOJ use of a 1952 law to denaturalize a Somali citizen who joined al-Shabaab terrorists months after naturalization. He supported enforcing loyalty standards.",
+      "summary_zh": "Elon Musk 對一則讚揚司法部使用 1952 年法律，取消一名入籍後數月即加入 al-Shabaab 恐怖組織的索馬利亞公民國籍的貼文回覆「McCarthy was right」。他支持執行忠誠標準。",
       "musk_quote": "McCarthy was right",
-      "musk_quote_zh": "McCarthy 沒錯",
+      "musk_quote_zh": "McCarthy was right",
       "importance": 3,
       "first_seen": "2026-06-22T02:30:01Z",
-      "updated_at": "2026-06-22T22:05:02.962453+00:00",
+      "updated_at": "2026-06-23T00:05:04.742366+00:00",
       "links": [
+        {
+          "label": "Elon Musk on X",
+          "url": "https://x.com/elonmusk/status/2069192344511926617"
+        },
         {
           "label": "Elon Musk on X",
           "url": "https://x.com/elonmusk"
@@ -235,18 +267,39 @@
       "category": "xai_x_platform",
       "source_type": "musk_quote",
       "title_en": "Elon Musk Highlights Grok Build Upgrades: Multi-Agent 'Goal' Feature Now Live",
-      "title_zh": "Elon Musk 強調 Grok Build 升級：多代理「Goal」功能已上線",
-      "summary_en": "Elon Musk quote-posted the announcement that /goal is live on Grok Build. The feature uses a team of specialized AI agents — implementors, skeptics, code reviewers, and planners — mixing Grok Build and Composer roles for complex tasks. Elon simply commented 'Grok Build upgrades' in strong endorsement of the advanced agent orchestration for ambitious coding and automation.",
-      "summary_zh": "Elon Musk 轉發 /goal 已在 Grok Build 上線的公告。該功能使用專業 AI 代理團隊——實作者、懷疑者、程式碼審查者與規劃者——混合 Grok Build 與 Composer 角色處理複雜任務。Elon 僅回覆「Grok Build upgrades」，強力背書此先進代理協作系統適用於雄心勃勃的程式設計與自動化。",
+      "title_zh": "Elon Musk 強調 Grok Build 升級：多代理「目標」功能現已上線",
+      "summary_en": "Elon Musk quote-posted the announcement that /goal is live on Grok Build. The feature uses a team of specialized AI agents (implementors, skeptics, code reviewers, planners) mixing Grok Build and Composer roles for complex tasks.",
+      "summary_zh": "Elon Musk 轉發宣布 /goal 已在 Grok Build 上線。該功能使用專業 AI 代理團隊（執行者、懷疑者、程式碼審查者、規劃者），混合 Grok Build 與 Composer 角色處理複雜任務。",
       "musk_quote": "Grok Build upgrades",
       "musk_quote_zh": "Grok Build 升級",
       "importance": 3,
       "first_seen": "2026-06-22T20:50:04Z",
-      "updated_at": "2026-06-22T22:05:02.962453+00:00",
+      "updated_at": "2026-06-23T00:05:04.742366+00:00",
       "links": [
         {
           "label": "Elon Musk on X",
           "url": "https://x.com/elonmusk/status/2069161018161311953"
+        }
+      ]
+    },
+    {
+      "id": "elon-permits-double-standards-texas-2026-06-23",
+      "story_id": "elon-permits-double-standards-texas-2026-06-23",
+      "category": "elon_personal",
+      "source_type": "musk_reply",
+      "title_en": "Elon Musk Questions Double Standards on Building Permits Amid Unauthorized Texas 'City' Construction",
+      "title_zh": "Elon Musk 質疑建築許可雙重標準：德州未授權「城市」建設引關注",
+      "summary_en": "Elon Musk replied 'So why does everyone else need permits?' to a post about developers building an entire city in Texas without permits or authorization, as criticized by Gov. Greg Abbott. The discussion highlighted perceived double standards in permitting and zoning enforcement, with many commenters linking it to specific communities and calling for demolition or stricter enforcement.",
+      "summary_zh": "Elon Musk 對一則關於德州開發商在未取得許可或授權下興建整個「城市」、遭州長 Greg Abbott 批評的貼文回覆：「那為什麼其他人還需要許可？」討論聚焦許可與分區執法的雙重標準，許多評論者將其與特定社群連結，並呼籲拆除或加強執法。",
+      "musk_quote": "So why does everyone else need permits?",
+      "musk_quote_zh": "那為什麼其他人還需要許可？",
+      "importance": 3,
+      "first_seen": "2026-06-22T22:54:33Z",
+      "updated_at": "2026-06-23T00:05:04.742366+00:00",
+      "links": [
+        {
+          "label": "Elon Musk on X",
+          "url": "https://x.com/elonmusk/status/2069192344511926617"
         }
       ]
     },
@@ -257,14 +310,18 @@
       "source_type": "musk_reply",
       "title_en": "Elon Musk Reacts 'Wow' to Internal Probes at Sam Altman's Worldcoin/Orb",
       "title_zh": "Elon Musk 對 Sam Altman 的 Worldcoin/Orb 內部調查回應「Wow」",
-      "summary_en": "Elon Musk replied 'Wow' to a report on internal investigations at Sam Altman's Orb startup (Worldcoin) for financial irregularities, bribery of foreign officials in Thailand, and ties to an individual accused of transnational cyber-fraud.",
-      "summary_zh": "Elon Musk 對一則關於 Sam Altman 的 Orb 初創公司（Worldcoin）內部調查報導回應「Wow」，調查涉及財務不當、賄賂泰國外國官員，以及與一名被控跨國網路詐欺者的關聯。",
+      "summary_en": "Elon Musk replied 'Wow' to a report on internal investigations at Sam Altman's Orb (Worldcoin) for financial irregularities, bribery of foreign officials in Thailand, and ties to an individual accused of transnational cyber-fraud.",
+      "summary_zh": "Elon Musk 對一則關於 Sam Altman 的 Orb（Worldcoin）因財務不當、賄賂泰國外國官員，以及與跨國網路詐欺指控者有關聯的內部調查報導，回應「Wow」。",
       "musk_quote": "Wow",
-      "musk_quote_zh": "哇",
+      "musk_quote_zh": "Wow",
       "importance": 2,
       "first_seen": "2026-06-22T17:15:23Z",
-      "updated_at": "2026-06-22T22:05:02.962453+00:00",
+      "updated_at": "2026-06-23T00:05:04.742366+00:00",
       "links": [
+        {
+          "label": "Elon Musk on X",
+          "url": "https://x.com/elonmusk/status/2069162209985400851"
+        },
         {
           "label": "Elon Musk on X",
           "url": "https://x.com/elonmusk"
@@ -281,15 +338,19 @@
       "category": "tesla",
       "source_type": "official_account",
       "title_en": "Tesla Amplifies User Praise: FSD Supervised 'Like Going from Black and White to Color TV'",
-      "title_zh": "Tesla 轉發用戶讚揚：FSD Supervised「如同從黑白電視進入彩色電視」",
-      "summary_en": "Tesla quoted a user describing FSD Supervised v14+ as transformative after long road trips and daily use: 'it’s like going from black and white to color TV.' When driving a regular car again, even a 'better' one, the user felt they were 'driving in the past.'",
-      "summary_zh": "Tesla 轉發用戶描述 FSD Supervised v14+ 在長途旅行與日常使用後帶來變革性體驗：「如同從黑白電視進入彩色電視」。當再次駕駛一般汽車（即使是「更好」的車款）時，用戶感覺「彷彿回到過去駕駛」。",
+      "title_zh": "Tesla 轉發用戶讚譽：FSD Supervised「如同從黑白電視變成彩色電視」",
+      "summary_en": "Tesla quoted a user describing FSD Supervised v14+ as transformative after long road trips and daily use: 'it’s like going from black and white to color TV.' The user felt regular cars felt 'broken' afterward.",
+      "summary_zh": "Tesla 轉發用戶描述 FSD Supervised v14+ 在長途和日常使用後具有變革性：「就像從黑白電視變成彩色電視」。用戶之後覺得一般汽車「壞掉了」。",
       "musk_quote": "",
       "musk_quote_zh": "",
       "importance": 2,
       "first_seen": "2026-06-22T07:24:39Z",
-      "updated_at": "2026-06-22T22:05:02.962453+00:00",
+      "updated_at": "2026-06-23T00:05:04.742366+00:00",
       "links": [
+        {
+          "label": "Tesla on X",
+          "url": "https://x.com/Tesla/status/2069160376013296049"
+        },
         {
           "label": "Tesla on X",
           "url": "https://x.com/Tesla"
@@ -297,6 +358,27 @@
         {
           "label": "Tesla on X",
           "url": "https://x.com/Tesla/status/2068958329452568644"
+        }
+      ]
+    },
+    {
+      "id": "elon-starmer-resignation-inevitable-2026-06-23",
+      "story_id": "elon-starmer-resignation-inevitable-2026-06-23",
+      "category": "elon_personal",
+      "source_type": "musk_reply",
+      "title_en": "Elon Musk Calls Keir Starmer's Resignation 'Inevitable' After Prediction Comes True",
+      "title_zh": "Elon Musk 稱英國首相 Starmer 辭職「必然」 預測成真",
+      "summary_en": "Elon Musk replied 'Inevitable' to a post noting that UK Prime Minister Keir Starmer's resignation fulfilled another of his earlier predictions. The context included discussions of free speech on X and UK political shifts.",
+      "summary_zh": "Elon Musk 對一則指出英國首相 Keir Starmer 辭職實現他先前預測的貼文回覆「Inevitable」（必然）。背景包含 X 平台言論自由與英國政治變動的討論。",
+      "musk_quote": "Inevitable",
+      "musk_quote_zh": "Inevitable",
+      "importance": 2,
+      "first_seen": "2026-06-22T20:43:48Z",
+      "updated_at": "2026-06-23T00:05:04.742366+00:00",
+      "links": [
+        {
+          "label": "Elon Musk on X",
+          "url": "https://x.com/elonmusk/status/2069159440377397258"
         }
       ]
     }
@@ -310,17 +392,21 @@
         "source_type": "musk_reply",
         "title_en": "Elon Musk Escalates Attacks on Rep. Ro Khanna, Calls Him 'Robber' and Demands Prison Over DOGE/USAID",
         "title_zh": "Elon Musk 升級抨擊眾議員 Ro Khanna，稱其為「強盜」並要求因 DOGE/USAID 入獄",
-        "summary_en": "Elon Musk sharply escalated his criticism of Rep. Ro Khanna regarding DOGE's oversight of USAID throughout the day. He labeled Khanna 'Ro the Robber,' stated 'Robber Khanna should be in prison' and 'Time to sue this liar.' Musk defended DOGE's work exposing waste and actual DOJ-proven USAID bribery schemes. Later in the evening, responding to claims of 4.5 million children dying from funding cuts, Elon stated there is not even a single dead child and if true it would be worldwide headline news. He emphasized accountability for real corruption over inflated body counts.",
-        "summary_zh": "Elon Musk 全天大幅升級對眾議員 Ro Khanna 的批評，針對 DOGE 監督 USAID 事務。他稱 Khanna 為「Ro the Robber」，表示「強盜 Khanna 應該入獄」並「是時候起訴這個騙子」。Musk 為 DOGE 揭露浪費與司法部已證實的 USAID 賄賂案辯護。晚間回應「450 萬兒童因經費削減死亡」的指控時，Elon 表示「甚至沒有一個死去的孩子」，若真有其事將成為全球頭條新聞。他強調應追究真實貪腐而非誇大死亡數字。",
-        "musk_quote": "There is not even a single dead child!\nIf there were, it would be worldwide headline news!",
-        "musk_quote_zh": "甚至沒有一個死去的孩子！\n若真有其事，將成為全球頭條新聞！",
+        "summary_en": "Elon Musk sharply escalated criticism of Rep. Ro Khanna over DOGE's USAID oversight. He labeled him 'Ro the Robber,' said 'Robber Khanna should be in prison' and 'Time to sue this liar.' Musk defended DOGE's accountability push. Later he added: 'There is not even a single dead child! If there were, it would be worldwide headline news!' rebutting claims that cuts sentenced millions of children to death.",
+        "summary_zh": "Elon Musk 今日大幅升級對眾議員 Ro Khanna 的批評，稱其為「Ro the Robber」，並表示「強盜 Khanna 應該入獄」及「是時候起訴這個騙子」。他為 DOGE 的問責行動辯護。稍後更強調：「甚至沒有一個死去的孩子！如果有，全世界都會頭條新聞！」以反駁削減 USAID 導致數百萬兒童死亡的指控。",
+        "musk_quote": "There is not even a single dead child! If there were, it would be worldwide headline news!",
+        "musk_quote_zh": "甚至沒有一個死去的孩子！如果有，全世界都會頭條新聞！",
         "importance": 5,
         "first_seen": "2026-06-22T02:44:44Z",
-        "updated_at": "2026-06-22T22:05:02.962453+00:00",
+        "updated_at": "2026-06-23T00:05:04.742366+00:00",
         "links": [
           {
-            "label": "Elon Musk on X (latest reply)",
+            "label": "Elon Musk on X",
             "url": "https://x.com/elonmusk/status/2069159695319757288"
+          },
+          {
+            "label": "Earlier escalation context",
+            "url": "https://x.com/elonmusk/status/2069070536517497046"
           },
           {
             "label": "Elon Musk on X (earlier posts)",
@@ -350,14 +436,14 @@
         "category": "elon_personal",
         "source_type": "musk_reply",
         "title_en": "Elon Musk: Giving 'Rage-Inducing Hormones to Mentally Ill People' Greatly Increases Murder and Suicide Risk",
-        "title_zh": "Elon Musk：給精神疾病者注射「引發憤怒的荷爾蒙」會大幅增加謀殺與自殺風險",
-        "summary_en": "Replying to a report of a Dutch 15-year-old girl identifying as a trans boy (later as a dog) who stabbed her parents to death after years of identity struggles and increasingly erratic behavior, Elon Musk stated: 'Giving rage-inducing hormones to mentally ill people obviously greatly increases risk of murder and suicide.' The comment links gender-affirming hormones to elevated violence and self-harm risks in those with underlying mental health issues.",
-        "summary_zh": "回應一則荷蘭 15 歲女孩自認跨男（後來自認狗）在多年身份掙扎與行為日益異常後刺殺父母的報導，Elon Musk 表示：「給有精神疾病的人注射引發憤怒的荷爾蒙，顯然會大大增加謀殺和自殺的風險。」此評論將性別肯定荷爾蒙與潛在精神健康問題者的暴力及自傷風險升高連結起來。",
+        "title_zh": "Elon Musk：給「精神疾病患者」使用「引發狂怒的荷爾蒙」會大幅增加謀殺與自殺風險",
+        "summary_en": "Replying to a report of a Dutch 15-year-old girl identifying as a trans boy (later as a dog) who stabbed her parents after years of identity struggles, Elon stated: 'Giving rage-inducing hormones to mentally ill people obviously greatly increases risk of murder and suicide.'",
+        "summary_zh": "針對一則荷蘭 15 歲少女自認跨性別男孩（後來自認狗）在多年身份掙扎後刺殺父母的報導，Elon Musk 表示：「給精神疾病患者使用引發狂怒的荷爾蒙，顯然會大幅增加謀殺與自殺的風險。」",
         "musk_quote": "Giving rage-inducing hormones to mentally ill people obviously greatly increases risk of murder and suicide",
-        "musk_quote_zh": "給有精神疾病的人注射引發憤怒的荷爾蒙，顯然會大大增加謀殺和自殺的風險",
+        "musk_quote_zh": "給精神疾病患者使用引發狂怒的荷爾蒙，顯然會大幅增加謀殺與自殺的風險",
         "importance": 4,
         "first_seen": "2026-06-22T20:43:12Z",
-        "updated_at": "2026-06-22T22:05:02.962453+00:00",
+        "updated_at": "2026-06-23T00:05:04.742366+00:00",
         "links": [
           {
             "label": "Elon Musk on X",
@@ -371,15 +457,19 @@
         "category": "elon_personal",
         "source_type": "musk_reply",
         "title_en": "Elon Musk Replies 'Execution' Supporting Death Penalty in UK Child Sex Abuse Case",
-        "title_zh": "Elon Musk 回覆「Execution」，支持英國兒童性虐待案死刑",
-        "summary_en": "Elon Musk replied 'Execution' to a post detailing charges against two UK men for multiple counts of sexual activity with a child, paying for sexual services of a child, and sex trafficking. The original post requested the death penalty for such offenders.",
-        "summary_zh": "Elon Musk 對一則 detailing 兩名英國男子被控多項與兒童性行為、支付兒童性服務及人口販運的貼文回覆「Execution」。原貼文要求對此類罪犯判處死刑。",
+        "title_zh": "Elon Musk 回覆「處決」支持英國兒童性虐待案死刑",
+        "summary_en": "Elon Musk replied 'Execution' to a post detailing charges against two UK men for multiple counts of sexual activity with a child, paying for sexual services of a child, and sex trafficking. The original post requested the death penalty.",
+        "summary_zh": "Elon Musk 對一則 detailing 兩名英國男子被控多項兒童性行為、支付兒童性服務及人口販運的貼文回覆「處決」。原貼文要求對此類罪行判處死刑。",
         "musk_quote": "Execution",
         "musk_quote_zh": "處決",
         "importance": 3,
         "first_seen": "2026-06-22T16:35:49Z",
-        "updated_at": "2026-06-22T22:05:02.962453+00:00",
+        "updated_at": "2026-06-23T00:05:04.742366+00:00",
         "links": [
+          {
+            "label": "Elon Musk on X",
+            "url": "https://x.com/elonmusk/status/2069158770832203815"
+          },
           {
             "label": "Elon Musk on X",
             "url": "https://x.com/elonmusk"
@@ -397,14 +487,18 @@
         "source_type": "musk_reply",
         "title_en": "Elon Musk: Massive Rise in Media 'White Supremacy' Term is Manufactured Leftist Anti-White Racism",
         "title_zh": "Elon Musk：媒體「白人至上主義」用詞大幅上升是左派製造的反白人種族主義",
-        "summary_en": "Elon Musk replied 'True' to analysis showing explosive increases in media usage of the term 'White Supremacy' (e.g., LA Times up 9749% from 2010-2020, with similar spikes at NYT, WaPo, WSJ). He agreed it was not organic but a Leftist creation to push anti-white racism.",
-        "summary_zh": "Elon Musk 對一則分析回覆「True」，該分析顯示媒體使用「白人至上主義」一詞呈爆炸性增長（例如 LA Times 2010-2020 年上升 9749%，NYT、WaPo、WSJ 也有類似激增）。他同意這不是自然現象，而是左派為推動反白人種族主義而製造的敘事。",
+        "summary_en": "Elon Musk replied 'True' to analysis showing explosive increases in media usage of 'White Supremacy' (e.g., LA Times up 9749% from 2010-2020). He agreed it was manufactured leftist anti-white racism rather than organic.",
+        "summary_zh": "Elon Musk 對一則顯示媒體「白人至上主義」用詞爆炸性增加的分析回覆「True」（例如 LA Times 2010-2020 年上升 9749%）。他同意這是左派製造的反白人種族主義，而非自然現象。",
         "musk_quote": "True",
-        "musk_quote_zh": "正確",
+        "musk_quote_zh": "True",
         "importance": 3,
         "first_seen": "2026-06-22T15:45:47Z",
-        "updated_at": "2026-06-22T22:05:02.962453+00:00",
+        "updated_at": "2026-06-23T00:05:04.742366+00:00",
         "links": [
+          {
+            "label": "Elon Musk on X",
+            "url": "https://x.com/elonmusk/status/2069159440377397258"
+          },
           {
             "label": "Elon Musk on X",
             "url": "https://x.com/elonmusk"
@@ -421,15 +515,19 @@
         "category": "elon_personal",
         "source_type": "musk_reply",
         "title_en": "Elon Musk: 'McCarthy Was Right' on Stripping Citizenship from Those Joining Terrorist Groups",
-        "title_zh": "Elon Musk：「McCarthy 沒錯」，支持剝奪加入恐怖組織者的公民權",
-        "summary_en": "Elon Musk replied 'McCarthy was right' to a post praising DOJ use of a 1952 law to denaturalize a Somali citizen who joined al-Shabaab terrorists months after naturalization. He supported enforcing loyalty standards and rejecting 'McCarthyism' smears against such enforcement.",
-        "summary_zh": "Elon Musk 對一則讚揚司法部運用 1952 年法律，剝奪一名入籍後數月即加入 al-Shabaab 恐怖組織的索馬利亞公民國籍的貼文回覆「McCarthy was right」。他支持執行忠誠標準，並拒絕將此類執法貼上「麥卡錫主義」標籤。",
+        "title_zh": "Elon Musk：「麥卡錫是對的」 支持剝奪加入恐怖組織者的公民權",
+        "summary_en": "Elon Musk replied 'McCarthy was right' to a post praising DOJ use of a 1952 law to denaturalize a Somali citizen who joined al-Shabaab terrorists months after naturalization. He supported enforcing loyalty standards.",
+        "summary_zh": "Elon Musk 對一則讚揚司法部使用 1952 年法律，取消一名入籍後數月即加入 al-Shabaab 恐怖組織的索馬利亞公民國籍的貼文回覆「McCarthy was right」。他支持執行忠誠標準。",
         "musk_quote": "McCarthy was right",
-        "musk_quote_zh": "McCarthy 沒錯",
+        "musk_quote_zh": "McCarthy was right",
         "importance": 3,
         "first_seen": "2026-06-22T02:30:01Z",
-        "updated_at": "2026-06-22T22:05:02.962453+00:00",
+        "updated_at": "2026-06-23T00:05:04.742366+00:00",
         "links": [
+          {
+            "label": "Elon Musk on X",
+            "url": "https://x.com/elonmusk/status/2069192344511926617"
+          },
           {
             "label": "Elon Musk on X",
             "url": "https://x.com/elonmusk"
@@ -441,20 +539,45 @@
         ]
       },
       {
+        "id": "elon-permits-double-standards-texas-2026-06-23",
+        "story_id": "elon-permits-double-standards-texas-2026-06-23",
+        "category": "elon_personal",
+        "source_type": "musk_reply",
+        "title_en": "Elon Musk Questions Double Standards on Building Permits Amid Unauthorized Texas 'City' Construction",
+        "title_zh": "Elon Musk 質疑建築許可雙重標準：德州未授權「城市」建設引關注",
+        "summary_en": "Elon Musk replied 'So why does everyone else need permits?' to a post about developers building an entire city in Texas without permits or authorization, as criticized by Gov. Greg Abbott. The discussion highlighted perceived double standards in permitting and zoning enforcement, with many commenters linking it to specific communities and calling for demolition or stricter enforcement.",
+        "summary_zh": "Elon Musk 對一則關於德州開發商在未取得許可或授權下興建整個「城市」、遭州長 Greg Abbott 批評的貼文回覆：「那為什麼其他人還需要許可？」討論聚焦許可與分區執法的雙重標準，許多評論者將其與特定社群連結，並呼籲拆除或加強執法。",
+        "musk_quote": "So why does everyone else need permits?",
+        "musk_quote_zh": "那為什麼其他人還需要許可？",
+        "importance": 3,
+        "first_seen": "2026-06-22T22:54:33Z",
+        "updated_at": "2026-06-23T00:05:04.742366+00:00",
+        "links": [
+          {
+            "label": "Elon Musk on X",
+            "url": "https://x.com/elonmusk/status/2069192344511926617"
+          }
+        ]
+      },
+      {
         "id": "elon-wow-sam-altman-worldcoin-probe-2026-06-22",
         "story_id": "elon-wow-sam-altman-worldcoin-probe-2026-06-22",
         "category": "elon_personal",
         "source_type": "musk_reply",
         "title_en": "Elon Musk Reacts 'Wow' to Internal Probes at Sam Altman's Worldcoin/Orb",
         "title_zh": "Elon Musk 對 Sam Altman 的 Worldcoin/Orb 內部調查回應「Wow」",
-        "summary_en": "Elon Musk replied 'Wow' to a report on internal investigations at Sam Altman's Orb startup (Worldcoin) for financial irregularities, bribery of foreign officials in Thailand, and ties to an individual accused of transnational cyber-fraud.",
-        "summary_zh": "Elon Musk 對一則關於 Sam Altman 的 Orb 初創公司（Worldcoin）內部調查報導回應「Wow」，調查涉及財務不當、賄賂泰國外國官員，以及與一名被控跨國網路詐欺者的關聯。",
+        "summary_en": "Elon Musk replied 'Wow' to a report on internal investigations at Sam Altman's Orb (Worldcoin) for financial irregularities, bribery of foreign officials in Thailand, and ties to an individual accused of transnational cyber-fraud.",
+        "summary_zh": "Elon Musk 對一則關於 Sam Altman 的 Orb（Worldcoin）因財務不當、賄賂泰國外國官員，以及與跨國網路詐欺指控者有關聯的內部調查報導，回應「Wow」。",
         "musk_quote": "Wow",
-        "musk_quote_zh": "哇",
+        "musk_quote_zh": "Wow",
         "importance": 2,
         "first_seen": "2026-06-22T17:15:23Z",
-        "updated_at": "2026-06-22T22:05:02.962453+00:00",
+        "updated_at": "2026-06-23T00:05:04.742366+00:00",
         "links": [
+          {
+            "label": "Elon Musk on X",
+            "url": "https://x.com/elonmusk/status/2069162209985400851"
+          },
           {
             "label": "Elon Musk on X",
             "url": "https://x.com/elonmusk"
@@ -462,6 +585,27 @@
           {
             "label": "Elon Musk on X",
             "url": "https://x.com/elonmusk/status/2069106990383550853"
+          }
+        ]
+      },
+      {
+        "id": "elon-starmer-resignation-inevitable-2026-06-23",
+        "story_id": "elon-starmer-resignation-inevitable-2026-06-23",
+        "category": "elon_personal",
+        "source_type": "musk_reply",
+        "title_en": "Elon Musk Calls Keir Starmer's Resignation 'Inevitable' After Prediction Comes True",
+        "title_zh": "Elon Musk 稱英國首相 Starmer 辭職「必然」 預測成真",
+        "summary_en": "Elon Musk replied 'Inevitable' to a post noting that UK Prime Minister Keir Starmer's resignation fulfilled another of his earlier predictions. The context included discussions of free speech on X and UK political shifts.",
+        "summary_zh": "Elon Musk 對一則指出英國首相 Keir Starmer 辭職實現他先前預測的貼文回覆「Inevitable」（必然）。背景包含 X 平台言論自由與英國政治變動的討論。",
+        "musk_quote": "Inevitable",
+        "musk_quote_zh": "Inevitable",
+        "importance": 2,
+        "first_seen": "2026-06-22T20:43:48Z",
+        "updated_at": "2026-06-23T00:05:04.742366+00:00",
+        "links": [
+          {
+            "label": "Elon Musk on X",
+            "url": "https://x.com/elonmusk/status/2069159440377397258"
           }
         ]
       }
@@ -473,14 +617,14 @@
         "category": "tesla",
         "source_type": "musk_reply",
         "title_en": "Elon Musk Defends Tesla FSD: 'This Was a High Speed Crash' After Media Misreports Driver Override",
-        "title_zh": "Elon Musk 為 Tesla FSD 辯護：「這是一起高速撞擊」，媒體誤報駕駛超控",
-        "summary_en": "Elon Musk replied to reports (including Business Insider) of a Tesla crashing into a house at high speed, killing a woman: 'Yes, this makes no sense. FSD drives slowly through neighborhood streets and this was a high speed crash!' Tesla AI lead Ashok Elluswamy confirmed the driver manually overrode FSD by pressing the accelerator to 100%, reaching 73 mph in a residential area even after impact. Media accused of falsely labeling it an FSD incident.",
-        "summary_zh": "Elon Musk 回應包括 Business Insider 在內的報導，指出 Tesla 高速撞入民宅導致女性死亡：「是的，這說不通。FSD 在社區街道上開得很慢，而這是一起高速撞擊事故！」Tesla AI 負責人 Ashok Elluswamy 證實駕駛手動超控 FSD，將油門踩到底，在住宅區達到 73 mph，甚至撞擊後仍持續踩油門。媒體被指控錯誤標示為 FSD 事故。",
+        "title_zh": "Elon Musk 為 Tesla FSD 辯護：「這是高速撞擊」 媒體誤報駕駛接管",
+        "summary_en": "Elon Musk replied to reports of a Tesla crashing into a house at high speed, killing a woman: 'Yes, this makes no sense. FSD drives slowly through neighborhood streets and this was a high speed crash!' Tesla AI team noted the vehicle was traveling ~75 mph in a 30 mph zone with driver override.",
+        "summary_zh": "Elon Musk 回應一輛 Tesla 高速撞入民宅導致女子死亡的報導：「是的，這說不通。FSD 在社區街道會慢慢開，這是高速撞擊！」Tesla AI 團隊指出車輛時速約 75 英里，遠超 30 英里限速，且駕駛曾接管。",
         "musk_quote": "Yes, this makes no sense. FSD drives slowly through neighborhood streets and this was a high speed crash!",
-        "musk_quote_zh": "是的，這說不通。FSD 在社區街道上開得很慢，而這是一起高速撞擊事故！",
+        "musk_quote_zh": "是的，這說不通。FSD 在社區街道會慢慢開，這是高速撞擊！",
         "importance": 4,
         "first_seen": "2026-06-22T20:51:44Z",
-        "updated_at": "2026-06-22T22:05:02.962453+00:00",
+        "updated_at": "2026-06-23T00:05:04.742366+00:00",
         "links": [
           {
             "label": "Elon Musk on X",
@@ -498,15 +642,19 @@
         "category": "tesla",
         "source_type": "official_account",
         "title_en": "Tesla Amplifies User Praise: FSD Supervised 'Like Going from Black and White to Color TV'",
-        "title_zh": "Tesla 轉發用戶讚揚：FSD Supervised「如同從黑白電視進入彩色電視」",
-        "summary_en": "Tesla quoted a user describing FSD Supervised v14+ as transformative after long road trips and daily use: 'it’s like going from black and white to color TV.' When driving a regular car again, even a 'better' one, the user felt they were 'driving in the past.'",
-        "summary_zh": "Tesla 轉發用戶描述 FSD Supervised v14+ 在長途旅行與日常使用後帶來變革性體驗：「如同從黑白電視進入彩色電視」。當再次駕駛一般汽車（即使是「更好」的車款）時，用戶感覺「彷彿回到過去駕駛」。",
+        "title_zh": "Tesla 轉發用戶讚譽：FSD Supervised「如同從黑白電視變成彩色電視」",
+        "summary_en": "Tesla quoted a user describing FSD Supervised v14+ as transformative after long road trips and daily use: 'it’s like going from black and white to color TV.' The user felt regular cars felt 'broken' afterward.",
+        "summary_zh": "Tesla 轉發用戶描述 FSD Supervised v14+ 在長途和日常使用後具有變革性：「就像從黑白電視變成彩色電視」。用戶之後覺得一般汽車「壞掉了」。",
         "musk_quote": "",
         "musk_quote_zh": "",
         "importance": 2,
         "first_seen": "2026-06-22T07:24:39Z",
-        "updated_at": "2026-06-22T22:05:02.962453+00:00",
+        "updated_at": "2026-06-23T00:05:04.742366+00:00",
         "links": [
+          {
+            "label": "Tesla on X",
+            "url": "https://x.com/Tesla/status/2069160376013296049"
+          },
           {
             "label": "Tesla on X",
             "url": "https://x.com/Tesla"
@@ -526,14 +674,14 @@
         "category": "xai_x_platform",
         "source_type": "musk_quote",
         "title_en": "Elon Musk Highlights Grok Build Upgrades: Multi-Agent 'Goal' Feature Now Live",
-        "title_zh": "Elon Musk 強調 Grok Build 升級：多代理「Goal」功能已上線",
-        "summary_en": "Elon Musk quote-posted the announcement that /goal is live on Grok Build. The feature uses a team of specialized AI agents — implementors, skeptics, code reviewers, and planners — mixing Grok Build and Composer roles for complex tasks. Elon simply commented 'Grok Build upgrades' in strong endorsement of the advanced agent orchestration for ambitious coding and automation.",
-        "summary_zh": "Elon Musk 轉發 /goal 已在 Grok Build 上線的公告。該功能使用專業 AI 代理團隊——實作者、懷疑者、程式碼審查者與規劃者——混合 Grok Build 與 Composer 角色處理複雜任務。Elon 僅回覆「Grok Build upgrades」，強力背書此先進代理協作系統適用於雄心勃勃的程式設計與自動化。",
+        "title_zh": "Elon Musk 強調 Grok Build 升級：多代理「目標」功能現已上線",
+        "summary_en": "Elon Musk quote-posted the announcement that /goal is live on Grok Build. The feature uses a team of specialized AI agents (implementors, skeptics, code reviewers, planners) mixing Grok Build and Composer roles for complex tasks.",
+        "summary_zh": "Elon Musk 轉發宣布 /goal 已在 Grok Build 上線。該功能使用專業 AI 代理團隊（執行者、懷疑者、程式碼審查者、規劃者），混合 Grok Build 與 Composer 角色處理複雜任務。",
         "musk_quote": "Grok Build upgrades",
         "musk_quote_zh": "Grok Build 升級",
         "importance": 3,
         "first_seen": "2026-06-22T20:50:04Z",
-        "updated_at": "2026-06-22T22:05:02.962453+00:00",
+        "updated_at": "2026-06-23T00:05:04.742366+00:00",
         "links": [
           {
             "label": "Elon Musk on X",
@@ -544,7 +692,7 @@
     ],
     "other": []
   },
-  "brief_en": "Elon escalated attacks on Rep. Ro Khanna over USAID/DOGE cuts, denying any child deaths and citing real fraud cases. Defended Tesla FSD crash as driver override at 73 mph. Celebrated Grok Build multi-agent upgrades. Warned cross-sex hormones raise murder/suicide risk in mental illness case. Other posts on media bias and policy.",
-  "brief_zh": "Elon 持續抨擊 Ro Khanna 議員，指 USAID/DOGE 議題並否認兒童死亡指控，強調真實貪腐案件。為 Tesla FSD 撞車事件辯護，稱駕駛超控達 73 mph。讚揚 Grok Build 多代理團隊升級。指出跨性荷爾蒙會增加精神疾病者謀殺與自殺風險。另有媒體偏見與政策評論。",
-  "updated_at": "2026-06-22T22:05:02.962453+00:00"
+  "brief_en": "Elon escalated attacks on Ro Khanna over DOGE/USAID (no dead children from cuts, sue the liar), defended FSD in high-speed crash reports, called Starmer's UK resignation 'inevitable', questioned permitting double standards for unauthorized Texas 'city' construction, and highlighted Grok Build multi-agent /goal upgrades. Also commented on trans hormones/violence risk and media narratives.",
+  "brief_zh": "Elon Musk 升級抨擊 Ro Khanna 及 DOGE/USAID（否認兒童死亡指控、要求訴訟）；為 FSD 高速撞擊辯護；稱英國首相 Starmer 辭職「必然」；質疑德州無許可「城市」建設雙重標準；並推廣 Grok Build 多代理 /goal 功能。另評論跨性別荷爾蒙風險與媒體敘事。",
+  "updated_at": "2026-06-23T00:05:04.742366+00:00"
 }
