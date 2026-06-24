@@ -54,7 +54,8 @@ import tempfile
 import subprocess
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import quote, urlparse
+from urllib.request import Request, urlopen
 
 # ---------------------------------------------------------------- 設定 ----
 
@@ -504,23 +505,96 @@ def _url_status_suffix(url: str) -> str:
     return m.group(1)[-6:] if m else ""
 
 
+def _x_status_id(url: str) -> str:
+    m = re.search(r"/status/(\d+)", url or "")
+    return m.group(1) if m else ""
+
+
+def _x_handle_from_url(url: str) -> str:
+    try:
+        parsed = urlparse(url)
+    except Exception:
+        return ""
+    host = re.sub(r"^www\.", "", parsed.netloc.lower())
+    if host not in ("x.com", "twitter.com"):
+        return ""
+    parts = [p for p in parsed.path.split("/") if p]
+    if not parts or parts[0].lower() == "i":
+        return ""
+    return parts[0].lstrip("@")
+
+
+def _x_author_label(author_name: str, author_url: str) -> str:
+    handle = _x_handle_from_url(author_url).lower()
+    if handle == "elonmusk":
+        return "Elon on X"
+    name = (author_name or "").strip()
+    if name:
+        return f"{name} on X"
+    if handle:
+        return f"@{handle} on X"
+    return "X"
+
+
+def _canonicalize_x_link(link: dict, cache: dict[str, dict]) -> None:
+    """Use X oEmbed to correct wrong /{handle}/status/{id} paths returned by LLMs."""
+    url = (link.get("url") or "").strip()
+    sid = _x_status_id(url)
+    if not sid:
+        return
+    if sid not in cache:
+        cache[sid] = {}
+        oembed = "https://publish.twitter.com/oembed?omit_script=1&url=" + quote(
+            f"https://twitter.com/i/status/{sid}",
+            safe="",
+        )
+        try:
+            req = Request(oembed, headers={"User-Agent": "MarsRadar/1.0"})
+            with urlopen(req, timeout=8) as resp:
+                cache[sid] = json.loads(resp.read().decode("utf-8"))
+        except Exception as exc:
+            print(f"  ⚠️ X oEmbed canonicalize failed for {sid}: {type(exc).__name__}: {exc}")
+            return
+    data = cache.get(sid) or {}
+    canonical_url = (data.get("url") or "").strip()
+    author_url = (data.get("author_url") or "").strip()
+    author_name = (data.get("author_name") or "").strip()
+    if canonical_url:
+        link["url"] = canonical_url
+    if author_url or author_name:
+        link["_x_author_label"] = _x_author_label(author_name, author_url)
+
+
 def _host_label(url: str) -> str:
     try:
         host = re.sub(r"^www\.", "", urlparse(url).netloc.lower())
     except Exception:
         return "Source"
     if host in ("x.com", "twitter.com"):
-        return "Elon on X"
+        handle = _x_handle_from_url(url).lower()
+        if handle == "elonmusk":
+            return "Elon on X"
+        if handle:
+            return f"@{handle} on X"
+        return "X"
     return host or "Source"
 
 
 def _normalize_link_label(it: dict, link: dict, idx: int) -> str:
     label = (link.get("label") or link.get("source") or "").strip()
     url = (link.get("url") or "").strip()
-    if label and label.lower() not in GENERIC_X_LABELS:
+    author_label = (link.get("_x_author_label") or "").strip()
+    label_l = label.lower()
+    author_l = author_label.lower()
+    elon_label_for_non_elon = (
+        bool(author_label)
+        and not author_l.startswith("elon ")
+        and (label_l.startswith("elon on x") or label_l.startswith("elon musk on x"))
+    )
+    if label and label_l not in GENERIC_X_LABELS and not elon_label_for_non_elon:
         return label
 
-    base = _host_label(url)
+    base = author_label or _host_label(url)
     details = []
     source_type = (it.get("source_type") or "").strip()
     if source_type in ("musk_reply", "musk_quote"):
@@ -541,6 +615,7 @@ def _normalize_link_label(it: dict, link: dict, idx: int) -> str:
 def normalize_items(items: list) -> list:
     """淨化、保證每筆都有合法 category、story_id 與必要欄位（含馬斯克原話/來源型別/時間戳）。"""
     out = []
+    x_oembed_cache: dict[str, dict] = {}
     for i, it in enumerate(items):
         cat = it.get("category", "other")
         if cat not in CATEGORIES:
@@ -554,7 +629,9 @@ def normalize_items(items: list) -> list:
             if not isinstance(link, dict) or not link.get("url"):
                 continue
             cleaned = dict(link)
+            _canonicalize_x_link(cleaned, x_oembed_cache)
             cleaned["label"] = _normalize_link_label(it, cleaned, link_idx)
+            cleaned.pop("_x_author_label", None)
             links.append(cleaned)
         out.append({
             "id": sid,                 # App 用 id 當 Identifiable；= story_id 讓合併後不閃爍
