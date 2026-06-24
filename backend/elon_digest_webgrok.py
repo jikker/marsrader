@@ -527,6 +527,37 @@ def _make_story_id(it: dict, idx: int, date_str: str) -> str:
     return f"musk-{slug or 'post'}-{date_str}-{idx}"
 
 
+def _compact_label_part(text: str, max_len: int = 42) -> str:
+    text = re.sub(r"https?://\S+", "", text or "")
+    text = re.sub(r"\s+", " ", text).strip(" -—:：。.,，")
+    if len(text) <= max_len:
+        return text
+    return text[:max_len].rstrip(" -—:：。.,，") + "…"
+
+
+def _link_status_suffix(link: str) -> str:
+    m = re.search(r"/status/(\d+)", link or "")
+    return m.group(1)[-6:] if m else ""
+
+
+def _x_link_label(typ: str, topic: str, engaged: str, text: str, link: str) -> str:
+    """Make repeated X source links distinguishable in the app."""
+    details = []
+    typ = (typ or "post").lower()
+    if typ in ("reply", "quote", "repost"):
+        if engaged:
+            details.append(f"{typ} to {engaged}")
+        else:
+            details.append(typ)
+    subject = _compact_label_part(topic or text)
+    if subject:
+        details.append(subject)
+    suffix = _link_status_suffix(link)
+    if suffix:
+        details.append(f"post {suffix}")
+    return "Elon on X" + (" — " + " · ".join(details[:3]) if details else "")
+
+
 def grok_items_to_digest(grok_arr: list, run_iso: str, date_str: str) -> dict:
     """把 web-grok 回的 X 貼文陣列對映成 elon_digest 的 grok dict（含 items + brief）。
     回傳形如 call_grok() 的結構：{"brief_en","brief_zh","items":[...],"_usage":{...}}。
@@ -565,7 +596,7 @@ def grok_items_to_digest(grok_arr: list, run_iso: str, date_str: str) -> dict:
 
         links = []
         if link:
-            links.append({"label": "Elon on X", "url": link})
+            links.append({"label": _x_link_label(typ, topic, engaged, text, link), "url": link})
 
         items.append({
             "story_id": _make_story_id(it, idx, date_str),

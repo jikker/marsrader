@@ -48,11 +48,13 @@ import os
 import sys
 import json
 import base64
+import re
 import shutil
 import tempfile
 import subprocess
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
+from urllib.parse import urlparse
 
 # ---------------------------------------------------------------- 設定 ----
 
@@ -486,6 +488,56 @@ def _slugify_story(it: dict, idx: int) -> str:
     return slug or f"item-{idx}"
 
 
+GENERIC_X_LABELS = {"elon on x", "elon musk on x", "elon", "x"}
+
+
+def _compact_link_label_part(text: str, max_len: int = 42) -> str:
+    text = re.sub(r"https?://\S+", "", text or "")
+    text = re.sub(r"\s+", " ", text).strip(" -—:：。.,，")
+    if len(text) <= max_len:
+        return text
+    return text[:max_len].rstrip(" -—:：。.,，") + "…"
+
+
+def _url_status_suffix(url: str) -> str:
+    m = re.search(r"/status/(\d+)", url or "")
+    return m.group(1)[-6:] if m else ""
+
+
+def _host_label(url: str) -> str:
+    try:
+        host = re.sub(r"^www\.", "", urlparse(url).netloc.lower())
+    except Exception:
+        return "Source"
+    if host in ("x.com", "twitter.com"):
+        return "Elon on X"
+    return host or "Source"
+
+
+def _normalize_link_label(it: dict, link: dict, idx: int) -> str:
+    label = (link.get("label") or link.get("source") or "").strip()
+    url = (link.get("url") or "").strip()
+    if label and label.lower() not in GENERIC_X_LABELS:
+        return label
+
+    base = _host_label(url)
+    details = []
+    source_type = (it.get("source_type") or "").strip()
+    if source_type in ("musk_reply", "musk_quote"):
+        details.append("reply" if source_type == "musk_reply" else "quote")
+    subject = _compact_link_label_part(
+        it.get("title_en") or it.get("title_zh") or it.get("musk_quote") or it.get("summary_en")
+    )
+    if subject:
+        details.append(subject)
+    suffix = _url_status_suffix(url)
+    if suffix:
+        details.append(f"post {suffix}")
+    if not details and idx > 0:
+        details.append(f"source {idx + 1}")
+    return base + (" — " + " · ".join(details[:3]) if details else "")
+
+
 def normalize_items(items: list) -> list:
     """淨化、保證每筆都有合法 category、story_id 與必要欄位（含馬斯克原話/來源型別/時間戳）。"""
     out = []
@@ -497,6 +549,13 @@ def normalize_items(items: list) -> list:
         if st not in SOURCE_TYPES:
             st = "news"
         sid = (it.get("story_id") or it.get("id") or "").strip() or _slugify_story(it, i)
+        links = []
+        for link_idx, link in enumerate(it.get("links", [])):
+            if not isinstance(link, dict) or not link.get("url"):
+                continue
+            cleaned = dict(link)
+            cleaned["label"] = _normalize_link_label(it, cleaned, link_idx)
+            links.append(cleaned)
         out.append({
             "id": sid,                 # App 用 id 當 Identifiable；= story_id 讓合併後不閃爍
             "story_id": sid,
@@ -511,7 +570,7 @@ def normalize_items(items: list) -> list:
             "importance": int(it.get("importance") or 3),
             "first_seen": (it.get("first_seen") or "").strip(),
             "updated_at": (it.get("updated_at") or "").strip(),
-            "links": [l for l in it.get("links", []) if l.get("url")],
+            "links": links,
         })
     return out
 
