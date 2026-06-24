@@ -120,6 +120,17 @@ ANTI-HALLUCINATION:
 - Respect timestamps: only include items from the stated lookback window; do NOT resurface old
   viral posts as if new. If you cannot verify a claim or URL, omit it.
 
+X SOURCE ACCURACY (strict — fixes wrong "Elon on X" labels):
+- For every X status URL, identify the ACTUAL author of that exact status id. Do not infer the
+  author from the surrounding conversation or topic.
+- If source_type starts with musk_, links[0] MUST be the actual @elonmusk status URL for his post,
+  quote-post, or reply. Do not use the URL of the post he replied to / quoted as the primary link.
+- If you include a post by someone else because Elon replied to or quoted it, label it as that
+  author's post and set elon_relation to replied_to / quoted / mentioned / none.
+- Never label a non-@elonmusk status as "Elon on X" or "Elon Musk on X".
+- When unsure whether a URL is Elon's own status, set source_type=mixed or news and explain via
+  summary instead of pretending it is a musk_post.
+
 SAME-DAY STORY MERGE (critical — avoid duplicates):
 - You will receive EXISTING_ITEMS for today (UTC+8 / Taipei calendar day). Treat them as the canonical list so far.
 - ONE real-world story = ONE item for the whole day. When new info arrives, UPDATE the matching
@@ -153,13 +164,23 @@ SCHEMA_BLOCK = """Return STRICT JSON with EXACTLY this shape:
       "importance": 1,
       "first_seen": "ISO-8601 UTC — PRESERVE from the existing item if you are updating it",
       "updated_at": "ISO-8601 UTC — now",
-      "links": [{{"label": "Source name (Elon on X / Reuters / ...)", "url": "https://..."}}]
+      "links": [
+        {{
+          "label": "Exact source label, e.g. Elon on X / Nick Shirley on X / Reuters",
+          "url": "https://x.com/<actual_author>/status/<status_id> or https://...",
+          "x_author_name": "Display name of the exact X status author, empty for non-X links",
+          "x_author_handle": "handle of the exact X status author without @, empty for non-X links",
+          "elon_relation": "own_post|reply_by_elon|quote_by_elon|replied_to|quoted|mentioned|none"
+        }}
+      ]
     }}
   ]
 }}
 Rules:
 - musk_quote required (non-empty) when source_type starts with musk_; use "" for pure news/official items.
-- links[0] should be the PRIMARY source (the @elonmusk post URL when source_type is musk_*).
+- links[0] should be the PRIMARY source (the actual @elonmusk status URL when source_type is musk_*).
+- For X links, x_author_handle MUST match the actual author of that exact status id; if it is not
+  elonmusk, the label must not say Elon.
 - items = the FULL merged list for today AFTER applying EXISTING_ITEMS (not a delta, not just new ones).
 - Aim for 6-15 high-signal items for the whole day. Drop stale low-value noise."""
 
@@ -536,6 +557,18 @@ def _x_author_label(author_name: str, author_url: str) -> str:
     return "X"
 
 
+def _x_author_label_from_fields(author_name: str, author_handle: str) -> str:
+    handle = (author_handle or "").strip().lstrip("@")
+    name = (author_name or "").strip()
+    if handle.lower() == "elonmusk":
+        return "Elon on X"
+    if name:
+        return f"{name} on X"
+    if handle:
+        return f"@{handle} on X"
+    return ""
+
+
 def _canonicalize_x_link(link: dict, cache: dict[str, dict]) -> None:
     """Use X oEmbed to correct wrong /{handle}/status/{id} paths returned by LLMs."""
     url = (link.get("url") or "").strip()
@@ -584,6 +617,11 @@ def _normalize_link_label(it: dict, link: dict, idx: int) -> str:
     label = (link.get("label") or link.get("source") or "").strip()
     url = (link.get("url") or "").strip()
     author_label = (link.get("_x_author_label") or "").strip()
+    if not author_label:
+        author_label = _x_author_label_from_fields(
+            link.get("x_author_name") or link.get("author_name") or "",
+            link.get("x_author_handle") or link.get("author_handle") or "",
+        )
     label_l = label.lower()
     author_l = author_label.lower()
     elon_label_for_non_elon = (
@@ -596,8 +634,13 @@ def _normalize_link_label(it: dict, link: dict, idx: int) -> str:
 
     base = author_label or _host_label(url)
     details = []
+    relation = (link.get("elon_relation") or "").strip().lower()
     source_type = (it.get("source_type") or "").strip()
-    if source_type in ("musk_reply", "musk_quote"):
+    if relation in ("reply_by_elon", "replied_to"):
+        details.append("reply")
+    elif relation in ("quote_by_elon", "quoted"):
+        details.append("quote")
+    elif source_type in ("musk_reply", "musk_quote"):
         details.append("reply" if source_type == "musk_reply" else "quote")
     subject = _compact_link_label_part(
         it.get("title_en") or it.get("title_zh") or it.get("musk_quote") or it.get("summary_en")
@@ -629,6 +672,9 @@ def normalize_items(items: list) -> list:
             if not isinstance(link, dict) or not link.get("url"):
                 continue
             cleaned = dict(link)
+            canonical_url = (cleaned.get("canonical_url") or cleaned.get("x_canonical_url") or "").strip()
+            if canonical_url:
+                cleaned["url"] = canonical_url
             _canonicalize_x_link(cleaned, x_oembed_cache)
             cleaned["label"] = _normalize_link_label(it, cleaned, link_idx)
             cleaned.pop("_x_author_label", None)
