@@ -500,7 +500,7 @@ _TYPE_TO_SOURCE = {
     "post": "musk_post",
     "reply": "musk_reply",
     "quote": "musk_quote",
-    "repost": "musk_quote",   # 轉推＝引用他人，歸 musk_quote（仍是「他發的」）
+    "repost": "musk_repost",  # 轉推（2026-07-12 起納入監控範圍，獨立 source_type）
 }
 
 # topic 關鍵字 → digest category（粗略規則；中文標題等可後補）
@@ -718,7 +718,8 @@ def main():
     try:
         path = ed.write_digest(repo, date_str, run_iso, grok)
         ed.rebuild_index(repo)
-        print(f"[write] {path}")
+        widx = ed.rebuild_weekly(repo)
+        print(f"[write] {path}（週報 {len(widx.get('weeks', []))} 週已重建）")
         ed.git_commit_push(repo, date_str)
     except Exception as e:
         print(f"[webgrok] ❌ 寫檔/合併/push 失敗：{e!r}", file=sys.stderr)

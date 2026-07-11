@@ -76,15 +76,10 @@ ENC_ENVELOPE_TAG = "marsradar_enc"
 
 XAI_ENDPOINT = "https://api.x.ai/v1/chat/completions"
 
-# 只監控這份清單 → 控制成本（地雷二的應對）。可自由增減。
+# 只監控馬斯克本人（2026-07-12 用戶指示：不額外監控其他 ID；轉推 repost 也納入監控範圍）。
+# 新聞/web 僅作佐證，不再監控其他 X 帳號。
 WATCH_HANDLES = [
-    "elonmusk",      # Elon 本人
-    "Tesla",         # 特斯拉官方
-    "SpaceX",        # SpaceX 官方
-    "xAI",           # xAI 官方
-    "cybertruck",    # 產品線
-    "Teslarati",     # 科技記者/媒體
-    "SawyerMerritt", # 知名 Tesla/SpaceX 觀察家
+    "elonmusk",      # Elon 本人（含轉推）
 ]
 
 CATEGORIES = ["elon_personal", "tesla", "spacex", "xai_x_platform", "other"]
@@ -104,14 +99,14 @@ SYSTEM_RULES = """You are MarsRadar's editor. You produce a concise, accurate, b
 doing on X, plus related Tesla / SpaceX / xAI / X-platform developments.
 
 SOURCE PRIORITY (strict — this is the core of the product):
-1) PRIMARY = @elonmusk's OWN X activity in the window: original posts, quote-posts and
-   substantive replies (not @-only spam). Capture his ACTUAL words, tone and topics. This is
-   the main product — lead with "what Elon said", not with a news headline.
-2) SECONDARY = Official accounts (@Tesla, @SpaceX, @xAI, @cybertruck) ONLY when (a) Elon did
-   not post about it AND (b) it is a material corporate/product event.
-3) TERTIARY = Reputable news / web (@Teslarati, @SawyerMerritt, major outlets): background or
-   corroboration ONLY. Never let a news headline become the main story if Elon already posted
-   about the same topic.
+1) PRIMARY (the ONLY monitored X account) = @elonmusk's OWN X activity in the window:
+   original posts, REPOSTS/RETWEETS, quote-posts and substantive replies (not @-only spam).
+   Capture his ACTUAL words, tone and topics. Reposts/retweets COUNT as his activity: report
+   WHAT he amplified and WHO wrote it. This is the main product — lead with "what Elon
+   said/amplified", not with a news headline.
+2) SECONDARY = Reputable news / web: background or corroboration ONLY for stories Musk posted,
+   reposted or replied about. Do NOT monitor any other X account. Never let a news headline
+   become the main story if Elon already posted about the same topic.
 
 ANTI-HALLUCINATION:
 - Use ONLY facts found via live X reading and web search. Do NOT invent posts, quotes or URLs.
@@ -125,8 +120,11 @@ X SOURCE ACCURACY (strict — fixes wrong "Elon on X" labels):
   author from the surrounding conversation or topic.
 - If source_type starts with musk_, links[0] MUST be the actual @elonmusk status URL for his post,
   quote-post, or reply. Do not use the URL of the post he replied to / quoted as the primary link.
+  EXCEPTION musk_repost: a plain repost/retweet has NO separate permalink — links[0] is the
+  ORIGINAL author's status URL with elon_relation=reposted, the label must name the original
+  author, and the title must make clear Elon reposted it.
 - If you include a post by someone else because Elon replied to or quoted it, label it as that
-  author's post and set elon_relation to replied_to / quoted / mentioned / none.
+  author's post and set elon_relation to replied_to / quoted / reposted / mentioned / none.
 - Never label a non-@elonmusk status as "Elon on X" or "Elon Musk on X".
 - When unsure whether a URL is Elon's own status, set source_type=mixed or news and explain via
   summary instead of pretending it is a musk_post.
@@ -154,7 +152,7 @@ SCHEMA_BLOCK = """Return STRICT JSON with EXACTLY this shape:
     {{
       "story_id": "stable-lowercase-kebab-id-for-this-story-today (e.g. tesla-fsd-china-2026-06-22)",
       "category": "elon_personal|tesla|spacex|xai_x_platform|other",
-      "source_type": "musk_post|musk_reply|musk_quote|official_account|news|mixed",
+      "source_type": "musk_post|musk_reply|musk_quote|musk_repost|official_account|news|mixed",
       "title_en": "...",
       "title_zh": "...",
       "summary_en": "1-3 sentences, your own words; lead with what Musk said if applicable",
@@ -170,15 +168,17 @@ SCHEMA_BLOCK = """Return STRICT JSON with EXACTLY this shape:
           "url": "https://x.com/<actual_author>/status/<status_id> or https://...",
           "x_author_name": "Display name of the exact X status author, empty for non-X links",
           "x_author_handle": "handle of the exact X status author without @, empty for non-X links",
-          "elon_relation": "own_post|reply_by_elon|quote_by_elon|replied_to|quoted|mentioned|none"
+          "elon_relation": "own_post|reply_by_elon|quote_by_elon|replied_to|quoted|reposted|mentioned|none"
         }}
       ]
     }}
   ]
 }}
 Rules:
-- musk_quote required (non-empty) when source_type starts with musk_; use "" for pure news/official items.
-- links[0] should be the PRIMARY source (the actual @elonmusk status URL when source_type is musk_*).
+- musk_quote required (non-empty) for musk_post/musk_reply/musk_quote; for musk_repost put the
+  reposted post's key sentence (it is what Elon chose to amplify); use "" for pure news items.
+- links[0] should be the PRIMARY source (the actual @elonmusk status URL when source_type is
+  musk_post/musk_reply/musk_quote; the ORIGINAL author's status URL for musk_repost).
 - For X links, x_author_handle MUST match the actual author of that exact status id; if it is not
   elonmusk, the label must not say Elon.
 - items = the FULL merged list for today AFTER applying EXISTING_ITEMS (not a delta, not just new ones).
@@ -193,15 +193,16 @@ HOURS into any existing items for this calendar day (UTC+8 / Taipei). Lead with 
 {existing_items_json}
 
 === ACCOUNTS TO MONITOR ===
-PRIMARY: @elonmusk  (his posts, quote-posts, substantive replies — THE main product)
-SECONDARY (only if Musk didn't cover it AND it's material): @Tesla, @SpaceX, @xAI, @cybertruck
-TERTIARY (context/corroboration only): @Teslarati, @SawyerMerritt, reputable news outlets
+ONLY @elonmusk — his original posts, REPOSTS/RETWEETS, quote-posts and substantive replies.
+Do NOT monitor any other X account. Reputable news/web may be used ONLY to corroborate or add
+context to stories Musk himself posted/reposted/replied about.
 
 === WHAT TO PRIORITIZE ===
 1. What did @elonmusk literally say/post in the window? (topic, tone, controversy, product hints,
    politics) — group related posts into ONE story item, not one item per reply.
-2. Corporate/official news ONLY when it adds facts Musk didn't say (earnings, launch, recall...).
-3. Skip: reply spam, reposts of old news, engagement bait with no substance.
+2. What did he REPOST/RETWEET? Reposts are part of the product — report what he amplified
+   (original author + content) as musk_repost items.
+3. Skip: reply spam, engagement bait with no substance, stale reposts of old news resurfacing.
 
 """ + SCHEMA_BLOCK
 
@@ -399,9 +400,8 @@ def call_grok_api(date_str: str, run_iso: str = "", existing_items: list | None 
             "from_date": date_str,
             "max_search_results": 30,
             "sources": [
-                # 馬斯克本人優先（第一來源），官方帳號其次，新聞/網路只當佐證。
-                {"type": "x", "x_handles": ["elonmusk"]},
-                {"type": "x", "x_handles": [h for h in WATCH_HANDLES if h != "elonmusk"]},
+                # 只監控馬斯克本人（含轉推）；新聞/網路只當佐證，不監控其他 X 帳號。
+                {"type": "x", "x_handles": WATCH_HANDLES},
                 {"type": "news"},
                 {"type": "web"},
             ],
@@ -499,7 +499,8 @@ def load_public(path: Path) -> dict:
 
 # --------------------------------------------------------- JSON 寫入/合併 ----
 
-SOURCE_TYPES = {"musk_post", "musk_reply", "musk_quote", "official_account", "news", "mixed", "web"}
+SOURCE_TYPES = {"musk_post", "musk_reply", "musk_quote", "musk_repost",
+                "official_account", "news", "mixed", "web"}
 
 
 def _slugify_story(it: dict, idx: int) -> str:
@@ -640,8 +641,11 @@ def _normalize_link_label(it: dict, link: dict, idx: int) -> str:
         details.append("reply")
     elif relation in ("quote_by_elon", "quoted"):
         details.append("quote")
-    elif source_type in ("musk_reply", "musk_quote"):
-        details.append("reply" if source_type == "musk_reply" else "quote")
+    elif relation == "reposted":
+        details.append("repost")
+    elif source_type in ("musk_reply", "musk_quote", "musk_repost"):
+        details.append({"musk_reply": "reply", "musk_quote": "quote",
+                        "musk_repost": "repost"}[source_type])
     subject = _compact_link_label_part(
         it.get("title_en") or it.get("title_zh") or it.get("musk_quote") or it.get("summary_en")
     )
@@ -816,6 +820,98 @@ def rebuild_index(repo: Path):
         dump_public(repo / "latest.json", latest)
 
 
+# ------------------------------------------------------------- 週報 weekly ----
+# 純程式聚合（不另呼叫 Grok）：把 digests/*.json 依 ISO 週（台北日期）聚合成
+# weekly/<YYYY-Www>.json + weekly_index.json，供 App「週報」分頁直讀。
+# 週報內容＝該週每日 brief（day-by-day）＋ 全週去重後的重點故事 Top N ＋ 分類統計。
+
+WEEKLY_TOP_MIN_IMPORTANCE = 4
+WEEKLY_TOP_CAP = 20
+
+
+def week_key(date_str: str) -> str:
+    """'2026-07-12' → ISO 週 '2026-W28'（用 isocalendar()[i] 索引寫法相容 Python 3.9）。"""
+    iso = datetime.strptime(date_str, "%Y-%m-%d").isocalendar()
+    return f"{iso[0]}-W{iso[1]:02d}"
+
+
+def build_week_doc(week: str, day_docs: list, now_iso: str) -> dict:
+    """把一週內的每日 digest 文件聚合成一份週報文件。"""
+    day_docs = sorted(day_docs, key=lambda d: d.get("date") or "")
+    days, merged = [], {}
+    for doc in day_docs:
+        items = doc.get("items_flat", []) or []
+        days.append({
+            "date": doc.get("date"),
+            "brief_en": doc.get("brief_en", ""),
+            "brief_zh": doc.get("brief_zh", ""),
+            "item_count": len(items),
+        })
+        # 跨日同故事去重：同 story_id 取（重要度, 更新時間）較高者
+        for it in items:
+            sid = it.get("story_id") or it.get("id") or ""
+            old = merged.get(sid)
+            if old is None or \
+               (int(it.get("importance", 3)), it.get("updated_at", "")) >= \
+               (int(old.get("importance", 3)), old.get("updated_at", "")):
+                merged[sid] = it
+    all_items = sorted(merged.values(), key=lambda x: x.get("updated_at", ""), reverse=True)
+    all_items.sort(key=lambda x: -int(x.get("importance", 3)))
+    top = [it for it in all_items if int(it.get("importance", 3)) >= WEEKLY_TOP_MIN_IMPORTANCE]
+    if len(top) < 5:            # 淡週：重要度 4+ 不足 5 則就直接取前 10
+        top = all_items[:10]
+    top = top[:WEEKLY_TOP_CAP]
+    cat_counts: dict = {}
+    for it in merged.values():
+        c = it.get("category", "other")
+        cat_counts[c] = cat_counts.get(c, 0) + 1
+    return {
+        "week": week,
+        "start_date": days[0]["date"] if days else "",
+        "end_date": days[-1]["date"] if days else "",
+        "updated_at": now_iso,
+        "day_count": len(days),
+        "item_count": len(merged),
+        "days": days,
+        "top_items": top,
+        "category_counts": cat_counts,
+    }
+
+
+def rebuild_weekly(repo: Path):
+    """全量重建 weekly/*.json 與 weekly_index.json（資料量小、每次重建最簡單可靠）。"""
+    digests = repo / "digests"
+    weekly_dir = repo / "weekly"
+    weekly_dir.mkdir(parents=True, exist_ok=True)
+    now_iso = datetime.now(timezone.utc).isoformat()
+    by_week: dict = {}
+    for f in sorted(digests.glob("*.json")):
+        try:
+            doc = load_public(f)
+        except Exception:
+            continue
+        date_str = doc.get("date") or f.stem
+        try:
+            wk = week_key(date_str)
+        except ValueError:
+            continue
+        by_week.setdefault(wk, []).append(doc)
+    index = {"updated_at": now_iso, "weeks": []}
+    for wk in sorted(by_week.keys(), reverse=True):
+        wdoc = build_week_doc(wk, by_week[wk], now_iso)
+        dump_public(weekly_dir / f"{wk}.json", wdoc)
+        index["weeks"].append({
+            "week": wk,
+            "file": f"weekly/{wk}.json",
+            "start_date": wdoc["start_date"],
+            "end_date": wdoc["end_date"],
+            "day_count": wdoc["day_count"],
+            "item_count": wdoc["item_count"],
+        })
+    dump_public(repo / "weekly_index.json", index)
+    return index
+
+
 # ------------------------------------------------------------------ git ----
 
 def git(repo: Path, *args) -> str:
@@ -889,7 +985,8 @@ def main():
 
     path = write_digest(REPO_DIR, date_str, run_iso, grok)
     rebuild_index(REPO_DIR)
-    print(f"[write] {path}")
+    widx = rebuild_weekly(REPO_DIR)
+    print(f"[write] {path}（週報 {len(widx.get('weeks', []))} 週已重建）")
 
     git_commit_push(REPO_DIR, date_str)
     print("=== done ===")
