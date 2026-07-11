@@ -827,6 +827,7 @@ def rebuild_index(repo: Path):
 
 WEEKLY_TOP_MIN_IMPORTANCE = 4
 WEEKLY_TOP_CAP = 20
+WEEKLY_DAY_HEADLINES = 3    # 週報每日條列重點：取當日重要度最高的前 N 則標題
 
 
 def week_key(date_str: str) -> str:
@@ -841,10 +842,17 @@ def build_week_doc(week: str, day_docs: list, now_iso: str) -> dict:
     days, merged = [], {}
     for doc in day_docs:
         items = doc.get("items_flat", []) or []
+        # 每日條列重點（headlines）：當日重要度最高的前 N 則標題。
+        # App 週報以此取代整段 brief（brief 仍保留欄位供舊版 App / 相容用）。
+        day_top = sorted(items, key=lambda x: x.get("updated_at", ""), reverse=True)
+        day_top.sort(key=lambda x: -int(x.get("importance", 3)))
+        day_top = day_top[:WEEKLY_DAY_HEADLINES]
         days.append({
             "date": doc.get("date"),
             "brief_en": doc.get("brief_en", ""),
             "brief_zh": doc.get("brief_zh", ""),
+            "headlines_zh": [it.get("title_zh") or it.get("title_en") or "" for it in day_top],
+            "headlines_en": [it.get("title_en") or it.get("title_zh") or "" for it in day_top],
             "item_count": len(items),
         })
         # 跨日同故事去重：同 story_id 取（重要度, 更新時間）較高者
