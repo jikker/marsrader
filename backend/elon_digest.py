@@ -886,6 +886,20 @@ def build_week_doc(week: str, day_docs: list, now_iso: str) -> dict:
     }
 
 
+def week_preview(wdoc: dict, lang: str) -> str:
+    """週報預覽文字（放進 weekly_index，給 App 對未付費用戶顯示前 100 字 teaser）。
+    取全週重點故事標題（已依重要度排序）串接，湊到 ~160 字就停。"""
+    parts: list = []
+    for it in wdoc.get("top_items", []):
+        t = (it.get(f"title_{lang}") or it.get("title_en") or "").strip()
+        if t:
+            parts.append(t)
+        if sum(len(p) for p in parts) >= 160:
+            break
+    sep = "；" if lang == "zh" else "; "
+    return sep.join(parts)[:200]
+
+
 def rebuild_weekly(repo: Path):
     """全量重建 weekly/*.json 與 weekly_index.json（資料量小、每次重建最簡單可靠）。"""
     digests = repo / "digests"
@@ -915,6 +929,8 @@ def rebuild_weekly(repo: Path):
             "end_date": wdoc["end_date"],
             "day_count": wdoc["day_count"],
             "item_count": wdoc["item_count"],
+            "preview_zh": week_preview(wdoc, "zh"),
+            "preview_en": week_preview(wdoc, "en"),
         })
     dump_public(repo / "weekly_index.json", index)
     return index
