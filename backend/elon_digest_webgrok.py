@@ -663,7 +663,16 @@ def read_x_via_webgrok(run_iso: str, date_str: str, existing_items: list) -> dic
     print(f"[webgrok] 送出完整 prompt（{len(prompt)} 字，lookback={LOOKBACK_HOURS}h，"
           f"既有 {len(existing_items)} 條）→ grok 讀 X+合併中…")
     if not tab.send(prompt):
-        raise RuntimeError("prompt 送出失敗（送出後 URL 沒變成對話頁）。")
+        # 自我除錯：複用到的分頁可能卡在舊對話（擴充功能連不上/URL 導不回新對話），
+        # 送出鈕點了但沒反應。跟 wait_editor 失敗同一套後備——開全新分頁重試一次，
+        # 而不是直接放棄（曾發生同一顆卡分頁連續失敗 19 小時無人察覺）。
+        print("[webgrok] prompt 送出失敗（送出後 URL 沒變成對話頁）→ 改開全新 grok.com 分頁重試")
+        tab.open_fresh()
+        if not tab.wait_editor(45):
+            raise RuntimeError("重試後 grok.com 編輯器仍未就緒——"
+                               "確認瀏覽器已開 grok.com 且已登入。")
+        if not tab.send(prompt):
+            raise RuntimeError("prompt 送出失敗（重試全新分頁後仍送出失敗）。")
 
     block = tab.wait_reply(GEN_TIMEOUT)
     if not block:
