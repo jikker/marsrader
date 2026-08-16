@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# MarsRadar 後端 runner —— 給 cron 用。每 2 小時跑一次。
+# MarsRadar 後端 runner —— 給 cron 用。每 6 小時跑一次。
 #
 # 預設後端＝Grok Build CLI（DIGEST_BACKEND=cli）：吃你的 Grok 訂閱、不需要任何 API key，
 # 只需要這台機器上已安裝並登入 grok CLI（curl -fsSL https://x.ai/cli/install.sh | bash）。
