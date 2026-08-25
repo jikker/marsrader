@@ -159,13 +159,7 @@ class MCP:
             "clientInfo": {"name": "marsradar-webgrok", "version": "1.0"}})
         self._post({"jsonrpc": "2.0", "method": "notifications/initialized", "params": {}})
 
-    # 2026-08-25：browser MCP 支援多個瀏覽器 session。設 MARSRADAR_BROWSER_SESSION=gpu4070
-    # 就改用 4070 (ROG-NUC-970) 那台 Edge 跑 Grok 分析，不會搶用戶主力 Chrome 的分頁與焦點。
-    browser_session = os.environ.get("MARSRADAR_BROWSER_SESSION") or None
-
     def call(self, name, arguments, timeout=120):
-        if name.startswith("browser_") and self.browser_session and "session" not in arguments:
-            arguments = {**arguments, "session": self.browser_session}
         res = self._rpc("tools/call", {"name": name, "arguments": arguments}, timeout=timeout)
         if isinstance(res, dict) and "content" in res:
             txt = "\n".join(c.get("text", "") for c in res["content"] if c.get("type") == "text")

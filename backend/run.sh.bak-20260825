@@ -17,11 +17,6 @@ export GIT_PUSH="${GIT_PUSH:-1}"
 export GROK_TIMEOUT="${GROK_TIMEOUT:-1800}"
 # webgrok 等 grok.com 讀 X 生成完成的逾時秒數
 export WEBGROK_GEN_TIMEOUT="${WEBGROK_GEN_TIMEOUT:-240}"
-# 2026-08-25 用戶指定：瀏覽器自動化改跑 4070 (ROG-NUC-970) 那台 Edge，
-# 不要再搶用戶主力機的分頁與焦點。gpu4070 session 由該台 Edge 的
-# Claude Browser Agent 擴充註冊（連線靠 WSL→4070 的反向 SSH 通道 -R 3456）。
-# 想臨時切回本機瀏覽器：MARSRADAR_BROWSER_SESSION=default ./run.sh
-export MARSRADAR_BROWSER_SESSION="${MARSRADAR_BROWSER_SESSION:-gpu4070}"
 
 # 有 venv 就用（api 後端需要 requests）；沒有就用系統 python3（cli/webgrok 只需標準庫）
 PY="$(dirname "$0")/.venv/bin/python3"
